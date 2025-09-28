@@ -7,6 +7,11 @@ namespace LiteDB.ReproRunner.Cli.Commands;
 internal sealed class RunCommandSettings : RootCommandSettings
 {
     /// <summary>
+    /// Gets the default frames-per-second limit applied to the live UI.
+    /// </summary>
+    public const decimal DefaultFps = 30m;
+
+    /// <summary>
     /// Gets or sets the identifier of the repro to execute.
     /// </summary>
     [CommandArgument(0, "[id]")]
@@ -42,6 +47,13 @@ internal sealed class RunCommandSettings : RootCommandSettings
     public bool SkipValidation { get; set; }
 
     /// <summary>
+    /// Gets or sets the maximum number of times the live UI refreshes per second.
+    /// </summary>
+    [CommandOption("--fps <FPS>")]
+    [Description("Limit the live UI refresh rate in frames per second (default: 30).")]
+    public decimal? Fps { get; set; }
+
+    /// <summary>
     /// Validates the run command settings.
     /// </summary>
     /// <returns>The validation result describing any errors.</returns>
@@ -65,6 +77,11 @@ internal sealed class RunCommandSettings : RootCommandSettings
         if (Timeout is int timeout && timeout < 1)
         {
             return ValidationResult.Error("--timeout expects a positive integer value in seconds.");
+        }
+
+        if (Fps is decimal fps && fps <= 0)
+        {
+            return ValidationResult.Error("--fps expects a positive decimal value.");
         }
 
         return base.Validate();

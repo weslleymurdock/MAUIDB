@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Threading.Channels;
 using System.Xml.Linq;
 using LiteDB.ReproRunner.Cli.Execution;
@@ -77,13 +78,14 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
 
         var table = new Table().Border(TableBorder.Rounded).AddColumns("Repro", "Repro Version", "Reproduced", "Fixed");
         var logLines = new List<string>();
+        var targetFps = settings.Fps ?? RunCommandSettings.DefaultFps;
         var layout = new Layout("root")
             .SplitRows(
                 new Layout("logs").Size(8),
                 new Layout("results"));
 
         layout["results"].Update(table);
-        layout["logs"].Update(CreateLogView(logLines));
+        layout["logs"].Update(CreateLogView(logLines, targetFps));
         var overallExitCode = 0;
         var plannedVariants = new List<RunVariantPlan>();
         var buildFailures = new List<BuildFailure>();
@@ -97,7 +99,7 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
         {
             await _console.Live(layout).StartAsync(async ctx =>
             {
-                var uiTask = ProcessUiUpdatesAsync(uiUpdates.Reader, table, layout, logLines, ctx, _cancellationToken);
+                var uiTask = ProcessUiUpdatesAsync(uiUpdates.Reader, table, layout, logLines, targetFps, ctx, _cancellationToken);
                 var writer = uiUpdates.Writer;
                 var previousObserver = _executor.LogObserver;
                 var previousSuppression = _executor.SuppressConsoleLogOutput;
@@ -357,10 +359,13 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
 
     private sealed record BuildFailure(string ManifestId, string Variant, IReadOnlyList<string> Output);
 
-    private static IRenderable CreateLogView(IReadOnlyList<string> lines)
+    private static IRenderable CreateLogView(IReadOnlyList<string> lines, decimal fps)
     {
         var logTable = new Table().Border(TableBorder.Rounded);
-        logTable.AddColumn(new TableColumn("[bold]Recent Logs[/]").LeftAligned());
+        var fpsLabel = fps <= 0
+            ? "Unlimited"
+            : string.Format(CultureInfo.InvariantCulture, "{0:0.0}", fps);
+        logTable.AddColumn(new TableColumn($"[bold]Recent Logs[/] [dim](FPS: {fpsLabel})[/]").LeftAligned());
 
         if (lines.Count == 0)
         {
@@ -396,9 +401,14 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
         Table table,
         Layout layout,
         List<string> logLines,
+        decimal fps,
         LiveDisplayContext context,
         CancellationToken cancellationToken)
     {
+        var refreshInterval = CalculateRefreshInterval(fps);
+        var nextRefreshTime = DateTimeOffset.MinValue;
+        var needsRefresh = false;
+
         try
         {
             await foreach (var update in reader.ReadAllAsync(cancellationToken).ConfigureAwait(false))
@@ -412,19 +422,48 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
                             logLines.RemoveAt(0);
                         }
 
-                        layout["logs"].Update(CreateLogView(logLines));
+                        layout["logs"].Update(CreateLogView(logLines, fps));
                         break;
                     case TableRowUpdate rowUpdate:
                         table.AddRow(rowUpdate.ReproId, rowUpdate.Version, rowUpdate.Reproduced, rowUpdate.Fixed);
                         break;
                 }
 
-                context.Refresh();
+                needsRefresh = true;
+
+                if (refreshInterval == TimeSpan.Zero || DateTimeOffset.UtcNow >= nextRefreshTime)
+                {
+                    context.Refresh();
+                    needsRefresh = false;
+
+                    if (refreshInterval != TimeSpan.Zero)
+                    {
+                        nextRefreshTime = DateTimeOffset.UtcNow + refreshInterval;
+                    }
+                }
             }
         }
         catch (OperationCanceledException)
         {
         }
+        finally
+        {
+            if (needsRefresh)
+            {
+                context.Refresh();
+            }
+        }
+    }
+
+    private static TimeSpan CalculateRefreshInterval(decimal fps)
+    {
+        if (fps <= 0)
+        {
+            return TimeSpan.Zero;
+        }
+
+        var secondsPerFrame = (double)(1m / fps);
+        return TimeSpan.FromSeconds(secondsPerFrame);
     }
 
     private abstract record UiUpdate;
