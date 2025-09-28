@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Text.Json;
 
-namespace LiteDB.ReproRunner.Cli;
+namespace LiteDB.ReproRunner.Cli.Manifests;
 
 internal sealed class ManifestRepository
 {

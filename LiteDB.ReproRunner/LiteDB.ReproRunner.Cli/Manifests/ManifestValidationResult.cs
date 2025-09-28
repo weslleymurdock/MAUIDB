@@ -1,4 +1,4 @@
-namespace LiteDB.ReproRunner.Cli;
+namespace LiteDB.ReproRunner.Cli.Manifests;
 
 internal sealed class ManifestValidationResult
 {

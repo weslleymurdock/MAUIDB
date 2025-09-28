@@ -1,5 +1,7 @@
 using System.Threading;
 using LiteDB.ReproRunner.Cli.Commands;
+using LiteDB.ReproRunner.Cli.Execution;
+using LiteDB.ReproRunner.Cli.Infrastructure;
 using Spectre.Console;
 using Spectre.Console.Cli;
 
@@ -22,6 +24,8 @@ internal static class Program
         var registrar = new TypeRegistrar();
         registrar.RegisterInstance(typeof(IAnsiConsole), console);
         registrar.RegisterInstance(typeof(ReproExecutor), new ReproExecutor());
+        registrar.RegisterInstance(typeof(RunDirectoryPlanner), new RunDirectoryPlanner());
+        registrar.RegisterInstance(typeof(ReproBuildCoordinator), new ReproBuildCoordinator());
         registrar.RegisterInstance(typeof(ReproRootLocator), new ReproRootLocator(rootOverride));
         registrar.RegisterInstance(typeof(CancellationToken), cts.Token);
 

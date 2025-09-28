@@ -1,6 +1,7 @@
+using LiteDB.ReproRunner.Cli.Manifests;
 using Spectre.Console;
 
-namespace LiteDB.ReproRunner.Cli;
+namespace LiteDB.ReproRunner.Cli.Infrastructure;
 
 internal static class CliOutput
 {

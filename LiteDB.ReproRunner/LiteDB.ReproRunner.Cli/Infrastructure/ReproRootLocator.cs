@@ -1,4 +1,4 @@
-namespace LiteDB.ReproRunner.Cli;
+namespace LiteDB.ReproRunner.Cli.Infrastructure;
 
 internal sealed class ReproRootLocator
 {
