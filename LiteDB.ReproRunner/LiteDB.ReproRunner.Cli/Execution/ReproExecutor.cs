@@ -7,12 +7,18 @@ using LiteDB.ReproRunner.Shared.Messaging;
 
 namespace LiteDB.ReproRunner.Cli.Execution;
 
+/// <summary>
+/// Executes built repro assemblies and relays their structured output.
+/// </summary>
 internal sealed class ReproExecutor
 {
     private readonly TextWriter _standardOut;
     private readonly TextWriter _standardError;
     private readonly object _writeLock = new();
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ReproExecutor"/> class using the console streams.
+    /// </summary>
     public ReproExecutor()
         : this(Console.Out, Console.Error)
     {
@@ -26,6 +32,14 @@ internal sealed class ReproExecutor
 
     internal Action<int, ReproHostMessageEnvelope>? StructuredMessageObserver { get; set; }
 
+    /// <summary>
+    /// Executes the provided repro build across the requested number of instances.
+    /// </summary>
+    /// <param name="build">The build to execute.</param>
+    /// <param name="instances">The number of instances to launch.</param>
+    /// <param name="timeoutSeconds">The timeout applied to the execution.</param>
+    /// <param name="cancellationToken">The token used to observe cancellation requests.</param>
+    /// <returns>The execution result for the run.</returns>
     public async Task<ReproExecutionResult> ExecuteAsync(
         ReproBuildResult build,
         int instances,
@@ -374,4 +388,11 @@ internal sealed class ReproExecutor
     }
 }
 
+/// <summary>
+/// Represents the result of executing a repro variant.
+/// </summary>
+/// <param name="UseProjectReference">Indicates whether the run targeted the source project build.</param>
+/// <param name="Reproduced">Indicates whether the repro successfully reproduced the issue.</param>
+/// <param name="ExitCode">The exit code reported by the repro host.</param>
+/// <param name="Duration">The elapsed time for the execution.</param>
 internal readonly record struct ReproExecutionResult(bool UseProjectReference, bool Reproduced, int ExitCode, TimeSpan Duration);

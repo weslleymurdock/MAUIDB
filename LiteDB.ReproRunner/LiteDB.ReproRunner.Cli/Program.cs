@@ -7,8 +7,16 @@ using Spectre.Console.Cli;
 
 namespace LiteDB.ReproRunner.Cli;
 
+/// <summary>
+/// Entry point for the repro runner CLI application.
+/// </summary>
 internal static class Program
 {
+    /// <summary>
+    /// Application entry point.
+    /// </summary>
+    /// <param name="args">The command-line arguments provided by the user.</param>
+    /// <returns>The process exit code.</returns>
     public static async Task<int> Main(string[] args)
     {
         using var cts = new CancellationTokenSource();

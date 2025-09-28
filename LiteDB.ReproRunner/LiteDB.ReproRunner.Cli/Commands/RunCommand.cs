@@ -16,6 +16,15 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
     private readonly ReproExecutor _executor;
     private readonly CancellationToken _cancellationToken;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="RunCommand"/> class.
+    /// </summary>
+    /// <param name="console">The console used to render output.</param>
+    /// <param name="rootLocator">Resolves the repro root directory.</param>
+    /// <param name="planner">Creates deterministic run directories.</param>
+    /// <param name="buildCoordinator">Builds repro variants before execution.</param>
+    /// <param name="executor">Executes repro variants.</param>
+    /// <param name="cancellationToken">Signals cancellation requests.</param>
     public RunCommand(
         IAnsiConsole console,
         ReproRootLocator rootLocator,
@@ -32,6 +41,12 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
         _cancellationToken = cancellationToken;
     }
 
+    /// <summary>
+    /// Executes the run command.
+    /// </summary>
+    /// <param name="context">The Spectre command context.</param>
+    /// <param name="settings">The run settings provided by the user.</param>
+    /// <returns>The process exit code.</returns>
     public override async Task<int> ExecuteAsync(CommandContext context, RunCommandSettings settings)
     {
         _cancellationToken.ThrowIfCancellationRequested();

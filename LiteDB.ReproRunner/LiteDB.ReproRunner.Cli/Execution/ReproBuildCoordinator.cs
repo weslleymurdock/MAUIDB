@@ -3,8 +3,17 @@ using System.Text;
 
 namespace LiteDB.ReproRunner.Cli.Execution;
 
+/// <summary>
+/// Coordinates building repro variants ahead of execution.
+/// </summary>
 internal sealed class ReproBuildCoordinator
 {
+    /// <summary>
+    /// Builds the provided repro variants sequentially.
+    /// </summary>
+    /// <param name="variants">The variants to build.</param>
+    /// <param name="cancellationToken">The token used to observe cancellation requests.</param>
+    /// <returns>The collection of build results for the supplied variants.</returns>
     public async Task<IReadOnlyList<ReproBuildResult>> BuildAsync(
         IEnumerable<RunVariantPlan> variants,
         CancellationToken cancellationToken)
@@ -119,6 +128,9 @@ internal sealed class ReproBuildCoordinator
     }
 }
 
+/// <summary>
+/// Represents the outcome of a repro variant build.
+/// </summary>
 internal sealed class ReproBuildResult
 {
     private ReproBuildResult(
@@ -135,26 +147,60 @@ internal sealed class ReproBuildResult
         Output = output;
     }
 
+    /// <summary>
+    /// Gets the plan that was built.
+    /// </summary>
     public RunVariantPlan Plan { get; }
 
+    /// <summary>
+    /// Gets a value indicating whether the build succeeded.
+    /// </summary>
     public bool Succeeded { get; }
 
+    /// <summary>
+    /// Gets the exit code reported by the build process.
+    /// </summary>
     public int ExitCode { get; }
 
+    /// <summary>
+    /// Gets the path to the built assembly when the build succeeds.
+    /// </summary>
     public string? AssemblyPath { get; }
 
+    /// <summary>
+    /// Gets the captured build output lines.
+    /// </summary>
     public IReadOnlyList<string> Output { get; }
 
+    /// <summary>
+    /// Creates a successful build result for the specified plan.
+    /// </summary>
+    /// <param name="plan">The plan that was built.</param>
+    /// <param name="assemblyPath">The path to the produced assembly.</param>
+    /// <param name="output">The captured output from the build process.</param>
+    /// <returns>The successful build result.</returns>
     public static ReproBuildResult CreateSuccess(RunVariantPlan plan, string assemblyPath, IReadOnlyList<string> output)
     {
         return new ReproBuildResult(plan, succeeded: true, exitCode: 0, assemblyPath: assemblyPath, output: output);
     }
 
+    /// <summary>
+    /// Creates a failed build result for the specified plan.
+    /// </summary>
+    /// <param name="plan">The plan that was built.</param>
+    /// <param name="exitCode">The exit code returned by the build process.</param>
+    /// <param name="output">The captured output from the build process.</param>
+    /// <returns>The failed build result.</returns>
     public static ReproBuildResult CreateFailure(RunVariantPlan plan, int exitCode, IReadOnlyList<string> output)
     {
         return new ReproBuildResult(plan, succeeded: false, exitCode: exitCode, assemblyPath: null, output: output);
     }
 
+    /// <summary>
+    /// Creates a build result indicating that the repro project was not found.
+    /// </summary>
+    /// <param name="plan">The plan that failed to build.</param>
+    /// <returns>The build result representing the missing project.</returns>
     public static ReproBuildResult CreateMissingProject(RunVariantPlan plan)
     {
         var output = new List<string> { "No project file was discovered for this repro." };

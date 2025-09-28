@@ -6,26 +6,45 @@ namespace LiteDB.ReproRunner.Cli.Commands;
 
 internal sealed class RunCommandSettings : RootCommandSettings
 {
+    /// <summary>
+    /// Gets or sets the identifier of the repro to execute.
+    /// </summary>
     [CommandArgument(0, "[id]")]
     [Description("Identifier of the repro to run.")]
     public string? Id { get; set; }
 
+    /// <summary>
+    /// Gets or sets a value indicating whether all repros should be executed.
+    /// </summary>
     [CommandOption("--all")]
     [Description("Run every repro in sequence.")]
     public bool All { get; set; }
 
+    /// <summary>
+    /// Gets or sets the number of instances to launch for each repro.
+    /// </summary>
     [CommandOption("--instances <N>")]
     [Description("Override the number of instances to launch.")]
     public int? Instances { get; set; }
 
+    /// <summary>
+    /// Gets or sets the timeout to apply to each repro execution, in seconds.
+    /// </summary>
     [CommandOption("--timeout <SECONDS>")]
     [Description("Override the timeout applied to each repro.")]
     public int? Timeout { get; set; }
 
+    /// <summary>
+    /// Gets or sets a value indicating whether validation failures should be ignored.
+    /// </summary>
     [CommandOption("--skipValidation")]
     [Description("Allow execution even when manifest validation fails.")]
     public bool SkipValidation { get; set; }
 
+    /// <summary>
+    /// Validates the run command settings.
+    /// </summary>
+    /// <returns>The validation result describing any errors.</returns>
     public override ValidationResult Validate()
     {
         if (All && Id is not null)
