@@ -37,6 +37,7 @@ namespace LiteDB
 
             // get BsonDocument from object
             var doc = _mapper.ToDocument(entity);
+            this.ApplyWriteTransforms(entity, doc);
 
             // set document _id using id parameter
             doc["_id"] = id;

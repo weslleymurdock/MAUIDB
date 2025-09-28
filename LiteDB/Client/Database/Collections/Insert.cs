@@ -16,6 +16,7 @@ namespace LiteDB
 
             var doc = _mapper.ToDocument(entity);
             var removed = this.RemoveDocId(doc);
+            this.ApplyWriteTransforms(entity, doc);
 
             _engine.Insert(_collection, new[] { doc }, _autoId);
 
@@ -39,6 +40,7 @@ namespace LiteDB
             if (id == null || id.IsNull) throw new ArgumentNullException(nameof(id));
 
             var doc = _mapper.ToDocument(entity);
+            this.ApplyWriteTransforms(entity, doc);
 
             doc["_id"] = id;
 
@@ -75,6 +77,7 @@ namespace LiteDB
             {
                 var doc = _mapper.ToDocument(document);
                 var removed = this.RemoveDocId(doc);
+                this.ApplyWriteTransforms(document, doc);
 
                 yield return doc;
 
