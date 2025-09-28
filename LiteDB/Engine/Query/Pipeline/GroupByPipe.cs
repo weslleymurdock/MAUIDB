@@ -50,18 +50,17 @@ namespace LiteDB.Engine
 
             if (query.OrderBy != null)
             {
-                result = this.OrderGroupedResult(result, query.OrderBy, query.Offset, query.Limit);
-            }
-            else
-            {
-                // apply offset
-                if (query.Offset > 0) result = result.Skip(query.Offset);
-
-                // apply limit
-                if (query.Limit < int.MaxValue) result = result.Take(query.Limit);
+                return this.OrderGroupedResult(result, query.OrderBy, query.Offset, query.Limit)
+                    .Select(x => x.Document);
             }
 
-            return result;
+            // apply offset
+            if (query.Offset > 0) result = result.Skip(query.Offset);
+
+            // apply limit
+            if (query.Limit < int.MaxValue) result = result.Take(query.Limit);
+
+            return result.Select(x => x.Document);
         }
 
         /// <summary>
@@ -116,7 +115,20 @@ namespace LiteDB.Engine
         /// Run Select expression over a group source - each group will return a single value
         /// If contains Having expression, test if result = true before run Select
         /// </summary>
-        private IEnumerable<BsonDocument> SelectGroupBy(IEnumerable<DocumentCacheEnumerable> groups, GroupBy groupBy)
+        private readonly struct GroupedResult
+        {
+            public GroupedResult(BsonValue key, BsonDocument document)
+            {
+                this.Key = key;
+                this.Document = document;
+            }
+
+            public BsonValue Key { get; }
+
+            public BsonDocument Document { get; }
+        }
+
+        private IEnumerable<GroupedResult> SelectGroupBy(IEnumerable<DocumentCacheEnumerable> groups, GroupBy groupBy)
         {
             var defaultName = groupBy.Select.DefaultFieldName();
 
@@ -124,6 +136,12 @@ namespace LiteDB.Engine
             {
                 // transfom group result if contains select expression
                 BsonValue value;
+                var key = BsonValue.Null;
+
+                if (groupBy.Select.Parameters != null && groupBy.Select.Parameters.TryGetValue("key", out var storedKey))
+                {
+                    key = storedKey;
+                }
 
                 try
                 {
@@ -136,18 +154,11 @@ namespace LiteDB.Engine
 
                     if (ReferenceEquals(groupBy.Select, BsonExpression.Root))
                     {
-                        var key = BsonValue.Null;
-
-                        if (groupBy.Select.Parameters != null && groupBy.Select.Parameters.TryGetValue("key", out var storedKey))
-                        {
-                            key = storedKey;
-                        }
-
                         var items = new BsonArray();
 
-                        foreach (var document in group)
+                        foreach (var groupDocument in group)
                         {
-                            items.Add(document);
+                            items.Add(groupDocument);
                         }
 
                         value = new BsonDocument
@@ -166,38 +177,49 @@ namespace LiteDB.Engine
                     group.Dispose();
                 }
 
+                BsonDocument document;
+
                 if (value.IsDocument)
                 {
-                    yield return value.AsDocument;
+                    document = value.AsDocument;
                 }
                 else
                 {
-                    yield return new BsonDocument { [defaultName] = value };
+                    document = new BsonDocument { [defaultName] = value };
                 }
+
+                yield return new GroupedResult(key, document);
             }
         }
 
         /// <summary>
         /// Apply ORDER BY over grouped projection using in-memory sorting.
         /// </summary>
-        private IEnumerable<BsonDocument> OrderGroupedResult(IEnumerable<BsonDocument> source, OrderBy orderBy, int offset, int limit)
+        private IEnumerable<GroupedResult> OrderGroupedResult(IEnumerable<GroupedResult> source, OrderBy orderBy, int offset, int limit)
         {
             var segments = orderBy.Segments;
             var orders = segments.Select(x => x.Order).ToArray();
-            var buffer = new List<(SortKey Key, BsonDocument Document)>();
+            var buffer = new List<(SortKey Key, GroupedResult Result)>();
 
-            foreach (var document in source)
+            foreach (var item in source)
             {
                 var values = new BsonValue[segments.Count];
 
                 for (var i = 0; i < segments.Count; i++)
                 {
-                    values[i] = segments[i].Expression.ExecuteScalar(document, _pragmas.Collation);
+                    var expression = segments[i].Expression;
+
+                    if (expression.Parameters != null)
+                    {
+                        expression.Parameters["key"] = item.Key;
+                    }
+
+                    values[i] = expression.ExecuteScalar(item.Document, _pragmas.Collation);
                 }
 
                 var key = SortKey.FromValues(values, orders);
 
-                buffer.Add((key, document));
+                buffer.Add((key, item));
             }
 
             buffer.Sort((left, right) => left.Key.CompareTo(right.Key, _pragmas.Collation));
@@ -213,7 +235,7 @@ namespace LiteDB.Engine
                     continue;
                 }
 
-                yield return item.Document;
+                yield return item.Result;
 
                 returned++;
 
