@@ -2,6 +2,9 @@
 
 LiteDB uses GitVersion for semantic versioning across local builds and CI. The configuration lives in `GitVersion.yml` and is consumed by both MSBuild (via `GitVersion.MsBuild`) and the GitHub workflows.
 
+> [!NOTE]
+> Environments that expose the repository as a detached worktree or otherwise hide the `.git/HEAD` sentinel (for example, some test harnesses) automatically fall back to a static `0.0.0-detached` version so builds can proceed without GitVersion.
+
 ## Branch semantics
 
 - `master` is the mainline branch. Each direct commit or merge increments the patch number unless an annotated `v*` tag (or `+semver:` directive) requests a larger bump.

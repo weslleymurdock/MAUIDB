@@ -84,6 +84,11 @@ jobs:
         if: success()
         run: dotnet pack LiteDB/LiteDB.csproj --configuration Release --no-build -o artifacts /p:ContinuousIntegrationBuild=true
 
+      # if delete all nuget packages which are named ``0.0.0-detached.nupkg`` (leftover from detached builds)
+      - name: Clean up detached packages
+        run: |
+          find artifacts -name "0.0.0-detached.nupkg" -delete
+
       - name: Retrieve secrets from Bitwarden
         uses: bitwarden/sm-action@v2
         with:
