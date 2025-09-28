@@ -1,3 +1,4 @@
+using System.Threading.Channels;
 using System.Xml.Linq;
 using LiteDB.ReproRunner.Cli.Execution;
 using LiteDB.ReproRunner.Cli.Infrastructure;
@@ -11,6 +12,8 @@ namespace LiteDB.ReproRunner.Cli.Commands;
 
 internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
 {
+    private const int MaxLogLines = 5;
+
     private readonly IAnsiConsole _console;
     private readonly ReproRootLocator _rootLocator;
     private readonly RunDirectoryPlanner _planner;
@@ -72,10 +75,8 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
             return 1;
         }
 
-        const int MaxLogLines = 5;
         var table = new Table().Border(TableBorder.Rounded).AddColumns("Repro", "Repro Version", "Reproduced", "Fixed");
         var logLines = new List<string>();
-        var logSync = new object();
         var layout = new Layout("root")
             .SplitRows(
                 new Layout("logs").Size(8),
@@ -86,63 +87,31 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
         var overallExitCode = 0;
         var plannedVariants = new List<RunVariantPlan>();
         var buildFailures = new List<BuildFailure>();
-
-        static IRenderable CreateLogView(IReadOnlyList<string> lines)
+        var uiUpdates = Channel.CreateUnbounded<UiUpdate>(new UnboundedChannelOptions
         {
-            var logTable = new Table().Border(TableBorder.Rounded);
-            logTable.AddColumn(new TableColumn("[bold]Recent Logs[/]").LeftAligned());
-
-            if (lines.Count == 0)
-            {
-                logTable.AddRow("[dim]No log entries.[/]");
-            }
-            else
-            {
-                foreach (var line in lines)
-                {
-                    logTable.AddRow(line);
-                }
-            }
-
-            return logTable;
-        }
-
-        static string FormatLogLine(ReproExecutionLogEntry entry)
-        {
-            var levelMarkup = entry.Level switch
-            {
-                ReproHostLogLevel.Error or ReproHostLogLevel.Critical => "[red]ERR[/]",
-                ReproHostLogLevel.Warning => "[yellow]WRN[/]",
-                ReproHostLogLevel.Debug => "[grey]DBG[/]",
-                ReproHostLogLevel.Trace => "[grey]TRC[/]",
-                _ => "[grey]INF[/]"
-            };
-
-            return $"{levelMarkup} [dim]#{entry.InstanceIndex}[/] {Markup.Escape(entry.Message)}";
-        }
+            SingleReader = true,
+            AllowSynchronousContinuations = false
+        });
 
         try
         {
             await _console.Live(layout).StartAsync(async ctx =>
             {
+                var uiTask = ProcessUiUpdatesAsync(uiUpdates.Reader, table, layout, logLines, ctx, _cancellationToken);
+                var writer = uiUpdates.Writer;
                 var previousObserver = _executor.LogObserver;
                 var previousSuppression = _executor.SuppressConsoleLogOutput;
                 _executor.SuppressConsoleLogOutput = true;
                 _executor.LogObserver = entry =>
                 {
-                    lock (logSync)
-                    {
-                        logLines.Add(FormatLogLine(entry));
-                        while (logLines.Count > MaxLogLines)
-                        {
-                            logLines.RemoveAt(0);
-                        }
-
-                        layout["logs"].Update(CreateLogView(logLines));
-                    }
-
-                    ctx.Refresh();
+                    var formatted = FormatLogLine(entry);
+                    writer.TryWrite(new LogLineUpdate(formatted));
                 };
+
+                void QueueRow(string reproId, string version, string reproduced, string fixedStatus)
+                {
+                    writer.TryWrite(new TableRowUpdate(reproId, version, reproduced, fixedStatus));
+                }
 
                 try
                 {
@@ -156,16 +125,14 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
                         {
                             if (!settings.SkipValidation)
                             {
-                                table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
-                                ctx.Refresh();
+                                QueueRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
                                 overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
                                 continue;
                             }
 
                             if (repro.Manifest is null)
                             {
-                                table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
-                                ctx.Refresh();
+                                QueueRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
                                 overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
                                 continue;
                             }
@@ -173,8 +140,7 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
 
                         if (repro.Manifest is null)
                         {
-                            table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Missing[/]", "[red]❌[/]", "[red]❌[/]");
-                            ctx.Refresh();
+                            QueueRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Missing[/]", "[red]❌[/]", "[red]❌[/]");
                             overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
                             continue;
                         }
@@ -184,16 +150,14 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
 
                         if (manifest.RequiresParallel && instances < 2)
                         {
-                            table.AddRow(Markup.Escape(manifest.Id), "[red]Config Error[/]", "[red]❌[/]", "[red]❌[/]");
-                            ctx.Refresh();
+                            QueueRow(Markup.Escape(manifest.Id), "[red]Config Error[/]", "[red]❌[/]", "[red]❌[/]");
                             overallExitCode = 1;
                             continue;
                         }
 
                         if (repro.ProjectPath is null)
                         {
-                            table.AddRow(Markup.Escape(manifest.Id), "[red]Project Missing[/]", "[red]❌[/]", "[red]❌[/]");
-                            ctx.Refresh();
+                            QueueRow(Markup.Escape(manifest.Id), "[red]Project Missing[/]", "[red]❌[/]", "[red]❌[/]");
                             overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
                             continue;
                         }
@@ -282,14 +246,22 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
                             overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
                         }
 
-                        table.AddRow(Markup.Escape(candidate.Manifest.Id), versionCell, reproducedStatus, fixedStatus);
-                        ctx.Refresh();
+                        QueueRow(Markup.Escape(candidate.Manifest.Id), versionCell, reproducedStatus, fixedStatus);
                     }
                 }
                 finally
                 {
                     _executor.LogObserver = previousObserver;
                     _executor.SuppressConsoleLogOutput = previousSuppression;
+                    writer.TryComplete();
+
+                    try
+                    {
+                        await uiTask.ConfigureAwait(false);
+                    }
+                    catch (OperationCanceledException)
+                    {
+                    }
                 }
             }).ConfigureAwait(false);
             if (buildFailures.Count > 0)
@@ -384,4 +356,80 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
         RunVariantPlan LatestPlan);
 
     private sealed record BuildFailure(string ManifestId, string Variant, IReadOnlyList<string> Output);
+
+    private static IRenderable CreateLogView(IReadOnlyList<string> lines)
+    {
+        var logTable = new Table().Border(TableBorder.Rounded);
+        logTable.AddColumn(new TableColumn("[bold]Recent Logs[/]").LeftAligned());
+
+        if (lines.Count == 0)
+        {
+            logTable.AddRow("[dim]No log entries.[/]");
+        }
+        else
+        {
+            foreach (var line in lines)
+            {
+                logTable.AddRow(line);
+            }
+        }
+
+        return logTable;
+    }
+
+    private static string FormatLogLine(ReproExecutionLogEntry entry)
+    {
+        var levelMarkup = entry.Level switch
+        {
+            ReproHostLogLevel.Error or ReproHostLogLevel.Critical => "[red]ERR[/]",
+            ReproHostLogLevel.Warning => "[yellow]WRN[/]",
+            ReproHostLogLevel.Debug => "[grey]DBG[/]",
+            ReproHostLogLevel.Trace => "[grey]TRC[/]",
+            _ => "[grey]INF[/]"
+        };
+
+        return $"{levelMarkup} [dim]#{entry.InstanceIndex}[/] {Markup.Escape(entry.Message)}";
+    }
+
+    private static async Task ProcessUiUpdatesAsync(
+        ChannelReader<UiUpdate> reader,
+        Table table,
+        Layout layout,
+        List<string> logLines,
+        LiveDisplayContext context,
+        CancellationToken cancellationToken)
+    {
+        try
+        {
+            await foreach (var update in reader.ReadAllAsync(cancellationToken).ConfigureAwait(false))
+            {
+                switch (update)
+                {
+                    case LogLineUpdate logUpdate:
+                        logLines.Add(logUpdate.Line);
+                        while (logLines.Count > MaxLogLines)
+                        {
+                            logLines.RemoveAt(0);
+                        }
+
+                        layout["logs"].Update(CreateLogView(logLines));
+                        break;
+                    case TableRowUpdate rowUpdate:
+                        table.AddRow(rowUpdate.ReproId, rowUpdate.Version, rowUpdate.Reproduced, rowUpdate.Fixed);
+                        break;
+                }
+
+                context.Refresh();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+        }
+    }
+
+    private abstract record UiUpdate;
+
+    private sealed record LogLineUpdate(string Line) : UiUpdate;
+
+    private sealed record TableRowUpdate(string ReproId, string Version, string Reproduced, string Fixed) : UiUpdate;
 }
