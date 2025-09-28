@@ -21,7 +21,14 @@ namespace LiteDB.Tests.QueryTest
 
             var actual = collection.Query()
                 .GroupBy(x => x.Age)
-                .Select(g => new { Age = g.Key, Count = g.Count() })
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
                 .OrderBy(x => x.Age)
                 .ToArray()
                 .Select(x => (x.Age, x.Count))
@@ -44,7 +51,14 @@ namespace LiteDB.Tests.QueryTest
 
             var actual = collection.Query()
                 .GroupBy(x => x.Date.Year)
-                .Select(g => new { Year = g.Key, Sum = g.Sum(p => p.Age) })
+                .Select
+                (
+                    g => new
+                    {
+                        Year = g.Key,
+                        Sum = g.Sum(p => p.Age)
+                    }
+                )
                 .OrderBy(x => x.Year)
                 .ToArray()
                 .Select(x => (x.Year, x.Sum))
@@ -61,7 +75,14 @@ namespace LiteDB.Tests.QueryTest
 
             var expected = local
                 .GroupBy(x => x.Age)
-                .Select(g => new { Age = g.Key, Count = g.Count() })
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
                 .OrderByDescending(x => x.Count)
                 .ThenBy(x => x.Age)
                 .Skip(5)
@@ -71,7 +92,14 @@ namespace LiteDB.Tests.QueryTest
 
             var actual = collection.Query()
                 .GroupBy(x => x.Age)
-                .Select(g => new { Age = g.Key, Count = g.Count() })
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
                 .OrderByDescending(x => x.Count)
                 .ThenBy(x => x.Age)
                 .Skip(5)
@@ -92,11 +120,14 @@ namespace LiteDB.Tests.QueryTest
             var expected = local
                 .GroupBy(x => x.Age)
                 .OrderBy(g => g.Key)
-                .Select(g => new
-                {
-                    Key = g.Key,
-                    Names = g.OrderBy(p => p.Name).Select(p => p.Name).ToArray()
-                })
+                .Select
+                (
+                    g => new
+                    {
+                        Key = g.Key,
+                        Names = g.OrderBy(p => p.Name).Select(p => p.Name).ToArray()
+                    }
+                )
                 .ToArray();
 
             var groupings = collection.Query()
@@ -107,15 +138,126 @@ namespace LiteDB.Tests.QueryTest
 
             var actual = groupings
                 .OrderBy(g => g.Key)
-                .Select(g => new
-                {
-                    g.Key,
-                    Names = g.OrderBy(p => p.Name).Select(p => p.Name).ToArray()
-                })
+                .Select
+                (
+                    g => new
+                    {
+                        g.Key,
+                        Names = g.OrderBy(p => p.Name).Select(p => p.Name).ToArray()
+                    }
+                )
                 .ToArray();
 
             actual.Should().BeEquivalentTo(expected, options => options.WithStrictOrdering());
         }
 
+        [Fact]
+        public void Query_GroupBy_OrderBy_Key_Before_Select_Should_Work()
+        {
+            using var db = new PersonGroupByData();
+            var (collection, local) = db.GetData();
+
+            // This test specifically targets the bug where OrderBy(g => g.Key) before Select()
+            // causes issues with @key parameter binding in the GroupByPipe
+            var expected = local
+                .GroupBy(x => x.Age)
+                .OrderBy(g => g.Key) // Order by key BEFORE projection
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
+                .ToArray();
+
+            var actual = collection.Query()
+                .GroupBy(x => x.Age)
+                .OrderBy(g => g.Key) // This should work but currently fails due to @key not being bound
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
+                .ToArray();
+
+            actual.Should().BeEquivalentTo(expected, options => options.WithStrictOrdering());
+        }
+
+        [Fact]
+        public void Query_GroupBy_OrderByDescending_Key_Before_Select_Should_Work()
+        {
+            using var db = new PersonGroupByData();
+            var (collection, local) = db.GetData();
+
+            // Test descending order as well to ensure the fix works for both directions
+            var expected = local
+                .GroupBy(x => x.Age)
+                .OrderByDescending(g => g.Key) // Order by key descending BEFORE projection
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
+                .ToArray();
+
+            var actual = collection.Query()
+                .GroupBy(x => x.Age)
+                .OrderByDescending(g => g.Key) // This should work but currently fails
+                .Select
+                (
+                    g => new
+                    {
+                        Age = g.Key,
+                        Count = g.Count()
+                    }
+                )
+                .ToArray();
+
+            actual.Should().BeEquivalentTo(expected, options => options.WithStrictOrdering());
+        }
+
+        [Fact]
+        public void Query_GroupBy_Complex_Key_OrderBy_Before_Select_Should_Work()
+        {
+            using var db = new PersonGroupByData();
+            var (collection, local) = db.GetData();
+
+            // Test with a more complex grouping key to ensure the fix works with different key types
+            var expected = local
+                .GroupBy(x => x.Date.Year)
+                .OrderBy(g => g.Key) // Order by year key BEFORE projection
+                .Select
+                (
+                    g => new
+                    {
+                        Year = g.Key,
+                        TotalAge = g.Sum(p => p.Age)
+                    }
+                )
+                .ToArray();
+
+            var actual = collection.Query()
+                .GroupBy(x => x.Date.Year)
+                .OrderBy(g => g.Key) // This should work but currently fails
+                .Select
+                (
+                    g => new
+                    {
+                        Year = g.Key,
+                        TotalAge = g.Sum(p => p.Age)
+                    }
+                )
+                .ToArray();
+
+            actual.Should().BeEquivalentTo(expected, options => options.WithStrictOrdering());
+        }
     }
 }
