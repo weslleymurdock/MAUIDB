@@ -1,12 +1,116 @@
-﻿using FluentAssertions;
-using LiteDB.Tests;
+﻿using System.IO;
 using System.Linq;
+
+using FluentAssertions;
+using LiteDB;
+using LiteDB.Engine;
+using LiteDB.Tests;
 using Xunit;
 
 namespace LiteDB.Tests.QueryTest
 {
     public class GroupBy_Tests
     {
+        [Fact]
+        [Trait("Area", "GroupBy")]
+        public void Having_Sees_Group_Key()
+        {
+            using var stream = new MemoryStream();
+            using var db = new LiteDatabase(stream);
+            var col = db.GetCollection<GroupItem>("numbers");
+
+            for (var i = 1; i <= 5; i++)
+            {
+                col.Insert(new GroupItem { Id = i, Value = i, Parity = i % 2 });
+            }
+
+            var results = col.Query()
+                .GroupBy(x => x.Parity)
+                .Having(BsonExpression.Create("@key = 1"))
+                .Select(g => new { g.Key, Count = g.Count() })
+                .ToArray();
+
+            var because = $"HAVING must see @key; got {results.Length} groups.";
+            results.Should().HaveCount(1, because);
+            results[0].Key.Should().Be(1, "HAVING must filter on the grouping key value 1.");
+            results[0].Count.Should().Be(3, "HAVING must aggregate the odd values (1, 3, 5).");
+        }
+
+        [Fact]
+        [Trait("Area", "GroupBy")]
+        public void GroupBy_Respects_Collation_For_Key_Equality()
+        {
+            using var dataStream = new MemoryStream();
+            using var engine = new LiteEngine(new EngineSettings
+            {
+                DataStream = dataStream,
+                Collation = new Collation("en-US/IgnoreCase")
+            });
+            using var db = new LiteDatabase(engine, disposeOnClose: false);
+            var col = db.GetCollection<NamedItem>("names");
+
+            col.Insert(new NamedItem { Id = 1, Name = "ALICE" });
+            col.Insert(new NamedItem { Id = 2, Name = "alice" });
+            col.Insert(new NamedItem { Id = 3, Name = "Alice" });
+
+            var results = col.Query()
+                .GroupBy(x => x.Name)
+                .Select(g => new { g.Key, Count = g.Count() })
+                .ToArray();
+
+            var because = $"Grouping equality must honor the configured case-insensitive collation; got {results.Length} groups.";
+            results.Should().HaveCount(1, because);
+            results[0].Count.Should().Be(3, "Grouping equality must honor the configured case-insensitive collation.");
+        }
+
+        [Fact]
+        [Trait("Area", "GroupBy")]
+        public void OrderBy_Count_Before_Select_Uses_Group_Not_Projection()
+        {
+            using var stream = new MemoryStream();
+            using var db = new LiteDatabase(stream);
+            var col = db.GetCollection<CategoryItem>("items");
+
+            col.Insert(new CategoryItem { Id = 1, Category = "A" });
+            col.Insert(new CategoryItem { Id = 2, Category = "A" });
+            col.Insert(new CategoryItem { Id = 3, Category = "A" });
+            col.Insert(new CategoryItem { Id = 4, Category = "B" });
+            col.Insert(new CategoryItem { Id = 5, Category = "B" });
+            col.Insert(new CategoryItem { Id = 6, Category = "C" });
+
+            var ascending = col.Query()
+                .GroupBy(x => x.Category)
+                .OrderBy(g => g.Count())
+                .Select(g => new { g.Key, Size = g.Count() })
+                .ToArray();
+
+            var ascendingSizes = ascending.Select(x => x.Size).ToArray();
+            ascendingSizes.Should().Equal(new[] { 1, 2, 3 },
+                "OrderBy aggregate must be evaluated over the group source before projection (ascending). Actual: {0}",
+                string.Join(", ", ascendingSizes));
+
+            var ascendingKeys = ascending.Select(x => x.Key).ToArray();
+            ascendingKeys.Should().Equal(new[] { "C", "B", "A" },
+                "OrderBy aggregate must order groups by their aggregated size (ascending). Actual: {0}",
+                string.Join(", ", ascendingKeys));
+
+            var descending = col.Query()
+                .GroupBy(x => x.Category)
+                .OrderByDescending(g => g.Count())
+                .Select(g => new { g.Key, Size = g.Count() })
+                .ToArray();
+
+            var descendingSizes = descending.Select(x => x.Size).ToArray();
+            descendingSizes.Should().Equal(new[] { 3, 2, 1 },
+                "OrderBy aggregate must be evaluated over the group source before projection (descending). Actual: {0}",
+                string.Join(", ", descendingSizes));
+
+            var descendingKeys = descending.Select(x => x.Key).ToArray();
+            descendingKeys.Should().Equal(new[] { "A", "B", "C" },
+                "OrderBy aggregate must order groups by their aggregated size (descending). Actual: {0}",
+                string.Join(", ", descendingKeys));
+        }
+
         [Fact]
         public void Query_GroupBy_Age_With_Count()
         {
@@ -259,5 +363,29 @@ namespace LiteDB.Tests.QueryTest
 
             actual.Should().BeEquivalentTo(expected, options => options.WithStrictOrdering());
         }
+
+        private class GroupItem
+        {
+            public int Id { get; set; }
+
+            public int Value { get; set; }
+
+            public int Parity { get; set; }
+        }
+
+        private class NamedItem
+        {
+            public int Id { get; set; }
+
+            public string Name { get; set; } = string.Empty;
+        }
+
+        private class CategoryItem
+        {
+            public int Id { get; set; }
+
+            public string Category { get; set; } = string.Empty;
+        }
+
     }
 }
