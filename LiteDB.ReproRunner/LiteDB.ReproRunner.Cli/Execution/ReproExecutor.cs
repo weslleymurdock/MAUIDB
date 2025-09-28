@@ -32,6 +32,10 @@ internal sealed class ReproExecutor
 
     internal Action<int, ReproHostMessageEnvelope>? StructuredMessageObserver { get; set; }
 
+    internal Action<ReproExecutionLogEntry>? LogObserver { get; set; }
+
+    internal bool SuppressConsoleLogOutput { get; set; }
+
     /// <summary>
     /// Executes the provided repro build across the requested number of instances.
     /// </summary>
@@ -288,9 +292,17 @@ internal sealed class ReproExecutor
     private void WriteLogMessage(int instanceIndex, ReproHostMessageEnvelope envelope)
     {
         var message = envelope.Text ?? string.Empty;
+        var level = envelope.Level ?? ReproHostLogLevel.Information;
         var formatted = $"[{instanceIndex}] {message}";
 
-        switch (envelope.Level)
+        LogObserver?.Invoke(new ReproExecutionLogEntry(instanceIndex, message, level));
+
+        if (SuppressConsoleLogOutput)
+        {
+            return;
+        }
+
+        switch (level)
         {
             case ReproHostLogLevel.Error:
             case ReproHostLogLevel.Critical:
@@ -396,3 +408,11 @@ internal sealed class ReproExecutor
 /// <param name="ExitCode">The exit code reported by the repro host.</param>
 /// <param name="Duration">The elapsed time for the execution.</param>
 internal readonly record struct ReproExecutionResult(bool UseProjectReference, bool Reproduced, int ExitCode, TimeSpan Duration);
+
+/// <summary>
+/// Represents a structured log entry emitted during repro execution.
+/// </summary>
+/// <param name="InstanceIndex">The zero-based instance index originating the log entry.</param>
+/// <param name="Message">The log message text.</param>
+/// <param name="Level">The severity associated with the log entry.</param>
+internal readonly record struct ReproExecutionLogEntry(int InstanceIndex, string Message, ReproHostLogLevel Level);

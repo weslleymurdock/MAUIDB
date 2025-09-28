@@ -2,8 +2,10 @@ using System.Xml.Linq;
 using LiteDB.ReproRunner.Cli.Execution;
 using LiteDB.ReproRunner.Cli.Infrastructure;
 using LiteDB.ReproRunner.Cli.Manifests;
+using LiteDB.ReproRunner.Shared.Messaging;
 using Spectre.Console;
 using Spectre.Console.Cli;
+using Spectre.Console.Rendering;
 
 namespace LiteDB.ReproRunner.Cli.Commands;
 
@@ -70,153 +72,224 @@ internal sealed class RunCommand : AsyncCommand<RunCommandSettings>
             return 1;
         }
 
+        const int MaxLogLines = 5;
         var table = new Table().Border(TableBorder.Rounded).AddColumns("Repro", "Repro Version", "Reproduced", "Fixed");
+        var logLines = new List<string>();
+        var logSync = new object();
+        var layout = new Layout("root")
+            .SplitRows(
+                new Layout("logs").Size(8),
+                new Layout("results"));
+
+        layout["results"].Update(table);
+        layout["logs"].Update(CreateLogView(logLines));
         var overallExitCode = 0;
         var plannedVariants = new List<RunVariantPlan>();
         var buildFailures = new List<BuildFailure>();
 
+        static IRenderable CreateLogView(IReadOnlyList<string> lines)
+        {
+            var logTable = new Table().Border(TableBorder.Rounded);
+            logTable.AddColumn(new TableColumn("[bold]Recent Logs[/]").LeftAligned());
+
+            if (lines.Count == 0)
+            {
+                logTable.AddRow("[dim]No log entries.[/]");
+            }
+            else
+            {
+                foreach (var line in lines)
+                {
+                    logTable.AddRow(line);
+                }
+            }
+
+            return logTable;
+        }
+
+        static string FormatLogLine(ReproExecutionLogEntry entry)
+        {
+            var levelMarkup = entry.Level switch
+            {
+                ReproHostLogLevel.Error or ReproHostLogLevel.Critical => "[red]ERR[/]",
+                ReproHostLogLevel.Warning => "[yellow]WRN[/]",
+                ReproHostLogLevel.Debug => "[grey]DBG[/]",
+                ReproHostLogLevel.Trace => "[grey]TRC[/]",
+                _ => "[grey]INF[/]"
+            };
+
+            return $"{levelMarkup} [dim]#{entry.InstanceIndex}[/] {Markup.Escape(entry.Message)}";
+        }
+
         try
         {
-            await _console.Live(table).StartAsync(async ctx =>
+            await _console.Live(layout).StartAsync(async ctx =>
             {
-                var candidates = new List<RunCandidate>();
-
-                foreach (var repro in selected)
+                var previousObserver = _executor.LogObserver;
+                var previousSuppression = _executor.SuppressConsoleLogOutput;
+                _executor.SuppressConsoleLogOutput = true;
+                _executor.LogObserver = entry =>
                 {
-                    _cancellationToken.ThrowIfCancellationRequested();
-
-                    if (!repro.IsValid)
+                    lock (logSync)
                     {
-                        if (!settings.SkipValidation)
+                        logLines.Add(FormatLogLine(entry));
+                        while (logLines.Count > MaxLogLines)
                         {
-                            table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
-                            ctx.Refresh();
-                            overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
-                            continue;
+                            logLines.RemoveAt(0);
+                        }
+
+                        layout["logs"].Update(CreateLogView(logLines));
+                    }
+
+                    ctx.Refresh();
+                };
+
+                try
+                {
+                    var candidates = new List<RunCandidate>();
+
+                    foreach (var repro in selected)
+                    {
+                        _cancellationToken.ThrowIfCancellationRequested();
+
+                        if (!repro.IsValid)
+                        {
+                            if (!settings.SkipValidation)
+                            {
+                                table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
+                                ctx.Refresh();
+                                overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
+                                continue;
+                            }
+
+                            if (repro.Manifest is null)
+                            {
+                                table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
+                                ctx.Refresh();
+                                overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
+                                continue;
+                            }
                         }
 
                         if (repro.Manifest is null)
                         {
-                            table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Invalid[/]", "[red]❌[/]", "[red]❌[/]");
+                            table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Missing[/]", "[red]❌[/]", "[red]❌[/]");
                             ctx.Refresh();
                             overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
                             continue;
                         }
+
+                        var manifest = repro.Manifest;
+                        var instances = settings.Instances ?? manifest.DefaultInstances;
+
+                        if (manifest.RequiresParallel && instances < 2)
+                        {
+                            table.AddRow(Markup.Escape(manifest.Id), "[red]Config Error[/]", "[red]❌[/]", "[red]❌[/]");
+                            ctx.Refresh();
+                            overallExitCode = 1;
+                            continue;
+                        }
+
+                        if (repro.ProjectPath is null)
+                        {
+                            table.AddRow(Markup.Escape(manifest.Id), "[red]Project Missing[/]", "[red]❌[/]", "[red]❌[/]");
+                            ctx.Refresh();
+                            overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
+                            continue;
+                        }
+
+                        var timeoutSeconds = settings.Timeout ?? manifest.TimeoutSeconds;
+                        var packageVersion = TryResolvePackageVersion(repro.ProjectPath);
+                        var packageDisplay = packageVersion ?? "NuGet";
+                        var packageVariantId = BuildVariantIdentifier(packageVersion);
+
+                        var packagePlan = _planner.CreateVariantPlan(
+                            repro,
+                            manifest.Id,
+                            packageVariantId,
+                            packageDisplay,
+                            useProjectReference: false);
+
+                        var latestPlan = _planner.CreateVariantPlan(
+                            repro,
+                            manifest.Id,
+                            "ver_latest",
+                            "Latest",
+                            useProjectReference: true);
+
+                        plannedVariants.Add(packagePlan);
+                        plannedVariants.Add(latestPlan);
+
+                        candidates.Add(new RunCandidate(
+                            manifest,
+                            instances,
+                            timeoutSeconds,
+                            packageDisplay,
+                            packagePlan,
+                            latestPlan));
                     }
 
-                    if (repro.Manifest is null)
+                    if (candidates.Count == 0)
                     {
-                        table.AddRow(Markup.Escape(repro.RawId ?? "(unknown)"), "[red]Missing[/]", "[red]❌[/]", "[red]❌[/]");
-                        ctx.Refresh();
-                        overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
-                        continue;
+                        return;
                     }
 
-                    var manifest = repro.Manifest;
-                    var instances = settings.Instances ?? manifest.DefaultInstances;
+                    var buildResults = await _buildCoordinator.BuildAsync(plannedVariants, _cancellationToken).ConfigureAwait(false);
+                    var buildLookup = buildResults.ToDictionary(result => result.Plan);
 
-                    if (manifest.RequiresParallel && instances < 2)
+                    foreach (var candidate in candidates)
                     {
-                        table.AddRow(Markup.Escape(manifest.Id), "[red]Config Error[/]", "[red]❌[/]", "[red]❌[/]");
+                        var packageBuild = buildLookup[candidate.PackagePlan];
+                        var latestBuild = buildLookup[candidate.LatestPlan];
+
+                        ReproExecutionResult? packageResult = null;
+                        ReproExecutionResult? latestResult = null;
+
+                        if (packageBuild.Succeeded)
+                        {
+                            packageResult = await _executor.ExecuteAsync(packageBuild, candidate.Instances, candidate.TimeoutSeconds, _cancellationToken).ConfigureAwait(false);
+                        }
+                        else
+                        {
+                            overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
+                            buildFailures.Add(new BuildFailure(candidate.Manifest.Id, candidate.PackageDisplay, packageBuild.Output));
+                        }
+
+                        if (latestBuild.Succeeded)
+                        {
+                            latestResult = await _executor.ExecuteAsync(latestBuild, candidate.Instances, candidate.TimeoutSeconds, _cancellationToken).ConfigureAwait(false);
+                        }
+                        else
+                        {
+                            overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
+                            buildFailures.Add(new BuildFailure(candidate.Manifest.Id, "Latest", latestBuild.Output));
+                        }
+
+                        var versionCell = packageBuild.Succeeded
+                            ? Markup.Escape(candidate.PackageDisplay)
+                            : "[red]Build Failed[/]";
+
+                        var reproducedStatus = packageResult is null
+                            ? "[yellow]-[/]"
+                            : (packageResult.Value.Reproduced ? "[green]✅[/]" : "[red]❌[/]");
+
+                        var fixedStatus = latestResult is null
+                            ? "[yellow]-[/]"
+                            : (latestResult.Value.Reproduced ? "[red]❌[/]" : "[green]✅[/]");
+
+                        if ((packageResult?.Reproduced ?? false) || (latestResult?.Reproduced ?? false))
+                        {
+                            overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
+                        }
+
+                        table.AddRow(Markup.Escape(candidate.Manifest.Id), versionCell, reproducedStatus, fixedStatus);
                         ctx.Refresh();
-                        overallExitCode = 1;
-                        continue;
                     }
-
-                    if (repro.ProjectPath is null)
-                    {
-                        table.AddRow(Markup.Escape(manifest.Id), "[red]Project Missing[/]", "[red]❌[/]", "[red]❌[/]");
-                        ctx.Refresh();
-                        overallExitCode = overallExitCode == 0 ? 2 : overallExitCode;
-                        continue;
-                    }
-
-                    var timeoutSeconds = settings.Timeout ?? manifest.TimeoutSeconds;
-                    var packageVersion = TryResolvePackageVersion(repro.ProjectPath);
-                    var packageDisplay = packageVersion ?? "NuGet";
-                    var packageVariantId = BuildVariantIdentifier(packageVersion);
-
-                    var packagePlan = _planner.CreateVariantPlan(
-                        repro,
-                        manifest.Id,
-                        packageVariantId,
-                        packageDisplay,
-                        useProjectReference: false);
-
-                    var latestPlan = _planner.CreateVariantPlan(
-                        repro,
-                        manifest.Id,
-                        "ver_latest",
-                        "Latest",
-                        useProjectReference: true);
-
-                    plannedVariants.Add(packagePlan);
-                    plannedVariants.Add(latestPlan);
-
-                    candidates.Add(new RunCandidate(
-                        manifest,
-                        instances,
-                        timeoutSeconds,
-                        packageDisplay,
-                        packagePlan,
-                        latestPlan));
                 }
-
-                if (candidates.Count == 0)
+                finally
                 {
-                    return;
-                }
-
-                var buildResults = await _buildCoordinator.BuildAsync(plannedVariants, _cancellationToken).ConfigureAwait(false);
-                var buildLookup = buildResults.ToDictionary(result => result.Plan);
-
-                foreach (var candidate in candidates)
-                {
-                    var packageBuild = buildLookup[candidate.PackagePlan];
-                    var latestBuild = buildLookup[candidate.LatestPlan];
-
-                    ReproExecutionResult? packageResult = null;
-                    ReproExecutionResult? latestResult = null;
-
-                    if (packageBuild.Succeeded)
-                    {
-                        packageResult = await _executor.ExecuteAsync(packageBuild, candidate.Instances, candidate.TimeoutSeconds, _cancellationToken).ConfigureAwait(false);
-                    }
-                    else
-                    {
-                        overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
-                        buildFailures.Add(new BuildFailure(candidate.Manifest.Id, candidate.PackageDisplay, packageBuild.Output));
-                    }
-
-                    if (latestBuild.Succeeded)
-                    {
-                        latestResult = await _executor.ExecuteAsync(latestBuild, candidate.Instances, candidate.TimeoutSeconds, _cancellationToken).ConfigureAwait(false);
-                    }
-                    else
-                    {
-                        overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
-                        buildFailures.Add(new BuildFailure(candidate.Manifest.Id, "Latest", latestBuild.Output));
-                    }
-
-                    var versionCell = packageBuild.Succeeded
-                        ? Markup.Escape(candidate.PackageDisplay)
-                        : "[red]Build Failed[/]";
-
-                    var reproducedStatus = packageResult is null
-                        ? "[yellow]-[/]"
-                        : (packageResult.Value.Reproduced ? "[green]✅[/]" : "[red]❌[/]");
-
-                    var fixedStatus = latestResult is null
-                        ? "[yellow]-[/]"
-                        : (latestResult.Value.Reproduced ? "[red]❌[/]" : "[green]✅[/]");
-
-                    if ((packageResult?.Reproduced ?? false) || (latestResult?.Reproduced ?? false))
-                    {
-                        overallExitCode = overallExitCode == 0 ? 1 : overallExitCode;
-                    }
-
-                    table.AddRow(Markup.Escape(candidate.Manifest.Id), versionCell, reproducedStatus, fixedStatus);
-                    ctx.Refresh();
+                    _executor.LogObserver = previousObserver;
+                    _executor.SuppressConsoleLogOutput = previousSuppression;
                 }
             }).ConfigureAwait(false);
             if (buildFailures.Count > 0)
