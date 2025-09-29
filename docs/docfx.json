@@ -1,0 +1,85 @@
+{
+  "$schema": "https://dotnet.github.io/docfx/schemas/v1.0/docfx.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../LiteDB",
+          "files": [
+            "LiteDB.csproj"
+          ]
+        },
+        {
+          "src": "../LiteDB.Shell",
+          "files": [
+            "LiteDB.Shell.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "index.md",
+          "toc.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/toc.yml"
+        ],
+        "exclude": [
+          "index.md",
+          "toc.yml",
+          "api/**",
+          "_site/**",
+          "index.xml.md"
+        ]
+      },
+      {
+        "files": [
+          "api/**.yml"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/images/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "LiteDB Documentation",
+      "_appFooter": "© LiteDB Project",
+      "_enableSearch": true,
+      "_disableContribution": false
+    },
+    "template": [
+      "default"
+    ],
+    "xref": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "markdownEngineName": "markdig",
+    "markdownEngineProperties": {
+      "extensions": [
+        "pipeTables",
+        "tasklists"
+      ]
+    }
+  }
+}

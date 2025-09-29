@@ -52,7 +52,7 @@ An index can be created over any valid `BsonExpression`.
 
 * You can use `EnsureIndex("Address")` to create an index on the embedded `Address` document.
 * `EnsureIndex("Address.Street")` creates an index on the nested `Street` field using dotted notation.
-* Indexes operate on `BsonDocument` field names. If you are using a custom `ResolvePropertyName` or `[BsonField]` attribute, reference the resolved document field name rather than the property name. See [Object Mapping](../object-mapping/).
+* Indexes operate on `BsonDocument` field names. If you are using a custom `ResolvePropertyName` or `[BsonField]` attribute, reference the resolved document field name rather than the property name. See [Object Mapping](~/object-mapping/index.md).
 * You can use a lambda expression to define an index field in a strongly typed collection: `EnsureIndex(x => x.Name)`.
 * Indexes are identified by a unique name.
 
@@ -86,7 +86,7 @@ You can create an index based on the result of an expression, including expressi
 * `collection.EnsureIndex("Total", "SUM($.Items[*].Price)")`
 * `collection.EnsureIndex("CheapBooks", "LOWER($.Books[@.Price < 20].Title)")`
 
-See [Expressions](/docs/expressions/) for more details about expressions.
+See [Expressions](~/expressions/index.md) for more details about expressions.
 
 ## Limitations
 

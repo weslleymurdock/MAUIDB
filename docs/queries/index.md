@@ -52,7 +52,7 @@ In all queries:
 * In index search, **Field** must be an index name or field in document.
 * When no index using, **Field** can be `Path` or an `Expression`
 * **Field** name on left side, **Value** (or values) on right side
-* Queries are executed in `BsonDocument` class before mapping to your object. You need to use the `BsonDocument` field name and BSON types values. If you are using a custom `ResolvePropertyName` or `[BsonField]` attribute, you must use your document field name and not the property name on your type. See [Object Mapping](Object-Mapping).
+* Queries are executed in `BsonDocument` class before mapping to your object. You need to use the `BsonDocument` field name and BSON types values. If you are using a custom `ResolvePropertyName` or `[BsonField]` attribute, you must use your document field name and not the property name on your type. See [Object Mapping](~/object-mapping/index.md).
 
 ## Find(), FindById(), FindOne() and FindAll()
 

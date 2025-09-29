@@ -1,0 +1,52 @@
+- name: Overview
+  href: index.md
+- name: Getting started
+  href: getting-started/index.md
+- name: Working with data
+  items:
+    - name: Connection string
+      href: connection-string/index.md
+    - name: Collections
+      href: collections/index.md
+    - name: BsonDocument
+      href: bsondocument/index.md
+    - name: Object mapping
+      href: object-mapping/index.md
+    - name: Repository pattern
+      href: repository-pattern/index.md
+- name: Querying and indexing
+  items:
+    - name: Queries
+      href: queries/index.md
+    - name: Indexes
+      href: indexes/index.md
+    - name: Expressions
+      href: expressions/index.md
+    - name: Collation
+      href: collation/index.md
+    - name: Pragmas
+      href: pragmas/index.md
+- name: Advanced scenarios
+  items:
+    - name: Encryption
+      href: encryption/index.md
+    - name: FileStorage
+      href: filestorage/index.md
+    - name: DbRef
+      href: dbref/index.md
+    - name: Concurrency
+      href: concurrency/index.md
+- name: Architecture
+  items:
+    - name: Data structure
+      href: data-structure/index.md
+    - name: How LiteDB works
+      href: how-litedb-works/index.md
+- name: Project information
+  items:
+    - name: Versioning
+      href: versioning/index.md
+    - name: Changelog
+      href: changelog/index.md
+- name: API reference
+  href: api/index.md
