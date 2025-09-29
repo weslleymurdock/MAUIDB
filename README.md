@@ -46,7 +46,14 @@ New UI to manage and visualize your database:
 
 ## Documentation
 
-Visit [the Wiki](https://github.com/mbdavid/LiteDB/wiki) for full documentation. For simplified chinese version, [check here](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn).
+LiteDB's documentation is built with [DocFX](https://dotnet.github.io/docfx/) from the content in [`docs/`](./docs). To generate the site locally run:
+
+```bash
+dotnet tool restore
+dotnet tool run docfx build docs/docfx.json
+```
+
+The static site output is written to `docs/_site/`. You can also serve it locally with `dotnet tool run docfx serve docs/docfx.json` for live previews. The legacy [GitHub Wiki](https://github.com/mbdavid/LiteDB/wiki) remains available while content migrates to the new site.
 
 ## LiteDB Community
 

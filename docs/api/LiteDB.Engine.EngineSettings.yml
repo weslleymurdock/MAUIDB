@@ -1,0 +1,853 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Engine.EngineSettings
+  commentId: T:LiteDB.Engine.EngineSettings
+  id: EngineSettings
+  parent: LiteDB.Engine
+  children:
+  - LiteDB.Engine.EngineSettings.AutoRebuild
+  - LiteDB.Engine.EngineSettings.Collation
+  - LiteDB.Engine.EngineSettings.DataStream
+  - LiteDB.Engine.EngineSettings.Filename
+  - LiteDB.Engine.EngineSettings.InitialSize
+  - LiteDB.Engine.EngineSettings.LogStream
+  - LiteDB.Engine.EngineSettings.Password
+  - LiteDB.Engine.EngineSettings.ReadOnly
+  - LiteDB.Engine.EngineSettings.ReadTransform
+  - LiteDB.Engine.EngineSettings.TempStream
+  - LiteDB.Engine.EngineSettings.Upgrade
+  langs:
+  - csharp
+  - vb
+  name: EngineSettings
+  nameWithType: EngineSettings
+  fullName: LiteDB.Engine.EngineSettings
+  type: Class
+  source:
+    id: EngineSettings
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 17
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: All engine settings used to starts new engine
+  example: []
+  syntax:
+    content: public class EngineSettings
+    content.vb: Public Class EngineSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.Engine.EngineSettings.DataStream
+  commentId: P:LiteDB.Engine.EngineSettings.DataStream
+  id: DataStream
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: DataStream
+  nameWithType: EngineSettings.DataStream
+  fullName: LiteDB.Engine.EngineSettings.DataStream
+  type: Property
+  source:
+    id: DataStream
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 22
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Get/Set custom stream to be used as datafile (can be MemoryStream or TempStream). Do not use FileStream - to use physical file, use "filename" attribute (and keep DataStream/WalStream null)
+  example: []
+  syntax:
+    content: public Stream DataStream { get; set; }
+    parameters: []
+    return:
+      type: System.IO.Stream
+    content.vb: Public Property DataStream As Stream
+  overload: LiteDB.Engine.EngineSettings.DataStream*
+- uid: LiteDB.Engine.EngineSettings.LogStream
+  commentId: P:LiteDB.Engine.EngineSettings.LogStream
+  id: LogStream
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: LogStream
+  nameWithType: EngineSettings.LogStream
+  fullName: LiteDB.Engine.EngineSettings.LogStream
+  type: Property
+  source:
+    id: LogStream
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 27
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Get/Set custom stream to be used as log file. If is null, use a new TempStream (for TempStream datafile) or MemoryStream (for MemoryStream datafile)
+  example: []
+  syntax:
+    content: public Stream LogStream { get; set; }
+    parameters: []
+    return:
+      type: System.IO.Stream
+    content.vb: Public Property LogStream As Stream
+  overload: LiteDB.Engine.EngineSettings.LogStream*
+- uid: LiteDB.Engine.EngineSettings.TempStream
+  commentId: P:LiteDB.Engine.EngineSettings.TempStream
+  id: TempStream
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: TempStream
+  nameWithType: EngineSettings.TempStream
+  fullName: LiteDB.Engine.EngineSettings.TempStream
+  type: Property
+  source:
+    id: TempStream
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 32
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Get/Set custom stream to be used as temp file. If is null, will create new FileStreamFactory with "-tmp" on name
+  example: []
+  syntax:
+    content: public Stream TempStream { get; set; }
+    parameters: []
+    return:
+      type: System.IO.Stream
+    content.vb: Public Property TempStream As Stream
+  overload: LiteDB.Engine.EngineSettings.TempStream*
+- uid: LiteDB.Engine.EngineSettings.Filename
+  commentId: P:LiteDB.Engine.EngineSettings.Filename
+  id: Filename
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: Filename
+  nameWithType: EngineSettings.Filename
+  fullName: LiteDB.Engine.EngineSettings.Filename
+  type: Property
+  source:
+    id: Filename
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 37
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: "Full path or relative path from DLL directory. Can use ':temp:' for temp database or ':memory:' for in-memory database. (default: null)"
+  example: []
+  syntax:
+    content: public string Filename { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Filename As String
+  overload: LiteDB.Engine.EngineSettings.Filename*
+- uid: LiteDB.Engine.EngineSettings.Password
+  commentId: P:LiteDB.Engine.EngineSettings.Password
+  id: Password
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: EngineSettings.Password
+  fullName: LiteDB.Engine.EngineSettings.Password
+  type: Property
+  source:
+    id: Password
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 42
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Get database password to decrypt pages
+  example: []
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: LiteDB.Engine.EngineSettings.Password*
+- uid: LiteDB.Engine.EngineSettings.InitialSize
+  commentId: P:LiteDB.Engine.EngineSettings.InitialSize
+  id: InitialSize
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: InitialSize
+  nameWithType: EngineSettings.InitialSize
+  fullName: LiteDB.Engine.EngineSettings.InitialSize
+  type: Property
+  source:
+    id: InitialSize
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: 'If database is new, initialize with allocated space (in bytes) (default: 0)'
+  example: []
+  syntax:
+    content: public long InitialSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property InitialSize As Long
+  overload: LiteDB.Engine.EngineSettings.InitialSize*
+- uid: LiteDB.Engine.EngineSettings.Collation
+  commentId: P:LiteDB.Engine.EngineSettings.Collation
+  id: Collation
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: Collation
+  nameWithType: EngineSettings.Collation
+  fullName: LiteDB.Engine.EngineSettings.Collation
+  type: Property
+  source:
+    id: Collation
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 52
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: 'Create database with custom string collection (used only to create database) (default: Collation.Default)'
+  example: []
+  syntax:
+    content: public Collation Collation { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.Collation
+    content.vb: Public Property Collation As Collation
+  overload: LiteDB.Engine.EngineSettings.Collation*
+- uid: LiteDB.Engine.EngineSettings.ReadOnly
+  commentId: P:LiteDB.Engine.EngineSettings.ReadOnly
+  id: ReadOnly
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly
+  nameWithType: EngineSettings.ReadOnly
+  fullName: LiteDB.Engine.EngineSettings.ReadOnly
+  type: Property
+  source:
+    id: ReadOnly
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 57
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Indicate that engine will open files in readonly mode (and will not support any database change)
+  example: []
+  syntax:
+    content: public bool ReadOnly { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property [ReadOnly] As Boolean
+  overload: LiteDB.Engine.EngineSettings.ReadOnly*
+- uid: LiteDB.Engine.EngineSettings.AutoRebuild
+  commentId: P:LiteDB.Engine.EngineSettings.AutoRebuild
+  id: AutoRebuild
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: AutoRebuild
+  nameWithType: EngineSettings.AutoRebuild
+  fullName: LiteDB.Engine.EngineSettings.AutoRebuild
+  type: Property
+  source:
+    id: AutoRebuild
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 62
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: After a Close with exception do a database rebuild on next open
+  example: []
+  syntax:
+    content: public bool AutoRebuild { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AutoRebuild As Boolean
+  overload: LiteDB.Engine.EngineSettings.AutoRebuild*
+- uid: LiteDB.Engine.EngineSettings.Upgrade
+  commentId: P:LiteDB.Engine.EngineSettings.Upgrade
+  id: Upgrade
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: Upgrade
+  nameWithType: EngineSettings.Upgrade
+  fullName: LiteDB.Engine.EngineSettings.Upgrade
+  type: Property
+  source:
+    id: Upgrade
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 67
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: If detect it's a older version (v4) do upgrade in datafile to new v5. A backup file will be keeped in same directory
+  example: []
+  syntax:
+    content: public bool Upgrade { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Upgrade As Boolean
+  overload: LiteDB.Engine.EngineSettings.Upgrade*
+- uid: LiteDB.Engine.EngineSettings.ReadTransform
+  commentId: P:LiteDB.Engine.EngineSettings.ReadTransform
+  id: ReadTransform
+  parent: LiteDB.Engine.EngineSettings
+  langs:
+  - csharp
+  - vb
+  name: ReadTransform
+  nameWithType: EngineSettings.ReadTransform
+  fullName: LiteDB.Engine.EngineSettings.ReadTransform
+  type: Property
+  source:
+    id: ReadTransform
+    path: /workspace/LiteDB/LiteDB/Engine/EngineSettings.cs
+    startLine: 72
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Is used to transform a <xref href="LiteDB.BsonValue" data-throw-if-not-resolved="false"></xref> from the database on read. This can be used to upgrade data from older versions.
+  example: []
+  syntax:
+    content: public Func<string, BsonValue, BsonValue> ReadTransform { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.String,LiteDB.BsonValue,LiteDB.BsonValue}
+    content.vb: Public Property ReadTransform As Func(Of String, BsonValue, BsonValue)
+  overload: LiteDB.Engine.EngineSettings.ReadTransform*
+references:
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.Engine.EngineSettings.DataStream*
+  commentId: Overload:LiteDB.Engine.EngineSettings.DataStream
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_DataStream
+  name: DataStream
+  nameWithType: EngineSettings.DataStream
+  fullName: LiteDB.Engine.EngineSettings.DataStream
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: LiteDB.Engine.EngineSettings.LogStream*
+  commentId: Overload:LiteDB.Engine.EngineSettings.LogStream
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_LogStream
+  name: LogStream
+  nameWithType: EngineSettings.LogStream
+  fullName: LiteDB.Engine.EngineSettings.LogStream
+- uid: LiteDB.Engine.EngineSettings.TempStream*
+  commentId: Overload:LiteDB.Engine.EngineSettings.TempStream
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_TempStream
+  name: TempStream
+  nameWithType: EngineSettings.TempStream
+  fullName: LiteDB.Engine.EngineSettings.TempStream
+- uid: LiteDB.Engine.EngineSettings.Filename*
+  commentId: Overload:LiteDB.Engine.EngineSettings.Filename
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_Filename
+  name: Filename
+  nameWithType: EngineSettings.Filename
+  fullName: LiteDB.Engine.EngineSettings.Filename
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.Engine.EngineSettings.Password*
+  commentId: Overload:LiteDB.Engine.EngineSettings.Password
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_Password
+  name: Password
+  nameWithType: EngineSettings.Password
+  fullName: LiteDB.Engine.EngineSettings.Password
+- uid: LiteDB.Engine.EngineSettings.InitialSize*
+  commentId: Overload:LiteDB.Engine.EngineSettings.InitialSize
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_InitialSize
+  name: InitialSize
+  nameWithType: EngineSettings.InitialSize
+  fullName: LiteDB.Engine.EngineSettings.InitialSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: LiteDB.Engine.EngineSettings.Collation*
+  commentId: Overload:LiteDB.Engine.EngineSettings.Collation
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_Collation
+  name: Collation
+  nameWithType: EngineSettings.Collation
+  fullName: LiteDB.Engine.EngineSettings.Collation
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.Engine.EngineSettings.ReadOnly*
+  commentId: Overload:LiteDB.Engine.EngineSettings.ReadOnly
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_ReadOnly
+  name: ReadOnly
+  nameWithType: EngineSettings.ReadOnly
+  fullName: LiteDB.Engine.EngineSettings.ReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.Engine.EngineSettings.AutoRebuild*
+  commentId: Overload:LiteDB.Engine.EngineSettings.AutoRebuild
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_AutoRebuild
+  name: AutoRebuild
+  nameWithType: EngineSettings.AutoRebuild
+  fullName: LiteDB.Engine.EngineSettings.AutoRebuild
+- uid: LiteDB.Engine.EngineSettings.Upgrade*
+  commentId: Overload:LiteDB.Engine.EngineSettings.Upgrade
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_Upgrade
+  name: Upgrade
+  nameWithType: EngineSettings.Upgrade
+  fullName: LiteDB.Engine.EngineSettings.Upgrade
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.Engine.EngineSettings.ReadTransform*
+  commentId: Overload:LiteDB.Engine.EngineSettings.ReadTransform
+  href: LiteDB.Engine.EngineSettings.html#LiteDB_Engine_EngineSettings_ReadTransform
+  name: ReadTransform
+  nameWithType: EngineSettings.ReadTransform
+  fullName: LiteDB.Engine.EngineSettings.ReadTransform
+- uid: System.Func{System.String,LiteDB.BsonValue,LiteDB.BsonValue}
+  commentId: T:System.Func{System.String,LiteDB.BsonValue,LiteDB.BsonValue}
+  parent: System
+  definition: System.Func`3
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<string, BsonValue, BsonValue>
+  nameWithType: Func<string, BsonValue, BsonValue>
+  fullName: System.Func<string, LiteDB.BsonValue, LiteDB.BsonValue>
+  nameWithType.vb: Func(Of String, BsonValue, BsonValue)
+  fullName.vb: System.Func(Of String, LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: Func(Of String, BsonValue, BsonValue)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )

@@ -1,0 +1,1109 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.SharedDataReader
+  commentId: T:LiteDB.SharedDataReader
+  id: SharedDataReader
+  parent: LiteDB
+  children:
+  - LiteDB.SharedDataReader.#ctor(LiteDB.IBsonDataReader,System.Action)
+  - LiteDB.SharedDataReader.Collection
+  - LiteDB.SharedDataReader.Current
+  - LiteDB.SharedDataReader.Dispose
+  - LiteDB.SharedDataReader.Dispose(System.Boolean)
+  - LiteDB.SharedDataReader.Finalize
+  - LiteDB.SharedDataReader.HasValues
+  - LiteDB.SharedDataReader.Item(System.String)
+  - LiteDB.SharedDataReader.Read
+  langs:
+  - csharp
+  - vb
+  name: SharedDataReader
+  nameWithType: SharedDataReader
+  fullName: LiteDB.SharedDataReader
+  type: Class
+  source:
+    id: SharedDataReader
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 8
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: 'public class SharedDataReader : IBsonDataReader, IDisposable'
+    content.vb: Public Class SharedDataReader Implements IBsonDataReader, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - LiteDB.IBsonDataReader
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.First
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.FirstOrDefault
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.Single
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.SingleOrDefault
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.ToArray
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.ToEnumerable
+  - LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.ToList
+- uid: LiteDB.SharedDataReader.#ctor(LiteDB.IBsonDataReader,System.Action)
+  commentId: M:LiteDB.SharedDataReader.#ctor(LiteDB.IBsonDataReader,System.Action)
+  id: '#ctor(LiteDB.IBsonDataReader,System.Action)'
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: SharedDataReader(IBsonDataReader, Action)
+  nameWithType: SharedDataReader.SharedDataReader(IBsonDataReader, Action)
+  fullName: LiteDB.SharedDataReader.SharedDataReader(LiteDB.IBsonDataReader, System.Action)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 15
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public SharedDataReader(IBsonDataReader reader, Action dispose)
+    parameters:
+    - id: reader
+      type: LiteDB.IBsonDataReader
+    - id: dispose
+      type: System.Action
+    content.vb: Public Sub New(reader As IBsonDataReader, dispose As Action)
+  overload: LiteDB.SharedDataReader.#ctor*
+  nameWithType.vb: SharedDataReader.New(IBsonDataReader, Action)
+  fullName.vb: LiteDB.SharedDataReader.New(LiteDB.IBsonDataReader, System.Action)
+  name.vb: New(IBsonDataReader, Action)
+- uid: LiteDB.SharedDataReader.Item(System.String)
+  commentId: P:LiteDB.SharedDataReader.Item(System.String)
+  id: Item(System.String)
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: this[string]
+  nameWithType: SharedDataReader.this[string]
+  fullName: LiteDB.SharedDataReader.this[string]
+  type: Property
+  source:
+    id: this[]
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public BsonValue this[string field] { get; }
+    parameters:
+    - id: field
+      type: System.String
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public ReadOnly Default Property this[](field As String) As BsonValue
+  overload: LiteDB.SharedDataReader.Item*
+  implements:
+  - LiteDB.IBsonDataReader.Item(System.String)
+  nameWithType.vb: SharedDataReader.this[](String)
+  fullName.vb: LiteDB.SharedDataReader.this[](String)
+  name.vb: this[](String)
+- uid: LiteDB.SharedDataReader.Collection
+  commentId: P:LiteDB.SharedDataReader.Collection
+  id: Collection
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: Collection
+  nameWithType: SharedDataReader.Collection
+  fullName: LiteDB.SharedDataReader.Collection
+  type: Property
+  source:
+    id: Collection
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 23
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public string Collection { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Collection As String
+  overload: LiteDB.SharedDataReader.Collection*
+  implements:
+  - LiteDB.IBsonDataReader.Collection
+- uid: LiteDB.SharedDataReader.Current
+  commentId: P:LiteDB.SharedDataReader.Current
+  id: Current
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: SharedDataReader.Current
+  fullName: LiteDB.SharedDataReader.Current
+  type: Property
+  source:
+    id: Current
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 25
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public BsonValue Current { get; }
+    parameters: []
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public ReadOnly Property Current As BsonValue
+  overload: LiteDB.SharedDataReader.Current*
+  implements:
+  - LiteDB.IBsonDataReader.Current
+- uid: LiteDB.SharedDataReader.HasValues
+  commentId: P:LiteDB.SharedDataReader.HasValues
+  id: HasValues
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: HasValues
+  nameWithType: SharedDataReader.HasValues
+  fullName: LiteDB.SharedDataReader.HasValues
+  type: Property
+  source:
+    id: HasValues
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 27
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool HasValues { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasValues As Boolean
+  overload: LiteDB.SharedDataReader.HasValues*
+  implements:
+  - LiteDB.IBsonDataReader.HasValues
+- uid: LiteDB.SharedDataReader.Read
+  commentId: M:LiteDB.SharedDataReader.Read
+  id: Read
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: Read()
+  nameWithType: SharedDataReader.Read()
+  fullName: LiteDB.SharedDataReader.Read()
+  type: Method
+  source:
+    id: Read
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 29
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool Read()
+    return:
+      type: System.Boolean
+    content.vb: Public Function Read() As Boolean
+  overload: LiteDB.SharedDataReader.Read*
+  implements:
+  - LiteDB.IBsonDataReader.Read
+- uid: LiteDB.SharedDataReader.Dispose
+  commentId: M:LiteDB.SharedDataReader.Dispose
+  id: Dispose
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SharedDataReader.Dispose()
+  fullName: LiteDB.SharedDataReader.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: LiteDB.SharedDataReader.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: LiteDB.SharedDataReader.Finalize
+  commentId: M:LiteDB.SharedDataReader.Finalize
+  id: Finalize
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: ~SharedDataReader()
+  nameWithType: SharedDataReader.~SharedDataReader()
+  fullName: LiteDB.SharedDataReader.~SharedDataReader()
+  type: Method
+  source:
+    id: Finalize
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 37
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: protected ~SharedDataReader()
+    content.vb: 'Protected '
+  overload: LiteDB.SharedDataReader.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: LiteDB.SharedDataReader.Dispose(System.Boolean)
+  commentId: M:LiteDB.SharedDataReader.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: LiteDB.SharedDataReader
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: SharedDataReader.Dispose(bool)
+  fullName: LiteDB.SharedDataReader.Dispose(bool)
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Client/Shared/SharedDataReader.cs
+    startLine: 42
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: LiteDB.SharedDataReader.Dispose*
+  nameWithType.vb: SharedDataReader.Dispose(Boolean)
+  fullName.vb: LiteDB.SharedDataReader.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LiteDB.IBsonDataReader
+  commentId: T:LiteDB.IBsonDataReader
+  parent: LiteDB
+  href: LiteDB.IBsonDataReader.html
+  name: IBsonDataReader
+  nameWithType: IBsonDataReader
+  fullName: LiteDB.IBsonDataReader
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.First
+  commentId: M:LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_First_LiteDB_IBsonDataReader_
+  name: First(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.First(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+    name: First
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_First_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+    name: First
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_First_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.FirstOrDefault
+  commentId: M:LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_FirstOrDefault_LiteDB_IBsonDataReader_
+  name: FirstOrDefault(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.FirstOrDefault(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+    name: FirstOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_FirstOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+    name: FirstOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_FirstOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.Single
+  commentId: M:LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_Single_LiteDB_IBsonDataReader_
+  name: Single(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.Single(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+    name: Single
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_Single_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+    name: Single
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_Single_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.SingleOrDefault
+  commentId: M:LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_SingleOrDefault_LiteDB_IBsonDataReader_
+  name: SingleOrDefault(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.SingleOrDefault(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+    name: SingleOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_SingleOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+    name: SingleOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_SingleOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.ToArray
+  commentId: M:LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToArray_LiteDB_IBsonDataReader_
+  name: ToArray(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.ToArray(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+    name: ToArray
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToArray_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+    name: ToArray
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToArray_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.ToEnumerable
+  commentId: M:LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToEnumerable_LiteDB_IBsonDataReader_
+  name: ToEnumerable(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.ToEnumerable(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+    name: ToEnumerable
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToEnumerable_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+    name: ToEnumerable
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToEnumerable_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.IBsonDataReader.LiteDB.BsonDataReaderExtensions.ToList
+  commentId: M:LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+  parent: LiteDB.BsonDataReaderExtensions
+  definition: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToList_LiteDB_IBsonDataReader_
+  name: ToList(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.ToList(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+    name: ToList
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToList_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+    name: ToList
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToList_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_First_LiteDB_IBsonDataReader_
+  name: First(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.First(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+    name: First
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_First_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.First(LiteDB.IBsonDataReader)
+    name: First
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_First_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.BsonDataReaderExtensions
+  commentId: T:LiteDB.BsonDataReaderExtensions
+  parent: LiteDB
+  href: LiteDB.BsonDataReaderExtensions.html
+  name: BsonDataReaderExtensions
+  nameWithType: BsonDataReaderExtensions
+  fullName: LiteDB.BsonDataReaderExtensions
+- uid: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_FirstOrDefault_LiteDB_IBsonDataReader_
+  name: FirstOrDefault(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.FirstOrDefault(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+    name: FirstOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_FirstOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.FirstOrDefault(LiteDB.IBsonDataReader)
+    name: FirstOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_FirstOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_Single_LiteDB_IBsonDataReader_
+  name: Single(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.Single(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+    name: Single
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_Single_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.Single(LiteDB.IBsonDataReader)
+    name: Single
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_Single_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_SingleOrDefault_LiteDB_IBsonDataReader_
+  name: SingleOrDefault(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.SingleOrDefault(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+    name: SingleOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_SingleOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.SingleOrDefault(LiteDB.IBsonDataReader)
+    name: SingleOrDefault
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_SingleOrDefault_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToArray_LiteDB_IBsonDataReader_
+  name: ToArray(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.ToArray(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+    name: ToArray
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToArray_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.ToArray(LiteDB.IBsonDataReader)
+    name: ToArray
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToArray_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToEnumerable_LiteDB_IBsonDataReader_
+  name: ToEnumerable(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.ToEnumerable(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+    name: ToEnumerable
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToEnumerable_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.ToEnumerable(LiteDB.IBsonDataReader)
+    name: ToEnumerable
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToEnumerable_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+  commentId: M:LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+  href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToList_LiteDB_IBsonDataReader_
+  name: ToList(IBsonDataReader)
+  nameWithType: BsonDataReaderExtensions.ToList(IBsonDataReader)
+  fullName: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+  spec.csharp:
+  - uid: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+    name: ToList
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToList_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonDataReaderExtensions.ToList(LiteDB.IBsonDataReader)
+    name: ToList
+    href: LiteDB.BsonDataReaderExtensions.html#LiteDB_BsonDataReaderExtensions_ToList_LiteDB_IBsonDataReader_
+  - name: (
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    href: LiteDB.IBsonDataReader.html
+  - name: )
+- uid: LiteDB.SharedDataReader.#ctor*
+  commentId: Overload:LiteDB.SharedDataReader.#ctor
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader__ctor_LiteDB_IBsonDataReader_System_Action_
+  name: SharedDataReader
+  nameWithType: SharedDataReader.SharedDataReader
+  fullName: LiteDB.SharedDataReader.SharedDataReader
+  nameWithType.vb: SharedDataReader.New
+  fullName.vb: LiteDB.SharedDataReader.New
+  name.vb: New
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: LiteDB.SharedDataReader.Item*
+  commentId: Overload:LiteDB.SharedDataReader.Item
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Item_System_String_
+  name: this
+  nameWithType: SharedDataReader.this
+  fullName: LiteDB.SharedDataReader.this
+  nameWithType.vb: SharedDataReader.this[]
+  fullName.vb: LiteDB.SharedDataReader.this[]
+  name.vb: this[]
+- uid: LiteDB.IBsonDataReader.Item(System.String)
+  commentId: P:LiteDB.IBsonDataReader.Item(System.String)
+  parent: LiteDB.IBsonDataReader
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: this[string]
+  nameWithType: IBsonDataReader.this[string]
+  fullName: LiteDB.IBsonDataReader.this[string]
+  nameWithType.vb: IBsonDataReader.this[](String)
+  fullName.vb: LiteDB.IBsonDataReader.this[](String)
+  name.vb: this[](String)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.IBsonDataReader.Item(System.String)
+    name: this[]
+    href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_Item_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.SharedDataReader.Collection*
+  commentId: Overload:LiteDB.SharedDataReader.Collection
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Collection
+  name: Collection
+  nameWithType: SharedDataReader.Collection
+  fullName: LiteDB.SharedDataReader.Collection
+- uid: LiteDB.IBsonDataReader.Collection
+  commentId: P:LiteDB.IBsonDataReader.Collection
+  parent: LiteDB.IBsonDataReader
+  href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_Collection
+  name: Collection
+  nameWithType: IBsonDataReader.Collection
+  fullName: LiteDB.IBsonDataReader.Collection
+- uid: LiteDB.SharedDataReader.Current*
+  commentId: Overload:LiteDB.SharedDataReader.Current
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Current
+  name: Current
+  nameWithType: SharedDataReader.Current
+  fullName: LiteDB.SharedDataReader.Current
+- uid: LiteDB.IBsonDataReader.Current
+  commentId: P:LiteDB.IBsonDataReader.Current
+  parent: LiteDB.IBsonDataReader
+  href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_Current
+  name: Current
+  nameWithType: IBsonDataReader.Current
+  fullName: LiteDB.IBsonDataReader.Current
+- uid: LiteDB.SharedDataReader.HasValues*
+  commentId: Overload:LiteDB.SharedDataReader.HasValues
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_HasValues
+  name: HasValues
+  nameWithType: SharedDataReader.HasValues
+  fullName: LiteDB.SharedDataReader.HasValues
+- uid: LiteDB.IBsonDataReader.HasValues
+  commentId: P:LiteDB.IBsonDataReader.HasValues
+  parent: LiteDB.IBsonDataReader
+  href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_HasValues
+  name: HasValues
+  nameWithType: IBsonDataReader.HasValues
+  fullName: LiteDB.IBsonDataReader.HasValues
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.SharedDataReader.Read*
+  commentId: Overload:LiteDB.SharedDataReader.Read
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Read
+  name: Read
+  nameWithType: SharedDataReader.Read
+  fullName: LiteDB.SharedDataReader.Read
+- uid: LiteDB.IBsonDataReader.Read
+  commentId: M:LiteDB.IBsonDataReader.Read
+  parent: LiteDB.IBsonDataReader
+  href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_Read
+  name: Read()
+  nameWithType: IBsonDataReader.Read()
+  fullName: LiteDB.IBsonDataReader.Read()
+  spec.csharp:
+  - uid: LiteDB.IBsonDataReader.Read
+    name: Read
+    href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_Read
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.IBsonDataReader.Read
+    name: Read
+    href: LiteDB.IBsonDataReader.html#LiteDB_IBsonDataReader_Read
+  - name: (
+  - name: )
+- uid: LiteDB.SharedDataReader.Dispose*
+  commentId: Overload:LiteDB.SharedDataReader.Dispose
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Dispose
+  name: Dispose
+  nameWithType: SharedDataReader.Dispose
+  fullName: LiteDB.SharedDataReader.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: LiteDB.SharedDataReader.Finalize*
+  commentId: Overload:LiteDB.SharedDataReader.Finalize
+  href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Finalize
+  name: ~SharedDataReader
+  nameWithType: SharedDataReader.~SharedDataReader
+  fullName: LiteDB.SharedDataReader.~SharedDataReader
+  spec.csharp:
+  - name: "~"
+  - uid: LiteDB.SharedDataReader.Finalize*
+    name: SharedDataReader
+    href: LiteDB.SharedDataReader.html#LiteDB_SharedDataReader_Finalize

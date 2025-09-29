@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.BsonMapper.DeserializationCallback
+  commentId: T:LiteDB.BsonMapper.DeserializationCallback
+  id: BsonMapper.DeserializationCallback
+  parent: LiteDB
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: BsonMapper.DeserializationCallback
+  nameWithType: BsonMapper.DeserializationCallback
+  fullName: LiteDB.BsonMapper.DeserializationCallback
+  type: Delegate
+  source:
+    id: DeserializationCallback
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Deserialize.cs
+    startLine: 20
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Delegate for deserialization callback.
+  example: []
+  syntax:
+    content: public delegate BsonValue BsonMapper.DeserializationCallback(BsonMapper sender, Type target, BsonValue value)
+    parameters:
+    - id: sender
+      type: LiteDB.BsonMapper
+      description: The BsonMapper instance that triggered the deserialization.
+    - id: target
+      type: System.Type
+      description: The target type for deserialization.
+    - id: value
+      type: LiteDB.BsonValue
+      description: The BsonValue to be deserialized.
+    return:
+      type: LiteDB.BsonValue
+      description: The deserialized BsonValue.
+    content.vb: Public Delegate Function BsonMapper.DeserializationCallback(sender As BsonMapper, target As Type, value As BsonValue) As BsonValue
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.BsonMapper
+  commentId: T:LiteDB.BsonMapper
+  parent: LiteDB
+  href: LiteDB.BsonMapper.html
+  name: BsonMapper
+  nameWithType: BsonMapper
+  fullName: LiteDB.BsonMapper
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

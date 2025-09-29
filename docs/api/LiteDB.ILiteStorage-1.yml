@@ -1,0 +1,1075 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ILiteStorage`1
+  commentId: T:LiteDB.ILiteStorage`1
+  id: ILiteStorage`1
+  parent: LiteDB
+  children:
+  - LiteDB.ILiteStorage`1.Delete(`0)
+  - LiteDB.ILiteStorage`1.Download(`0,System.IO.Stream)
+  - LiteDB.ILiteStorage`1.Download(`0,System.String,System.Boolean)
+  - LiteDB.ILiteStorage`1.Exists(`0)
+  - LiteDB.ILiteStorage`1.Find(LiteDB.BsonExpression)
+  - LiteDB.ILiteStorage`1.Find(System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{`0},System.Boolean}})
+  - LiteDB.ILiteStorage`1.Find(System.String,LiteDB.BsonDocument)
+  - LiteDB.ILiteStorage`1.Find(System.String,LiteDB.BsonValue[])
+  - LiteDB.ILiteStorage`1.FindAll
+  - LiteDB.ILiteStorage`1.FindById(`0)
+  - LiteDB.ILiteStorage`1.OpenRead(`0)
+  - LiteDB.ILiteStorage`1.OpenWrite(`0,System.String,LiteDB.BsonDocument)
+  - LiteDB.ILiteStorage`1.SetMetadata(`0,LiteDB.BsonDocument)
+  - LiteDB.ILiteStorage`1.Upload(`0,System.String)
+  - LiteDB.ILiteStorage`1.Upload(`0,System.String,System.IO.Stream,LiteDB.BsonDocument)
+  langs:
+  - csharp
+  - vb
+  name: ILiteStorage<TFileId>
+  nameWithType: ILiteStorage<TFileId>
+  fullName: LiteDB.ILiteStorage<TFileId>
+  type: Interface
+  source:
+    id: ILiteStorage
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public interface ILiteStorage<TFileId>
+    typeParameters:
+    - id: TFileId
+    content.vb: Public Interface ILiteStorage(Of TFileId)
+  nameWithType.vb: ILiteStorage(Of TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId)
+  name.vb: ILiteStorage(Of TFileId)
+- uid: LiteDB.ILiteStorage`1.FindById(`0)
+  commentId: M:LiteDB.ILiteStorage`1.FindById(`0)
+  id: FindById(`0)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: FindById(TFileId)
+  nameWithType: ILiteStorage<TFileId>.FindById(TFileId)
+  fullName: LiteDB.ILiteStorage<TFileId>.FindById(TFileId)
+  type: Method
+  source:
+    id: FindById
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Find a file inside datafile and returns LiteFileInfo instance. Returns null if not found
+  example: []
+  syntax:
+    content: LiteFileInfo<TFileId> FindById(TFileId id)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    return:
+      type: LiteDB.LiteFileInfo{{TFileId}}
+    content.vb: Function FindById(id As TFileId) As LiteFileInfo(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.FindById*
+  nameWithType.vb: ILiteStorage(Of TFileId).FindById(TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).FindById(TFileId)
+- uid: LiteDB.ILiteStorage`1.Find(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteStorage`1.Find(LiteDB.BsonExpression)
+  id: Find(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Find(BsonExpression)
+  nameWithType: ILiteStorage<TFileId>.Find(BsonExpression)
+  fullName: LiteDB.ILiteStorage<TFileId>.Find(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: Find
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 17
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Find all files that match with predicate expression.
+  example: []
+  syntax:
+    content: IEnumerable<LiteFileInfo<TFileId>> Find(BsonExpression predicate)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{{TFileId}}}
+    content.vb: Function Find(predicate As BsonExpression) As IEnumerable(Of LiteFileInfo(Of TFileId))
+  overload: LiteDB.ILiteStorage`1.Find*
+  nameWithType.vb: ILiteStorage(Of TFileId).Find(BsonExpression)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Find(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteStorage`1.Find(System.String,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteStorage`1.Find(System.String,LiteDB.BsonDocument)
+  id: Find(System.String,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Find(string, BsonDocument)
+  nameWithType: ILiteStorage<TFileId>.Find(string, BsonDocument)
+  fullName: LiteDB.ILiteStorage<TFileId>.Find(string, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: Find
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 22
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Find all files that match with predicate expression.
+  example: []
+  syntax:
+    content: IEnumerable<LiteFileInfo<TFileId>> Find(string predicate, BsonDocument parameters)
+    parameters:
+    - id: predicate
+      type: System.String
+    - id: parameters
+      type: LiteDB.BsonDocument
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{{TFileId}}}
+    content.vb: Function Find(predicate As String, parameters As BsonDocument) As IEnumerable(Of LiteFileInfo(Of TFileId))
+  overload: LiteDB.ILiteStorage`1.Find*
+  nameWithType.vb: ILiteStorage(Of TFileId).Find(String, BsonDocument)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Find(String, LiteDB.BsonDocument)
+  name.vb: Find(String, BsonDocument)
+- uid: LiteDB.ILiteStorage`1.Find(System.String,LiteDB.BsonValue[])
+  commentId: M:LiteDB.ILiteStorage`1.Find(System.String,LiteDB.BsonValue[])
+  id: Find(System.String,LiteDB.BsonValue[])
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Find(string, params BsonValue[])
+  nameWithType: ILiteStorage<TFileId>.Find(string, params BsonValue[])
+  fullName: LiteDB.ILiteStorage<TFileId>.Find(string, params LiteDB.BsonValue[])
+  type: Method
+  source:
+    id: Find
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 27
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Find all files that match with predicate expression.
+  example: []
+  syntax:
+    content: IEnumerable<LiteFileInfo<TFileId>> Find(string predicate, params BsonValue[] args)
+    parameters:
+    - id: predicate
+      type: System.String
+    - id: args
+      type: LiteDB.BsonValue[]
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{{TFileId}}}
+    content.vb: Function Find(predicate As String, ParamArray args As BsonValue()) As IEnumerable(Of LiteFileInfo(Of TFileId))
+  overload: LiteDB.ILiteStorage`1.Find*
+  nameWithType.vb: ILiteStorage(Of TFileId).Find(String, ParamArray BsonValue())
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Find(String, ParamArray LiteDB.BsonValue())
+  name.vb: Find(String, ParamArray BsonValue())
+- uid: LiteDB.ILiteStorage`1.Find(System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{`0},System.Boolean}})
+  commentId: M:LiteDB.ILiteStorage`1.Find(System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{`0},System.Boolean}})
+  id: Find(System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{`0},System.Boolean}})
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Find(Expression<Func<LiteFileInfo<TFileId>, bool>>)
+  nameWithType: ILiteStorage<TFileId>.Find(Expression<Func<LiteFileInfo<TFileId>, bool>>)
+  fullName: LiteDB.ILiteStorage<TFileId>.Find(System.Linq.Expressions.Expression<System.Func<LiteDB.LiteFileInfo<TFileId>, bool>>)
+  type: Method
+  source:
+    id: Find
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 32
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Find all files that match with predicate expression.
+  example: []
+  syntax:
+    content: IEnumerable<LiteFileInfo<TFileId>> Find(Expression<Func<LiteFileInfo<TFileId>, bool>> predicate)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{{TFileId}},System.Boolean}}
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{{TFileId}}}
+    content.vb: Function Find(predicate As Expression(Of Func(Of LiteFileInfo(Of TFileId), Boolean))) As IEnumerable(Of LiteFileInfo(Of TFileId))
+  overload: LiteDB.ILiteStorage`1.Find*
+  nameWithType.vb: ILiteStorage(Of TFileId).Find(Expression(Of Func(Of LiteFileInfo(Of TFileId), Boolean)))
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Find(System.Linq.Expressions.Expression(Of System.Func(Of LiteDB.LiteFileInfo(Of TFileId), Boolean)))
+  name.vb: Find(Expression(Of Func(Of LiteFileInfo(Of TFileId), Boolean)))
+- uid: LiteDB.ILiteStorage`1.FindAll
+  commentId: M:LiteDB.ILiteStorage`1.FindAll
+  id: FindAll
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: FindAll()
+  nameWithType: ILiteStorage<TFileId>.FindAll()
+  fullName: LiteDB.ILiteStorage<TFileId>.FindAll()
+  type: Method
+  source:
+    id: FindAll
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 37
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Find all files inside file collections
+  example: []
+  syntax:
+    content: IEnumerable<LiteFileInfo<TFileId>> FindAll()
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{{TFileId}}}
+    content.vb: Function FindAll() As IEnumerable(Of LiteFileInfo(Of TFileId))
+  overload: LiteDB.ILiteStorage`1.FindAll*
+  nameWithType.vb: ILiteStorage(Of TFileId).FindAll()
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).FindAll()
+- uid: LiteDB.ILiteStorage`1.Exists(`0)
+  commentId: M:LiteDB.ILiteStorage`1.Exists(`0)
+  id: Exists(`0)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Exists(TFileId)
+  nameWithType: ILiteStorage<TFileId>.Exists(TFileId)
+  fullName: LiteDB.ILiteStorage<TFileId>.Exists(TFileId)
+  type: Method
+  source:
+    id: Exists
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 42
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns if a file exisits in database
+  example: []
+  syntax:
+    content: bool Exists(TFileId id)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    return:
+      type: System.Boolean
+    content.vb: Function Exists(id As TFileId) As Boolean
+  overload: LiteDB.ILiteStorage`1.Exists*
+  nameWithType.vb: ILiteStorage(Of TFileId).Exists(TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Exists(TFileId)
+- uid: LiteDB.ILiteStorage`1.OpenWrite(`0,System.String,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteStorage`1.OpenWrite(`0,System.String,LiteDB.BsonDocument)
+  id: OpenWrite(`0,System.String,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: OpenWrite(TFileId, string, BsonDocument)
+  nameWithType: ILiteStorage<TFileId>.OpenWrite(TFileId, string, BsonDocument)
+  fullName: LiteDB.ILiteStorage<TFileId>.OpenWrite(TFileId, string, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: OpenWrite
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Open/Create new file storage and returns linked Stream to write operations.
+  example: []
+  syntax:
+    content: LiteFileStream<TFileId> OpenWrite(TFileId id, string filename, BsonDocument metadata = null)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    - id: filename
+      type: System.String
+    - id: metadata
+      type: LiteDB.BsonDocument
+    return:
+      type: LiteDB.LiteFileStream{{TFileId}}
+    content.vb: Function OpenWrite(id As TFileId, filename As String, metadata As BsonDocument = Nothing) As LiteFileStream(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.OpenWrite*
+  nameWithType.vb: ILiteStorage(Of TFileId).OpenWrite(TFileId, String, BsonDocument)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).OpenWrite(TFileId, String, LiteDB.BsonDocument)
+  name.vb: OpenWrite(TFileId, String, BsonDocument)
+- uid: LiteDB.ILiteStorage`1.Upload(`0,System.String,System.IO.Stream,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteStorage`1.Upload(`0,System.String,System.IO.Stream,LiteDB.BsonDocument)
+  id: Upload(`0,System.String,System.IO.Stream,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Upload(TFileId, string, Stream, BsonDocument)
+  nameWithType: ILiteStorage<TFileId>.Upload(TFileId, string, Stream, BsonDocument)
+  fullName: LiteDB.ILiteStorage<TFileId>.Upload(TFileId, string, System.IO.Stream, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: Upload
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 52
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Upload a file based on stream data
+  example: []
+  syntax:
+    content: LiteFileInfo<TFileId> Upload(TFileId id, string filename, Stream stream, BsonDocument metadata = null)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    - id: filename
+      type: System.String
+    - id: stream
+      type: System.IO.Stream
+    - id: metadata
+      type: LiteDB.BsonDocument
+    return:
+      type: LiteDB.LiteFileInfo{{TFileId}}
+    content.vb: Function Upload(id As TFileId, filename As String, stream As Stream, metadata As BsonDocument = Nothing) As LiteFileInfo(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.Upload*
+  nameWithType.vb: ILiteStorage(Of TFileId).Upload(TFileId, String, Stream, BsonDocument)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Upload(TFileId, String, System.IO.Stream, LiteDB.BsonDocument)
+  name.vb: Upload(TFileId, String, Stream, BsonDocument)
+- uid: LiteDB.ILiteStorage`1.Upload(`0,System.String)
+  commentId: M:LiteDB.ILiteStorage`1.Upload(`0,System.String)
+  id: Upload(`0,System.String)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Upload(TFileId, string)
+  nameWithType: ILiteStorage<TFileId>.Upload(TFileId, string)
+  fullName: LiteDB.ILiteStorage<TFileId>.Upload(TFileId, string)
+  type: Method
+  source:
+    id: Upload
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 57
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Upload a file based on file system data
+  example: []
+  syntax:
+    content: LiteFileInfo<TFileId> Upload(TFileId id, string filename)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    - id: filename
+      type: System.String
+    return:
+      type: LiteDB.LiteFileInfo{{TFileId}}
+    content.vb: Function Upload(id As TFileId, filename As String) As LiteFileInfo(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.Upload*
+  nameWithType.vb: ILiteStorage(Of TFileId).Upload(TFileId, String)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Upload(TFileId, String)
+  name.vb: Upload(TFileId, String)
+- uid: LiteDB.ILiteStorage`1.SetMetadata(`0,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteStorage`1.SetMetadata(`0,LiteDB.BsonDocument)
+  id: SetMetadata(`0,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: SetMetadata(TFileId, BsonDocument)
+  nameWithType: ILiteStorage<TFileId>.SetMetadata(TFileId, BsonDocument)
+  fullName: LiteDB.ILiteStorage<TFileId>.SetMetadata(TFileId, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: SetMetadata
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 62
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Update metadata on a file. File must exist.
+  example: []
+  syntax:
+    content: bool SetMetadata(TFileId id, BsonDocument metadata)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    - id: metadata
+      type: LiteDB.BsonDocument
+    return:
+      type: System.Boolean
+    content.vb: Function SetMetadata(id As TFileId, metadata As BsonDocument) As Boolean
+  overload: LiteDB.ILiteStorage`1.SetMetadata*
+  nameWithType.vb: ILiteStorage(Of TFileId).SetMetadata(TFileId, BsonDocument)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).SetMetadata(TFileId, LiteDB.BsonDocument)
+- uid: LiteDB.ILiteStorage`1.OpenRead(`0)
+  commentId: M:LiteDB.ILiteStorage`1.OpenRead(`0)
+  id: OpenRead(`0)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: OpenRead(TFileId)
+  nameWithType: ILiteStorage<TFileId>.OpenRead(TFileId)
+  fullName: LiteDB.ILiteStorage<TFileId>.OpenRead(TFileId)
+  type: Method
+  source:
+    id: OpenRead
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 67
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Load data inside storage and returns as Stream
+  example: []
+  syntax:
+    content: LiteFileStream<TFileId> OpenRead(TFileId id)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    return:
+      type: LiteDB.LiteFileStream{{TFileId}}
+    content.vb: Function OpenRead(id As TFileId) As LiteFileStream(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.OpenRead*
+  nameWithType.vb: ILiteStorage(Of TFileId).OpenRead(TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).OpenRead(TFileId)
+- uid: LiteDB.ILiteStorage`1.Download(`0,System.IO.Stream)
+  commentId: M:LiteDB.ILiteStorage`1.Download(`0,System.IO.Stream)
+  id: Download(`0,System.IO.Stream)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Download(TFileId, Stream)
+  nameWithType: ILiteStorage<TFileId>.Download(TFileId, Stream)
+  fullName: LiteDB.ILiteStorage<TFileId>.Download(TFileId, System.IO.Stream)
+  type: Method
+  source:
+    id: Download
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 72
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Copy all file content to a steam
+  example: []
+  syntax:
+    content: LiteFileInfo<TFileId> Download(TFileId id, Stream stream)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    - id: stream
+      type: System.IO.Stream
+    return:
+      type: LiteDB.LiteFileInfo{{TFileId}}
+    content.vb: Function Download(id As TFileId, stream As Stream) As LiteFileInfo(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.Download*
+  nameWithType.vb: ILiteStorage(Of TFileId).Download(TFileId, Stream)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Download(TFileId, System.IO.Stream)
+- uid: LiteDB.ILiteStorage`1.Download(`0,System.String,System.Boolean)
+  commentId: M:LiteDB.ILiteStorage`1.Download(`0,System.String,System.Boolean)
+  id: Download(`0,System.String,System.Boolean)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Download(TFileId, string, bool)
+  nameWithType: ILiteStorage<TFileId>.Download(TFileId, string, bool)
+  fullName: LiteDB.ILiteStorage<TFileId>.Download(TFileId, string, bool)
+  type: Method
+  source:
+    id: Download
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 77
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Copy all file content to a file
+  example: []
+  syntax:
+    content: LiteFileInfo<TFileId> Download(TFileId id, string filename, bool overwritten)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    - id: filename
+      type: System.String
+    - id: overwritten
+      type: System.Boolean
+    return:
+      type: LiteDB.LiteFileInfo{{TFileId}}
+    content.vb: Function Download(id As TFileId, filename As String, overwritten As Boolean) As LiteFileInfo(Of TFileId)
+  overload: LiteDB.ILiteStorage`1.Download*
+  nameWithType.vb: ILiteStorage(Of TFileId).Download(TFileId, String, Boolean)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Download(TFileId, String, Boolean)
+  name.vb: Download(TFileId, String, Boolean)
+- uid: LiteDB.ILiteStorage`1.Delete(`0)
+  commentId: M:LiteDB.ILiteStorage`1.Delete(`0)
+  id: Delete(`0)
+  parent: LiteDB.ILiteStorage`1
+  langs:
+  - csharp
+  - vb
+  name: Delete(TFileId)
+  nameWithType: ILiteStorage<TFileId>.Delete(TFileId)
+  fullName: LiteDB.ILiteStorage<TFileId>.Delete(TFileId)
+  type: Method
+  source:
+    id: Delete
+    path: /workspace/LiteDB/LiteDB/Client/Storage/ILiteStorage.cs
+    startLine: 82
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Delete a file inside datafile and all metadata related
+  example: []
+  syntax:
+    content: bool Delete(TFileId id)
+    parameters:
+    - id: id
+      type: '{TFileId}'
+    return:
+      type: System.Boolean
+    content.vb: Function Delete(id As TFileId) As Boolean
+  overload: LiteDB.ILiteStorage`1.Delete*
+  nameWithType.vb: ILiteStorage(Of TFileId).Delete(TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Delete(TFileId)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.ILiteStorage`1.FindById*
+  commentId: Overload:LiteDB.ILiteStorage`1.FindById
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_FindById__0_
+  name: FindById
+  nameWithType: ILiteStorage<TFileId>.FindById
+  fullName: LiteDB.ILiteStorage<TFileId>.FindById
+  nameWithType.vb: ILiteStorage(Of TFileId).FindById
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).FindById
+- uid: '{TFileId}'
+  commentId: '!:TFileId'
+  definition: TFileId
+  name: TFileId
+  nameWithType: TFileId
+  fullName: TFileId
+- uid: LiteDB.LiteFileInfo{{TFileId}}
+  commentId: T:LiteDB.LiteFileInfo{`0}
+  parent: LiteDB
+  definition: LiteDB.LiteFileInfo`1
+  href: LiteDB.LiteFileInfo-1.html
+  name: LiteFileInfo<TFileId>
+  nameWithType: LiteFileInfo<TFileId>
+  fullName: LiteDB.LiteFileInfo<TFileId>
+  nameWithType.vb: LiteFileInfo(Of TFileId)
+  fullName.vb: LiteDB.LiteFileInfo(Of TFileId)
+  name.vb: LiteFileInfo(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: TFileId
+  name: TFileId
+  nameWithType: TFileId
+  fullName: TFileId
+- uid: LiteDB.LiteFileInfo`1
+  commentId: T:LiteDB.LiteFileInfo`1
+  href: LiteDB.LiteFileInfo-1.html
+  name: LiteFileInfo<TFileId>
+  nameWithType: LiteFileInfo<TFileId>
+  fullName: LiteDB.LiteFileInfo<TFileId>
+  nameWithType.vb: LiteFileInfo(Of TFileId)
+  fullName.vb: LiteDB.LiteFileInfo(Of TFileId)
+  name.vb: LiteFileInfo(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.ILiteStorage`1.Find*
+  commentId: Overload:LiteDB.ILiteStorage`1.Find
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_Find_LiteDB_BsonExpression_
+  name: Find
+  nameWithType: ILiteStorage<TFileId>.Find
+  fullName: LiteDB.ILiteStorage<TFileId>.Find
+  nameWithType.vb: ILiteStorage(Of TFileId).Find
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Find
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{{TFileId}}}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.LiteFileInfo{`0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<LiteFileInfo<TFileId>>
+  nameWithType: IEnumerable<LiteFileInfo<TFileId>>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.LiteFileInfo<TFileId>>
+  nameWithType.vb: IEnumerable(Of LiteFileInfo(Of TFileId))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.LiteFileInfo(Of TFileId))
+  name.vb: IEnumerable(Of LiteFileInfo(Of TFileId))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.BsonValue[]
+  isExternal: true
+  href: LiteDB.BsonValue.html
+  name: BsonValue[]
+  nameWithType: BsonValue[]
+  fullName: LiteDB.BsonValue[]
+  nameWithType.vb: BsonValue()
+  fullName.vb: LiteDB.BsonValue()
+  name.vb: BsonValue()
+  spec.csharp:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+- uid: System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{{TFileId}},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{LiteDB.LiteFileInfo{`0},System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<LiteFileInfo<TFileId>, bool>>
+  nameWithType: Expression<Func<LiteFileInfo<TFileId>, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<LiteDB.LiteFileInfo<TFileId>, bool>>
+  nameWithType.vb: Expression(Of Func(Of LiteFileInfo(Of TFileId), Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of LiteDB.LiteFileInfo(Of TFileId), Boolean))
+  name.vb: Expression(Of Func(Of LiteFileInfo(Of TFileId), Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: LiteDB.ILiteStorage`1.FindAll*
+  commentId: Overload:LiteDB.ILiteStorage`1.FindAll
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_FindAll
+  name: FindAll
+  nameWithType: ILiteStorage<TFileId>.FindAll
+  fullName: LiteDB.ILiteStorage<TFileId>.FindAll
+  nameWithType.vb: ILiteStorage(Of TFileId).FindAll
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).FindAll
+- uid: LiteDB.ILiteStorage`1.Exists*
+  commentId: Overload:LiteDB.ILiteStorage`1.Exists
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_Exists__0_
+  name: Exists
+  nameWithType: ILiteStorage<TFileId>.Exists
+  fullName: LiteDB.ILiteStorage<TFileId>.Exists
+  nameWithType.vb: ILiteStorage(Of TFileId).Exists
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Exists
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.ILiteStorage`1.OpenWrite*
+  commentId: Overload:LiteDB.ILiteStorage`1.OpenWrite
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_OpenWrite__0_System_String_LiteDB_BsonDocument_
+  name: OpenWrite
+  nameWithType: ILiteStorage<TFileId>.OpenWrite
+  fullName: LiteDB.ILiteStorage<TFileId>.OpenWrite
+  nameWithType.vb: ILiteStorage(Of TFileId).OpenWrite
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).OpenWrite
+- uid: LiteDB.LiteFileStream{{TFileId}}
+  commentId: T:LiteDB.LiteFileStream{`0}
+  parent: LiteDB
+  definition: LiteDB.LiteFileStream`1
+  href: LiteDB.LiteFileStream-1.html
+  name: LiteFileStream<TFileId>
+  nameWithType: LiteFileStream<TFileId>
+  fullName: LiteDB.LiteFileStream<TFileId>
+  nameWithType.vb: LiteFileStream(Of TFileId)
+  fullName.vb: LiteDB.LiteFileStream(Of TFileId)
+  name.vb: LiteFileStream(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream
+    href: LiteDB.LiteFileStream-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream
+    href: LiteDB.LiteFileStream-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.LiteFileStream`1
+  commentId: T:LiteDB.LiteFileStream`1
+  href: LiteDB.LiteFileStream-1.html
+  name: LiteFileStream<TFileId>
+  nameWithType: LiteFileStream<TFileId>
+  fullName: LiteDB.LiteFileStream<TFileId>
+  nameWithType.vb: LiteFileStream(Of TFileId)
+  fullName.vb: LiteDB.LiteFileStream(Of TFileId)
+  name.vb: LiteFileStream(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream
+    href: LiteDB.LiteFileStream-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream
+    href: LiteDB.LiteFileStream-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.ILiteStorage`1.Upload*
+  commentId: Overload:LiteDB.ILiteStorage`1.Upload
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_Upload__0_System_String_System_IO_Stream_LiteDB_BsonDocument_
+  name: Upload
+  nameWithType: ILiteStorage<TFileId>.Upload
+  fullName: LiteDB.ILiteStorage<TFileId>.Upload
+  nameWithType.vb: ILiteStorage(Of TFileId).Upload
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Upload
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: LiteDB.ILiteStorage`1.SetMetadata*
+  commentId: Overload:LiteDB.ILiteStorage`1.SetMetadata
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_SetMetadata__0_LiteDB_BsonDocument_
+  name: SetMetadata
+  nameWithType: ILiteStorage<TFileId>.SetMetadata
+  fullName: LiteDB.ILiteStorage<TFileId>.SetMetadata
+  nameWithType.vb: ILiteStorage(Of TFileId).SetMetadata
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).SetMetadata
+- uid: LiteDB.ILiteStorage`1.OpenRead*
+  commentId: Overload:LiteDB.ILiteStorage`1.OpenRead
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_OpenRead__0_
+  name: OpenRead
+  nameWithType: ILiteStorage<TFileId>.OpenRead
+  fullName: LiteDB.ILiteStorage<TFileId>.OpenRead
+  nameWithType.vb: ILiteStorage(Of TFileId).OpenRead
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).OpenRead
+- uid: LiteDB.ILiteStorage`1.Download*
+  commentId: Overload:LiteDB.ILiteStorage`1.Download
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_Download__0_System_IO_Stream_
+  name: Download
+  nameWithType: ILiteStorage<TFileId>.Download
+  fullName: LiteDB.ILiteStorage<TFileId>.Download
+  nameWithType.vb: ILiteStorage(Of TFileId).Download
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Download
+- uid: LiteDB.ILiteStorage`1.Delete*
+  commentId: Overload:LiteDB.ILiteStorage`1.Delete
+  href: LiteDB.ILiteStorage-1.html#LiteDB_ILiteStorage_1_Delete__0_
+  name: Delete
+  nameWithType: ILiteStorage<TFileId>.Delete
+  fullName: LiteDB.ILiteStorage<TFileId>.Delete
+  nameWithType.vb: ILiteStorage(Of TFileId).Delete
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId).Delete

@@ -1,0 +1,2328 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Engine.AesStream
+  commentId: T:LiteDB.Engine.AesStream
+  id: AesStream
+  parent: LiteDB.Engine
+  children:
+  - LiteDB.Engine.AesStream.#ctor(System.String,System.IO.Stream)
+  - LiteDB.Engine.AesStream.CanRead
+  - LiteDB.Engine.AesStream.CanSeek
+  - LiteDB.Engine.AesStream.CanWrite
+  - LiteDB.Engine.AesStream.Dispose(System.Boolean)
+  - LiteDB.Engine.AesStream.Flush
+  - LiteDB.Engine.AesStream.Length
+  - LiteDB.Engine.AesStream.NewSalt
+  - LiteDB.Engine.AesStream.Position
+  - LiteDB.Engine.AesStream.Read(System.Byte[],System.Int32,System.Int32)
+  - LiteDB.Engine.AesStream.Salt
+  - LiteDB.Engine.AesStream.Seek(System.Int64,System.IO.SeekOrigin)
+  - LiteDB.Engine.AesStream.SetLength(System.Int64)
+  - LiteDB.Engine.AesStream.StreamPosition
+  - LiteDB.Engine.AesStream.Write(System.Byte[],System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: AesStream
+  nameWithType: AesStream
+  fullName: LiteDB.Engine.AesStream
+  type: Class
+  source:
+    id: AesStream
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Encrypted AES Stream
+  example: []
+  syntax:
+    content: 'public class AesStream : Stream, IDisposable'
+    content.vb: Public Class AesStream Inherits Stream Implements IDisposable
+  inheritance:
+  - System.Object
+  - System.MarshalByRefObject
+  - System.IO.Stream
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.IO.Stream.Null
+  - System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  - System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  - System.IO.Stream.Close
+  - System.IO.Stream.CopyTo(System.IO.Stream)
+  - System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+  - System.IO.Stream.CopyToAsync(System.IO.Stream)
+  - System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32)
+  - System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  - System.IO.Stream.CreateWaitHandle
+  - System.IO.Stream.Dispose
+  - System.IO.Stream.EndRead(System.IAsyncResult)
+  - System.IO.Stream.EndWrite(System.IAsyncResult)
+  - System.IO.Stream.FlushAsync
+  - System.IO.Stream.FlushAsync(System.Threading.CancellationToken)
+  - System.IO.Stream.ObjectInvariant
+  - System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)
+  - System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  - System.IO.Stream.ReadByte
+  - System.IO.Stream.Synchronized(System.IO.Stream)
+  - System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)
+  - System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  - System.IO.Stream.WriteByte(System.Byte)
+  - System.IO.Stream.CanTimeout
+  - System.IO.Stream.ReadTimeout
+  - System.IO.Stream.WriteTimeout
+  - System.MarshalByRefObject.GetLifetimeService
+  - System.MarshalByRefObject.InitializeLifetimeService
+  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.Engine.AesStream.Salt
+  commentId: P:LiteDB.Engine.AesStream.Salt
+  id: Salt
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Salt
+  nameWithType: AesStream.Salt
+  fullName: LiteDB.Engine.AesStream.Salt
+  type: Property
+  source:
+    id: Salt
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 29
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public byte[] Salt { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Salt As Byte()
+  overload: LiteDB.Engine.AesStream.Salt*
+- uid: LiteDB.Engine.AesStream.CanRead
+  commentId: P:LiteDB.Engine.AesStream.CanRead
+  id: CanRead
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: CanRead
+  nameWithType: AesStream.CanRead
+  fullName: LiteDB.Engine.AesStream.CanRead
+  type: Property
+  source:
+    id: CanRead
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override bool CanRead { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property CanRead As Boolean
+  overridden: System.IO.Stream.CanRead
+  overload: LiteDB.Engine.AesStream.CanRead*
+- uid: LiteDB.Engine.AesStream.CanSeek
+  commentId: P:LiteDB.Engine.AesStream.CanSeek
+  id: CanSeek
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: CanSeek
+  nameWithType: AesStream.CanSeek
+  fullName: LiteDB.Engine.AesStream.CanSeek
+  type: Property
+  source:
+    id: CanSeek
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 33
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override bool CanSeek { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property CanSeek As Boolean
+  overridden: System.IO.Stream.CanSeek
+  overload: LiteDB.Engine.AesStream.CanSeek*
+- uid: LiteDB.Engine.AesStream.CanWrite
+  commentId: P:LiteDB.Engine.AesStream.CanWrite
+  id: CanWrite
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: CanWrite
+  nameWithType: AesStream.CanWrite
+  fullName: LiteDB.Engine.AesStream.CanWrite
+  type: Property
+  source:
+    id: CanWrite
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 35
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override bool CanWrite { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property CanWrite As Boolean
+  overridden: System.IO.Stream.CanWrite
+  overload: LiteDB.Engine.AesStream.CanWrite*
+- uid: LiteDB.Engine.AesStream.Length
+  commentId: P:LiteDB.Engine.AesStream.Length
+  id: Length
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: AesStream.Length
+  fullName: LiteDB.Engine.AesStream.Length
+  type: Property
+  source:
+    id: Length
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 37
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override long Length { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Overrides ReadOnly Property Length As Long
+  overridden: System.IO.Stream.Length
+  overload: LiteDB.Engine.AesStream.Length*
+- uid: LiteDB.Engine.AesStream.Position
+  commentId: P:LiteDB.Engine.AesStream.Position
+  id: Position
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: AesStream.Position
+  fullName: LiteDB.Engine.AesStream.Position
+  type: Property
+  source:
+    id: Position
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 39
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override long Position { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Overrides Property Position As Long
+  overridden: System.IO.Stream.Position
+  overload: LiteDB.Engine.AesStream.Position*
+- uid: LiteDB.Engine.AesStream.StreamPosition
+  commentId: P:LiteDB.Engine.AesStream.StreamPosition
+  id: StreamPosition
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: StreamPosition
+  nameWithType: AesStream.StreamPosition
+  fullName: LiteDB.Engine.AesStream.StreamPosition
+  type: Property
+  source:
+    id: StreamPosition
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 45
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public long StreamPosition { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property StreamPosition As Long
+  overload: LiteDB.Engine.AesStream.StreamPosition*
+- uid: LiteDB.Engine.AesStream.#ctor(System.String,System.IO.Stream)
+  commentId: M:LiteDB.Engine.AesStream.#ctor(System.String,System.IO.Stream)
+  id: '#ctor(System.String,System.IO.Stream)'
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: AesStream(string, Stream)
+  nameWithType: AesStream.AesStream(string, Stream)
+  fullName: LiteDB.Engine.AesStream.AesStream(string, System.IO.Stream)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public AesStream(string password, Stream stream)
+    parameters:
+    - id: password
+      type: System.String
+    - id: stream
+      type: System.IO.Stream
+    content.vb: Public Sub New(password As String, stream As Stream)
+  overload: LiteDB.Engine.AesStream.#ctor*
+  nameWithType.vb: AesStream.New(String, Stream)
+  fullName.vb: LiteDB.Engine.AesStream.New(String, System.IO.Stream)
+  name.vb: New(String, Stream)
+- uid: LiteDB.Engine.AesStream.Read(System.Byte[],System.Int32,System.Int32)
+  commentId: M:LiteDB.Engine.AesStream.Read(System.Byte[],System.Int32,System.Int32)
+  id: Read(System.Byte[],System.Int32,System.Int32)
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Read(byte[], int, int)
+  nameWithType: AesStream.Read(byte[], int, int)
+  fullName: LiteDB.Engine.AesStream.Read(byte[], int, int)
+  type: Method
+  source:
+    id: Read
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 171
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Decrypt data from Stream
+  example: []
+  syntax:
+    content: public override int Read(byte[] array, int offset, int count)
+    parameters:
+    - id: array
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function Read(array As Byte(), offset As Integer, count As Integer) As Integer
+  overridden: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+  overload: LiteDB.Engine.AesStream.Read*
+  nameWithType.vb: AesStream.Read(Byte(), Integer, Integer)
+  fullName.vb: LiteDB.Engine.AesStream.Read(Byte(), Integer, Integer)
+  name.vb: Read(Byte(), Integer, Integer)
+- uid: LiteDB.Engine.AesStream.Write(System.Byte[],System.Int32,System.Int32)
+  commentId: M:LiteDB.Engine.AesStream.Write(System.Byte[],System.Int32,System.Int32)
+  id: Write(System.Byte[],System.Int32,System.Int32)
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Write(byte[], int, int)
+  nameWithType: AesStream.Write(byte[], int, int)
+  fullName: LiteDB.Engine.AesStream.Write(byte[], int, int)
+  type: Method
+  source:
+    id: Write
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 191
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Encrypt data to Stream
+  example: []
+  syntax:
+    content: public override void Write(byte[] array, int offset, int count)
+    parameters:
+    - id: array
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    content.vb: Public Overrides Sub Write(array As Byte(), offset As Integer, count As Integer)
+  overridden: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+  overload: LiteDB.Engine.AesStream.Write*
+  nameWithType.vb: AesStream.Write(Byte(), Integer, Integer)
+  fullName.vb: LiteDB.Engine.AesStream.Write(Byte(), Integer, Integer)
+  name.vb: Write(Byte(), Integer, Integer)
+- uid: LiteDB.Engine.AesStream.Dispose(System.Boolean)
+  commentId: M:LiteDB.Engine.AesStream.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: AesStream.Dispose(bool)
+  fullName: LiteDB.Engine.AesStream.Dispose(bool)
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 199
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: protected override void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overrides Sub Dispose(disposing As Boolean)
+  overridden: System.IO.Stream.Dispose(System.Boolean)
+  overload: LiteDB.Engine.AesStream.Dispose*
+  nameWithType.vb: AesStream.Dispose(Boolean)
+  fullName.vb: LiteDB.Engine.AesStream.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: LiteDB.Engine.AesStream.NewSalt
+  commentId: M:LiteDB.Engine.AesStream.NewSalt
+  id: NewSalt
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: NewSalt()
+  nameWithType: AesStream.NewSalt()
+  fullName: LiteDB.Engine.AesStream.NewSalt()
+  type: Method
+  source:
+    id: NewSalt
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 214
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Get new salt for encryption
+  example: []
+  syntax:
+    content: public static byte[] NewSalt()
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function NewSalt() As Byte()
+  overload: LiteDB.Engine.AesStream.NewSalt*
+- uid: LiteDB.Engine.AesStream.Flush
+  commentId: M:LiteDB.Engine.AesStream.Flush
+  id: Flush
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: AesStream.Flush()
+  fullName: LiteDB.Engine.AesStream.Flush()
+  type: Method
+  source:
+    id: Flush
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 226
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override void Flush()
+    content.vb: Public Overrides Sub Flush()
+  overridden: System.IO.Stream.Flush
+  overload: LiteDB.Engine.AesStream.Flush*
+- uid: LiteDB.Engine.AesStream.Seek(System.Int64,System.IO.SeekOrigin)
+  commentId: M:LiteDB.Engine.AesStream.Seek(System.Int64,System.IO.SeekOrigin)
+  id: Seek(System.Int64,System.IO.SeekOrigin)
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: Seek(long, SeekOrigin)
+  nameWithType: AesStream.Seek(long, SeekOrigin)
+  fullName: LiteDB.Engine.AesStream.Seek(long, System.IO.SeekOrigin)
+  type: Method
+  source:
+    id: Seek
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 231
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override long Seek(long offset, SeekOrigin origin)
+    parameters:
+    - id: offset
+      type: System.Int64
+    - id: origin
+      type: System.IO.SeekOrigin
+    return:
+      type: System.Int64
+    content.vb: Public Overrides Function Seek(offset As Long, origin As SeekOrigin) As Long
+  overridden: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+  overload: LiteDB.Engine.AesStream.Seek*
+  nameWithType.vb: AesStream.Seek(Long, SeekOrigin)
+  fullName.vb: LiteDB.Engine.AesStream.Seek(Long, System.IO.SeekOrigin)
+  name.vb: Seek(Long, SeekOrigin)
+- uid: LiteDB.Engine.AesStream.SetLength(System.Int64)
+  commentId: M:LiteDB.Engine.AesStream.SetLength(System.Int64)
+  id: SetLength(System.Int64)
+  parent: LiteDB.Engine.AesStream
+  langs:
+  - csharp
+  - vb
+  name: SetLength(long)
+  nameWithType: AesStream.SetLength(long)
+  fullName: LiteDB.Engine.AesStream.SetLength(long)
+  type: Method
+  source:
+    id: SetLength
+    path: /workspace/LiteDB/LiteDB/Engine/Disk/Streams/AesStream.cs
+    startLine: 236
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public override void SetLength(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    content.vb: Public Overrides Sub SetLength(value As Long)
+  overridden: System.IO.Stream.SetLength(System.Int64)
+  overload: LiteDB.Engine.AesStream.SetLength*
+  nameWithType.vb: AesStream.SetLength(Long)
+  fullName.vb: LiteDB.Engine.AesStream.SetLength(Long)
+  name.vb: SetLength(Long)
+references:
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.MarshalByRefObject
+  commentId: T:System.MarshalByRefObject
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject
+  name: MarshalByRefObject
+  nameWithType: MarshalByRefObject
+  fullName: System.MarshalByRefObject
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.IO.Stream.Null
+  commentId: F:System.IO.Stream.Null
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.null
+  name: "Null"
+  nameWithType: Stream.Null
+  fullName: System.IO.Stream.Null
+- uid: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.beginread
+  name: BeginRead(byte[], int, int, AsyncCallback, object)
+  nameWithType: Stream.BeginRead(byte[], int, int, AsyncCallback, object)
+  fullName: System.IO.Stream.BeginRead(byte[], int, int, System.AsyncCallback, object)
+  nameWithType.vb: Stream.BeginRead(Byte(), Integer, Integer, AsyncCallback, Object)
+  fullName.vb: System.IO.Stream.BeginRead(Byte(), Integer, Integer, System.AsyncCallback, Object)
+  name.vb: BeginRead(Byte(), Integer, Integer, AsyncCallback, Object)
+  spec.csharp:
+  - uid: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginRead
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.beginread
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginRead
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.beginread
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  commentId: M:System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.beginwrite
+  name: BeginWrite(byte[], int, int, AsyncCallback, object)
+  nameWithType: Stream.BeginWrite(byte[], int, int, AsyncCallback, object)
+  fullName: System.IO.Stream.BeginWrite(byte[], int, int, System.AsyncCallback, object)
+  nameWithType.vb: Stream.BeginWrite(Byte(), Integer, Integer, AsyncCallback, Object)
+  fullName.vb: System.IO.Stream.BeginWrite(Byte(), Integer, Integer, System.AsyncCallback, Object)
+  name.vb: BeginWrite(Byte(), Integer, Integer, AsyncCallback, Object)
+  spec.csharp:
+  - uid: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginWrite
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.beginwrite
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+    name: BeginWrite
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.beginwrite
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.AsyncCallback
+    name: AsyncCallback
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.asynccallback
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IO.Stream.Close
+  commentId: M:System.IO.Stream.Close
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.close
+  name: Close()
+  nameWithType: Stream.Close()
+  fullName: System.IO.Stream.Close()
+  spec.csharp:
+  - uid: System.IO.Stream.Close
+    name: Close
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.close
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Close
+    name: Close
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.close
+  - name: (
+  - name: )
+- uid: System.IO.Stream.CopyTo(System.IO.Stream)
+  commentId: M:System.IO.Stream.CopyTo(System.IO.Stream)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.copyto#system-io-stream-copyto(system-io-stream)
+  name: CopyTo(Stream)
+  nameWithType: Stream.CopyTo(Stream)
+  fullName: System.IO.Stream.CopyTo(System.IO.Stream)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copyto#system-io-stream-copyto(system-io-stream)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copyto#system-io-stream-copyto(system-io-stream)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+  commentId: M:System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.copyto#system-io-stream-copyto(system-io-stream-system-int32)
+  name: CopyTo(Stream, int)
+  nameWithType: Stream.CopyTo(Stream, int)
+  fullName: System.IO.Stream.CopyTo(System.IO.Stream, int)
+  nameWithType.vb: Stream.CopyTo(Stream, Integer)
+  fullName.vb: System.IO.Stream.CopyTo(System.IO.Stream, Integer)
+  name.vb: CopyTo(Stream, Integer)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copyto#system-io-stream-copyto(system-io-stream-system-int32)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyTo(System.IO.Stream,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copyto#system-io-stream-copyto(system-io-stream-system-int32)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.IO.Stream.CopyToAsync(System.IO.Stream)
+  commentId: M:System.IO.Stream.CopyToAsync(System.IO.Stream)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream)
+  name: CopyToAsync(Stream)
+  nameWithType: Stream.CopyToAsync(Stream)
+  fullName: System.IO.Stream.CopyToAsync(System.IO.Stream)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyToAsync(System.IO.Stream)
+    name: CopyToAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyToAsync(System.IO.Stream)
+    name: CopyToAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32)
+  commentId: M:System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream-system-int32)
+  name: CopyToAsync(Stream, int)
+  nameWithType: Stream.CopyToAsync(Stream, int)
+  fullName: System.IO.Stream.CopyToAsync(System.IO.Stream, int)
+  nameWithType.vb: Stream.CopyToAsync(Stream, Integer)
+  fullName.vb: System.IO.Stream.CopyToAsync(System.IO.Stream, Integer)
+  name.vb: CopyToAsync(Stream, Integer)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32)
+    name: CopyToAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream-system-int32)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32)
+    name: CopyToAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream-system-int32)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  commentId: M:System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream-system-int32-system-threading-cancellationtoken)
+  name: CopyToAsync(Stream, int, CancellationToken)
+  nameWithType: Stream.CopyToAsync(Stream, int, CancellationToken)
+  fullName: System.IO.Stream.CopyToAsync(System.IO.Stream, int, System.Threading.CancellationToken)
+  nameWithType.vb: Stream.CopyToAsync(Stream, Integer, CancellationToken)
+  fullName.vb: System.IO.Stream.CopyToAsync(System.IO.Stream, Integer, System.Threading.CancellationToken)
+  name.vb: CopyToAsync(Stream, Integer, CancellationToken)
+  spec.csharp:
+  - uid: System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+    name: CopyToAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream-system-int32-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+    name: CopyToAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync#system-io-stream-copytoasync(system-io-stream-system-int32-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.IO.Stream.CreateWaitHandle
+  commentId: M:System.IO.Stream.CreateWaitHandle
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.createwaithandle
+  name: CreateWaitHandle()
+  nameWithType: Stream.CreateWaitHandle()
+  fullName: System.IO.Stream.CreateWaitHandle()
+  spec.csharp:
+  - uid: System.IO.Stream.CreateWaitHandle
+    name: CreateWaitHandle
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.createwaithandle
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.CreateWaitHandle
+    name: CreateWaitHandle
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.createwaithandle
+  - name: (
+  - name: )
+- uid: System.IO.Stream.Dispose
+  commentId: M:System.IO.Stream.Dispose
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.dispose#system-io-stream-dispose
+  name: Dispose()
+  nameWithType: Stream.Dispose()
+  fullName: System.IO.Stream.Dispose()
+  spec.csharp:
+  - uid: System.IO.Stream.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.dispose#system-io-stream-dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.dispose#system-io-stream-dispose
+  - name: (
+  - name: )
+- uid: System.IO.Stream.EndRead(System.IAsyncResult)
+  commentId: M:System.IO.Stream.EndRead(System.IAsyncResult)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.endread
+  name: EndRead(IAsyncResult)
+  nameWithType: Stream.EndRead(IAsyncResult)
+  fullName: System.IO.Stream.EndRead(System.IAsyncResult)
+  spec.csharp:
+  - uid: System.IO.Stream.EndRead(System.IAsyncResult)
+    name: EndRead
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.endread
+  - name: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.EndRead(System.IAsyncResult)
+    name: EndRead
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.endread
+  - name: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  - name: )
+- uid: System.IO.Stream.EndWrite(System.IAsyncResult)
+  commentId: M:System.IO.Stream.EndWrite(System.IAsyncResult)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.endwrite
+  name: EndWrite(IAsyncResult)
+  nameWithType: Stream.EndWrite(IAsyncResult)
+  fullName: System.IO.Stream.EndWrite(System.IAsyncResult)
+  spec.csharp:
+  - uid: System.IO.Stream.EndWrite(System.IAsyncResult)
+    name: EndWrite
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.endwrite
+  - name: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.EndWrite(System.IAsyncResult)
+    name: EndWrite
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.endwrite
+  - name: (
+  - uid: System.IAsyncResult
+    name: IAsyncResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  - name: )
+- uid: System.IO.Stream.FlushAsync
+  commentId: M:System.IO.Stream.FlushAsync
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.flushasync#system-io-stream-flushasync
+  name: FlushAsync()
+  nameWithType: Stream.FlushAsync()
+  fullName: System.IO.Stream.FlushAsync()
+  spec.csharp:
+  - uid: System.IO.Stream.FlushAsync
+    name: FlushAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.flushasync#system-io-stream-flushasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.FlushAsync
+    name: FlushAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.flushasync#system-io-stream-flushasync
+  - name: (
+  - name: )
+- uid: System.IO.Stream.FlushAsync(System.Threading.CancellationToken)
+  commentId: M:System.IO.Stream.FlushAsync(System.Threading.CancellationToken)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.flushasync#system-io-stream-flushasync(system-threading-cancellationtoken)
+  name: FlushAsync(CancellationToken)
+  nameWithType: Stream.FlushAsync(CancellationToken)
+  fullName: System.IO.Stream.FlushAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: System.IO.Stream.FlushAsync(System.Threading.CancellationToken)
+    name: FlushAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.flushasync#system-io-stream-flushasync(system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.FlushAsync(System.Threading.CancellationToken)
+    name: FlushAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.flushasync#system-io-stream-flushasync(system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.IO.Stream.ObjectInvariant
+  commentId: M:System.IO.Stream.ObjectInvariant
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.objectinvariant
+  name: ObjectInvariant()
+  nameWithType: Stream.ObjectInvariant()
+  fullName: System.IO.Stream.ObjectInvariant()
+  spec.csharp:
+  - uid: System.IO.Stream.ObjectInvariant
+    name: ObjectInvariant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.objectinvariant
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.ObjectInvariant
+    name: ObjectInvariant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.objectinvariant
+  - name: (
+  - name: )
+- uid: System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.readasync#system-io-stream-readasync(system-byte()-system-int32-system-int32)
+  name: ReadAsync(byte[], int, int)
+  nameWithType: Stream.ReadAsync(byte[], int, int)
+  fullName: System.IO.Stream.ReadAsync(byte[], int, int)
+  nameWithType.vb: Stream.ReadAsync(Byte(), Integer, Integer)
+  fullName.vb: System.IO.Stream.ReadAsync(Byte(), Integer, Integer)
+  name.vb: ReadAsync(Byte(), Integer, Integer)
+  spec.csharp:
+  - uid: System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)
+    name: ReadAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.readasync#system-io-stream-readasync(system-byte()-system-int32-system-int32)
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)
+    name: ReadAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.readasync#system-io-stream-readasync(system-byte()-system-int32-system-int32)
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  commentId: M:System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.readasync#system-io-stream-readasync(system-byte()-system-int32-system-int32-system-threading-cancellationtoken)
+  name: ReadAsync(byte[], int, int, CancellationToken)
+  nameWithType: Stream.ReadAsync(byte[], int, int, CancellationToken)
+  fullName: System.IO.Stream.ReadAsync(byte[], int, int, System.Threading.CancellationToken)
+  nameWithType.vb: Stream.ReadAsync(Byte(), Integer, Integer, CancellationToken)
+  fullName.vb: System.IO.Stream.ReadAsync(Byte(), Integer, Integer, System.Threading.CancellationToken)
+  name.vb: ReadAsync(Byte(), Integer, Integer, CancellationToken)
+  spec.csharp:
+  - uid: System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+    name: ReadAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.readasync#system-io-stream-readasync(system-byte()-system-int32-system-int32-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+    name: ReadAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.readasync#system-io-stream-readasync(system-byte()-system-int32-system-int32-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.IO.Stream.ReadByte
+  commentId: M:System.IO.Stream.ReadByte
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.readbyte
+  name: ReadByte()
+  nameWithType: Stream.ReadByte()
+  fullName: System.IO.Stream.ReadByte()
+  spec.csharp:
+  - uid: System.IO.Stream.ReadByte
+    name: ReadByte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.readbyte
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.ReadByte
+    name: ReadByte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.readbyte
+  - name: (
+  - name: )
+- uid: System.IO.Stream.Synchronized(System.IO.Stream)
+  commentId: M:System.IO.Stream.Synchronized(System.IO.Stream)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.synchronized
+  name: Synchronized(Stream)
+  nameWithType: Stream.Synchronized(Stream)
+  fullName: System.IO.Stream.Synchronized(System.IO.Stream)
+  spec.csharp:
+  - uid: System.IO.Stream.Synchronized(System.IO.Stream)
+    name: Synchronized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.synchronized
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Synchronized(System.IO.Stream)
+    name: Synchronized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.synchronized
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.writeasync#system-io-stream-writeasync(system-byte()-system-int32-system-int32)
+  name: WriteAsync(byte[], int, int)
+  nameWithType: Stream.WriteAsync(byte[], int, int)
+  fullName: System.IO.Stream.WriteAsync(byte[], int, int)
+  nameWithType.vb: Stream.WriteAsync(Byte(), Integer, Integer)
+  fullName.vb: System.IO.Stream.WriteAsync(Byte(), Integer, Integer)
+  name.vb: WriteAsync(Byte(), Integer, Integer)
+  spec.csharp:
+  - uid: System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)
+    name: WriteAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.writeasync#system-io-stream-writeasync(system-byte()-system-int32-system-int32)
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)
+    name: WriteAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.writeasync#system-io-stream-writeasync(system-byte()-system-int32-system-int32)
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  commentId: M:System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.writeasync#system-io-stream-writeasync(system-byte()-system-int32-system-int32-system-threading-cancellationtoken)
+  name: WriteAsync(byte[], int, int, CancellationToken)
+  nameWithType: Stream.WriteAsync(byte[], int, int, CancellationToken)
+  fullName: System.IO.Stream.WriteAsync(byte[], int, int, System.Threading.CancellationToken)
+  nameWithType.vb: Stream.WriteAsync(Byte(), Integer, Integer, CancellationToken)
+  fullName.vb: System.IO.Stream.WriteAsync(Byte(), Integer, Integer, System.Threading.CancellationToken)
+  name.vb: WriteAsync(Byte(), Integer, Integer, CancellationToken)
+  spec.csharp:
+  - uid: System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+    name: WriteAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.writeasync#system-io-stream-writeasync(system-byte()-system-int32-system-int32-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+    name: WriteAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.writeasync#system-io-stream-writeasync(system-byte()-system-int32-system-int32-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.IO.Stream.WriteByte(System.Byte)
+  commentId: M:System.IO.Stream.WriteByte(System.Byte)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.writebyte
+  name: WriteByte(byte)
+  nameWithType: Stream.WriteByte(byte)
+  fullName: System.IO.Stream.WriteByte(byte)
+  nameWithType.vb: Stream.WriteByte(Byte)
+  fullName.vb: System.IO.Stream.WriteByte(Byte)
+  name.vb: WriteByte(Byte)
+  spec.csharp:
+  - uid: System.IO.Stream.WriteByte(System.Byte)
+    name: WriteByte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.writebyte
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.WriteByte(System.Byte)
+    name: WriteByte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.writebyte
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.IO.Stream.CanTimeout
+  commentId: P:System.IO.Stream.CanTimeout
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.cantimeout
+  name: CanTimeout
+  nameWithType: Stream.CanTimeout
+  fullName: System.IO.Stream.CanTimeout
+- uid: System.IO.Stream.ReadTimeout
+  commentId: P:System.IO.Stream.ReadTimeout
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.readtimeout
+  name: ReadTimeout
+  nameWithType: Stream.ReadTimeout
+  fullName: System.IO.Stream.ReadTimeout
+- uid: System.IO.Stream.WriteTimeout
+  commentId: P:System.IO.Stream.WriteTimeout
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.writetimeout
+  name: WriteTimeout
+  nameWithType: Stream.WriteTimeout
+  fullName: System.IO.Stream.WriteTimeout
+- uid: System.MarshalByRefObject.GetLifetimeService
+  commentId: M:System.MarshalByRefObject.GetLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  name: GetLifetimeService()
+  nameWithType: MarshalByRefObject.GetLifetimeService()
+  fullName: System.MarshalByRefObject.GetLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.InitializeLifetimeService
+  commentId: M:System.MarshalByRefObject.InitializeLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  name: InitializeLifetimeService()
+  nameWithType: MarshalByRefObject.InitializeLifetimeService()
+  fullName: System.MarshalByRefObject.InitializeLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  name: MemberwiseClone(bool)
+  nameWithType: MarshalByRefObject.MemberwiseClone(bool)
+  fullName: System.MarshalByRefObject.MemberwiseClone(bool)
+  nameWithType.vb: MarshalByRefObject.MemberwiseClone(Boolean)
+  fullName.vb: System.MarshalByRefObject.MemberwiseClone(Boolean)
+  name.vb: MemberwiseClone(Boolean)
+  spec.csharp:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: LiteDB.Engine.AesStream.Salt*
+  commentId: Overload:LiteDB.Engine.AesStream.Salt
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Salt
+  name: Salt
+  nameWithType: AesStream.Salt
+  fullName: LiteDB.Engine.AesStream.Salt
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.IO.Stream.CanRead
+  commentId: P:System.IO.Stream.CanRead
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.canread
+  name: CanRead
+  nameWithType: Stream.CanRead
+  fullName: System.IO.Stream.CanRead
+- uid: LiteDB.Engine.AesStream.CanRead*
+  commentId: Overload:LiteDB.Engine.AesStream.CanRead
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_CanRead
+  name: CanRead
+  nameWithType: AesStream.CanRead
+  fullName: LiteDB.Engine.AesStream.CanRead
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IO.Stream.CanSeek
+  commentId: P:System.IO.Stream.CanSeek
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.canseek
+  name: CanSeek
+  nameWithType: Stream.CanSeek
+  fullName: System.IO.Stream.CanSeek
+- uid: LiteDB.Engine.AesStream.CanSeek*
+  commentId: Overload:LiteDB.Engine.AesStream.CanSeek
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_CanSeek
+  name: CanSeek
+  nameWithType: AesStream.CanSeek
+  fullName: LiteDB.Engine.AesStream.CanSeek
+- uid: System.IO.Stream.CanWrite
+  commentId: P:System.IO.Stream.CanWrite
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.canwrite
+  name: CanWrite
+  nameWithType: Stream.CanWrite
+  fullName: System.IO.Stream.CanWrite
+- uid: LiteDB.Engine.AesStream.CanWrite*
+  commentId: Overload:LiteDB.Engine.AesStream.CanWrite
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_CanWrite
+  name: CanWrite
+  nameWithType: AesStream.CanWrite
+  fullName: LiteDB.Engine.AesStream.CanWrite
+- uid: System.IO.Stream.Length
+  commentId: P:System.IO.Stream.Length
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.length
+  name: Length
+  nameWithType: Stream.Length
+  fullName: System.IO.Stream.Length
+- uid: LiteDB.Engine.AesStream.Length*
+  commentId: Overload:LiteDB.Engine.AesStream.Length
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Length
+  name: Length
+  nameWithType: AesStream.Length
+  fullName: LiteDB.Engine.AesStream.Length
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.IO.Stream.Position
+  commentId: P:System.IO.Stream.Position
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.position
+  name: Position
+  nameWithType: Stream.Position
+  fullName: System.IO.Stream.Position
+- uid: LiteDB.Engine.AesStream.Position*
+  commentId: Overload:LiteDB.Engine.AesStream.Position
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Position
+  name: Position
+  nameWithType: AesStream.Position
+  fullName: LiteDB.Engine.AesStream.Position
+- uid: LiteDB.Engine.AesStream.StreamPosition*
+  commentId: Overload:LiteDB.Engine.AesStream.StreamPosition
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_StreamPosition
+  name: StreamPosition
+  nameWithType: AesStream.StreamPosition
+  fullName: LiteDB.Engine.AesStream.StreamPosition
+- uid: LiteDB.Engine.AesStream.#ctor*
+  commentId: Overload:LiteDB.Engine.AesStream.#ctor
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream__ctor_System_String_System_IO_Stream_
+  name: AesStream
+  nameWithType: AesStream.AesStream
+  fullName: LiteDB.Engine.AesStream.AesStream
+  nameWithType.vb: AesStream.New
+  fullName.vb: LiteDB.Engine.AesStream.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.read
+  name: Read(byte[], int, int)
+  nameWithType: Stream.Read(byte[], int, int)
+  fullName: System.IO.Stream.Read(byte[], int, int)
+  nameWithType.vb: Stream.Read(Byte(), Integer, Integer)
+  fullName.vb: System.IO.Stream.Read(Byte(), Integer, Integer)
+  name.vb: Read(Byte(), Integer, Integer)
+  spec.csharp:
+  - uid: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+    name: Read
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.read
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Read(System.Byte[],System.Int32,System.Int32)
+    name: Read
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.read
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.Engine.AesStream.Read*
+  commentId: Overload:LiteDB.Engine.AesStream.Read
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Read_System_Byte___System_Int32_System_Int32_
+  name: Read
+  nameWithType: AesStream.Read
+  fullName: LiteDB.Engine.AesStream.Read
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.write
+  name: Write(byte[], int, int)
+  nameWithType: Stream.Write(byte[], int, int)
+  fullName: System.IO.Stream.Write(byte[], int, int)
+  nameWithType.vb: Stream.Write(Byte(), Integer, Integer)
+  fullName.vb: System.IO.Stream.Write(Byte(), Integer, Integer)
+  name.vb: Write(Byte(), Integer, Integer)
+  spec.csharp:
+  - uid: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+    name: Write
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.write
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32)
+    name: Write
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.write
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.Engine.AesStream.Write*
+  commentId: Overload:LiteDB.Engine.AesStream.Write
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Write_System_Byte___System_Int32_System_Int32_
+  name: Write
+  nameWithType: AesStream.Write
+  fullName: LiteDB.Engine.AesStream.Write
+- uid: System.IO.Stream.Dispose(System.Boolean)
+  commentId: M:System.IO.Stream.Dispose(System.Boolean)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.dispose#system-io-stream-dispose(system-boolean)
+  name: Dispose(bool)
+  nameWithType: Stream.Dispose(bool)
+  fullName: System.IO.Stream.Dispose(bool)
+  nameWithType.vb: Stream.Dispose(Boolean)
+  fullName.vb: System.IO.Stream.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: System.IO.Stream.Dispose(System.Boolean)
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.dispose#system-io-stream-dispose(system-boolean)
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Dispose(System.Boolean)
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.dispose#system-io-stream-dispose(system-boolean)
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: LiteDB.Engine.AesStream.Dispose*
+  commentId: Overload:LiteDB.Engine.AesStream.Dispose
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Dispose_System_Boolean_
+  name: Dispose
+  nameWithType: AesStream.Dispose
+  fullName: LiteDB.Engine.AesStream.Dispose
+- uid: LiteDB.Engine.AesStream.NewSalt*
+  commentId: Overload:LiteDB.Engine.AesStream.NewSalt
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_NewSalt
+  name: NewSalt
+  nameWithType: AesStream.NewSalt
+  fullName: LiteDB.Engine.AesStream.NewSalt
+- uid: System.IO.Stream.Flush
+  commentId: M:System.IO.Stream.Flush
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.flush
+  name: Flush()
+  nameWithType: Stream.Flush()
+  fullName: System.IO.Stream.Flush()
+  spec.csharp:
+  - uid: System.IO.Stream.Flush
+    name: Flush
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.flush
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Flush
+    name: Flush
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.flush
+  - name: (
+  - name: )
+- uid: LiteDB.Engine.AesStream.Flush*
+  commentId: Overload:LiteDB.Engine.AesStream.Flush
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Flush
+  name: Flush
+  nameWithType: AesStream.Flush
+  fullName: LiteDB.Engine.AesStream.Flush
+- uid: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+  commentId: M:System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.seek
+  name: Seek(long, SeekOrigin)
+  nameWithType: Stream.Seek(long, SeekOrigin)
+  fullName: System.IO.Stream.Seek(long, System.IO.SeekOrigin)
+  nameWithType.vb: Stream.Seek(Long, SeekOrigin)
+  fullName.vb: System.IO.Stream.Seek(Long, System.IO.SeekOrigin)
+  name.vb: Seek(Long, SeekOrigin)
+  spec.csharp:
+  - uid: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+    name: Seek
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.seek
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.IO.SeekOrigin
+    name: SeekOrigin
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.seekorigin
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.Seek(System.Int64,System.IO.SeekOrigin)
+    name: Seek
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.seek
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.IO.SeekOrigin
+    name: SeekOrigin
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.seekorigin
+  - name: )
+- uid: LiteDB.Engine.AesStream.Seek*
+  commentId: Overload:LiteDB.Engine.AesStream.Seek
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_Seek_System_Int64_System_IO_SeekOrigin_
+  name: Seek
+  nameWithType: AesStream.Seek
+  fullName: LiteDB.Engine.AesStream.Seek
+- uid: System.IO.SeekOrigin
+  commentId: T:System.IO.SeekOrigin
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.seekorigin
+  name: SeekOrigin
+  nameWithType: SeekOrigin
+  fullName: System.IO.SeekOrigin
+- uid: System.IO.Stream.SetLength(System.Int64)
+  commentId: M:System.IO.Stream.SetLength(System.Int64)
+  parent: System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream.setlength
+  name: SetLength(long)
+  nameWithType: Stream.SetLength(long)
+  fullName: System.IO.Stream.SetLength(long)
+  nameWithType.vb: Stream.SetLength(Long)
+  fullName.vb: System.IO.Stream.SetLength(Long)
+  name.vb: SetLength(Long)
+  spec.csharp:
+  - uid: System.IO.Stream.SetLength(System.Int64)
+    name: SetLength
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.setlength
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  spec.vb:
+  - uid: System.IO.Stream.SetLength(System.Int64)
+    name: SetLength
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream.setlength
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: LiteDB.Engine.AesStream.SetLength*
+  commentId: Overload:LiteDB.Engine.AesStream.SetLength
+  href: LiteDB.Engine.AesStream.html#LiteDB_Engine_AesStream_SetLength_System_Int64_
+  name: SetLength
+  nameWithType: AesStream.SetLength
+  fullName: LiteDB.Engine.AesStream.SetLength

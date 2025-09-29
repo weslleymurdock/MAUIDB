@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  id: LiteDB.Engine
+  children:
+  - LiteDB.Engine.AesStream
+  - LiteDB.Engine.EngineSettings
+  - LiteDB.Engine.FileOrigin
+  - LiteDB.Engine.ILiteEngine
+  - LiteDB.Engine.LiteEngine
+  - LiteDB.Engine.Pragmas
+  - LiteDB.Engine.RebuildOptions
+  - LiteDB.Engine.TempStream
+  langs:
+  - csharp
+  - vb
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  type: Namespace
+  assemblies:
+  - LiteDB
+references:
+- uid: LiteDB.Engine.AesStream
+  commentId: T:LiteDB.Engine.AesStream
+  href: LiteDB.Engine.AesStream.html
+  name: AesStream
+  nameWithType: AesStream
+  fullName: LiteDB.Engine.AesStream
+- uid: LiteDB.Engine.TempStream
+  commentId: T:LiteDB.Engine.TempStream
+  href: LiteDB.Engine.TempStream.html
+  name: TempStream
+  nameWithType: TempStream
+  fullName: LiteDB.Engine.TempStream
+- uid: LiteDB.Engine.LiteEngine
+  commentId: T:LiteDB.Engine.LiteEngine
+  href: LiteDB.Engine.LiteEngine.html
+  name: LiteEngine
+  nameWithType: LiteEngine
+  fullName: LiteDB.Engine.LiteEngine
+- uid: LiteDB.Engine.EngineSettings
+  commentId: T:LiteDB.Engine.EngineSettings
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.EngineSettings.html
+  name: EngineSettings
+  nameWithType: EngineSettings
+  fullName: LiteDB.Engine.EngineSettings
+- uid: LiteDB.Engine.ILiteEngine
+  commentId: T:LiteDB.Engine.ILiteEngine
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.ILiteEngine.html
+  name: ILiteEngine
+  nameWithType: ILiteEngine
+  fullName: LiteDB.Engine.ILiteEngine
+- uid: LiteDB.Engine.Pragmas
+  commentId: T:LiteDB.Engine.Pragmas
+  href: LiteDB.Engine.Pragmas.html
+  name: Pragmas
+  nameWithType: Pragmas
+  fullName: LiteDB.Engine.Pragmas
+- uid: LiteDB.Engine.FileOrigin
+  commentId: T:LiteDB.Engine.FileOrigin
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.FileOrigin.html
+  name: FileOrigin
+  nameWithType: FileOrigin
+  fullName: LiteDB.Engine.FileOrigin
+- uid: LiteDB.Engine.RebuildOptions
+  commentId: T:LiteDB.Engine.RebuildOptions
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.RebuildOptions.html
+  name: RebuildOptions
+  nameWithType: RebuildOptions
+  fullName: LiteDB.Engine.RebuildOptions
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html

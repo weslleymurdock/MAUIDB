@@ -1,0 +1,402 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.QueryOrder
+  commentId: T:LiteDB.QueryOrder
+  id: QueryOrder
+  parent: LiteDB
+  children:
+  - LiteDB.QueryOrder.#ctor(LiteDB.BsonExpression,System.Int32)
+  - LiteDB.QueryOrder.Expression
+  - LiteDB.QueryOrder.Order
+  langs:
+  - csharp
+  - vb
+  name: QueryOrder
+  nameWithType: QueryOrder
+  fullName: LiteDB.QueryOrder
+  type: Class
+  source:
+    id: QueryOrder
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Structures/QueryOrder.cs
+    startLine: 5
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Represents a single ORDER BY segment containing the expression and direction.
+  example: []
+  syntax:
+    content: public class QueryOrder
+    content.vb: Public Class QueryOrder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.QueryOrder.#ctor(LiteDB.BsonExpression,System.Int32)
+  commentId: M:LiteDB.QueryOrder.#ctor(LiteDB.BsonExpression,System.Int32)
+  id: '#ctor(LiteDB.BsonExpression,System.Int32)'
+  parent: LiteDB.QueryOrder
+  langs:
+  - csharp
+  - vb
+  name: QueryOrder(BsonExpression, int)
+  nameWithType: QueryOrder.QueryOrder(BsonExpression, int)
+  fullName: LiteDB.QueryOrder.QueryOrder(LiteDB.BsonExpression, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Structures/QueryOrder.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public QueryOrder(BsonExpression expression, int order)
+    parameters:
+    - id: expression
+      type: LiteDB.BsonExpression
+    - id: order
+      type: System.Int32
+    content.vb: Public Sub New(expression As BsonExpression, order As Integer)
+  overload: LiteDB.QueryOrder.#ctor*
+  nameWithType.vb: QueryOrder.New(BsonExpression, Integer)
+  fullName.vb: LiteDB.QueryOrder.New(LiteDB.BsonExpression, Integer)
+  name.vb: New(BsonExpression, Integer)
+- uid: LiteDB.QueryOrder.Expression
+  commentId: P:LiteDB.QueryOrder.Expression
+  id: Expression
+  parent: LiteDB.QueryOrder
+  langs:
+  - csharp
+  - vb
+  name: Expression
+  nameWithType: QueryOrder.Expression
+  fullName: LiteDB.QueryOrder.Expression
+  type: Property
+  source:
+    id: Expression
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Structures/QueryOrder.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonExpression Expression { get; }
+    parameters: []
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public ReadOnly Property Expression As BsonExpression
+  overload: LiteDB.QueryOrder.Expression*
+- uid: LiteDB.QueryOrder.Order
+  commentId: P:LiteDB.QueryOrder.Order
+  id: Order
+  parent: LiteDB.QueryOrder
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: QueryOrder.Order
+  fullName: LiteDB.QueryOrder.Order
+  type: Property
+  source:
+    id: Order
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Structures/QueryOrder.cs
+    startLine: 15
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public int Order { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Order As Integer
+  overload: LiteDB.QueryOrder.Order*
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.QueryOrder.#ctor*
+  commentId: Overload:LiteDB.QueryOrder.#ctor
+  href: LiteDB.QueryOrder.html#LiteDB_QueryOrder__ctor_LiteDB_BsonExpression_System_Int32_
+  name: QueryOrder
+  nameWithType: QueryOrder.QueryOrder
+  fullName: LiteDB.QueryOrder.QueryOrder
+  nameWithType.vb: QueryOrder.New
+  fullName.vb: LiteDB.QueryOrder.New
+  name.vb: New
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LiteDB.QueryOrder.Expression*
+  commentId: Overload:LiteDB.QueryOrder.Expression
+  href: LiteDB.QueryOrder.html#LiteDB_QueryOrder_Expression
+  name: Expression
+  nameWithType: QueryOrder.Expression
+  fullName: LiteDB.QueryOrder.Expression
+- uid: LiteDB.QueryOrder.Order*
+  commentId: Overload:LiteDB.QueryOrder.Order
+  href: LiteDB.QueryOrder.html#LiteDB_QueryOrder_Order
+  name: Order
+  nameWithType: QueryOrder.Order
+  fullName: LiteDB.QueryOrder.Order

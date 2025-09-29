@@ -1,0 +1,76 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [
+            "LiteDB/LiteDB.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ]
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "NoWarn": "CS8632"
+      }
+    }
+  ],
+  "build": {
+    "dest": "_site",
+    "content": [
+      {
+        "files": [
+          "index.md",
+          "toc.yml",
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "api/**.yml"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "LiteDB Documentation",
+      "_appFooter": "© {year} LiteDB contributors",
+      "_enableSearch": true,
+      "_gitContribute": {
+        "repo": "https://github.com/mbdavid/LiteDB",
+        "branch": "master"
+      }
+    },
+    "markdownEngineName": "markdig",
+    "markdownEngineProperties": {
+      "extensions": [
+        "advanced",
+        "alerts",
+        "autoidentifiers",
+        "pipe-tables",
+        "emphasisextras",
+        "footnotes",
+        "definitionlists",
+        "tasklists"
+      ]
+    },
+    "template": [
+      "default"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ]
+  }
+}

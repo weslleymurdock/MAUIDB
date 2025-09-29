@@ -1,0 +1,2048 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ILiteQueryable`1
+  commentId: T:LiteDB.ILiteQueryable`1
+  id: ILiteQueryable`1
+  parent: LiteDB
+  children:
+  - LiteDB.ILiteQueryable`1.GroupBy(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.Having(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.Include(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.Include(System.Collections.Generic.List{LiteDB.BsonExpression})
+  - LiteDB.ILiteQueryable`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  - LiteDB.ILiteQueryable`1.OrderBy(LiteDB.BsonExpression,System.Int32)
+  - LiteDB.ILiteQueryable`1.OrderByDescending(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  - LiteDB.ILiteQueryable`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32)
+  - LiteDB.ILiteQueryable`1.Select(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.Select``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  - LiteDB.ILiteQueryable`1.ThenBy(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.ThenByDescending(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.ThenByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  - LiteDB.ILiteQueryable`1.ThenBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  - LiteDB.ILiteQueryable`1.Where(LiteDB.BsonExpression)
+  - LiteDB.ILiteQueryable`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  - LiteDB.ILiteQueryable`1.Where(System.String,LiteDB.BsonDocument)
+  - LiteDB.ILiteQueryable`1.Where(System.String,LiteDB.BsonValue[])
+  langs:
+  - csharp
+  - vb
+  name: ILiteQueryable<T>
+  nameWithType: ILiteQueryable<T>
+  fullName: LiteDB.ILiteQueryable<T>
+  type: Interface
+  source:
+    id: ILiteQueryable
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: 'public interface ILiteQueryable<T> : ILiteQueryableResult<T>'
+    typeParameters:
+    - id: T
+    content.vb: Public Interface ILiteQueryable(Of T) Inherits ILiteQueryableResult(Of T)
+  inheritedMembers:
+  - LiteDB.ILiteQueryableResult{{T}}.Limit(System.Int32)
+  - LiteDB.ILiteQueryableResult{{T}}.Skip(System.Int32)
+  - LiteDB.ILiteQueryableResult{{T}}.Offset(System.Int32)
+  - LiteDB.ILiteQueryableResult{{T}}.ForUpdate
+  - LiteDB.ILiteQueryableResult{{T}}.GetPlan
+  - LiteDB.ILiteQueryableResult{{T}}.ExecuteReader
+  - LiteDB.ILiteQueryableResult{{T}}.ToDocuments
+  - LiteDB.ILiteQueryableResult{{T}}.ToEnumerable
+  - LiteDB.ILiteQueryableResult{{T}}.ToList
+  - LiteDB.ILiteQueryableResult{{T}}.ToArray
+  - LiteDB.ILiteQueryableResult{{T}}.Into(System.String,LiteDB.BsonAutoId)
+  - LiteDB.ILiteQueryableResult{{T}}.First
+  - LiteDB.ILiteQueryableResult{{T}}.FirstOrDefault
+  - LiteDB.ILiteQueryableResult{{T}}.Single
+  - LiteDB.ILiteQueryableResult{{T}}.SingleOrDefault
+  - LiteDB.ILiteQueryableResult{{T}}.Count
+  - LiteDB.ILiteQueryableResult{{T}}.LongCount
+  - LiteDB.ILiteQueryableResult{{T}}.Exists
+  nameWithType.vb: ILiteQueryable(Of T)
+  fullName.vb: LiteDB.ILiteQueryable(Of T)
+  name.vb: ILiteQueryable(Of T)
+- uid: LiteDB.ILiteQueryable`1.Include(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.Include(LiteDB.BsonExpression)
+  id: Include(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Include(BsonExpression)
+  nameWithType: ILiteQueryable<T>.Include(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.Include(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: Include
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 9
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Include(BsonExpression path)
+    parameters:
+    - id: path
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Include(path As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Include*
+  nameWithType.vb: ILiteQueryable(Of T).Include(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Include(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.Include(System.Collections.Generic.List{LiteDB.BsonExpression})
+  commentId: M:LiteDB.ILiteQueryable`1.Include(System.Collections.Generic.List{LiteDB.BsonExpression})
+  id: Include(System.Collections.Generic.List{LiteDB.BsonExpression})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Include(List<BsonExpression>)
+  nameWithType: ILiteQueryable<T>.Include(List<BsonExpression>)
+  fullName: LiteDB.ILiteQueryable<T>.Include(System.Collections.Generic.List<LiteDB.BsonExpression>)
+  type: Method
+  source:
+    id: Include
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 10
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Include(List<BsonExpression> paths)
+    parameters:
+    - id: paths
+      type: System.Collections.Generic.List{LiteDB.BsonExpression}
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Include(paths As List(Of BsonExpression)) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Include*
+  nameWithType.vb: ILiteQueryable(Of T).Include(List(Of BsonExpression))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Include(System.Collections.Generic.List(Of LiteDB.BsonExpression))
+  name.vb: Include(List(Of BsonExpression))
+- uid: LiteDB.ILiteQueryable`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:LiteDB.ILiteQueryable`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  id: Include``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Include<K>(Expression<Func<T, K>>)
+  nameWithType: ILiteQueryable<T>.Include<K>(Expression<Func<T, K>>)
+  fullName: LiteDB.ILiteQueryable<T>.Include<K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: Include
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 11
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Include<K>(Expression<Func<T, K>> path)
+    parameters:
+    - id: path
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Include(Of K)(path As Expression(Of Func(Of T, K))) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Include*
+  nameWithType.vb: ILiteQueryable(Of T).Include(Of K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Include(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: Include(Of K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.ILiteQueryable`1.Where(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.Where(LiteDB.BsonExpression)
+  id: Where(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Where(BsonExpression)
+  nameWithType: ILiteQueryable<T>.Where(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.Where(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: Where
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Where(BsonExpression predicate)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Where(predicate As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Where*
+  nameWithType.vb: ILiteQueryable(Of T).Where(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Where(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.Where(System.String,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteQueryable`1.Where(System.String,LiteDB.BsonDocument)
+  id: Where(System.String,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Where(string, BsonDocument)
+  nameWithType: ILiteQueryable<T>.Where(string, BsonDocument)
+  fullName: LiteDB.ILiteQueryable<T>.Where(string, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: Where
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Where(string predicate, BsonDocument parameters)
+    parameters:
+    - id: predicate
+      type: System.String
+    - id: parameters
+      type: LiteDB.BsonDocument
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Where(predicate As String, parameters As BsonDocument) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Where*
+  nameWithType.vb: ILiteQueryable(Of T).Where(String, BsonDocument)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Where(String, LiteDB.BsonDocument)
+  name.vb: Where(String, BsonDocument)
+- uid: LiteDB.ILiteQueryable`1.Where(System.String,LiteDB.BsonValue[])
+  commentId: M:LiteDB.ILiteQueryable`1.Where(System.String,LiteDB.BsonValue[])
+  id: Where(System.String,LiteDB.BsonValue[])
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Where(string, params BsonValue[])
+  nameWithType: ILiteQueryable<T>.Where(string, params BsonValue[])
+  fullName: LiteDB.ILiteQueryable<T>.Where(string, params LiteDB.BsonValue[])
+  type: Method
+  source:
+    id: Where
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 15
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Where(string predicate, params BsonValue[] args)
+    parameters:
+    - id: predicate
+      type: System.String
+    - id: args
+      type: LiteDB.BsonValue[]
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Where(predicate As String, ParamArray args As BsonValue()) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Where*
+  nameWithType.vb: ILiteQueryable(Of T).Where(String, ParamArray BsonValue())
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Where(String, ParamArray LiteDB.BsonValue())
+  name.vb: Where(String, ParamArray BsonValue())
+- uid: LiteDB.ILiteQueryable`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  commentId: M:LiteDB.ILiteQueryable`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  id: Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Where(Expression<Func<T, bool>>)
+  nameWithType: ILiteQueryable<T>.Where(Expression<Func<T, bool>>)
+  fullName: LiteDB.ILiteQueryable<T>.Where(System.Linq.Expressions.Expression<System.Func<T, bool>>)
+  type: Method
+  source:
+    id: Where
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 16
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Where(Expression<Func<T, bool>> predicate)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Where(predicate As Expression(Of Func(Of T, Boolean))) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Where*
+  nameWithType.vb: ILiteQueryable(Of T).Where(Expression(Of Func(Of T, Boolean)))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Where(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)))
+  name.vb: Where(Expression(Of Func(Of T, Boolean)))
+- uid: LiteDB.ILiteQueryable`1.OrderBy(LiteDB.BsonExpression,System.Int32)
+  commentId: M:LiteDB.ILiteQueryable`1.OrderBy(LiteDB.BsonExpression,System.Int32)
+  id: OrderBy(LiteDB.BsonExpression,System.Int32)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: OrderBy(BsonExpression, int)
+  nameWithType: ILiteQueryable<T>.OrderBy(BsonExpression, int)
+  fullName: LiteDB.ILiteQueryable<T>.OrderBy(LiteDB.BsonExpression, int)
+  type: Method
+  source:
+    id: OrderBy
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 18
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> OrderBy(BsonExpression keySelector, int order = 1)
+    parameters:
+    - id: keySelector
+      type: LiteDB.BsonExpression
+    - id: order
+      type: System.Int32
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function OrderBy(keySelector As BsonExpression, order As Integer = 1) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.OrderBy*
+  nameWithType.vb: ILiteQueryable(Of T).OrderBy(BsonExpression, Integer)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).OrderBy(LiteDB.BsonExpression, Integer)
+  name.vb: OrderBy(BsonExpression, Integer)
+- uid: LiteDB.ILiteQueryable`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32)
+  commentId: M:LiteDB.ILiteQueryable`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32)
+  id: OrderBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: OrderBy<K>(Expression<Func<T, K>>, int)
+  nameWithType: ILiteQueryable<T>.OrderBy<K>(Expression<Func<T, K>>, int)
+  fullName: LiteDB.ILiteQueryable<T>.OrderBy<K>(System.Linq.Expressions.Expression<System.Func<T, K>>, int)
+  type: Method
+  source:
+    id: OrderBy
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 19
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> OrderBy<K>(Expression<Func<T, K>> keySelector, int order = 1)
+    parameters:
+    - id: keySelector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    - id: order
+      type: System.Int32
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function OrderBy(Of K)(keySelector As Expression(Of Func(Of T, K)), order As Integer = 1) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.OrderBy*
+  nameWithType.vb: ILiteQueryable(Of T).OrderBy(Of K)(Expression(Of Func(Of T, K)), Integer)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).OrderBy(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)), Integer)
+  name.vb: OrderBy(Of K)(Expression(Of Func(Of T, K)), Integer)
+- uid: LiteDB.ILiteQueryable`1.OrderByDescending(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.OrderByDescending(LiteDB.BsonExpression)
+  id: OrderByDescending(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: OrderByDescending(BsonExpression)
+  nameWithType: ILiteQueryable<T>.OrderByDescending(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.OrderByDescending(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: OrderByDescending
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 20
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> OrderByDescending(BsonExpression keySelector)
+    parameters:
+    - id: keySelector
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function OrderByDescending(keySelector As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.OrderByDescending*
+  nameWithType.vb: ILiteQueryable(Of T).OrderByDescending(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).OrderByDescending(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:LiteDB.ILiteQueryable`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  id: OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: OrderByDescending<K>(Expression<Func<T, K>>)
+  nameWithType: ILiteQueryable<T>.OrderByDescending<K>(Expression<Func<T, K>>)
+  fullName: LiteDB.ILiteQueryable<T>.OrderByDescending<K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: OrderByDescending
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> OrderByDescending<K>(Expression<Func<T, K>> keySelector)
+    parameters:
+    - id: keySelector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function OrderByDescending(Of K)(keySelector As Expression(Of Func(Of T, K))) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.OrderByDescending*
+  nameWithType.vb: ILiteQueryable(Of T).OrderByDescending(Of K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).OrderByDescending(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: OrderByDescending(Of K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.ILiteQueryable`1.ThenBy(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.ThenBy(LiteDB.BsonExpression)
+  id: ThenBy(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: ThenBy(BsonExpression)
+  nameWithType: ILiteQueryable<T>.ThenBy(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.ThenBy(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: ThenBy
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 22
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> ThenBy(BsonExpression keySelector)
+    parameters:
+    - id: keySelector
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function ThenBy(keySelector As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.ThenBy*
+  nameWithType.vb: ILiteQueryable(Of T).ThenBy(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).ThenBy(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.ThenBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:LiteDB.ILiteQueryable`1.ThenBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  id: ThenBy``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: ThenBy<K>(Expression<Func<T, K>>)
+  nameWithType: ILiteQueryable<T>.ThenBy<K>(Expression<Func<T, K>>)
+  fullName: LiteDB.ILiteQueryable<T>.ThenBy<K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: ThenBy
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 23
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> ThenBy<K>(Expression<Func<T, K>> keySelector)
+    parameters:
+    - id: keySelector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function ThenBy(Of K)(keySelector As Expression(Of Func(Of T, K))) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.ThenBy*
+  nameWithType.vb: ILiteQueryable(Of T).ThenBy(Of K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).ThenBy(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: ThenBy(Of K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.ILiteQueryable`1.ThenByDescending(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.ThenByDescending(LiteDB.BsonExpression)
+  id: ThenByDescending(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByDescending(BsonExpression)
+  nameWithType: ILiteQueryable<T>.ThenByDescending(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.ThenByDescending(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: ThenByDescending
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 24
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> ThenByDescending(BsonExpression keySelector)
+    parameters:
+    - id: keySelector
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function ThenByDescending(keySelector As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.ThenByDescending*
+  nameWithType.vb: ILiteQueryable(Of T).ThenByDescending(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).ThenByDescending(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.ThenByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:LiteDB.ILiteQueryable`1.ThenByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  id: ThenByDescending``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: ThenByDescending<K>(Expression<Func<T, K>>)
+  nameWithType: ILiteQueryable<T>.ThenByDescending<K>(Expression<Func<T, K>>)
+  fullName: LiteDB.ILiteQueryable<T>.ThenByDescending<K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: ThenByDescending
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 25
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> ThenByDescending<K>(Expression<Func<T, K>> keySelector)
+    parameters:
+    - id: keySelector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function ThenByDescending(Of K)(keySelector As Expression(Of Func(Of T, K))) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.ThenByDescending*
+  nameWithType.vb: ILiteQueryable(Of T).ThenByDescending(Of K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).ThenByDescending(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: ThenByDescending(Of K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.ILiteQueryable`1.GroupBy(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.GroupBy(LiteDB.BsonExpression)
+  id: GroupBy(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: GroupBy(BsonExpression)
+  nameWithType: ILiteQueryable<T>.GroupBy(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.GroupBy(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: GroupBy
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 27
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> GroupBy(BsonExpression keySelector)
+    parameters:
+    - id: keySelector
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function GroupBy(keySelector As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.GroupBy*
+  nameWithType.vb: ILiteQueryable(Of T).GroupBy(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).GroupBy(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.Having(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.Having(LiteDB.BsonExpression)
+  id: Having(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Having(BsonExpression)
+  nameWithType: ILiteQueryable<T>.Having(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.Having(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: Having
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 28
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryable<T> Having(BsonExpression predicate)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryable`1
+    content.vb: Function Having(predicate As BsonExpression) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteQueryable`1.Having*
+  nameWithType.vb: ILiteQueryable(Of T).Having(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Having(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.Select(LiteDB.BsonExpression)
+  commentId: M:LiteDB.ILiteQueryable`1.Select(LiteDB.BsonExpression)
+  id: Select(LiteDB.BsonExpression)
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Select(BsonExpression)
+  nameWithType: ILiteQueryable<T>.Select(BsonExpression)
+  fullName: LiteDB.ILiteQueryable<T>.Select(LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: Select
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 30
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryableResult<BsonDocument> Select(BsonExpression selector)
+    parameters:
+    - id: selector
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.ILiteQueryableResult{LiteDB.BsonDocument}
+    content.vb: Function [Select](selector As BsonExpression) As ILiteQueryableResult(Of BsonDocument)
+  overload: LiteDB.ILiteQueryable`1.Select*
+  nameWithType.vb: ILiteQueryable(Of T).Select(BsonExpression)
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Select(LiteDB.BsonExpression)
+- uid: LiteDB.ILiteQueryable`1.Select``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:LiteDB.ILiteQueryable`1.Select``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  id: Select``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  parent: LiteDB.ILiteQueryable`1
+  langs:
+  - csharp
+  - vb
+  name: Select<K>(Expression<Func<T, K>>)
+  nameWithType: ILiteQueryable<T>.Select<K>(Expression<Func<T, K>>)
+  fullName: LiteDB.ILiteQueryable<T>.Select<K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: Select
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryableResult<K> Select<K>(Expression<Func<T, K>> selector)
+    parameters:
+    - id: selector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.ILiteQueryableResult{{K}}
+    content.vb: Function [Select](Of K)(selector As Expression(Of Func(Of T, K))) As ILiteQueryableResult(Of K)
+  overload: LiteDB.ILiteQueryable`1.Select*
+  nameWithType.vb: ILiteQueryable(Of T).Select(Of K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Select(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: Select(Of K)(Expression(Of Func(Of T, K)))
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.ILiteQueryableResult{{T}}.Limit(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Limit(System.Int32)
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  name: Limit(int)
+  nameWithType: ILiteQueryableResult<T>.Limit(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Limit(int)
+  nameWithType.vb: ILiteQueryableResult(Of T).Limit(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Limit(Integer)
+  name.vb: Limit(Integer)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Limit(System.Int32)
+    name: Limit
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Limit(System.Int32)
+    name: Limit
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.Skip(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Skip(System.Int32)
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  name: Skip(int)
+  nameWithType: ILiteQueryableResult<T>.Skip(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Skip(int)
+  nameWithType.vb: ILiteQueryableResult(Of T).Skip(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Skip(Integer)
+  name.vb: Skip(Integer)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Skip(System.Int32)
+    name: Skip
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Skip(System.Int32)
+    name: Skip
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.Offset(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Offset(System.Int32)
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  name: Offset(int)
+  nameWithType: ILiteQueryableResult<T>.Offset(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Offset(int)
+  nameWithType.vb: ILiteQueryableResult(Of T).Offset(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Offset(Integer)
+  name.vb: Offset(Integer)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Offset(System.Int32)
+    name: Offset
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Offset(System.Int32)
+    name: Offset
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.ForUpdate
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.ForUpdate
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.ForUpdate
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  name: ForUpdate()
+  nameWithType: ILiteQueryableResult<T>.ForUpdate()
+  fullName: LiteDB.ILiteQueryableResult<T>.ForUpdate()
+  nameWithType.vb: ILiteQueryableResult(Of T).ForUpdate()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ForUpdate()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ForUpdate
+    name: ForUpdate
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ForUpdate
+    name: ForUpdate
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.GetPlan
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.GetPlan
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.GetPlan
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  name: GetPlan()
+  nameWithType: ILiteQueryableResult<T>.GetPlan()
+  fullName: LiteDB.ILiteQueryableResult<T>.GetPlan()
+  nameWithType.vb: ILiteQueryableResult(Of T).GetPlan()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).GetPlan()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.GetPlan
+    name: GetPlan
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.GetPlan
+    name: GetPlan
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.ExecuteReader
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.ExecuteReader
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.ExecuteReader
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  name: ExecuteReader()
+  nameWithType: ILiteQueryableResult<T>.ExecuteReader()
+  fullName: LiteDB.ILiteQueryableResult<T>.ExecuteReader()
+  nameWithType.vb: ILiteQueryableResult(Of T).ExecuteReader()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ExecuteReader()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ExecuteReader
+    name: ExecuteReader
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ExecuteReader
+    name: ExecuteReader
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.ToDocuments
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.ToDocuments
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.ToDocuments
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  name: ToDocuments()
+  nameWithType: ILiteQueryableResult<T>.ToDocuments()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToDocuments()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToDocuments()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToDocuments()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToDocuments
+    name: ToDocuments
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToDocuments
+    name: ToDocuments
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.ToEnumerable
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.ToEnumerable
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.ToEnumerable
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  name: ToEnumerable()
+  nameWithType: ILiteQueryableResult<T>.ToEnumerable()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToEnumerable()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToEnumerable()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToEnumerable()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToEnumerable
+    name: ToEnumerable
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToEnumerable
+    name: ToEnumerable
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.ToList
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.ToList
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.ToList
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  name: ToList()
+  nameWithType: ILiteQueryableResult<T>.ToList()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToList()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToList()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToList()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToList
+    name: ToList
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToList
+    name: ToList
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.ToArray
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.ToArray
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.ToArray
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  name: ToArray()
+  nameWithType: ILiteQueryableResult<T>.ToArray()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToArray()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToArray()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToArray()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToArray
+    name: ToArray
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.ToArray
+    name: ToArray
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.Into(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Into(System.String,LiteDB.BsonAutoId)
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  name: Into(string, BsonAutoId)
+  nameWithType: ILiteQueryableResult<T>.Into(string, BsonAutoId)
+  fullName: LiteDB.ILiteQueryableResult<T>.Into(string, LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteQueryableResult(Of T).Into(String, BsonAutoId)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Into(String, LiteDB.BsonAutoId)
+  name.vb: Into(String, BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Into(System.String,LiteDB.BsonAutoId)
+    name: Into
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Into(System.String,LiteDB.BsonAutoId)
+    name: Into
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.First
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.First
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.First
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  name: First()
+  nameWithType: ILiteQueryableResult<T>.First()
+  fullName: LiteDB.ILiteQueryableResult<T>.First()
+  nameWithType.vb: ILiteQueryableResult(Of T).First()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).First()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.First
+    name: First
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.First
+    name: First
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.FirstOrDefault
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.FirstOrDefault
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  name: FirstOrDefault()
+  nameWithType: ILiteQueryableResult<T>.FirstOrDefault()
+  fullName: LiteDB.ILiteQueryableResult<T>.FirstOrDefault()
+  nameWithType.vb: ILiteQueryableResult(Of T).FirstOrDefault()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).FirstOrDefault()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.FirstOrDefault
+    name: FirstOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.FirstOrDefault
+    name: FirstOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.Single
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Single
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Single
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  name: Single()
+  nameWithType: ILiteQueryableResult<T>.Single()
+  fullName: LiteDB.ILiteQueryableResult<T>.Single()
+  nameWithType.vb: ILiteQueryableResult(Of T).Single()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Single()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Single
+    name: Single
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Single
+    name: Single
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.SingleOrDefault
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.SingleOrDefault
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  name: SingleOrDefault()
+  nameWithType: ILiteQueryableResult<T>.SingleOrDefault()
+  fullName: LiteDB.ILiteQueryableResult<T>.SingleOrDefault()
+  nameWithType.vb: ILiteQueryableResult(Of T).SingleOrDefault()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).SingleOrDefault()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.SingleOrDefault
+    name: SingleOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.SingleOrDefault
+    name: SingleOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.Count
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Count
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Count
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  name: Count()
+  nameWithType: ILiteQueryableResult<T>.Count()
+  fullName: LiteDB.ILiteQueryableResult<T>.Count()
+  nameWithType.vb: ILiteQueryableResult(Of T).Count()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Count()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Count
+    name: Count
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Count
+    name: Count
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.LongCount
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.LongCount
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.LongCount
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  name: LongCount()
+  nameWithType: ILiteQueryableResult<T>.LongCount()
+  fullName: LiteDB.ILiteQueryableResult<T>.LongCount()
+  nameWithType.vb: ILiteQueryableResult(Of T).LongCount()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).LongCount()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.LongCount
+    name: LongCount
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.LongCount
+    name: LongCount
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}.Exists
+  commentId: M:LiteDB.ILiteQueryableResult{`0}.Exists
+  parent: LiteDB.ILiteQueryableResult{{T}}
+  definition: LiteDB.ILiteQueryableResult`1.Exists
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  name: Exists()
+  nameWithType: ILiteQueryableResult<T>.Exists()
+  fullName: LiteDB.ILiteQueryableResult<T>.Exists()
+  nameWithType.vb: ILiteQueryableResult(Of T).Exists()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Exists()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Exists
+    name: Exists
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult{`0}.Exists
+    name: Exists
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+  isExternal: true
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  name: Limit(int)
+  nameWithType: ILiteQueryableResult<T>.Limit(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Limit(int)
+  nameWithType.vb: ILiteQueryableResult(Of T).Limit(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Limit(Integer)
+  name.vb: Limit(Integer)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+    name: Limit
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+    name: Limit
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{T}}
+  commentId: T:LiteDB.ILiteQueryableResult{`0}
+  parent: LiteDB
+  definition: LiteDB.ILiteQueryableResult`1
+  href: LiteDB.ILiteQueryableResult-1.html
+  name: ILiteQueryableResult<T>
+  nameWithType: ILiteQueryableResult<T>
+  fullName: LiteDB.ILiteQueryableResult<T>
+  nameWithType.vb: ILiteQueryableResult(Of T)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T)
+  name.vb: ILiteQueryableResult(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+  isExternal: true
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  name: Skip(int)
+  nameWithType: ILiteQueryableResult<T>.Skip(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Skip(int)
+  nameWithType.vb: ILiteQueryableResult(Of T).Skip(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Skip(Integer)
+  name.vb: Skip(Integer)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+    name: Skip
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+    name: Skip
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+  isExternal: true
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  name: Offset(int)
+  nameWithType: ILiteQueryableResult<T>.Offset(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Offset(int)
+  nameWithType.vb: ILiteQueryableResult(Of T).Offset(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Offset(Integer)
+  name.vb: Offset(Integer)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+    name: Offset
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+    name: Offset
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ForUpdate
+  commentId: M:LiteDB.ILiteQueryableResult`1.ForUpdate
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  name: ForUpdate()
+  nameWithType: ILiteQueryableResult<T>.ForUpdate()
+  fullName: LiteDB.ILiteQueryableResult<T>.ForUpdate()
+  nameWithType.vb: ILiteQueryableResult(Of T).ForUpdate()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ForUpdate()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.ForUpdate
+    name: ForUpdate
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.ForUpdate
+    name: ForUpdate
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.GetPlan
+  commentId: M:LiteDB.ILiteQueryableResult`1.GetPlan
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  name: GetPlan()
+  nameWithType: ILiteQueryableResult<T>.GetPlan()
+  fullName: LiteDB.ILiteQueryableResult<T>.GetPlan()
+  nameWithType.vb: ILiteQueryableResult(Of T).GetPlan()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).GetPlan()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.GetPlan
+    name: GetPlan
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.GetPlan
+    name: GetPlan
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ExecuteReader
+  commentId: M:LiteDB.ILiteQueryableResult`1.ExecuteReader
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  name: ExecuteReader()
+  nameWithType: ILiteQueryableResult<T>.ExecuteReader()
+  fullName: LiteDB.ILiteQueryableResult<T>.ExecuteReader()
+  nameWithType.vb: ILiteQueryableResult(Of T).ExecuteReader()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ExecuteReader()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.ExecuteReader
+    name: ExecuteReader
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.ExecuteReader
+    name: ExecuteReader
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ToDocuments
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToDocuments
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  name: ToDocuments()
+  nameWithType: ILiteQueryableResult<T>.ToDocuments()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToDocuments()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToDocuments()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToDocuments()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.ToDocuments
+    name: ToDocuments
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.ToDocuments
+    name: ToDocuments
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ToEnumerable
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToEnumerable
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  name: ToEnumerable()
+  nameWithType: ILiteQueryableResult<T>.ToEnumerable()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToEnumerable()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToEnumerable()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToEnumerable()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.ToEnumerable
+    name: ToEnumerable
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.ToEnumerable
+    name: ToEnumerable
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ToList
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToList
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  name: ToList()
+  nameWithType: ILiteQueryableResult<T>.ToList()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToList()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToList()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToList()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.ToList
+    name: ToList
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.ToList
+    name: ToList
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ToArray
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToArray
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  name: ToArray()
+  nameWithType: ILiteQueryableResult<T>.ToArray()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToArray()
+  nameWithType.vb: ILiteQueryableResult(Of T).ToArray()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToArray()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.ToArray
+    name: ToArray
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.ToArray
+    name: ToArray
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+  isExternal: true
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  name: Into(string, BsonAutoId)
+  nameWithType: ILiteQueryableResult<T>.Into(string, BsonAutoId)
+  fullName: LiteDB.ILiteQueryableResult<T>.Into(string, LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteQueryableResult(Of T).Into(String, BsonAutoId)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Into(String, LiteDB.BsonAutoId)
+  name.vb: Into(String, BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+    name: Into
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+    name: Into
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.First
+  commentId: M:LiteDB.ILiteQueryableResult`1.First
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  name: First()
+  nameWithType: ILiteQueryableResult<T>.First()
+  fullName: LiteDB.ILiteQueryableResult<T>.First()
+  nameWithType.vb: ILiteQueryableResult(Of T).First()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).First()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.First
+    name: First
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.First
+    name: First
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  commentId: M:LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  name: FirstOrDefault()
+  nameWithType: ILiteQueryableResult<T>.FirstOrDefault()
+  fullName: LiteDB.ILiteQueryableResult<T>.FirstOrDefault()
+  nameWithType.vb: ILiteQueryableResult(Of T).FirstOrDefault()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).FirstOrDefault()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.FirstOrDefault
+    name: FirstOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.FirstOrDefault
+    name: FirstOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Single
+  commentId: M:LiteDB.ILiteQueryableResult`1.Single
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  name: Single()
+  nameWithType: ILiteQueryableResult<T>.Single()
+  fullName: LiteDB.ILiteQueryableResult<T>.Single()
+  nameWithType.vb: ILiteQueryableResult(Of T).Single()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Single()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Single
+    name: Single
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Single
+    name: Single
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  commentId: M:LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  name: SingleOrDefault()
+  nameWithType: ILiteQueryableResult<T>.SingleOrDefault()
+  fullName: LiteDB.ILiteQueryableResult<T>.SingleOrDefault()
+  nameWithType.vb: ILiteQueryableResult(Of T).SingleOrDefault()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).SingleOrDefault()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.SingleOrDefault
+    name: SingleOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.SingleOrDefault
+    name: SingleOrDefault
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Count
+  commentId: M:LiteDB.ILiteQueryableResult`1.Count
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  name: Count()
+  nameWithType: ILiteQueryableResult<T>.Count()
+  fullName: LiteDB.ILiteQueryableResult<T>.Count()
+  nameWithType.vb: ILiteQueryableResult(Of T).Count()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Count()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Count
+    name: Count
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Count
+    name: Count
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.LongCount
+  commentId: M:LiteDB.ILiteQueryableResult`1.LongCount
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  name: LongCount()
+  nameWithType: ILiteQueryableResult<T>.LongCount()
+  fullName: LiteDB.ILiteQueryableResult<T>.LongCount()
+  nameWithType.vb: ILiteQueryableResult(Of T).LongCount()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).LongCount()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.LongCount
+    name: LongCount
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.LongCount
+    name: LongCount
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Exists
+  commentId: M:LiteDB.ILiteQueryableResult`1.Exists
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  name: Exists()
+  nameWithType: ILiteQueryableResult<T>.Exists()
+  fullName: LiteDB.ILiteQueryableResult<T>.Exists()
+  nameWithType.vb: ILiteQueryableResult(Of T).Exists()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Exists()
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1.Exists
+    name: Exists
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1.Exists
+    name: Exists
+    href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1
+  commentId: T:LiteDB.ILiteQueryableResult`1
+  parent: LiteDB
+  href: LiteDB.ILiteQueryableResult-1.html
+  name: ILiteQueryableResult<T>
+  nameWithType: ILiteQueryableResult<T>
+  fullName: LiteDB.ILiteQueryableResult<T>
+  nameWithType.vb: ILiteQueryableResult(Of T)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T)
+  name.vb: ILiteQueryableResult(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteQueryable`1.Include*
+  commentId: Overload:LiteDB.ILiteQueryable`1.Include
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_Include_LiteDB_BsonExpression_
+  name: Include
+  nameWithType: ILiteQueryable<T>.Include
+  fullName: LiteDB.ILiteQueryable<T>.Include
+  nameWithType.vb: ILiteQueryable(Of T).Include
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Include
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: LiteDB.ILiteQueryable`1
+  commentId: T:LiteDB.ILiteQueryable`1
+  parent: LiteDB
+  href: LiteDB.ILiteQueryable-1.html
+  name: ILiteQueryable<T>
+  nameWithType: ILiteQueryable<T>
+  fullName: LiteDB.ILiteQueryable<T>
+  nameWithType.vb: ILiteQueryable(Of T)
+  fullName.vb: LiteDB.ILiteQueryable(Of T)
+  name.vb: ILiteQueryable(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List{LiteDB.BsonExpression}
+  commentId: T:System.Collections.Generic.List{LiteDB.BsonExpression}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<BsonExpression>
+  nameWithType: List<BsonExpression>
+  fullName: System.Collections.Generic.List<LiteDB.BsonExpression>
+  nameWithType.vb: List(Of BsonExpression)
+  fullName.vb: System.Collections.Generic.List(Of LiteDB.BsonExpression)
+  name.vb: List(Of BsonExpression)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,``0}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, K>>
+  nameWithType: Expression<Func<T, K>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, K>>
+  nameWithType.vb: Expression(Of Func(Of T, K))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, K))
+  name.vb: Expression(Of Func(Of T, K))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: LiteDB.ILiteQueryable`1.Where*
+  commentId: Overload:LiteDB.ILiteQueryable`1.Where
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_Where_LiteDB_BsonExpression_
+  name: Where
+  nameWithType: ILiteQueryable<T>.Where
+  fullName: LiteDB.ILiteQueryable<T>.Where
+  nameWithType.vb: ILiteQueryable(Of T).Where
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Where
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.BsonValue[]
+  isExternal: true
+  href: LiteDB.BsonValue.html
+  name: BsonValue[]
+  nameWithType: BsonValue[]
+  fullName: LiteDB.BsonValue[]
+  nameWithType.vb: BsonValue()
+  fullName.vb: LiteDB.BsonValue()
+  name.vb: BsonValue()
+  spec.csharp:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+- uid: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, bool>>
+  nameWithType: Expression<Func<T, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, bool>>
+  nameWithType.vb: Expression(Of Func(Of T, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean))
+  name.vb: Expression(Of Func(Of T, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: LiteDB.ILiteQueryable`1.OrderBy*
+  commentId: Overload:LiteDB.ILiteQueryable`1.OrderBy
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_OrderBy_LiteDB_BsonExpression_System_Int32_
+  name: OrderBy
+  nameWithType: ILiteQueryable<T>.OrderBy
+  fullName: LiteDB.ILiteQueryable<T>.OrderBy
+  nameWithType.vb: ILiteQueryable(Of T).OrderBy
+  fullName.vb: LiteDB.ILiteQueryable(Of T).OrderBy
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LiteDB.ILiteQueryable`1.OrderByDescending*
+  commentId: Overload:LiteDB.ILiteQueryable`1.OrderByDescending
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_OrderByDescending_LiteDB_BsonExpression_
+  name: OrderByDescending
+  nameWithType: ILiteQueryable<T>.OrderByDescending
+  fullName: LiteDB.ILiteQueryable<T>.OrderByDescending
+  nameWithType.vb: ILiteQueryable(Of T).OrderByDescending
+  fullName.vb: LiteDB.ILiteQueryable(Of T).OrderByDescending
+- uid: LiteDB.ILiteQueryable`1.ThenBy*
+  commentId: Overload:LiteDB.ILiteQueryable`1.ThenBy
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_ThenBy_LiteDB_BsonExpression_
+  name: ThenBy
+  nameWithType: ILiteQueryable<T>.ThenBy
+  fullName: LiteDB.ILiteQueryable<T>.ThenBy
+  nameWithType.vb: ILiteQueryable(Of T).ThenBy
+  fullName.vb: LiteDB.ILiteQueryable(Of T).ThenBy
+- uid: LiteDB.ILiteQueryable`1.ThenByDescending*
+  commentId: Overload:LiteDB.ILiteQueryable`1.ThenByDescending
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_ThenByDescending_LiteDB_BsonExpression_
+  name: ThenByDescending
+  nameWithType: ILiteQueryable<T>.ThenByDescending
+  fullName: LiteDB.ILiteQueryable<T>.ThenByDescending
+  nameWithType.vb: ILiteQueryable(Of T).ThenByDescending
+  fullName.vb: LiteDB.ILiteQueryable(Of T).ThenByDescending
+- uid: LiteDB.ILiteQueryable`1.GroupBy*
+  commentId: Overload:LiteDB.ILiteQueryable`1.GroupBy
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_GroupBy_LiteDB_BsonExpression_
+  name: GroupBy
+  nameWithType: ILiteQueryable<T>.GroupBy
+  fullName: LiteDB.ILiteQueryable<T>.GroupBy
+  nameWithType.vb: ILiteQueryable(Of T).GroupBy
+  fullName.vb: LiteDB.ILiteQueryable(Of T).GroupBy
+- uid: LiteDB.ILiteQueryable`1.Having*
+  commentId: Overload:LiteDB.ILiteQueryable`1.Having
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_Having_LiteDB_BsonExpression_
+  name: Having
+  nameWithType: ILiteQueryable<T>.Having
+  fullName: LiteDB.ILiteQueryable<T>.Having
+  nameWithType.vb: ILiteQueryable(Of T).Having
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Having
+- uid: LiteDB.ILiteQueryable`1.Select*
+  commentId: Overload:LiteDB.ILiteQueryable`1.Select
+  href: LiteDB.ILiteQueryable-1.html#LiteDB_ILiteQueryable_1_Select_LiteDB_BsonExpression_
+  name: Select
+  nameWithType: ILiteQueryable<T>.Select
+  fullName: LiteDB.ILiteQueryable<T>.Select
+  nameWithType.vb: ILiteQueryable(Of T).Select
+  fullName.vb: LiteDB.ILiteQueryable(Of T).Select
+- uid: LiteDB.ILiteQueryableResult{LiteDB.BsonDocument}
+  commentId: T:LiteDB.ILiteQueryableResult{LiteDB.BsonDocument}
+  parent: LiteDB
+  definition: LiteDB.ILiteQueryableResult`1
+  href: LiteDB.ILiteQueryableResult-1.html
+  name: ILiteQueryableResult<BsonDocument>
+  nameWithType: ILiteQueryableResult<BsonDocument>
+  fullName: LiteDB.ILiteQueryableResult<LiteDB.BsonDocument>
+  nameWithType.vb: ILiteQueryableResult(Of BsonDocument)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of LiteDB.BsonDocument)
+  name.vb: ILiteQueryableResult(Of BsonDocument)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+- uid: LiteDB.ILiteQueryableResult{{K}}
+  commentId: T:LiteDB.ILiteQueryableResult{``0}
+  parent: LiteDB
+  definition: LiteDB.ILiteQueryableResult`1
+  href: LiteDB.ILiteQueryableResult-1.html
+  name: ILiteQueryableResult<K>
+  nameWithType: ILiteQueryableResult<K>
+  fullName: LiteDB.ILiteQueryableResult<K>
+  nameWithType.vb: ILiteQueryableResult(Of K)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of K)
+  name.vb: ILiteQueryableResult(Of K)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: <
+  - name: K
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: K
+  - name: )

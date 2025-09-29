@@ -1,0 +1,709 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ConnectionString
+  commentId: T:LiteDB.ConnectionString
+  id: ConnectionString
+  parent: LiteDB
+  children:
+  - LiteDB.ConnectionString.#ctor
+  - LiteDB.ConnectionString.#ctor(System.String)
+  - LiteDB.ConnectionString.AutoRebuild
+  - LiteDB.ConnectionString.Collation
+  - LiteDB.ConnectionString.Connection
+  - LiteDB.ConnectionString.Filename
+  - LiteDB.ConnectionString.InitialSize
+  - LiteDB.ConnectionString.Item(System.String)
+  - LiteDB.ConnectionString.Password
+  - LiteDB.ConnectionString.ReadOnly
+  - LiteDB.ConnectionString.Upgrade
+  langs:
+  - csharp
+  - vb
+  name: ConnectionString
+  nameWithType: ConnectionString
+  fullName: LiteDB.ConnectionString
+  type: Class
+  source:
+    id: ConnectionString
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 11
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Manage ConnectionString to connect and create databases. Connection string are NameValue using Name1=Value1; Name2=Value2
+  example: []
+  syntax:
+    content: public class ConnectionString
+    content.vb: Public Class ConnectionString
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.ConnectionString.Connection
+  commentId: P:LiteDB.ConnectionString.Connection
+  id: Connection
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: Connection
+  nameWithType: ConnectionString.Connection
+  fullName: LiteDB.ConnectionString.Connection
+  type: Property
+  source:
+    id: Connection
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 18
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"connection\": Return how engine will be open (default: Direct)"
+  example: []
+  syntax:
+    content: public ConnectionType Connection { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.ConnectionType
+    content.vb: Public Property Connection As ConnectionType
+  overload: LiteDB.ConnectionString.Connection*
+- uid: LiteDB.ConnectionString.Filename
+  commentId: P:LiteDB.ConnectionString.Filename
+  id: Filename
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: Filename
+  nameWithType: ConnectionString.Filename
+  fullName: LiteDB.ConnectionString.Filename
+  type: Property
+  source:
+    id: Filename
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 23
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"filename\": Full path or relative path from DLL directory"
+  example: []
+  syntax:
+    content: public string Filename { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Filename As String
+  overload: LiteDB.ConnectionString.Filename*
+- uid: LiteDB.ConnectionString.Password
+  commentId: P:LiteDB.ConnectionString.Password
+  id: Password
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: ConnectionString.Password
+  fullName: LiteDB.ConnectionString.Password
+  type: Property
+  source:
+    id: Password
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 28
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"password\": Database password used to encrypt/decypted data pages"
+  example: []
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: LiteDB.ConnectionString.Password*
+- uid: LiteDB.ConnectionString.InitialSize
+  commentId: P:LiteDB.ConnectionString.InitialSize
+  id: InitialSize
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: InitialSize
+  nameWithType: ConnectionString.InitialSize
+  fullName: LiteDB.ConnectionString.InitialSize
+  type: Property
+  source:
+    id: InitialSize
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 33
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"initial size\": If database is new, initialize with allocated space - support KB, MB, GB (default: 0)"
+  example: []
+  syntax:
+    content: public long InitialSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property InitialSize As Long
+  overload: LiteDB.ConnectionString.InitialSize*
+- uid: LiteDB.ConnectionString.ReadOnly
+  commentId: P:LiteDB.ConnectionString.ReadOnly
+  id: ReadOnly
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly
+  nameWithType: ConnectionString.ReadOnly
+  fullName: LiteDB.ConnectionString.ReadOnly
+  type: Property
+  source:
+    id: ReadOnly
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 38
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"readonly\": Open datafile in readonly mode (default: false)"
+  example: []
+  syntax:
+    content: public bool ReadOnly { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property [ReadOnly] As Boolean
+  overload: LiteDB.ConnectionString.ReadOnly*
+- uid: LiteDB.ConnectionString.Upgrade
+  commentId: P:LiteDB.ConnectionString.Upgrade
+  id: Upgrade
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: Upgrade
+  nameWithType: ConnectionString.Upgrade
+  fullName: LiteDB.ConnectionString.Upgrade
+  type: Property
+  source:
+    id: Upgrade
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 43
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"upgrade\": Check if data file is an old version and convert before open (default: false)"
+  example: []
+  syntax:
+    content: public bool Upgrade { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Upgrade As Boolean
+  overload: LiteDB.ConnectionString.Upgrade*
+- uid: LiteDB.ConnectionString.AutoRebuild
+  commentId: P:LiteDB.ConnectionString.AutoRebuild
+  id: AutoRebuild
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: AutoRebuild
+  nameWithType: ConnectionString.AutoRebuild
+  fullName: LiteDB.ConnectionString.AutoRebuild
+  type: Property
+  source:
+    id: AutoRebuild
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 48
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"auto-rebuild\": If last close database exception result a invalid data state, rebuild datafile on next open (default: false)"
+  example: []
+  syntax:
+    content: public bool AutoRebuild { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AutoRebuild As Boolean
+  overload: LiteDB.ConnectionString.AutoRebuild*
+- uid: LiteDB.ConnectionString.Collation
+  commentId: P:LiteDB.ConnectionString.Collation
+  id: Collation
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: Collation
+  nameWithType: ConnectionString.Collation
+  fullName: LiteDB.ConnectionString.Collation
+  type: Property
+  source:
+    id: Collation
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 53
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: "\"collation\": Set default collaction when database creation (default: \"[CurrentCulture]/IgnoreCase\")"
+  example: []
+  syntax:
+    content: public Collation Collation { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.Collation
+    content.vb: Public Property Collation As Collation
+  overload: LiteDB.ConnectionString.Collation*
+- uid: LiteDB.ConnectionString.#ctor
+  commentId: M:LiteDB.ConnectionString.#ctor
+  id: '#ctor'
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: ConnectionString()
+  nameWithType: ConnectionString.ConnectionString()
+  fullName: LiteDB.ConnectionString.ConnectionString()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 58
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Initialize empty connection string
+  example: []
+  syntax:
+    content: public ConnectionString()
+    content.vb: Public Sub New()
+  overload: LiteDB.ConnectionString.#ctor*
+  nameWithType.vb: ConnectionString.New()
+  fullName.vb: LiteDB.ConnectionString.New()
+  name.vb: New()
+- uid: LiteDB.ConnectionString.#ctor(System.String)
+  commentId: M:LiteDB.ConnectionString.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: ConnectionString(string)
+  nameWithType: ConnectionString.ConnectionString(string)
+  fullName: LiteDB.ConnectionString.ConnectionString(string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 66
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Initialize connection string parsing string in "key1=value1;key2=value2;...." format or only "filename" as default (when no ; char found)
+  example: []
+  syntax:
+    content: public ConnectionString(string connectionString)
+    parameters:
+    - id: connectionString
+      type: System.String
+    content.vb: Public Sub New(connectionString As String)
+  overload: LiteDB.ConnectionString.#ctor*
+  nameWithType.vb: ConnectionString.New(String)
+  fullName.vb: LiteDB.ConnectionString.New(String)
+  name.vb: New(String)
+- uid: LiteDB.ConnectionString.Item(System.String)
+  commentId: P:LiteDB.ConnectionString.Item(System.String)
+  id: Item(System.String)
+  parent: LiteDB.ConnectionString
+  langs:
+  - csharp
+  - vb
+  name: this[string]
+  nameWithType: ConnectionString.this[string]
+  fullName: LiteDB.ConnectionString.this[string]
+  type: Property
+  source:
+    id: this[]
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionString.cs
+    startLine: 104
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get value from parsed connection string. Returns null if not found
+  example: []
+  syntax:
+    content: public string this[string key] { get; }
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Default Property this[](key As String) As String
+  overload: LiteDB.ConnectionString.Item*
+  nameWithType.vb: ConnectionString.this[](String)
+  fullName.vb: LiteDB.ConnectionString.this[](String)
+  name.vb: this[](String)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.ConnectionString.Connection*
+  commentId: Overload:LiteDB.ConnectionString.Connection
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_Connection
+  name: Connection
+  nameWithType: ConnectionString.Connection
+  fullName: LiteDB.ConnectionString.Connection
+- uid: LiteDB.ConnectionType
+  commentId: T:LiteDB.ConnectionType
+  parent: LiteDB
+  href: LiteDB.ConnectionType.html
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: LiteDB.ConnectionType
+- uid: LiteDB.ConnectionString.Filename*
+  commentId: Overload:LiteDB.ConnectionString.Filename
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_Filename
+  name: Filename
+  nameWithType: ConnectionString.Filename
+  fullName: LiteDB.ConnectionString.Filename
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.ConnectionString.Password*
+  commentId: Overload:LiteDB.ConnectionString.Password
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_Password
+  name: Password
+  nameWithType: ConnectionString.Password
+  fullName: LiteDB.ConnectionString.Password
+- uid: LiteDB.ConnectionString.InitialSize*
+  commentId: Overload:LiteDB.ConnectionString.InitialSize
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_InitialSize
+  name: InitialSize
+  nameWithType: ConnectionString.InitialSize
+  fullName: LiteDB.ConnectionString.InitialSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: LiteDB.ConnectionString.ReadOnly*
+  commentId: Overload:LiteDB.ConnectionString.ReadOnly
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_ReadOnly
+  name: ReadOnly
+  nameWithType: ConnectionString.ReadOnly
+  fullName: LiteDB.ConnectionString.ReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.ConnectionString.Upgrade*
+  commentId: Overload:LiteDB.ConnectionString.Upgrade
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_Upgrade
+  name: Upgrade
+  nameWithType: ConnectionString.Upgrade
+  fullName: LiteDB.ConnectionString.Upgrade
+- uid: LiteDB.ConnectionString.AutoRebuild*
+  commentId: Overload:LiteDB.ConnectionString.AutoRebuild
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_AutoRebuild
+  name: AutoRebuild
+  nameWithType: ConnectionString.AutoRebuild
+  fullName: LiteDB.ConnectionString.AutoRebuild
+- uid: LiteDB.ConnectionString.Collation*
+  commentId: Overload:LiteDB.ConnectionString.Collation
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_Collation
+  name: Collation
+  nameWithType: ConnectionString.Collation
+  fullName: LiteDB.ConnectionString.Collation
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB.ConnectionString.#ctor*
+  commentId: Overload:LiteDB.ConnectionString.#ctor
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString__ctor
+  name: ConnectionString
+  nameWithType: ConnectionString.ConnectionString
+  fullName: LiteDB.ConnectionString.ConnectionString
+  nameWithType.vb: ConnectionString.New
+  fullName.vb: LiteDB.ConnectionString.New
+  name.vb: New
+- uid: LiteDB.ConnectionString.Item*
+  commentId: Overload:LiteDB.ConnectionString.Item
+  href: LiteDB.ConnectionString.html#LiteDB_ConnectionString_Item_System_String_
+  name: this
+  nameWithType: ConnectionString.this
+  fullName: LiteDB.ConnectionString.this
+  nameWithType.vb: ConnectionString.this[]
+  fullName.vb: LiteDB.ConnectionString.this[]
+  name.vb: this[]

@@ -1,0 +1,1570 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ILiteRepository
+  commentId: T:LiteDB.ILiteRepository
+  id: ILiteRepository
+  parent: LiteDB
+  children:
+  - LiteDB.ILiteRepository.Database
+  - LiteDB.ILiteRepository.DeleteMany``1(LiteDB.BsonExpression,System.String)
+  - LiteDB.ILiteRepository.DeleteMany``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  - LiteDB.ILiteRepository.Delete``1(LiteDB.BsonValue,System.String)
+  - LiteDB.ILiteRepository.EnsureIndex``1(LiteDB.BsonExpression,System.Boolean,System.String)
+  - LiteDB.ILiteRepository.EnsureIndex``1(System.String,LiteDB.BsonExpression,System.Boolean,System.String)
+  - LiteDB.ILiteRepository.EnsureIndex``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  - LiteDB.ILiteRepository.EnsureIndex``2(System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  - LiteDB.ILiteRepository.Fetch``1(LiteDB.BsonExpression,System.String)
+  - LiteDB.ILiteRepository.Fetch``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  - LiteDB.ILiteRepository.FirstOrDefault``1(LiteDB.BsonExpression,System.String)
+  - LiteDB.ILiteRepository.FirstOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  - LiteDB.ILiteRepository.First``1(LiteDB.BsonExpression,System.String)
+  - LiteDB.ILiteRepository.First``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  - LiteDB.ILiteRepository.Insert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  - LiteDB.ILiteRepository.Insert``1(``0,System.String)
+  - LiteDB.ILiteRepository.Query``1(System.String)
+  - LiteDB.ILiteRepository.SingleById``1(LiteDB.BsonValue,System.String)
+  - LiteDB.ILiteRepository.SingleOrDefault``1(LiteDB.BsonExpression,System.String)
+  - LiteDB.ILiteRepository.SingleOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  - LiteDB.ILiteRepository.Single``1(LiteDB.BsonExpression,System.String)
+  - LiteDB.ILiteRepository.Single``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  - LiteDB.ILiteRepository.Update``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  - LiteDB.ILiteRepository.Update``1(``0,System.String)
+  - LiteDB.ILiteRepository.Upsert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  - LiteDB.ILiteRepository.Upsert``1(``0,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ILiteRepository
+  nameWithType: ILiteRepository
+  fullName: LiteDB.ILiteRepository
+  type: Interface
+  source:
+    id: ILiteRepository
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 6
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: 'public interface ILiteRepository : IDisposable'
+    content.vb: Public Interface ILiteRepository Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: LiteDB.ILiteRepository.Database
+  commentId: P:LiteDB.ILiteRepository.Database
+  id: Database
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Database
+  nameWithType: ILiteRepository.Database
+  fullName: LiteDB.ILiteRepository.Database
+  type: Property
+  source:
+    id: Database
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 11
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get database instance
+  example: []
+  syntax:
+    content: ILiteDatabase Database { get; }
+    parameters: []
+    return:
+      type: LiteDB.ILiteDatabase
+    content.vb: ReadOnly Property Database As ILiteDatabase
+  overload: LiteDB.ILiteRepository.Database*
+- uid: LiteDB.ILiteRepository.Insert``1(``0,System.String)
+  commentId: M:LiteDB.ILiteRepository.Insert``1(``0,System.String)
+  id: Insert``1(``0,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Insert<T>(T, string)
+  nameWithType: ILiteRepository.Insert<T>(T, string)
+  fullName: LiteDB.ILiteRepository.Insert<T>(T, string)
+  type: Method
+  source:
+    id: Insert
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 16
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Insert a new document into collection. Document Id must be a new value in collection - Returns document Id
+  example: []
+  syntax:
+    content: BsonValue Insert<T>(T entity, string collectionName = null)
+    parameters:
+    - id: entity
+      type: '{T}'
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Function Insert(Of T)(entity As T, collectionName As String = Nothing) As BsonValue
+  overload: LiteDB.ILiteRepository.Insert*
+  nameWithType.vb: ILiteRepository.Insert(Of T)(T, String)
+  fullName.vb: LiteDB.ILiteRepository.Insert(Of T)(T, String)
+  name.vb: Insert(Of T)(T, String)
+- uid: LiteDB.ILiteRepository.Insert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  commentId: M:LiteDB.ILiteRepository.Insert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  id: Insert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Insert<T>(IEnumerable<T>, string)
+  nameWithType: ILiteRepository.Insert<T>(IEnumerable<T>, string)
+  fullName: LiteDB.ILiteRepository.Insert<T>(System.Collections.Generic.IEnumerable<T>, string)
+  type: Method
+  source:
+    id: Insert
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Insert an array of new documents into collection. Document Id must be a new value in collection. Can be set buffer size to commit at each N documents
+  example: []
+  syntax:
+    content: int Insert<T>(IEnumerable<T> entities, string collectionName = null)
+    parameters:
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+    content.vb: Function Insert(Of T)(entities As IEnumerable(Of T), collectionName As String = Nothing) As Integer
+  overload: LiteDB.ILiteRepository.Insert*
+  nameWithType.vb: ILiteRepository.Insert(Of T)(IEnumerable(Of T), String)
+  fullName.vb: LiteDB.ILiteRepository.Insert(Of T)(System.Collections.Generic.IEnumerable(Of T), String)
+  name.vb: Insert(Of T)(IEnumerable(Of T), String)
+- uid: LiteDB.ILiteRepository.Update``1(``0,System.String)
+  commentId: M:LiteDB.ILiteRepository.Update``1(``0,System.String)
+  id: Update``1(``0,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Update<T>(T, string)
+  nameWithType: ILiteRepository.Update<T>(T, string)
+  fullName: LiteDB.ILiteRepository.Update<T>(T, string)
+  type: Method
+  source:
+    id: Update
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 26
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Update a document into collection. Returns false if not found document in collection
+  example: []
+  syntax:
+    content: bool Update<T>(T entity, string collectionName = null)
+    parameters:
+    - id: entity
+      type: '{T}'
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Function Update(Of T)(entity As T, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.Update*
+  nameWithType.vb: ILiteRepository.Update(Of T)(T, String)
+  fullName.vb: LiteDB.ILiteRepository.Update(Of T)(T, String)
+  name.vb: Update(Of T)(T, String)
+- uid: LiteDB.ILiteRepository.Update``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  commentId: M:LiteDB.ILiteRepository.Update``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  id: Update``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Update<T>(IEnumerable<T>, string)
+  nameWithType: ILiteRepository.Update<T>(IEnumerable<T>, string)
+  fullName: LiteDB.ILiteRepository.Update<T>(System.Collections.Generic.IEnumerable<T>, string)
+  type: Method
+  source:
+    id: Update
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Update all documents
+  example: []
+  syntax:
+    content: int Update<T>(IEnumerable<T> entities, string collectionName = null)
+    parameters:
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+    content.vb: Function Update(Of T)(entities As IEnumerable(Of T), collectionName As String = Nothing) As Integer
+  overload: LiteDB.ILiteRepository.Update*
+  nameWithType.vb: ILiteRepository.Update(Of T)(IEnumerable(Of T), String)
+  fullName.vb: LiteDB.ILiteRepository.Update(Of T)(System.Collections.Generic.IEnumerable(Of T), String)
+  name.vb: Update(Of T)(IEnumerable(Of T), String)
+- uid: LiteDB.ILiteRepository.Upsert``1(``0,System.String)
+  commentId: M:LiteDB.ILiteRepository.Upsert``1(``0,System.String)
+  id: Upsert``1(``0,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Upsert<T>(T, string)
+  nameWithType: ILiteRepository.Upsert<T>(T, string)
+  fullName: LiteDB.ILiteRepository.Upsert<T>(T, string)
+  type: Method
+  source:
+    id: Upsert
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 36
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Insert or Update a document based on _id key. Returns true if insert entity or false if update entity
+  example: []
+  syntax:
+    content: bool Upsert<T>(T entity, string collectionName = null)
+    parameters:
+    - id: entity
+      type: '{T}'
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Function Upsert(Of T)(entity As T, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.Upsert*
+  nameWithType.vb: ILiteRepository.Upsert(Of T)(T, String)
+  fullName.vb: LiteDB.ILiteRepository.Upsert(Of T)(T, String)
+  name.vb: Upsert(Of T)(T, String)
+- uid: LiteDB.ILiteRepository.Upsert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  commentId: M:LiteDB.ILiteRepository.Upsert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  id: Upsert``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Upsert<T>(IEnumerable<T>, string)
+  nameWithType: ILiteRepository.Upsert<T>(IEnumerable<T>, string)
+  fullName: LiteDB.ILiteRepository.Upsert<T>(System.Collections.Generic.IEnumerable<T>, string)
+  type: Method
+  source:
+    id: Upsert
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 41
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Insert or Update all documents based on _id key. Returns entity count that was inserted
+  example: []
+  syntax:
+    content: int Upsert<T>(IEnumerable<T> entities, string collectionName = null)
+    parameters:
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+    content.vb: Function Upsert(Of T)(entities As IEnumerable(Of T), collectionName As String = Nothing) As Integer
+  overload: LiteDB.ILiteRepository.Upsert*
+  nameWithType.vb: ILiteRepository.Upsert(Of T)(IEnumerable(Of T), String)
+  fullName.vb: LiteDB.ILiteRepository.Upsert(Of T)(System.Collections.Generic.IEnumerable(Of T), String)
+  name.vb: Upsert(Of T)(IEnumerable(Of T), String)
+- uid: LiteDB.ILiteRepository.Delete``1(LiteDB.BsonValue,System.String)
+  commentId: M:LiteDB.ILiteRepository.Delete``1(LiteDB.BsonValue,System.String)
+  id: Delete``1(LiteDB.BsonValue,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete<T>(BsonValue, string)
+  nameWithType: ILiteRepository.Delete<T>(BsonValue, string)
+  fullName: LiteDB.ILiteRepository.Delete<T>(LiteDB.BsonValue, string)
+  type: Method
+  source:
+    id: Delete
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 46
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Delete entity based on _id key
+  example: []
+  syntax:
+    content: bool Delete<T>(BsonValue id, string collectionName = null)
+    parameters:
+    - id: id
+      type: LiteDB.BsonValue
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Function Delete(Of T)(id As BsonValue, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.Delete*
+  nameWithType.vb: ILiteRepository.Delete(Of T)(BsonValue, String)
+  fullName.vb: LiteDB.ILiteRepository.Delete(Of T)(LiteDB.BsonValue, String)
+  name.vb: Delete(Of T)(BsonValue, String)
+- uid: LiteDB.ILiteRepository.DeleteMany``1(LiteDB.BsonExpression,System.String)
+  commentId: M:LiteDB.ILiteRepository.DeleteMany``1(LiteDB.BsonExpression,System.String)
+  id: DeleteMany``1(LiteDB.BsonExpression,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteMany<T>(BsonExpression, string)
+  nameWithType: ILiteRepository.DeleteMany<T>(BsonExpression, string)
+  fullName: LiteDB.ILiteRepository.DeleteMany<T>(LiteDB.BsonExpression, string)
+  type: Method
+  source:
+    id: DeleteMany
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 51
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Delete entity based on Query
+  example: []
+  syntax:
+    content: int DeleteMany<T>(BsonExpression predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+    content.vb: Function DeleteMany(Of T)(predicate As BsonExpression, collectionName As String = Nothing) As Integer
+  overload: LiteDB.ILiteRepository.DeleteMany*
+  nameWithType.vb: ILiteRepository.DeleteMany(Of T)(BsonExpression, String)
+  fullName.vb: LiteDB.ILiteRepository.DeleteMany(Of T)(LiteDB.BsonExpression, String)
+  name.vb: DeleteMany(Of T)(BsonExpression, String)
+- uid: LiteDB.ILiteRepository.DeleteMany``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  commentId: M:LiteDB.ILiteRepository.DeleteMany``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  id: DeleteMany``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteMany<T>(Expression<Func<T, bool>>, string)
+  nameWithType: ILiteRepository.DeleteMany<T>(Expression<Func<T, bool>>, string)
+  fullName: LiteDB.ILiteRepository.DeleteMany<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, string)
+  type: Method
+  source:
+    id: DeleteMany
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 56
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Delete entity based on predicate filter expression
+  example: []
+  syntax:
+    content: int DeleteMany<T>(Expression<Func<T, bool>> predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+    content.vb: Function DeleteMany(Of T)(predicate As Expression(Of Func(Of T, Boolean)), collectionName As String = Nothing) As Integer
+  overload: LiteDB.ILiteRepository.DeleteMany*
+  nameWithType.vb: ILiteRepository.DeleteMany(Of T)(Expression(Of Func(Of T, Boolean)), String)
+  fullName.vb: LiteDB.ILiteRepository.DeleteMany(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), String)
+  name.vb: DeleteMany(Of T)(Expression(Of Func(Of T, Boolean)), String)
+- uid: LiteDB.ILiteRepository.Query``1(System.String)
+  commentId: M:LiteDB.ILiteRepository.Query``1(System.String)
+  id: Query``1(System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Query<T>(string)
+  nameWithType: ILiteRepository.Query<T>(string)
+  fullName: LiteDB.ILiteRepository.Query<T>(string)
+  type: Method
+  source:
+    id: Query
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 61
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns new instance of LiteQueryable that provides all method to query any entity inside collection. Use fluent API to apply filter/includes an than run any execute command, like ToList() or First()
+  example: []
+  syntax:
+    content: ILiteQueryable<T> Query<T>(string collectionName = null)
+    parameters:
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.ILiteQueryable{{T}}
+    content.vb: Function Query(Of T)(collectionName As String = Nothing) As ILiteQueryable(Of T)
+  overload: LiteDB.ILiteRepository.Query*
+  nameWithType.vb: ILiteRepository.Query(Of T)(String)
+  fullName.vb: LiteDB.ILiteRepository.Query(Of T)(String)
+  name.vb: Query(Of T)(String)
+- uid: LiteDB.ILiteRepository.EnsureIndex``1(System.String,LiteDB.BsonExpression,System.Boolean,System.String)
+  commentId: M:LiteDB.ILiteRepository.EnsureIndex``1(System.String,LiteDB.BsonExpression,System.Boolean,System.String)
+  id: EnsureIndex``1(System.String,LiteDB.BsonExpression,System.Boolean,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: EnsureIndex<T>(string, BsonExpression, bool, string)
+  nameWithType: ILiteRepository.EnsureIndex<T>(string, BsonExpression, bool, string)
+  fullName: LiteDB.ILiteRepository.EnsureIndex<T>(string, LiteDB.BsonExpression, bool, string)
+  type: Method
+  source:
+    id: EnsureIndex
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 70
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Create a new permanent index in all documents inside this collections if index not exists already. Returns true if index was created or false if already exits
+  example: []
+  syntax:
+    content: bool EnsureIndex<T>(string name, BsonExpression expression, bool unique = false, string collectionName = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: Index name - unique name for this collection
+    - id: expression
+      type: LiteDB.BsonExpression
+      description: Create a custom expression function to be indexed
+    - id: unique
+      type: System.Boolean
+      description: If is a unique index
+    - id: collectionName
+      type: System.String
+      description: Collection Name
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Function EnsureIndex(Of T)(name As String, expression As BsonExpression, unique As Boolean = False, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.EnsureIndex*
+  nameWithType.vb: ILiteRepository.EnsureIndex(Of T)(String, BsonExpression, Boolean, String)
+  fullName.vb: LiteDB.ILiteRepository.EnsureIndex(Of T)(String, LiteDB.BsonExpression, Boolean, String)
+  name.vb: EnsureIndex(Of T)(String, BsonExpression, Boolean, String)
+- uid: LiteDB.ILiteRepository.EnsureIndex``1(LiteDB.BsonExpression,System.Boolean,System.String)
+  commentId: M:LiteDB.ILiteRepository.EnsureIndex``1(LiteDB.BsonExpression,System.Boolean,System.String)
+  id: EnsureIndex``1(LiteDB.BsonExpression,System.Boolean,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: EnsureIndex<T>(BsonExpression, bool, string)
+  nameWithType: ILiteRepository.EnsureIndex<T>(BsonExpression, bool, string)
+  fullName: LiteDB.ILiteRepository.EnsureIndex<T>(LiteDB.BsonExpression, bool, string)
+  type: Method
+  source:
+    id: EnsureIndex
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 78
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Create a new permanent index in all documents inside this collections if index not exists already. Returns true if index was created or false if already exits
+  example: []
+  syntax:
+    content: bool EnsureIndex<T>(BsonExpression expression, bool unique = false, string collectionName = null)
+    parameters:
+    - id: expression
+      type: LiteDB.BsonExpression
+      description: Create a custom expression function to be indexed
+    - id: unique
+      type: System.Boolean
+      description: If is a unique index
+    - id: collectionName
+      type: System.String
+      description: Collection Name
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Function EnsureIndex(Of T)(expression As BsonExpression, unique As Boolean = False, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.EnsureIndex*
+  nameWithType.vb: ILiteRepository.EnsureIndex(Of T)(BsonExpression, Boolean, String)
+  fullName.vb: LiteDB.ILiteRepository.EnsureIndex(Of T)(LiteDB.BsonExpression, Boolean, String)
+  name.vb: EnsureIndex(Of T)(BsonExpression, Boolean, String)
+- uid: LiteDB.ILiteRepository.EnsureIndex``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  commentId: M:LiteDB.ILiteRepository.EnsureIndex``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  id: EnsureIndex``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: EnsureIndex<T, K>(Expression<Func<T, K>>, bool, string)
+  nameWithType: ILiteRepository.EnsureIndex<T, K>(Expression<Func<T, K>>, bool, string)
+  fullName: LiteDB.ILiteRepository.EnsureIndex<T, K>(System.Linq.Expressions.Expression<System.Func<T, K>>, bool, string)
+  type: Method
+  source:
+    id: EnsureIndex
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 86
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Create a new permanent index in all documents inside this collections if index not exists already.
+  example: []
+  syntax:
+    content: bool EnsureIndex<T, K>(Expression<Func<T, K>> keySelector, bool unique = false, string collectionName = null)
+    parameters:
+    - id: keySelector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+      description: LinqExpression to be converted into BsonExpression to be indexed
+    - id: unique
+      type: System.Boolean
+      description: Create a unique keys index?
+    - id: collectionName
+      type: System.String
+      description: Collection Name
+    typeParameters:
+    - id: T
+    - id: K
+    return:
+      type: System.Boolean
+    content.vb: Function EnsureIndex(Of T, K)(keySelector As Expression(Of Func(Of T, K)), unique As Boolean = False, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.EnsureIndex*
+  nameWithType.vb: ILiteRepository.EnsureIndex(Of T, K)(Expression(Of Func(Of T, K)), Boolean, String)
+  fullName.vb: LiteDB.ILiteRepository.EnsureIndex(Of T, K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)), Boolean, String)
+  name.vb: EnsureIndex(Of T, K)(Expression(Of Func(Of T, K)), Boolean, String)
+- uid: LiteDB.ILiteRepository.EnsureIndex``2(System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  commentId: M:LiteDB.ILiteRepository.EnsureIndex``2(System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  id: EnsureIndex``2(System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: EnsureIndex<T, K>(string, Expression<Func<T, K>>, bool, string)
+  nameWithType: ILiteRepository.EnsureIndex<T, K>(string, Expression<Func<T, K>>, bool, string)
+  fullName: LiteDB.ILiteRepository.EnsureIndex<T, K>(string, System.Linq.Expressions.Expression<System.Func<T, K>>, bool, string)
+  type: Method
+  source:
+    id: EnsureIndex
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 95
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Create a new permanent index in all documents inside this collections if index not exists already.
+  example: []
+  syntax:
+    content: bool EnsureIndex<T, K>(string name, Expression<Func<T, K>> keySelector, bool unique = false, string collectionName = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: Index name - unique name for this collection
+    - id: keySelector
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+      description: LinqExpression to be converted into BsonExpression to be indexed
+    - id: unique
+      type: System.Boolean
+      description: Create a unique keys index?
+    - id: collectionName
+      type: System.String
+      description: Collection Name
+    typeParameters:
+    - id: T
+    - id: K
+    return:
+      type: System.Boolean
+    content.vb: Function EnsureIndex(Of T, K)(name As String, keySelector As Expression(Of Func(Of T, K)), unique As Boolean = False, collectionName As String = Nothing) As Boolean
+  overload: LiteDB.ILiteRepository.EnsureIndex*
+  nameWithType.vb: ILiteRepository.EnsureIndex(Of T, K)(String, Expression(Of Func(Of T, K)), Boolean, String)
+  fullName.vb: LiteDB.ILiteRepository.EnsureIndex(Of T, K)(String, System.Linq.Expressions.Expression(Of System.Func(Of T, K)), Boolean, String)
+  name.vb: EnsureIndex(Of T, K)(String, Expression(Of Func(Of T, K)), Boolean, String)
+- uid: LiteDB.ILiteRepository.SingleById``1(LiteDB.BsonValue,System.String)
+  commentId: M:LiteDB.ILiteRepository.SingleById``1(LiteDB.BsonValue,System.String)
+  id: SingleById``1(LiteDB.BsonValue,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: SingleById<T>(BsonValue, string)
+  nameWithType: ILiteRepository.SingleById<T>(BsonValue, string)
+  fullName: LiteDB.ILiteRepository.SingleById<T>(LiteDB.BsonValue, string)
+  type: Method
+  source:
+    id: SingleById
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 100
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Search for a single instance of T by Id. Shortcut from Query.SingleById
+  example: []
+  syntax:
+    content: T SingleById<T>(BsonValue id, string collectionName = null)
+    parameters:
+    - id: id
+      type: LiteDB.BsonValue
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function SingleById(Of T)(id As BsonValue, collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.SingleById*
+  nameWithType.vb: ILiteRepository.SingleById(Of T)(BsonValue, String)
+  fullName.vb: LiteDB.ILiteRepository.SingleById(Of T)(LiteDB.BsonValue, String)
+  name.vb: SingleById(Of T)(BsonValue, String)
+- uid: LiteDB.ILiteRepository.Fetch``1(LiteDB.BsonExpression,System.String)
+  commentId: M:LiteDB.ILiteRepository.Fetch``1(LiteDB.BsonExpression,System.String)
+  id: Fetch``1(LiteDB.BsonExpression,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Fetch<T>(BsonExpression, string)
+  nameWithType: ILiteRepository.Fetch<T>(BsonExpression, string)
+  fullName: LiteDB.ILiteRepository.Fetch<T>(LiteDB.BsonExpression, string)
+  type: Method
+  source:
+    id: Fetch
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 105
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).ToList();
+  example: []
+  syntax:
+    content: List<T> Fetch<T>(BsonExpression predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Function Fetch(Of T)(predicate As BsonExpression, collectionName As String = Nothing) As List(Of T)
+  overload: LiteDB.ILiteRepository.Fetch*
+  nameWithType.vb: ILiteRepository.Fetch(Of T)(BsonExpression, String)
+  fullName.vb: LiteDB.ILiteRepository.Fetch(Of T)(LiteDB.BsonExpression, String)
+  name.vb: Fetch(Of T)(BsonExpression, String)
+- uid: LiteDB.ILiteRepository.Fetch``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  commentId: M:LiteDB.ILiteRepository.Fetch``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  id: Fetch``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Fetch<T>(Expression<Func<T, bool>>, string)
+  nameWithType: ILiteRepository.Fetch<T>(Expression<Func<T, bool>>, string)
+  fullName: LiteDB.ILiteRepository.Fetch<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, string)
+  type: Method
+  source:
+    id: Fetch
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 110
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).ToList();
+  example: []
+  syntax:
+    content: List<T> Fetch<T>(Expression<Func<T, bool>> predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Function Fetch(Of T)(predicate As Expression(Of Func(Of T, Boolean)), collectionName As String = Nothing) As List(Of T)
+  overload: LiteDB.ILiteRepository.Fetch*
+  nameWithType.vb: ILiteRepository.Fetch(Of T)(Expression(Of Func(Of T, Boolean)), String)
+  fullName.vb: LiteDB.ILiteRepository.Fetch(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), String)
+  name.vb: Fetch(Of T)(Expression(Of Func(Of T, Boolean)), String)
+- uid: LiteDB.ILiteRepository.First``1(LiteDB.BsonExpression,System.String)
+  commentId: M:LiteDB.ILiteRepository.First``1(LiteDB.BsonExpression,System.String)
+  id: First``1(LiteDB.BsonExpression,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: First<T>(BsonExpression, string)
+  nameWithType: ILiteRepository.First<T>(BsonExpression, string)
+  fullName: LiteDB.ILiteRepository.First<T>(LiteDB.BsonExpression, string)
+  type: Method
+  source:
+    id: First
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 115
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).First();
+  example: []
+  syntax:
+    content: T First<T>(BsonExpression predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function First(Of T)(predicate As BsonExpression, collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.First*
+  nameWithType.vb: ILiteRepository.First(Of T)(BsonExpression, String)
+  fullName.vb: LiteDB.ILiteRepository.First(Of T)(LiteDB.BsonExpression, String)
+  name.vb: First(Of T)(BsonExpression, String)
+- uid: LiteDB.ILiteRepository.First``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  commentId: M:LiteDB.ILiteRepository.First``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  id: First``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: First<T>(Expression<Func<T, bool>>, string)
+  nameWithType: ILiteRepository.First<T>(Expression<Func<T, bool>>, string)
+  fullName: LiteDB.ILiteRepository.First<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, string)
+  type: Method
+  source:
+    id: First
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 120
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).First();
+  example: []
+  syntax:
+    content: T First<T>(Expression<Func<T, bool>> predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function First(Of T)(predicate As Expression(Of Func(Of T, Boolean)), collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.First*
+  nameWithType.vb: ILiteRepository.First(Of T)(Expression(Of Func(Of T, Boolean)), String)
+  fullName.vb: LiteDB.ILiteRepository.First(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), String)
+  name.vb: First(Of T)(Expression(Of Func(Of T, Boolean)), String)
+- uid: LiteDB.ILiteRepository.FirstOrDefault``1(LiteDB.BsonExpression,System.String)
+  commentId: M:LiteDB.ILiteRepository.FirstOrDefault``1(LiteDB.BsonExpression,System.String)
+  id: FirstOrDefault``1(LiteDB.BsonExpression,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: FirstOrDefault<T>(BsonExpression, string)
+  nameWithType: ILiteRepository.FirstOrDefault<T>(BsonExpression, string)
+  fullName: LiteDB.ILiteRepository.FirstOrDefault<T>(LiteDB.BsonExpression, string)
+  type: Method
+  source:
+    id: FirstOrDefault
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 125
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).FirstOrDefault();
+  example: []
+  syntax:
+    content: T FirstOrDefault<T>(BsonExpression predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function FirstOrDefault(Of T)(predicate As BsonExpression, collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.FirstOrDefault*
+  nameWithType.vb: ILiteRepository.FirstOrDefault(Of T)(BsonExpression, String)
+  fullName.vb: LiteDB.ILiteRepository.FirstOrDefault(Of T)(LiteDB.BsonExpression, String)
+  name.vb: FirstOrDefault(Of T)(BsonExpression, String)
+- uid: LiteDB.ILiteRepository.FirstOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  commentId: M:LiteDB.ILiteRepository.FirstOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  id: FirstOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: FirstOrDefault<T>(Expression<Func<T, bool>>, string)
+  nameWithType: ILiteRepository.FirstOrDefault<T>(Expression<Func<T, bool>>, string)
+  fullName: LiteDB.ILiteRepository.FirstOrDefault<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, string)
+  type: Method
+  source:
+    id: FirstOrDefault
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 130
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).FirstOrDefault();
+  example: []
+  syntax:
+    content: T FirstOrDefault<T>(Expression<Func<T, bool>> predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function FirstOrDefault(Of T)(predicate As Expression(Of Func(Of T, Boolean)), collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.FirstOrDefault*
+  nameWithType.vb: ILiteRepository.FirstOrDefault(Of T)(Expression(Of Func(Of T, Boolean)), String)
+  fullName.vb: LiteDB.ILiteRepository.FirstOrDefault(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), String)
+  name.vb: FirstOrDefault(Of T)(Expression(Of Func(Of T, Boolean)), String)
+- uid: LiteDB.ILiteRepository.Single``1(LiteDB.BsonExpression,System.String)
+  commentId: M:LiteDB.ILiteRepository.Single``1(LiteDB.BsonExpression,System.String)
+  id: Single``1(LiteDB.BsonExpression,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Single<T>(BsonExpression, string)
+  nameWithType: ILiteRepository.Single<T>(BsonExpression, string)
+  fullName: LiteDB.ILiteRepository.Single<T>(LiteDB.BsonExpression, string)
+  type: Method
+  source:
+    id: Single
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 135
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).Single();
+  example: []
+  syntax:
+    content: T Single<T>(BsonExpression predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function [Single](Of T)(predicate As BsonExpression, collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.Single*
+  nameWithType.vb: ILiteRepository.Single(Of T)(BsonExpression, String)
+  fullName.vb: LiteDB.ILiteRepository.Single(Of T)(LiteDB.BsonExpression, String)
+  name.vb: Single(Of T)(BsonExpression, String)
+- uid: LiteDB.ILiteRepository.Single``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  commentId: M:LiteDB.ILiteRepository.Single``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  id: Single``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: Single<T>(Expression<Func<T, bool>>, string)
+  nameWithType: ILiteRepository.Single<T>(Expression<Func<T, bool>>, string)
+  fullName: LiteDB.ILiteRepository.Single<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, string)
+  type: Method
+  source:
+    id: Single
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 140
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).Single();
+  example: []
+  syntax:
+    content: T Single<T>(Expression<Func<T, bool>> predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function [Single](Of T)(predicate As Expression(Of Func(Of T, Boolean)), collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.Single*
+  nameWithType.vb: ILiteRepository.Single(Of T)(Expression(Of Func(Of T, Boolean)), String)
+  fullName.vb: LiteDB.ILiteRepository.Single(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), String)
+  name.vb: Single(Of T)(Expression(Of Func(Of T, Boolean)), String)
+- uid: LiteDB.ILiteRepository.SingleOrDefault``1(LiteDB.BsonExpression,System.String)
+  commentId: M:LiteDB.ILiteRepository.SingleOrDefault``1(LiteDB.BsonExpression,System.String)
+  id: SingleOrDefault``1(LiteDB.BsonExpression,System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: SingleOrDefault<T>(BsonExpression, string)
+  nameWithType: ILiteRepository.SingleOrDefault<T>(BsonExpression, string)
+  fullName: LiteDB.ILiteRepository.SingleOrDefault<T>(LiteDB.BsonExpression, string)
+  type: Method
+  source:
+    id: SingleOrDefault
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 145
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).SingleOrDefault();
+  example: []
+  syntax:
+    content: T SingleOrDefault<T>(BsonExpression predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: LiteDB.BsonExpression
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function SingleOrDefault(Of T)(predicate As BsonExpression, collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.SingleOrDefault*
+  nameWithType.vb: ILiteRepository.SingleOrDefault(Of T)(BsonExpression, String)
+  fullName.vb: LiteDB.ILiteRepository.SingleOrDefault(Of T)(LiteDB.BsonExpression, String)
+  name.vb: SingleOrDefault(Of T)(BsonExpression, String)
+- uid: LiteDB.ILiteRepository.SingleOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  commentId: M:LiteDB.ILiteRepository.SingleOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  id: SingleOrDefault``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  parent: LiteDB.ILiteRepository
+  langs:
+  - csharp
+  - vb
+  name: SingleOrDefault<T>(Expression<Func<T, bool>>, string)
+  nameWithType: ILiteRepository.SingleOrDefault<T>(Expression<Func<T, bool>>, string)
+  fullName: LiteDB.ILiteRepository.SingleOrDefault<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, string)
+  type: Method
+  source:
+    id: SingleOrDefault
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteRepository.cs
+    startLine: 150
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute Query[T].Where(predicate).SingleOrDefault();
+  example: []
+  syntax:
+    content: T SingleOrDefault<T>(Expression<Func<T, bool>> predicate, string collectionName = null)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: collectionName
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function SingleOrDefault(Of T)(predicate As Expression(Of Func(Of T, Boolean)), collectionName As String = Nothing) As T
+  overload: LiteDB.ILiteRepository.SingleOrDefault*
+  nameWithType.vb: ILiteRepository.SingleOrDefault(Of T)(Expression(Of Func(Of T, Boolean)), String)
+  fullName.vb: LiteDB.ILiteRepository.SingleOrDefault(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), String)
+  name.vb: SingleOrDefault(Of T)(Expression(Of Func(Of T, Boolean)), String)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.ILiteRepository.Database*
+  commentId: Overload:LiteDB.ILiteRepository.Database
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Database
+  name: Database
+  nameWithType: ILiteRepository.Database
+  fullName: LiteDB.ILiteRepository.Database
+- uid: LiteDB.ILiteDatabase
+  commentId: T:LiteDB.ILiteDatabase
+  parent: LiteDB
+  href: LiteDB.ILiteDatabase.html
+  name: ILiteDatabase
+  nameWithType: ILiteDatabase
+  fullName: LiteDB.ILiteDatabase
+- uid: LiteDB.ILiteRepository.Insert*
+  commentId: Overload:LiteDB.ILiteRepository.Insert
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Insert__1___0_System_String_
+  name: Insert
+  nameWithType: ILiteRepository.Insert
+  fullName: LiteDB.ILiteRepository.Insert
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LiteDB.ILiteRepository.Update*
+  commentId: Overload:LiteDB.ILiteRepository.Update
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Update__1___0_System_String_
+  name: Update
+  nameWithType: ILiteRepository.Update
+  fullName: LiteDB.ILiteRepository.Update
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.ILiteRepository.Upsert*
+  commentId: Overload:LiteDB.ILiteRepository.Upsert
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Upsert__1___0_System_String_
+  name: Upsert
+  nameWithType: ILiteRepository.Upsert
+  fullName: LiteDB.ILiteRepository.Upsert
+- uid: LiteDB.ILiteRepository.Delete*
+  commentId: Overload:LiteDB.ILiteRepository.Delete
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Delete__1_LiteDB_BsonValue_System_String_
+  name: Delete
+  nameWithType: ILiteRepository.Delete
+  fullName: LiteDB.ILiteRepository.Delete
+- uid: LiteDB.ILiteRepository.DeleteMany*
+  commentId: Overload:LiteDB.ILiteRepository.DeleteMany
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_DeleteMany__1_LiteDB_BsonExpression_System_String_
+  name: DeleteMany
+  nameWithType: ILiteRepository.DeleteMany
+  fullName: LiteDB.ILiteRepository.DeleteMany
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, bool>>
+  nameWithType: Expression<Func<T, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, bool>>
+  nameWithType.vb: Expression(Of Func(Of T, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean))
+  name.vb: Expression(Of Func(Of T, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: LiteDB.ILiteRepository.Query*
+  commentId: Overload:LiteDB.ILiteRepository.Query
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Query__1_System_String_
+  name: Query
+  nameWithType: ILiteRepository.Query
+  fullName: LiteDB.ILiteRepository.Query
+- uid: LiteDB.ILiteQueryable{{T}}
+  commentId: T:LiteDB.ILiteQueryable{`0}
+  parent: LiteDB
+  definition: LiteDB.ILiteQueryable`1
+  href: LiteDB.ILiteQueryable-1.html
+  name: ILiteQueryable<T>
+  nameWithType: ILiteQueryable<T>
+  fullName: LiteDB.ILiteQueryable<T>
+  nameWithType.vb: ILiteQueryable(Of T)
+  fullName.vb: LiteDB.ILiteQueryable(Of T)
+  name.vb: ILiteQueryable(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteQueryable`1
+  commentId: T:LiteDB.ILiteQueryable`1
+  parent: LiteDB
+  href: LiteDB.ILiteQueryable-1.html
+  name: ILiteQueryable<T>
+  nameWithType: ILiteQueryable<T>
+  fullName: LiteDB.ILiteQueryable<T>
+  nameWithType.vb: ILiteQueryable(Of T)
+  fullName.vb: LiteDB.ILiteQueryable(Of T)
+  name.vb: ILiteQueryable(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteRepository.EnsureIndex*
+  commentId: Overload:LiteDB.ILiteRepository.EnsureIndex
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_EnsureIndex__1_System_String_LiteDB_BsonExpression_System_Boolean_System_String_
+  name: EnsureIndex
+  nameWithType: ILiteRepository.EnsureIndex
+  fullName: LiteDB.ILiteRepository.EnsureIndex
+- uid: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,``0}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, K>>
+  nameWithType: Expression<Func<T, K>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, K>>
+  nameWithType.vb: Expression(Of Func(Of T, K))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, K))
+  name.vb: Expression(Of Func(Of T, K))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: )
+  - name: )
+- uid: LiteDB.ILiteRepository.SingleById*
+  commentId: Overload:LiteDB.ILiteRepository.SingleById
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_SingleById__1_LiteDB_BsonValue_System_String_
+  name: SingleById
+  nameWithType: ILiteRepository.SingleById
+  fullName: LiteDB.ILiteRepository.SingleById
+- uid: LiteDB.ILiteRepository.Fetch*
+  commentId: Overload:LiteDB.ILiteRepository.Fetch
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Fetch__1_LiteDB_BsonExpression_System_String_
+  name: Fetch
+  nameWithType: ILiteRepository.Fetch
+  fullName: LiteDB.ILiteRepository.Fetch
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteRepository.First*
+  commentId: Overload:LiteDB.ILiteRepository.First
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_First__1_LiteDB_BsonExpression_System_String_
+  name: First
+  nameWithType: ILiteRepository.First
+  fullName: LiteDB.ILiteRepository.First
+- uid: LiteDB.ILiteRepository.FirstOrDefault*
+  commentId: Overload:LiteDB.ILiteRepository.FirstOrDefault
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_FirstOrDefault__1_LiteDB_BsonExpression_System_String_
+  name: FirstOrDefault
+  nameWithType: ILiteRepository.FirstOrDefault
+  fullName: LiteDB.ILiteRepository.FirstOrDefault
+- uid: LiteDB.ILiteRepository.Single*
+  commentId: Overload:LiteDB.ILiteRepository.Single
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_Single__1_LiteDB_BsonExpression_System_String_
+  name: Single
+  nameWithType: ILiteRepository.Single
+  fullName: LiteDB.ILiteRepository.Single
+- uid: LiteDB.ILiteRepository.SingleOrDefault*
+  commentId: Overload:LiteDB.ILiteRepository.SingleOrDefault
+  href: LiteDB.ILiteRepository.html#LiteDB_ILiteRepository_SingleOrDefault__1_LiteDB_BsonExpression_System_String_
+  name: SingleOrDefault
+  nameWithType: ILiteRepository.SingleOrDefault
+  fullName: LiteDB.ILiteRepository.SingleOrDefault

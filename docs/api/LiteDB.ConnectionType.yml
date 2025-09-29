@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ConnectionType
+  commentId: T:LiteDB.ConnectionType
+  id: ConnectionType
+  parent: LiteDB
+  children:
+  - LiteDB.ConnectionType.Direct
+  - LiteDB.ConnectionType.Shared
+  langs:
+  - csharp
+  - vb
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: LiteDB.ConnectionType
+  type: Enum
+  source:
+    id: ConnectionType
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionType.cs
+    startLine: 8
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public enum ConnectionType
+    content.vb: Public Enum ConnectionType
+- uid: LiteDB.ConnectionType.Direct
+  commentId: F:LiteDB.ConnectionType.Direct
+  id: Direct
+  parent: LiteDB.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Direct
+  nameWithType: ConnectionType.Direct
+  fullName: LiteDB.ConnectionType.Direct
+  type: Field
+  source:
+    id: Direct
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionType.cs
+    startLine: 10
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Direct = 0
+    return:
+      type: LiteDB.ConnectionType
+- uid: LiteDB.ConnectionType.Shared
+  commentId: F:LiteDB.ConnectionType.Shared
+  id: Shared
+  parent: LiteDB.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Shared
+  nameWithType: ConnectionType.Shared
+  fullName: LiteDB.ConnectionType.Shared
+  type: Field
+  source:
+    id: Shared
+    path: /workspace/LiteDB/LiteDB/Client/Structures/ConnectionType.cs
+    startLine: 11
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Shared = 1
+    return:
+      type: LiteDB.ConnectionType
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.ConnectionType
+  commentId: T:LiteDB.ConnectionType
+  parent: LiteDB
+  href: LiteDB.ConnectionType.html
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: LiteDB.ConnectionType

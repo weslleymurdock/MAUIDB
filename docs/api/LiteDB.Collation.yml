@@ -1,0 +1,1216 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  id: Collation
+  parent: LiteDB
+  children:
+  - LiteDB.Collation.#ctor(System.Int32,System.Globalization.CompareOptions)
+  - LiteDB.Collation.#ctor(System.String)
+  - LiteDB.Collation.Binary
+  - LiteDB.Collation.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.Collation.Compare(System.String,System.String)
+  - LiteDB.Collation.Culture
+  - LiteDB.Collation.Default
+  - LiteDB.Collation.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.Collation.GetHashCode(LiteDB.BsonValue)
+  - LiteDB.Collation.LCID
+  - LiteDB.Collation.SortOptions
+  - LiteDB.Collation.ToString
+  langs:
+  - csharp
+  - vb
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+  type: Class
+  source:
+    id: Collation
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 15
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Implement how database will compare to order by/find strings according defined culture/compare options
+
+    If not set, default is CurrentCulture with IgnoreCase
+  example: []
+  syntax:
+    content: 'public class Collation : IComparer<BsonValue>, IComparer<string>, IEqualityComparer<BsonValue>'
+    content.vb: Public Class Collation Implements IComparer(Of BsonValue), IComparer(Of String), IEqualityComparer(Of BsonValue)
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IComparer{LiteDB.BsonValue}
+  - System.Collections.Generic.IComparer{System.String}
+  - System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: LiteDB.Collation.#ctor(System.String)
+  commentId: M:LiteDB.Collation.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Collation(string)
+  nameWithType: Collation.Collation(string)
+  fullName: LiteDB.Collation.Collation(string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 19
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public Collation(string collation)
+    parameters:
+    - id: collation
+      type: System.String
+    content.vb: Public Sub New(collation As String)
+  overload: LiteDB.Collation.#ctor*
+  nameWithType.vb: Collation.New(String)
+  fullName.vb: LiteDB.Collation.New(String)
+  name.vb: New(String)
+- uid: LiteDB.Collation.#ctor(System.Int32,System.Globalization.CompareOptions)
+  commentId: M:LiteDB.Collation.#ctor(System.Int32,System.Globalization.CompareOptions)
+  id: '#ctor(System.Int32,System.Globalization.CompareOptions)'
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Collation(int, CompareOptions)
+  nameWithType: Collation.Collation(int, CompareOptions)
+  fullName: LiteDB.Collation.Collation(int, System.Globalization.CompareOptions)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 34
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public Collation(int lcid, CompareOptions sortOptions)
+    parameters:
+    - id: lcid
+      type: System.Int32
+    - id: sortOptions
+      type: System.Globalization.CompareOptions
+    content.vb: Public Sub New(lcid As Integer, sortOptions As CompareOptions)
+  overload: LiteDB.Collation.#ctor*
+  nameWithType.vb: Collation.New(Integer, CompareOptions)
+  fullName.vb: LiteDB.Collation.New(Integer, System.Globalization.CompareOptions)
+  name.vb: New(Integer, CompareOptions)
+- uid: LiteDB.Collation.Default
+  commentId: F:LiteDB.Collation.Default
+  id: Default
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: Collation.Default
+  fullName: LiteDB.Collation.Default
+  type: Field
+  source:
+    id: Default
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 43
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static Collation Default
+    return:
+      type: LiteDB.Collation
+    content.vb: Public Shared [Default] As Collation
+- uid: LiteDB.Collation.Binary
+  commentId: F:LiteDB.Collation.Binary
+  id: Binary
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Binary
+  nameWithType: Collation.Binary
+  fullName: LiteDB.Collation.Binary
+  type: Field
+  source:
+    id: Binary
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 45
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static Collation Binary
+    return:
+      type: LiteDB.Collation
+    content.vb: Public Shared Binary As Collation
+- uid: LiteDB.Collation.LCID
+  commentId: P:LiteDB.Collation.LCID
+  id: LCID
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: LCID
+  nameWithType: Collation.LCID
+  fullName: LiteDB.Collation.LCID
+  type: Property
+  source:
+    id: LCID
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 50
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get LCID code from culture
+  example: []
+  syntax:
+    content: public int LCID { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LCID As Integer
+  overload: LiteDB.Collation.LCID*
+- uid: LiteDB.Collation.Culture
+  commentId: P:LiteDB.Collation.Culture
+  id: Culture
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Culture
+  nameWithType: Collation.Culture
+  fullName: LiteDB.Collation.Culture
+  type: Property
+  source:
+    id: Culture
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 55
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get database language culture
+  example: []
+  syntax:
+    content: public CultureInfo Culture { get; }
+    parameters: []
+    return:
+      type: System.Globalization.CultureInfo
+    content.vb: Public ReadOnly Property Culture As CultureInfo
+  overload: LiteDB.Collation.Culture*
+- uid: LiteDB.Collation.SortOptions
+  commentId: P:LiteDB.Collation.SortOptions
+  id: SortOptions
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: SortOptions
+  nameWithType: Collation.SortOptions
+  fullName: LiteDB.Collation.SortOptions
+  type: Property
+  source:
+    id: SortOptions
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 60
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get options to how string should be compared in sort
+  example: []
+  syntax:
+    content: public CompareOptions SortOptions { get; }
+    parameters: []
+    return:
+      type: System.Globalization.CompareOptions
+    content.vb: Public ReadOnly Property SortOptions As CompareOptions
+  overload: LiteDB.Collation.SortOptions*
+- uid: LiteDB.Collation.Compare(System.String,System.String)
+  commentId: M:LiteDB.Collation.Compare(System.String,System.String)
+  id: Compare(System.String,System.String)
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Compare(string, string)
+  nameWithType: Collation.Compare(string, string)
+  fullName: LiteDB.Collation.Compare(string, string)
+  type: Method
+  source:
+    id: Compare
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 65
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Compare 2 string values using current culture/compare options
+  example: []
+  syntax:
+    content: public int Compare(string left, string right)
+    parameters:
+    - id: left
+      type: System.String
+    - id: right
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Function Compare(left As String, right As String) As Integer
+  overload: LiteDB.Collation.Compare*
+  implements:
+  - System.Collections.Generic.IComparer{System.String}.Compare(System.String,System.String)
+  nameWithType.vb: Collation.Compare(String, String)
+  fullName.vb: LiteDB.Collation.Compare(String, String)
+  name.vb: Compare(String, String)
+- uid: LiteDB.Collation.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.Collation.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Compare(BsonValue, BsonValue)
+  nameWithType: Collation.Compare(BsonValue, BsonValue)
+  fullName: LiteDB.Collation.Compare(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Compare
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 72
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public int Compare(BsonValue left, BsonValue rigth)
+    parameters:
+    - id: left
+      type: LiteDB.BsonValue
+    - id: rigth
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Public Function Compare(left As BsonValue, rigth As BsonValue) As Integer
+  overload: LiteDB.Collation.Compare*
+  implements:
+  - System.Collections.Generic.IComparer{LiteDB.BsonValue}.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+- uid: LiteDB.Collation.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.Collation.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: Equals(BsonValue, BsonValue)
+  nameWithType: Collation.Equals(BsonValue, BsonValue)
+  fullName: LiteDB.Collation.Equals(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Equals
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 77
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool Equals(BsonValue x, BsonValue y)
+    parameters:
+    - id: x
+      type: LiteDB.BsonValue
+    - id: y
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As BsonValue, y As BsonValue) As Boolean
+  overload: LiteDB.Collation.Equals*
+  implements:
+  - System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+- uid: LiteDB.Collation.GetHashCode(LiteDB.BsonValue)
+  commentId: M:LiteDB.Collation.GetHashCode(LiteDB.BsonValue)
+  id: GetHashCode(LiteDB.BsonValue)
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode(BsonValue)
+  nameWithType: Collation.GetHashCode(BsonValue)
+  fullName: LiteDB.Collation.GetHashCode(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: GetHashCode
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 82
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public int GetHashCode(BsonValue obj)
+    parameters:
+    - id: obj
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Public Function GetHashCode(obj As BsonValue) As Integer
+  overload: LiteDB.Collation.GetHashCode*
+  implements:
+  - System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.GetHashCode(LiteDB.BsonValue)
+- uid: LiteDB.Collation.ToString
+  commentId: M:LiteDB.Collation.ToString
+  id: ToString
+  parent: LiteDB.Collation
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Collation.ToString()
+  fullName: LiteDB.Collation.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: /workspace/LiteDB/LiteDB/Utils/Collation.cs
+    startLine: 87
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: LiteDB.Collation.ToString*
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.Generic.IComparer{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IComparer{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<BsonValue>
+  nameWithType: IComparer<BsonValue>
+  fullName: System.Collections.Generic.IComparer<LiteDB.BsonValue>
+  nameWithType.vb: IComparer(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IComparer(Of LiteDB.BsonValue)
+  name.vb: IComparer(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IComparer{System.String}
+  commentId: T:System.Collections.Generic.IComparer{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<string>
+  nameWithType: IComparer<string>
+  fullName: System.Collections.Generic.IComparer<string>
+  nameWithType.vb: IComparer(Of String)
+  fullName.vb: System.Collections.Generic.IComparer(Of String)
+  name.vb: IComparer(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEqualityComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  name: IEqualityComparer<BsonValue>
+  nameWithType: IEqualityComparer<BsonValue>
+  fullName: System.Collections.Generic.IEqualityComparer<LiteDB.BsonValue>
+  nameWithType.vb: IEqualityComparer(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of LiteDB.BsonValue)
+  name.vb: IEqualityComparer(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IComparer`1
+  commentId: T:System.Collections.Generic.IComparer`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<T>
+  nameWithType: IComparer<T>
+  fullName: System.Collections.Generic.IComparer<T>
+  nameWithType.vb: IComparer(Of T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T)
+  name.vb: IComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IEqualityComparer`1
+  commentId: T:System.Collections.Generic.IEqualityComparer`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  name: IEqualityComparer<T>
+  nameWithType: IEqualityComparer<T>
+  fullName: System.Collections.Generic.IEqualityComparer<T>
+  nameWithType.vb: IEqualityComparer(Of T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T)
+  name.vb: IEqualityComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.Collation.#ctor*
+  commentId: Overload:LiteDB.Collation.#ctor
+  href: LiteDB.Collation.html#LiteDB_Collation__ctor_System_String_
+  name: Collation
+  nameWithType: Collation.Collation
+  fullName: LiteDB.Collation.Collation
+  nameWithType.vb: Collation.New
+  fullName.vb: LiteDB.Collation.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Globalization.CompareOptions
+  commentId: T:System.Globalization.CompareOptions
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.compareoptions
+  name: CompareOptions
+  nameWithType: CompareOptions
+  fullName: System.Globalization.CompareOptions
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB.Collation.LCID*
+  commentId: Overload:LiteDB.Collation.LCID
+  href: LiteDB.Collation.html#LiteDB_Collation_LCID
+  name: LCID
+  nameWithType: Collation.LCID
+  fullName: LiteDB.Collation.LCID
+- uid: LiteDB.Collation.Culture*
+  commentId: Overload:LiteDB.Collation.Culture
+  href: LiteDB.Collation.html#LiteDB_Collation_Culture
+  name: Culture
+  nameWithType: Collation.Culture
+  fullName: LiteDB.Collation.Culture
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: LiteDB.Collation.SortOptions*
+  commentId: Overload:LiteDB.Collation.SortOptions
+  href: LiteDB.Collation.html#LiteDB_Collation_SortOptions
+  name: SortOptions
+  nameWithType: Collation.SortOptions
+  fullName: LiteDB.Collation.SortOptions
+- uid: LiteDB.Collation.Compare*
+  commentId: Overload:LiteDB.Collation.Compare
+  href: LiteDB.Collation.html#LiteDB_Collation_Compare_System_String_System_String_
+  name: Compare
+  nameWithType: Collation.Compare
+  fullName: LiteDB.Collation.Compare
+- uid: System.Collections.Generic.IComparer{System.String}.Compare(System.String,System.String)
+  commentId: M:System.Collections.Generic.IComparer{System.String}.Compare(System.String,System.String)
+  parent: System.Collections.Generic.IComparer{System.String}
+  definition: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  name: Compare(string, string)
+  nameWithType: IComparer<string>.Compare(string, string)
+  fullName: System.Collections.Generic.IComparer<string>.Compare(string, string)
+  nameWithType.vb: IComparer(Of String).Compare(String, String)
+  fullName.vb: System.Collections.Generic.IComparer(Of String).Compare(String, String)
+  name.vb: Compare(String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer{System.String}.Compare(System.String,System.String)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer{System.String}.Compare(System.String,System.String)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  commentId: M:System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  name: Compare(T, T)
+  nameWithType: IComparer<T>.Compare(T, T)
+  fullName: System.Collections.Generic.IComparer<T>.Compare(T, T)
+  nameWithType.vb: IComparer(Of T).Compare(T, T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T).Compare(T, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IComparer{LiteDB.BsonValue}.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.IComparer{LiteDB.BsonValue}.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: System.Collections.Generic.IComparer{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  name: Compare(BsonValue, BsonValue)
+  nameWithType: IComparer<BsonValue>.Compare(BsonValue, BsonValue)
+  fullName: System.Collections.Generic.IComparer<LiteDB.BsonValue>.Compare(LiteDB.BsonValue, LiteDB.BsonValue)
+  nameWithType.vb: IComparer(Of BsonValue).Compare(BsonValue, BsonValue)
+  fullName.vb: System.Collections.Generic.IComparer(Of LiteDB.BsonValue).Compare(LiteDB.BsonValue, LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer{LiteDB.BsonValue}.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer{LiteDB.BsonValue}.Compare(LiteDB.BsonValue,LiteDB.BsonValue)
+    name: Compare
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1.compare
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.Collation.Equals*
+  commentId: Overload:LiteDB.Collation.Equals
+  href: LiteDB.Collation.html#LiteDB_Collation_Equals_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: Equals
+  nameWithType: Collation.Equals
+  fullName: LiteDB.Collation.Equals
+- uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.equals
+  name: Equals(BsonValue, BsonValue)
+  nameWithType: IEqualityComparer<BsonValue>.Equals(BsonValue, BsonValue)
+  fullName: System.Collections.Generic.IEqualityComparer<LiteDB.BsonValue>.Equals(LiteDB.BsonValue, LiteDB.BsonValue)
+  nameWithType.vb: IEqualityComparer(Of BsonValue).Equals(BsonValue, BsonValue)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of LiteDB.BsonValue).Equals(LiteDB.BsonValue, LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.equals
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.Equals(LiteDB.BsonValue,LiteDB.BsonValue)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.equals
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  commentId: M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.equals
+  name: Equals(T, T)
+  nameWithType: IEqualityComparer<T>.Equals(T, T)
+  fullName: System.Collections.Generic.IEqualityComparer<T>.Equals(T, T)
+  nameWithType.vb: IEqualityComparer(Of T).Equals(T, T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T).Equals(T, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.equals
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.equals
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.Collation.GetHashCode*
+  commentId: Overload:LiteDB.Collation.GetHashCode
+  href: LiteDB.Collation.html#LiteDB_Collation_GetHashCode_LiteDB_BsonValue_
+  name: GetHashCode
+  nameWithType: Collation.GetHashCode
+  fullName: LiteDB.Collation.GetHashCode
+- uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.GetHashCode(LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.GetHashCode(LiteDB.BsonValue)
+  parent: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.gethashcode
+  name: GetHashCode(BsonValue)
+  nameWithType: IEqualityComparer<BsonValue>.GetHashCode(BsonValue)
+  fullName: System.Collections.Generic.IEqualityComparer<LiteDB.BsonValue>.GetHashCode(LiteDB.BsonValue)
+  nameWithType.vb: IEqualityComparer(Of BsonValue).GetHashCode(BsonValue)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of LiteDB.BsonValue).GetHashCode(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.GetHashCode(LiteDB.BsonValue)
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.gethashcode
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer{LiteDB.BsonValue}.GetHashCode(LiteDB.BsonValue)
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.gethashcode
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  commentId: M:System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.gethashcode
+  name: GetHashCode(T)
+  nameWithType: IEqualityComparer<T>.GetHashCode(T)
+  fullName: System.Collections.Generic.IEqualityComparer<T>.GetHashCode(T)
+  nameWithType.vb: IEqualityComparer(Of T).GetHashCode(T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T).GetHashCode(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.gethashcode
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1.gethashcode
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: LiteDB.Collation.ToString*
+  commentId: Overload:LiteDB.Collation.ToString
+  href: LiteDB.Collation.html#LiteDB_Collation_ToString
+  name: ToString
+  nameWithType: Collation.ToString
+  fullName: LiteDB.Collation.ToString
