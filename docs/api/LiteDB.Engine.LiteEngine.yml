@@ -1,0 +1,2372 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Engine.LiteEngine
+  commentId: T:LiteDB.Engine.LiteEngine
+  id: LiteEngine
+  parent: LiteDB.Engine
+  children:
+  - LiteDB.Engine.LiteEngine.#ctor
+  - LiteDB.Engine.LiteEngine.#ctor(LiteDB.Engine.EngineSettings)
+  - LiteDB.Engine.LiteEngine.#ctor(System.String)
+  - LiteDB.Engine.LiteEngine.BeginTrans
+  - LiteDB.Engine.LiteEngine.Checkpoint
+  - LiteDB.Engine.LiteEngine.Commit
+  - LiteDB.Engine.LiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  - LiteDB.Engine.LiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+  - LiteDB.Engine.LiteEngine.Dispose
+  - LiteDB.Engine.LiteEngine.Dispose(System.Boolean)
+  - LiteDB.Engine.LiteEngine.DropCollection(System.String)
+  - LiteDB.Engine.LiteEngine.DropIndex(System.String,System.String)
+  - LiteDB.Engine.LiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  - LiteDB.Engine.LiteEngine.GetCollectionNames
+  - LiteDB.Engine.LiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  - LiteDB.Engine.LiteEngine.Pragma(System.String)
+  - LiteDB.Engine.LiteEngine.Pragma(System.String,LiteDB.BsonValue)
+  - LiteDB.Engine.LiteEngine.Query(System.String,LiteDB.Query)
+  - LiteDB.Engine.LiteEngine.Rebuild
+  - LiteDB.Engine.LiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  - LiteDB.Engine.LiteEngine.RenameCollection(System.String,System.String)
+  - LiteDB.Engine.LiteEngine.Rollback
+  - LiteDB.Engine.LiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  - LiteDB.Engine.LiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  - LiteDB.Engine.LiteEngine.Upgrade(System.String,System.String,LiteDB.Collation)
+  - LiteDB.Engine.LiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  langs:
+  - csharp
+  - vb
+  name: LiteEngine
+  nameWithType: LiteEngine
+  fullName: LiteDB.Engine.LiteEngine
+  type: Class
+  source:
+    id: LiteEngine
+    path: /workspace/LiteDB/LiteDB/Engine/SystemCollections/SysTransactions.cs
+    startLine: 9
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: >-
+    A public class that take care of all engine data structure access - it´s basic implementation of a NoSql database
+
+    Its isolated from complete solution - works on low level only (no linq, no poco... just BSON objects)
+
+    [ThreadSafe]
+  example: []
+  syntax:
+    content: 'public class LiteEngine : ILiteEngine, IDisposable'
+    content.vb: Public Class LiteEngine Implements ILiteEngine, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - LiteDB.Engine.ILiteEngine
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.Engine.LiteEngine.GetCollectionNames
+  commentId: M:LiteDB.Engine.LiteEngine.GetCollectionNames
+  id: GetCollectionNames
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCollectionNames()
+  nameWithType: LiteEngine.GetCollectionNames()
+  fullName: LiteDB.Engine.LiteEngine.GetCollectionNames()
+  type: Method
+  source:
+    id: GetCollectionNames
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Collection.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Returns all collection inside datafile
+  example: []
+  syntax:
+    content: public IEnumerable<string> GetCollectionNames()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public Function GetCollectionNames() As IEnumerable(Of String)
+  overload: LiteDB.Engine.LiteEngine.GetCollectionNames*
+- uid: LiteDB.Engine.LiteEngine.DropCollection(System.String)
+  commentId: M:LiteDB.Engine.LiteEngine.DropCollection(System.String)
+  id: DropCollection(System.String)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: DropCollection(string)
+  nameWithType: LiteEngine.DropCollection(string)
+  fullName: LiteDB.Engine.LiteEngine.DropCollection(string)
+  type: Method
+  source:
+    id: DropCollection
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Collection.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Drop collection including all documents, indexes and extended pages (do not support transactions)
+  example: []
+  syntax:
+    content: public bool DropCollection(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function DropCollection(name As String) As Boolean
+  overload: LiteDB.Engine.LiteEngine.DropCollection*
+  implements:
+  - LiteDB.Engine.ILiteEngine.DropCollection(System.String)
+  nameWithType.vb: LiteEngine.DropCollection(String)
+  fullName.vb: LiteDB.Engine.LiteEngine.DropCollection(String)
+  name.vb: DropCollection(String)
+- uid: LiteDB.Engine.LiteEngine.RenameCollection(System.String,System.String)
+  commentId: M:LiteDB.Engine.LiteEngine.RenameCollection(System.String,System.String)
+  id: RenameCollection(System.String,System.String)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: RenameCollection(string, string)
+  nameWithType: LiteEngine.RenameCollection(string, string)
+  fullName: LiteDB.Engine.LiteEngine.RenameCollection(string, string)
+  type: Method
+  source:
+    id: RenameCollection
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Collection.cs
+    startLine: 50
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Rename a collection (do not support transactions)
+  example: []
+  syntax:
+    content: public bool RenameCollection(string collection, string newName)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: newName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function RenameCollection(collection As String, newName As String) As Boolean
+  overload: LiteDB.Engine.LiteEngine.RenameCollection*
+  implements:
+  - LiteDB.Engine.ILiteEngine.RenameCollection(System.String,System.String)
+  nameWithType.vb: LiteEngine.RenameCollection(String, String)
+  fullName.vb: LiteDB.Engine.LiteEngine.RenameCollection(String, String)
+  name.vb: RenameCollection(String, String)
+- uid: LiteDB.Engine.LiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  commentId: M:LiteDB.Engine.LiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  id: Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Delete(string, IEnumerable<BsonValue>)
+  nameWithType: LiteEngine.Delete(string, IEnumerable<BsonValue>)
+  fullName: LiteDB.Engine.LiteEngine.Delete(string, System.Collections.Generic.IEnumerable<LiteDB.BsonValue>)
+  type: Method
+  source:
+    id: Delete
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Delete.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Implements delete based on IDs enumerable
+  example: []
+  syntax:
+    content: public int Delete(string collection, IEnumerable<BsonValue> ids)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+    return:
+      type: System.Int32
+    content.vb: Public Function Delete(collection As String, ids As IEnumerable(Of BsonValue)) As Integer
+  overload: LiteDB.Engine.LiteEngine.Delete*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  nameWithType.vb: LiteEngine.Delete(String, IEnumerable(Of BsonValue))
+  fullName.vb: LiteDB.Engine.LiteEngine.Delete(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue))
+  name.vb: Delete(String, IEnumerable(Of BsonValue))
+- uid: LiteDB.Engine.LiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+  commentId: M:LiteDB.Engine.LiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+  id: DeleteMany(System.String,LiteDB.BsonExpression)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: DeleteMany(string, BsonExpression)
+  nameWithType: LiteEngine.DeleteMany(string, BsonExpression)
+  fullName: LiteDB.Engine.LiteEngine.DeleteMany(string, LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: DeleteMany
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Delete.cs
+    startLine: 58
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Implements delete based on filter expression
+  example: []
+  syntax:
+    content: public int DeleteMany(string collection, BsonExpression predicate)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: predicate
+      type: LiteDB.BsonExpression
+    return:
+      type: System.Int32
+    content.vb: Public Function DeleteMany(collection As String, predicate As BsonExpression) As Integer
+  overload: LiteDB.Engine.LiteEngine.DeleteMany*
+  implements:
+  - LiteDB.Engine.ILiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+  nameWithType.vb: LiteEngine.DeleteMany(String, BsonExpression)
+  fullName.vb: LiteDB.Engine.LiteEngine.DeleteMany(String, LiteDB.BsonExpression)
+  name.vb: DeleteMany(String, BsonExpression)
+- uid: LiteDB.Engine.LiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  commentId: M:LiteDB.Engine.LiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  id: EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: EnsureIndex(string, string, BsonExpression, bool)
+  nameWithType: LiteEngine.EnsureIndex(string, string, BsonExpression, bool)
+  fullName: LiteDB.Engine.LiteEngine.EnsureIndex(string, string, LiteDB.BsonExpression, bool)
+  type: Method
+  source:
+    id: EnsureIndex
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Index.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Create a new index (or do nothing if already exists) to a collection/field
+  example: []
+  syntax:
+    content: public bool EnsureIndex(string collection, string name, BsonExpression expression, bool unique)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: name
+      type: System.String
+    - id: expression
+      type: LiteDB.BsonExpression
+    - id: unique
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Function EnsureIndex(collection As String, name As String, expression As BsonExpression, unique As Boolean) As Boolean
+  overload: LiteDB.Engine.LiteEngine.EnsureIndex*
+  implements:
+  - LiteDB.Engine.ILiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  nameWithType.vb: LiteEngine.EnsureIndex(String, String, BsonExpression, Boolean)
+  fullName.vb: LiteDB.Engine.LiteEngine.EnsureIndex(String, String, LiteDB.BsonExpression, Boolean)
+  name.vb: EnsureIndex(String, String, BsonExpression, Boolean)
+- uid: LiteDB.Engine.LiteEngine.DropIndex(System.String,System.String)
+  commentId: M:LiteDB.Engine.LiteEngine.DropIndex(System.String,System.String)
+  id: DropIndex(System.String,System.String)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: DropIndex(string, string)
+  nameWithType: LiteEngine.DropIndex(string, string)
+  fullName: LiteDB.Engine.LiteEngine.DropIndex(string, string)
+  type: Method
+  source:
+    id: DropIndex
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Index.cs
+    startLine: 99
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Drop an index from a collection
+  example: []
+  syntax:
+    content: public bool DropIndex(string collection, string name)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function DropIndex(collection As String, name As String) As Boolean
+  overload: LiteDB.Engine.LiteEngine.DropIndex*
+  implements:
+  - LiteDB.Engine.ILiteEngine.DropIndex(System.String,System.String)
+  nameWithType.vb: LiteEngine.DropIndex(String, String)
+  fullName.vb: LiteDB.Engine.LiteEngine.DropIndex(String, String)
+  name.vb: DropIndex(String, String)
+- uid: LiteDB.Engine.LiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  commentId: M:LiteDB.Engine.LiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  id: Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Insert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  nameWithType: LiteEngine.Insert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  fullName: LiteDB.Engine.LiteEngine.Insert(string, System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>, LiteDB.BsonAutoId)
+  type: Method
+  source:
+    id: Insert
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Insert.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Insert all documents in collection. If document has no _id, use AutoId generation.
+  example: []
+  syntax:
+    content: public int Insert(string collection, IEnumerable<BsonDocument> docs, BsonAutoId autoId)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: docs
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+    - id: autoId
+      type: LiteDB.BsonAutoId
+    return:
+      type: System.Int32
+    content.vb: Public Function Insert(collection As String, docs As IEnumerable(Of BsonDocument), autoId As BsonAutoId) As Integer
+  overload: LiteDB.Engine.LiteEngine.Insert*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  nameWithType.vb: LiteEngine.Insert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+  fullName.vb: LiteDB.Engine.LiteEngine.Insert(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument), LiteDB.BsonAutoId)
+  name.vb: Insert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+- uid: LiteDB.Engine.LiteEngine.Pragma(System.String)
+  commentId: M:LiteDB.Engine.LiteEngine.Pragma(System.String)
+  id: Pragma(System.String)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Pragma(string)
+  nameWithType: LiteEngine.Pragma(string)
+  fullName: LiteDB.Engine.LiteEngine.Pragma(string)
+  type: Method
+  source:
+    id: Pragma
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Pragma.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Get engine internal pragma value
+  example: []
+  syntax:
+    content: public BsonValue Pragma(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Function Pragma(name As String) As BsonValue
+  overload: LiteDB.Engine.LiteEngine.Pragma*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Pragma(System.String)
+  nameWithType.vb: LiteEngine.Pragma(String)
+  fullName.vb: LiteDB.Engine.LiteEngine.Pragma(String)
+  name.vb: Pragma(String)
+- uid: LiteDB.Engine.LiteEngine.Pragma(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Engine.LiteEngine.Pragma(System.String,LiteDB.BsonValue)
+  id: Pragma(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Pragma(string, BsonValue)
+  nameWithType: LiteEngine.Pragma(string, BsonValue)
+  fullName: LiteDB.Engine.LiteEngine.Pragma(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Pragma
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Pragma.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Set engine pragma new value (some pragmas will be affected only after realod)
+  example: []
+  syntax:
+    content: public bool Pragma(string name, BsonValue value)
+    parameters:
+    - id: name
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Function Pragma(name As String, value As BsonValue) As Boolean
+  overload: LiteDB.Engine.LiteEngine.Pragma*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Pragma(System.String,LiteDB.BsonValue)
+  nameWithType.vb: LiteEngine.Pragma(String, BsonValue)
+  fullName.vb: LiteDB.Engine.LiteEngine.Pragma(String, LiteDB.BsonValue)
+  name.vb: Pragma(String, BsonValue)
+- uid: LiteDB.Engine.LiteEngine.Query(System.String,LiteDB.Query)
+  commentId: M:LiteDB.Engine.LiteEngine.Query(System.String,LiteDB.Query)
+  id: Query(System.String,LiteDB.Query)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Query(string, Query)
+  nameWithType: LiteEngine.Query(string, Query)
+  fullName: LiteDB.Engine.LiteEngine.Query(string, LiteDB.Query)
+  type: Method
+  source:
+    id: Query
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Query.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: >-
+    Run query over collection using a query definition. 
+
+    Returns a new IBsonDataReader that run and return first document result (open transaction)
+  example: []
+  syntax:
+    content: public IBsonDataReader Query(string collection, Query query)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: query
+      type: LiteDB.Query
+    return:
+      type: LiteDB.IBsonDataReader
+    content.vb: Public Function Query(collection As String, query As Query) As IBsonDataReader
+  overload: LiteDB.Engine.LiteEngine.Query*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Query(System.String,LiteDB.Query)
+  nameWithType.vb: LiteEngine.Query(String, Query)
+  fullName.vb: LiteDB.Engine.LiteEngine.Query(String, LiteDB.Query)
+  name.vb: Query(String, Query)
+- uid: LiteDB.Engine.LiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  commentId: M:LiteDB.Engine.LiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  id: Rebuild(LiteDB.Engine.RebuildOptions)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Rebuild(RebuildOptions)
+  nameWithType: LiteEngine.Rebuild(RebuildOptions)
+  fullName: LiteDB.Engine.LiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  type: Method
+  source:
+    id: Rebuild
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Rebuild.cs
+    startLine: 17
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: >-
+    Implement a full rebuild database. Engine will be closed and re-created in another instance.
+
+    A backup copy will be created with -backup extention. All data will be readed and re created in another database
+
+    After run, will re-open database
+  example: []
+  syntax:
+    content: public long Rebuild(RebuildOptions options)
+    parameters:
+    - id: options
+      type: LiteDB.Engine.RebuildOptions
+    return:
+      type: System.Int64
+    content.vb: Public Function Rebuild(options As RebuildOptions) As Long
+  overload: LiteDB.Engine.LiteEngine.Rebuild*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+- uid: LiteDB.Engine.LiteEngine.Rebuild
+  commentId: M:LiteDB.Engine.LiteEngine.Rebuild
+  id: Rebuild
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Rebuild()
+  nameWithType: LiteEngine.Rebuild()
+  fullName: LiteDB.Engine.LiteEngine.Rebuild()
+  type: Method
+  source:
+    id: Rebuild
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Rebuild.cs
+    startLine: 40
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Implement a full rebuild database. A backup copy will be created with -backup extention. All data will be readed and re created in another database
+  example: []
+  syntax:
+    content: public long Rebuild()
+    return:
+      type: System.Int64
+    content.vb: Public Function Rebuild() As Long
+  overload: LiteDB.Engine.LiteEngine.Rebuild*
+- uid: LiteDB.Engine.LiteEngine.BeginTrans
+  commentId: M:LiteDB.Engine.LiteEngine.BeginTrans
+  id: BeginTrans
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: BeginTrans()
+  nameWithType: LiteEngine.BeginTrans()
+  fullName: LiteDB.Engine.LiteEngine.BeginTrans()
+  type: Method
+  source:
+    id: BeginTrans
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Transaction.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: >-
+    Initialize a new transaction. Transaction are created "per-thread". There is only one single transaction per thread.
+
+    Return true if transaction was created or false if current thread already in a transaction.
+  example: []
+  syntax:
+    content: public bool BeginTrans()
+    return:
+      type: System.Boolean
+    content.vb: Public Function BeginTrans() As Boolean
+  overload: LiteDB.Engine.LiteEngine.BeginTrans*
+  implements:
+  - LiteDB.Engine.ILiteEngine.BeginTrans
+- uid: LiteDB.Engine.LiteEngine.Commit
+  commentId: M:LiteDB.Engine.LiteEngine.Commit
+  id: Commit
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Commit()
+  nameWithType: LiteEngine.Commit()
+  fullName: LiteDB.Engine.LiteEngine.Commit()
+  type: Method
+  source:
+    id: Commit
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Transaction.cs
+    startLine: 32
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Persist all dirty pages into LOG file
+  example: []
+  syntax:
+    content: public bool Commit()
+    return:
+      type: System.Boolean
+    content.vb: Public Function Commit() As Boolean
+  overload: LiteDB.Engine.LiteEngine.Commit*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Commit
+- uid: LiteDB.Engine.LiteEngine.Rollback
+  commentId: M:LiteDB.Engine.LiteEngine.Rollback
+  id: Rollback
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Rollback()
+  nameWithType: LiteEngine.Rollback()
+  fullName: LiteDB.Engine.LiteEngine.Rollback()
+  type: Method
+  source:
+    id: Rollback
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Transaction.cs
+    startLine: 57
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Do rollback to current transaction. Clear dirty pages in memory and return new pages to main empty linked-list
+  example: []
+  syntax:
+    content: public bool Rollback()
+    return:
+      type: System.Boolean
+    content.vb: Public Function Rollback() As Boolean
+  overload: LiteDB.Engine.LiteEngine.Rollback*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Rollback
+- uid: LiteDB.Engine.LiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  commentId: M:LiteDB.Engine.LiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  id: Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Update(string, IEnumerable<BsonDocument>)
+  nameWithType: LiteEngine.Update(string, IEnumerable<BsonDocument>)
+  fullName: LiteDB.Engine.LiteEngine.Update(string, System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>)
+  type: Method
+  source:
+    id: Update
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Update.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Implement update command to a document inside a collection. Return number of documents updated
+  example: []
+  syntax:
+    content: public int Update(string collection, IEnumerable<BsonDocument> docs)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: docs
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+    return:
+      type: System.Int32
+    content.vb: Public Function Update(collection As String, docs As IEnumerable(Of BsonDocument)) As Integer
+  overload: LiteDB.Engine.LiteEngine.Update*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  nameWithType.vb: LiteEngine.Update(String, IEnumerable(Of BsonDocument))
+  fullName.vb: LiteDB.Engine.LiteEngine.Update(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument))
+  name.vb: Update(String, IEnumerable(Of BsonDocument))
+- uid: LiteDB.Engine.LiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  commentId: M:LiteDB.Engine.LiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  id: UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: UpdateMany(string, BsonExpression, BsonExpression)
+  nameWithType: LiteEngine.UpdateMany(string, BsonExpression, BsonExpression)
+  fullName: LiteDB.Engine.LiteEngine.UpdateMany(string, LiteDB.BsonExpression, LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: UpdateMany
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Update.cs
+    startLine: 48
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Update documents using transform expression (must return a scalar/document value) using predicate as filter
+  example: []
+  syntax:
+    content: public int UpdateMany(string collection, BsonExpression transform, BsonExpression predicate)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: transform
+      type: LiteDB.BsonExpression
+    - id: predicate
+      type: LiteDB.BsonExpression
+    return:
+      type: System.Int32
+    content.vb: Public Function UpdateMany(collection As String, transform As BsonExpression, predicate As BsonExpression) As Integer
+  overload: LiteDB.Engine.LiteEngine.UpdateMany*
+  implements:
+  - LiteDB.Engine.ILiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  nameWithType.vb: LiteEngine.UpdateMany(String, BsonExpression, BsonExpression)
+  fullName.vb: LiteDB.Engine.LiteEngine.UpdateMany(String, LiteDB.BsonExpression, LiteDB.BsonExpression)
+  name.vb: UpdateMany(String, BsonExpression, BsonExpression)
+- uid: LiteDB.Engine.LiteEngine.Upgrade(System.String,System.String,LiteDB.Collation)
+  commentId: M:LiteDB.Engine.LiteEngine.Upgrade(System.String,System.String,LiteDB.Collation)
+  id: Upgrade(System.String,System.String,LiteDB.Collation)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Upgrade(string, string, Collation)
+  nameWithType: LiteEngine.Upgrade(string, string, Collation)
+  fullName: LiteDB.Engine.LiteEngine.Upgrade(string, string, LiteDB.Collation)
+  type: Method
+  source:
+    id: Upgrade
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Upgrade.cs
+    startLine: 50
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: >-
+    Upgrade old version of LiteDB into new LiteDB file structure. Returns true if database was completed converted
+
+    If database already in current version just return false
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Upgrade your LiteDB v4 datafiles using Upgrade=true in EngineSettings. You can use upgrade=true in connection string.")]
+
+      public static bool Upgrade(string filename, string password = null, Collation collation = null)
+    parameters:
+    - id: filename
+      type: System.String
+    - id: password
+      type: System.String
+    - id: collation
+      type: LiteDB.Collation
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Obsolete("Upgrade your LiteDB v4 datafiles using Upgrade=true in EngineSettings. You can use upgrade=true in connection string.")>
+
+      Public Shared Function Upgrade(filename As String, password As String = Nothing, collation As Collation = Nothing) As Boolean
+  overload: LiteDB.Engine.LiteEngine.Upgrade*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Upgrade your LiteDB v4 datafiles using Upgrade=true in EngineSettings. You can use upgrade=true in connection string.
+  nameWithType.vb: LiteEngine.Upgrade(String, String, Collation)
+  fullName.vb: LiteDB.Engine.LiteEngine.Upgrade(String, String, LiteDB.Collation)
+  name.vb: Upgrade(String, String, Collation)
+- uid: LiteDB.Engine.LiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  commentId: M:LiteDB.Engine.LiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  id: Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Upsert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  nameWithType: LiteEngine.Upsert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  fullName: LiteDB.Engine.LiteEngine.Upsert(string, System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>, LiteDB.BsonAutoId)
+  type: Method
+  source:
+    id: Upsert
+    path: /workspace/LiteDB/LiteDB/Engine/Engine/Upsert.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: >-
+    Implement upsert command to documents in a collection. Calls update on all documents,
+
+    then any documents not updated are then attempted to insert.
+
+    This will have the side effect of throwing if duplicate items are attempted to be inserted.
+  example: []
+  syntax:
+    content: public int Upsert(string collection, IEnumerable<BsonDocument> docs, BsonAutoId autoId)
+    parameters:
+    - id: collection
+      type: System.String
+    - id: docs
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+    - id: autoId
+      type: LiteDB.BsonAutoId
+    return:
+      type: System.Int32
+    content.vb: Public Function Upsert(collection As String, docs As IEnumerable(Of BsonDocument), autoId As BsonAutoId) As Integer
+  overload: LiteDB.Engine.LiteEngine.Upsert*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  nameWithType.vb: LiteEngine.Upsert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+  fullName.vb: LiteDB.Engine.LiteEngine.Upsert(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument), LiteDB.BsonAutoId)
+  name.vb: Upsert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+- uid: LiteDB.Engine.LiteEngine.#ctor
+  commentId: M:LiteDB.Engine.LiteEngine.#ctor
+  id: '#ctor'
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: LiteEngine()
+  nameWithType: LiteEngine.LiteEngine()
+  fullName: LiteDB.Engine.LiteEngine.LiteEngine()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Engine/LiteEngine.cs
+    startLine: 56
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Initialize LiteEngine using connection memory database
+  example: []
+  syntax:
+    content: public LiteEngine()
+    content.vb: Public Sub New()
+  overload: LiteDB.Engine.LiteEngine.#ctor*
+  nameWithType.vb: LiteEngine.New()
+  fullName.vb: LiteDB.Engine.LiteEngine.New()
+  name.vb: New()
+- uid: LiteDB.Engine.LiteEngine.#ctor(System.String)
+  commentId: M:LiteDB.Engine.LiteEngine.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: LiteEngine(string)
+  nameWithType: LiteEngine.LiteEngine(string)
+  fullName: LiteDB.Engine.LiteEngine.LiteEngine(string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Engine/LiteEngine.cs
+    startLine: 64
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Initialize LiteEngine using connection string using key=value; parser
+  example: []
+  syntax:
+    content: public LiteEngine(string filename)
+    parameters:
+    - id: filename
+      type: System.String
+    content.vb: Public Sub New(filename As String)
+  overload: LiteDB.Engine.LiteEngine.#ctor*
+  nameWithType.vb: LiteEngine.New(String)
+  fullName.vb: LiteDB.Engine.LiteEngine.New(String)
+  name.vb: New(String)
+- uid: LiteDB.Engine.LiteEngine.#ctor(LiteDB.Engine.EngineSettings)
+  commentId: M:LiteDB.Engine.LiteEngine.#ctor(LiteDB.Engine.EngineSettings)
+  id: '#ctor(LiteDB.Engine.EngineSettings)'
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: LiteEngine(EngineSettings)
+  nameWithType: LiteEngine.LiteEngine(EngineSettings)
+  fullName: LiteDB.Engine.LiteEngine.LiteEngine(LiteDB.Engine.EngineSettings)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Engine/LiteEngine.cs
+    startLine: 72
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Initialize LiteEngine using initial engine settings
+  example: []
+  syntax:
+    content: public LiteEngine(EngineSettings settings)
+    parameters:
+    - id: settings
+      type: LiteDB.Engine.EngineSettings
+    content.vb: Public Sub New(settings As EngineSettings)
+  overload: LiteDB.Engine.LiteEngine.#ctor*
+  nameWithType.vb: LiteEngine.New(EngineSettings)
+  fullName.vb: LiteDB.Engine.LiteEngine.New(LiteDB.Engine.EngineSettings)
+  name.vb: New(EngineSettings)
+- uid: LiteDB.Engine.LiteEngine.Checkpoint
+  commentId: M:LiteDB.Engine.LiteEngine.Checkpoint
+  id: Checkpoint
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Checkpoint()
+  nameWithType: LiteEngine.Checkpoint()
+  fullName: LiteDB.Engine.LiteEngine.Checkpoint()
+  type: Method
+  source:
+    id: Checkpoint
+    path: /workspace/LiteDB/LiteDB/Engine/LiteEngine.cs
+    startLine: 255
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Run checkpoint command to copy log file into data file
+  example: []
+  syntax:
+    content: public int Checkpoint()
+    return:
+      type: System.Int32
+    content.vb: Public Function Checkpoint() As Integer
+  overload: LiteDB.Engine.LiteEngine.Checkpoint*
+  implements:
+  - LiteDB.Engine.ILiteEngine.Checkpoint
+- uid: LiteDB.Engine.LiteEngine.Dispose
+  commentId: M:LiteDB.Engine.LiteEngine.Dispose
+  id: Dispose
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: LiteEngine.Dispose()
+  fullName: LiteDB.Engine.LiteEngine.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Engine/LiteEngine.cs
+    startLine: 257
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: LiteDB.Engine.LiteEngine.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: LiteDB.Engine.LiteEngine.Dispose(System.Boolean)
+  commentId: M:LiteDB.Engine.LiteEngine.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: LiteDB.Engine.LiteEngine
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: LiteEngine.Dispose(bool)
+  fullName: LiteDB.Engine.LiteEngine.Dispose(bool)
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Engine/LiteEngine.cs
+    startLine: 263
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: LiteDB.Engine.LiteEngine.Dispose*
+  nameWithType.vb: LiteEngine.Dispose(Boolean)
+  fullName.vb: LiteDB.Engine.LiteEngine.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LiteDB.Engine.ILiteEngine
+  commentId: T:LiteDB.Engine.ILiteEngine
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.ILiteEngine.html
+  name: ILiteEngine
+  nameWithType: ILiteEngine
+  fullName: LiteDB.Engine.ILiteEngine
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.Engine.LiteEngine.GetCollectionNames*
+  commentId: Overload:LiteDB.Engine.LiteEngine.GetCollectionNames
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_GetCollectionNames
+  name: GetCollectionNames
+  nameWithType: LiteEngine.GetCollectionNames
+  fullName: LiteDB.Engine.LiteEngine.GetCollectionNames
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LiteDB.Engine.LiteEngine.DropCollection*
+  commentId: Overload:LiteDB.Engine.LiteEngine.DropCollection
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_DropCollection_System_String_
+  name: DropCollection
+  nameWithType: LiteEngine.DropCollection
+  fullName: LiteDB.Engine.LiteEngine.DropCollection
+- uid: LiteDB.Engine.ILiteEngine.DropCollection(System.String)
+  commentId: M:LiteDB.Engine.ILiteEngine.DropCollection(System.String)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DropCollection_System_String_
+  name: DropCollection(string)
+  nameWithType: ILiteEngine.DropCollection(string)
+  fullName: LiteDB.Engine.ILiteEngine.DropCollection(string)
+  nameWithType.vb: ILiteEngine.DropCollection(String)
+  fullName.vb: LiteDB.Engine.ILiteEngine.DropCollection(String)
+  name.vb: DropCollection(String)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.DropCollection(System.String)
+    name: DropCollection
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DropCollection_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.DropCollection(System.String)
+    name: DropCollection
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DropCollection_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.Engine.LiteEngine.RenameCollection*
+  commentId: Overload:LiteDB.Engine.LiteEngine.RenameCollection
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_RenameCollection_System_String_System_String_
+  name: RenameCollection
+  nameWithType: LiteEngine.RenameCollection
+  fullName: LiteDB.Engine.LiteEngine.RenameCollection
+- uid: LiteDB.Engine.ILiteEngine.RenameCollection(System.String,System.String)
+  commentId: M:LiteDB.Engine.ILiteEngine.RenameCollection(System.String,System.String)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_RenameCollection_System_String_System_String_
+  name: RenameCollection(string, string)
+  nameWithType: ILiteEngine.RenameCollection(string, string)
+  fullName: LiteDB.Engine.ILiteEngine.RenameCollection(string, string)
+  nameWithType.vb: ILiteEngine.RenameCollection(String, String)
+  fullName.vb: LiteDB.Engine.ILiteEngine.RenameCollection(String, String)
+  name.vb: RenameCollection(String, String)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.RenameCollection(System.String,System.String)
+    name: RenameCollection
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_RenameCollection_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.RenameCollection(System.String,System.String)
+    name: RenameCollection
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_RenameCollection_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Delete*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Delete
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Delete_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonValue__
+  name: Delete
+  nameWithType: LiteEngine.Delete
+  fullName: LiteDB.Engine.LiteEngine.Delete
+- uid: LiteDB.Engine.ILiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  commentId: M:LiteDB.Engine.ILiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Delete_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonValue__
+  name: Delete(string, IEnumerable<BsonValue>)
+  nameWithType: ILiteEngine.Delete(string, IEnumerable<BsonValue>)
+  fullName: LiteDB.Engine.ILiteEngine.Delete(string, System.Collections.Generic.IEnumerable<LiteDB.BsonValue>)
+  nameWithType.vb: ILiteEngine.Delete(String, IEnumerable(Of BsonValue))
+  fullName.vb: LiteDB.Engine.ILiteEngine.Delete(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue))
+  name.vb: Delete(String, IEnumerable(Of BsonValue))
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+    name: Delete
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Delete_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonValue__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Delete(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+    name: Delete
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Delete_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonValue__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BsonValue>
+  nameWithType: IEnumerable<BsonValue>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonValue>
+  nameWithType.vb: IEnumerable(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue)
+  name.vb: IEnumerable(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LiteDB.Engine.LiteEngine.DeleteMany*
+  commentId: Overload:LiteDB.Engine.LiteEngine.DeleteMany
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_DeleteMany_System_String_LiteDB_BsonExpression_
+  name: DeleteMany
+  nameWithType: LiteEngine.DeleteMany
+  fullName: LiteDB.Engine.LiteEngine.DeleteMany
+- uid: LiteDB.Engine.ILiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+  commentId: M:LiteDB.Engine.ILiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DeleteMany_System_String_LiteDB_BsonExpression_
+  name: DeleteMany(string, BsonExpression)
+  nameWithType: ILiteEngine.DeleteMany(string, BsonExpression)
+  fullName: LiteDB.Engine.ILiteEngine.DeleteMany(string, LiteDB.BsonExpression)
+  nameWithType.vb: ILiteEngine.DeleteMany(String, BsonExpression)
+  fullName.vb: LiteDB.Engine.ILiteEngine.DeleteMany(String, LiteDB.BsonExpression)
+  name.vb: DeleteMany(String, BsonExpression)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+    name: DeleteMany
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DeleteMany_System_String_LiteDB_BsonExpression_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.DeleteMany(System.String,LiteDB.BsonExpression)
+    name: DeleteMany
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DeleteMany_System_String_LiteDB_BsonExpression_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: )
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.Engine.LiteEngine.EnsureIndex*
+  commentId: Overload:LiteDB.Engine.LiteEngine.EnsureIndex
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_EnsureIndex_System_String_System_String_LiteDB_BsonExpression_System_Boolean_
+  name: EnsureIndex
+  nameWithType: LiteEngine.EnsureIndex
+  fullName: LiteDB.Engine.LiteEngine.EnsureIndex
+- uid: LiteDB.Engine.ILiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  commentId: M:LiteDB.Engine.ILiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_EnsureIndex_System_String_System_String_LiteDB_BsonExpression_System_Boolean_
+  name: EnsureIndex(string, string, BsonExpression, bool)
+  nameWithType: ILiteEngine.EnsureIndex(string, string, BsonExpression, bool)
+  fullName: LiteDB.Engine.ILiteEngine.EnsureIndex(string, string, LiteDB.BsonExpression, bool)
+  nameWithType.vb: ILiteEngine.EnsureIndex(String, String, BsonExpression, Boolean)
+  fullName.vb: LiteDB.Engine.ILiteEngine.EnsureIndex(String, String, LiteDB.BsonExpression, Boolean)
+  name.vb: EnsureIndex(String, String, BsonExpression, Boolean)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+    name: EnsureIndex
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_EnsureIndex_System_String_System_String_LiteDB_BsonExpression_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.EnsureIndex(System.String,System.String,LiteDB.BsonExpression,System.Boolean)
+    name: EnsureIndex
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_EnsureIndex_System_String_System_String_LiteDB_BsonExpression_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.DropIndex*
+  commentId: Overload:LiteDB.Engine.LiteEngine.DropIndex
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_DropIndex_System_String_System_String_
+  name: DropIndex
+  nameWithType: LiteEngine.DropIndex
+  fullName: LiteDB.Engine.LiteEngine.DropIndex
+- uid: LiteDB.Engine.ILiteEngine.DropIndex(System.String,System.String)
+  commentId: M:LiteDB.Engine.ILiteEngine.DropIndex(System.String,System.String)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DropIndex_System_String_System_String_
+  name: DropIndex(string, string)
+  nameWithType: ILiteEngine.DropIndex(string, string)
+  fullName: LiteDB.Engine.ILiteEngine.DropIndex(string, string)
+  nameWithType.vb: ILiteEngine.DropIndex(String, String)
+  fullName.vb: LiteDB.Engine.ILiteEngine.DropIndex(String, String)
+  name.vb: DropIndex(String, String)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.DropIndex(System.String,System.String)
+    name: DropIndex
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DropIndex_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.DropIndex(System.String,System.String)
+    name: DropIndex
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_DropIndex_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Insert*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Insert
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Insert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  name: Insert
+  nameWithType: LiteEngine.Insert
+  fullName: LiteDB.Engine.LiteEngine.Insert
+- uid: LiteDB.Engine.ILiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  commentId: M:LiteDB.Engine.ILiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Insert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  name: Insert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  nameWithType: ILiteEngine.Insert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  fullName: LiteDB.Engine.ILiteEngine.Insert(string, System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>, LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteEngine.Insert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+  fullName.vb: LiteDB.Engine.ILiteEngine.Insert(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument), LiteDB.BsonAutoId)
+  name.vb: Insert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+    name: Insert
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Insert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Insert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+    name: Insert
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Insert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BsonDocument>
+  nameWithType: IEnumerable<BsonDocument>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>
+  nameWithType.vb: IEnumerable(Of BsonDocument)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument)
+  name.vb: IEnumerable(Of BsonDocument)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  parent: LiteDB
+  href: LiteDB.BsonAutoId.html
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId
+- uid: LiteDB.Engine.LiteEngine.Pragma*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Pragma
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Pragma_System_String_
+  name: Pragma
+  nameWithType: LiteEngine.Pragma
+  fullName: LiteDB.Engine.LiteEngine.Pragma
+- uid: LiteDB.Engine.ILiteEngine.Pragma(System.String)
+  commentId: M:LiteDB.Engine.ILiteEngine.Pragma(System.String)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Pragma_System_String_
+  name: Pragma(string)
+  nameWithType: ILiteEngine.Pragma(string)
+  fullName: LiteDB.Engine.ILiteEngine.Pragma(string)
+  nameWithType.vb: ILiteEngine.Pragma(String)
+  fullName.vb: LiteDB.Engine.ILiteEngine.Pragma(String)
+  name.vb: Pragma(String)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Pragma(System.String)
+    name: Pragma
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Pragma_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Pragma(System.String)
+    name: Pragma
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Pragma_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.Engine.ILiteEngine.Pragma(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Engine.ILiteEngine.Pragma(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Pragma_System_String_LiteDB_BsonValue_
+  name: Pragma(string, BsonValue)
+  nameWithType: ILiteEngine.Pragma(string, BsonValue)
+  fullName: LiteDB.Engine.ILiteEngine.Pragma(string, LiteDB.BsonValue)
+  nameWithType.vb: ILiteEngine.Pragma(String, BsonValue)
+  fullName.vb: LiteDB.Engine.ILiteEngine.Pragma(String, LiteDB.BsonValue)
+  name.vb: Pragma(String, BsonValue)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Pragma(System.String,LiteDB.BsonValue)
+    name: Pragma
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Pragma_System_String_LiteDB_BsonValue_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Pragma(System.String,LiteDB.BsonValue)
+    name: Pragma
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Pragma_System_String_LiteDB_BsonValue_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Query*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Query
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Query_System_String_LiteDB_Query_
+  name: Query
+  nameWithType: LiteEngine.Query
+  fullName: LiteDB.Engine.LiteEngine.Query
+- uid: LiteDB.Engine.ILiteEngine.Query(System.String,LiteDB.Query)
+  commentId: M:LiteDB.Engine.ILiteEngine.Query(System.String,LiteDB.Query)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Query_System_String_LiteDB_Query_
+  name: Query(string, Query)
+  nameWithType: ILiteEngine.Query(string, Query)
+  fullName: LiteDB.Engine.ILiteEngine.Query(string, LiteDB.Query)
+  nameWithType.vb: ILiteEngine.Query(String, Query)
+  fullName.vb: LiteDB.Engine.ILiteEngine.Query(String, LiteDB.Query)
+  name.vb: Query(String, Query)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Query(System.String,LiteDB.Query)
+    name: Query
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Query_System_String_LiteDB_Query_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.Query
+    name: Query
+    href: LiteDB.Query.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Query(System.String,LiteDB.Query)
+    name: Query
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Query_System_String_LiteDB_Query_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.Query
+    name: Query
+    href: LiteDB.Query.html
+  - name: )
+- uid: LiteDB.Query
+  commentId: T:LiteDB.Query
+  parent: LiteDB
+  href: LiteDB.Query.html
+  name: Query
+  nameWithType: Query
+  fullName: LiteDB.Query
+- uid: LiteDB.IBsonDataReader
+  commentId: T:LiteDB.IBsonDataReader
+  parent: LiteDB
+  href: LiteDB.IBsonDataReader.html
+  name: IBsonDataReader
+  nameWithType: IBsonDataReader
+  fullName: LiteDB.IBsonDataReader
+- uid: LiteDB.Engine.LiteEngine.Rebuild*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Rebuild
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Rebuild_LiteDB_Engine_RebuildOptions_
+  name: Rebuild
+  nameWithType: LiteEngine.Rebuild
+  fullName: LiteDB.Engine.LiteEngine.Rebuild
+- uid: LiteDB.Engine.ILiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  commentId: M:LiteDB.Engine.ILiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  parent: LiteDB.Engine.ILiteEngine
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Rebuild_LiteDB_Engine_RebuildOptions_
+  name: Rebuild(RebuildOptions)
+  nameWithType: ILiteEngine.Rebuild(RebuildOptions)
+  fullName: LiteDB.Engine.ILiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+    name: Rebuild
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Rebuild_LiteDB_Engine_RebuildOptions_
+  - name: (
+  - uid: LiteDB.Engine.RebuildOptions
+    name: RebuildOptions
+    href: LiteDB.Engine.RebuildOptions.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Rebuild(LiteDB.Engine.RebuildOptions)
+    name: Rebuild
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Rebuild_LiteDB_Engine_RebuildOptions_
+  - name: (
+  - uid: LiteDB.Engine.RebuildOptions
+    name: RebuildOptions
+    href: LiteDB.Engine.RebuildOptions.html
+  - name: )
+- uid: LiteDB.Engine.RebuildOptions
+  commentId: T:LiteDB.Engine.RebuildOptions
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.RebuildOptions.html
+  name: RebuildOptions
+  nameWithType: RebuildOptions
+  fullName: LiteDB.Engine.RebuildOptions
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: LiteDB.Engine.LiteEngine.BeginTrans*
+  commentId: Overload:LiteDB.Engine.LiteEngine.BeginTrans
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_BeginTrans
+  name: BeginTrans
+  nameWithType: LiteEngine.BeginTrans
+  fullName: LiteDB.Engine.LiteEngine.BeginTrans
+- uid: LiteDB.Engine.ILiteEngine.BeginTrans
+  commentId: M:LiteDB.Engine.ILiteEngine.BeginTrans
+  parent: LiteDB.Engine.ILiteEngine
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_BeginTrans
+  name: BeginTrans()
+  nameWithType: ILiteEngine.BeginTrans()
+  fullName: LiteDB.Engine.ILiteEngine.BeginTrans()
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.BeginTrans
+    name: BeginTrans
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_BeginTrans
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.BeginTrans
+    name: BeginTrans
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_BeginTrans
+  - name: (
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Commit*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Commit
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Commit
+  name: Commit
+  nameWithType: LiteEngine.Commit
+  fullName: LiteDB.Engine.LiteEngine.Commit
+- uid: LiteDB.Engine.ILiteEngine.Commit
+  commentId: M:LiteDB.Engine.ILiteEngine.Commit
+  parent: LiteDB.Engine.ILiteEngine
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Commit
+  name: Commit()
+  nameWithType: ILiteEngine.Commit()
+  fullName: LiteDB.Engine.ILiteEngine.Commit()
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Commit
+    name: Commit
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Commit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Commit
+    name: Commit
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Commit
+  - name: (
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Rollback*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Rollback
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Rollback
+  name: Rollback
+  nameWithType: LiteEngine.Rollback
+  fullName: LiteDB.Engine.LiteEngine.Rollback
+- uid: LiteDB.Engine.ILiteEngine.Rollback
+  commentId: M:LiteDB.Engine.ILiteEngine.Rollback
+  parent: LiteDB.Engine.ILiteEngine
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Rollback
+  name: Rollback()
+  nameWithType: ILiteEngine.Rollback()
+  fullName: LiteDB.Engine.ILiteEngine.Rollback()
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Rollback
+    name: Rollback
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Rollback
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Rollback
+    name: Rollback
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Rollback
+  - name: (
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Update*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Update
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Update_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__
+  name: Update
+  nameWithType: LiteEngine.Update
+  fullName: LiteDB.Engine.LiteEngine.Update
+- uid: LiteDB.Engine.ILiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  commentId: M:LiteDB.Engine.ILiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Update_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__
+  name: Update(string, IEnumerable<BsonDocument>)
+  nameWithType: ILiteEngine.Update(string, IEnumerable<BsonDocument>)
+  fullName: LiteDB.Engine.ILiteEngine.Update(string, System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>)
+  nameWithType.vb: ILiteEngine.Update(String, IEnumerable(Of BsonDocument))
+  fullName.vb: LiteDB.Engine.ILiteEngine.Update(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument))
+  name.vb: Update(String, IEnumerable(Of BsonDocument))
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+    name: Update
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Update_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Update(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument})
+    name: Update
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Update_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.UpdateMany*
+  commentId: Overload:LiteDB.Engine.LiteEngine.UpdateMany
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_UpdateMany_System_String_LiteDB_BsonExpression_LiteDB_BsonExpression_
+  name: UpdateMany
+  nameWithType: LiteEngine.UpdateMany
+  fullName: LiteDB.Engine.LiteEngine.UpdateMany
+- uid: LiteDB.Engine.ILiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  commentId: M:LiteDB.Engine.ILiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_UpdateMany_System_String_LiteDB_BsonExpression_LiteDB_BsonExpression_
+  name: UpdateMany(string, BsonExpression, BsonExpression)
+  nameWithType: ILiteEngine.UpdateMany(string, BsonExpression, BsonExpression)
+  fullName: LiteDB.Engine.ILiteEngine.UpdateMany(string, LiteDB.BsonExpression, LiteDB.BsonExpression)
+  nameWithType.vb: ILiteEngine.UpdateMany(String, BsonExpression, BsonExpression)
+  fullName.vb: LiteDB.Engine.ILiteEngine.UpdateMany(String, LiteDB.BsonExpression, LiteDB.BsonExpression)
+  name.vb: UpdateMany(String, BsonExpression, BsonExpression)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+    name: UpdateMany
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_UpdateMany_System_String_LiteDB_BsonExpression_LiteDB_BsonExpression_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.UpdateMany(System.String,LiteDB.BsonExpression,LiteDB.BsonExpression)
+    name: UpdateMany
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_UpdateMany_System_String_LiteDB_BsonExpression_LiteDB_BsonExpression_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Upgrade*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Upgrade
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Upgrade_System_String_System_String_LiteDB_Collation_
+  name: Upgrade
+  nameWithType: LiteEngine.Upgrade
+  fullName: LiteDB.Engine.LiteEngine.Upgrade
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB.Engine.LiteEngine.Upsert*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Upsert
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Upsert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  name: Upsert
+  nameWithType: LiteEngine.Upsert
+  fullName: LiteDB.Engine.LiteEngine.Upsert
+- uid: LiteDB.Engine.ILiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  commentId: M:LiteDB.Engine.ILiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+  parent: LiteDB.Engine.ILiteEngine
+  isExternal: true
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Upsert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  name: Upsert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  nameWithType: ILiteEngine.Upsert(string, IEnumerable<BsonDocument>, BsonAutoId)
+  fullName: LiteDB.Engine.ILiteEngine.Upsert(string, System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>, LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteEngine.Upsert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+  fullName.vb: LiteDB.Engine.ILiteEngine.Upsert(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument), LiteDB.BsonAutoId)
+  name.vb: Upsert(String, IEnumerable(Of BsonDocument), BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+    name: Upsert
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Upsert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Upsert(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},LiteDB.BsonAutoId)
+    name: Upsert
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Upsert_System_String_System_Collections_Generic_IEnumerable_LiteDB_BsonDocument__LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.#ctor*
+  commentId: Overload:LiteDB.Engine.LiteEngine.#ctor
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine__ctor
+  name: LiteEngine
+  nameWithType: LiteEngine.LiteEngine
+  fullName: LiteDB.Engine.LiteEngine.LiteEngine
+  nameWithType.vb: LiteEngine.New
+  fullName.vb: LiteDB.Engine.LiteEngine.New
+  name.vb: New
+- uid: LiteDB.Engine.EngineSettings
+  commentId: T:LiteDB.Engine.EngineSettings
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.EngineSettings.html
+  name: EngineSettings
+  nameWithType: EngineSettings
+  fullName: LiteDB.Engine.EngineSettings
+- uid: LiteDB.Engine.LiteEngine.Checkpoint*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Checkpoint
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Checkpoint
+  name: Checkpoint
+  nameWithType: LiteEngine.Checkpoint
+  fullName: LiteDB.Engine.LiteEngine.Checkpoint
+- uid: LiteDB.Engine.ILiteEngine.Checkpoint
+  commentId: M:LiteDB.Engine.ILiteEngine.Checkpoint
+  parent: LiteDB.Engine.ILiteEngine
+  href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Checkpoint
+  name: Checkpoint()
+  nameWithType: ILiteEngine.Checkpoint()
+  fullName: LiteDB.Engine.ILiteEngine.Checkpoint()
+  spec.csharp:
+  - uid: LiteDB.Engine.ILiteEngine.Checkpoint
+    name: Checkpoint
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Checkpoint
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.Engine.ILiteEngine.Checkpoint
+    name: Checkpoint
+    href: LiteDB.Engine.ILiteEngine.html#LiteDB_Engine_ILiteEngine_Checkpoint
+  - name: (
+  - name: )
+- uid: LiteDB.Engine.LiteEngine.Dispose*
+  commentId: Overload:LiteDB.Engine.LiteEngine.Dispose
+  href: LiteDB.Engine.LiteEngine.html#LiteDB_Engine_LiteEngine_Dispose
+  name: Dispose
+  nameWithType: LiteEngine.Dispose
+  fullName: LiteDB.Engine.LiteEngine.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

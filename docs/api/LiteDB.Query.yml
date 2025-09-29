@@ -1,0 +1,1834 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Query
+  commentId: T:LiteDB.Query
+  id: Query
+  parent: LiteDB
+  children:
+  - LiteDB.Query.All
+  - LiteDB.Query.All(System.Int32)
+  - LiteDB.Query.All(System.String,System.Int32)
+  - LiteDB.Query.And(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  - LiteDB.Query.And(LiteDB.BsonExpression[])
+  - LiteDB.Query.Any
+  - LiteDB.Query.Ascending
+  - LiteDB.Query.Between(System.String,LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.Query.Contains(System.String,System.String)
+  - LiteDB.Query.Descending
+  - LiteDB.Query.EQ(System.String,LiteDB.BsonValue)
+  - LiteDB.Query.ExplainPlan
+  - LiteDB.Query.ForUpdate
+  - LiteDB.Query.GT(System.String,LiteDB.BsonValue)
+  - LiteDB.Query.GTE(System.String,LiteDB.BsonValue)
+  - LiteDB.Query.GroupBy
+  - LiteDB.Query.Having
+  - LiteDB.Query.In(System.String,LiteDB.BsonArray)
+  - LiteDB.Query.In(System.String,LiteDB.BsonValue[])
+  - LiteDB.Query.In(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  - LiteDB.Query.Includes
+  - LiteDB.Query.Into
+  - LiteDB.Query.IntoAutoId
+  - LiteDB.Query.LT(System.String,LiteDB.BsonValue)
+  - LiteDB.Query.LTE(System.String,LiteDB.BsonValue)
+  - LiteDB.Query.Limit
+  - LiteDB.Query.Not(System.String,LiteDB.BsonValue)
+  - LiteDB.Query.Offset
+  - LiteDB.Query.Or(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  - LiteDB.Query.Or(LiteDB.BsonExpression[])
+  - LiteDB.Query.OrderBy
+  - LiteDB.Query.Select
+  - LiteDB.Query.StartsWith(System.String,System.String)
+  - LiteDB.Query.ToSQL(System.String)
+  - LiteDB.Query.Where
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: Query
+  fullName: LiteDB.Query
+  type: Class
+  source:
+    id: Query
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Class is a result from optimized QueryBuild. Indicate how engine must run query - there is no more decisions to engine made, must only execute as query was defined
+  example: []
+  syntax:
+    content: public class Query
+    content.vb: Public Class Query
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.Query.Ascending
+  commentId: F:LiteDB.Query.Ascending
+  id: Ascending
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Ascending
+  nameWithType: Query.Ascending
+  fullName: LiteDB.Query.Ascending
+  type: Field
+  source:
+    id: Ascending
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 18
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Indicate when a query must execute in ascending order
+  example: []
+  syntax:
+    content: public const int Ascending = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const Ascending As Integer = 1
+- uid: LiteDB.Query.Descending
+  commentId: F:LiteDB.Query.Descending
+  id: Descending
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Descending
+  nameWithType: Query.Descending
+  fullName: LiteDB.Query.Descending
+  type: Field
+  source:
+    id: Descending
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 23
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Indicate when a query must execute in descending order
+  example: []
+  syntax:
+    content: public const int Descending = -1
+    return:
+      type: System.Int32
+    content.vb: Public Const Descending As Integer = -1
+- uid: LiteDB.Query.All
+  commentId: M:LiteDB.Query.All
+  id: All
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: All()
+  nameWithType: Query.All()
+  fullName: LiteDB.Query.All()
+  type: Method
+  source:
+    id: All
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 28
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents
+  example: []
+  syntax:
+    content: public static Query All()
+    return:
+      type: LiteDB.Query
+    content.vb: Public Shared Function All() As Query
+  overload: LiteDB.Query.All*
+- uid: LiteDB.Query.All(System.Int32)
+  commentId: M:LiteDB.Query.All(System.Int32)
+  id: All(System.Int32)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: All(int)
+  nameWithType: Query.All(int)
+  fullName: LiteDB.Query.All(int)
+  type: Method
+  source:
+    id: All
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 36
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents
+  example: []
+  syntax:
+    content: public static Query All(int order = 1)
+    parameters:
+    - id: order
+      type: System.Int32
+    return:
+      type: LiteDB.Query
+    content.vb: Public Shared Function All(order As Integer = 1) As Query
+  overload: LiteDB.Query.All*
+  nameWithType.vb: Query.All(Integer)
+  fullName.vb: LiteDB.Query.All(Integer)
+  name.vb: All(Integer)
+- uid: LiteDB.Query.All(System.String,System.Int32)
+  commentId: M:LiteDB.Query.All(System.String,System.Int32)
+  id: All(System.String,System.Int32)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: All(string, int)
+  nameWithType: Query.All(string, int)
+  fullName: LiteDB.Query.All(string, int)
+  type: Method
+  source:
+    id: All
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 46
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents
+  example: []
+  syntax:
+    content: public static Query All(string field, int order = 1)
+    parameters:
+    - id: field
+      type: System.String
+    - id: order
+      type: System.Int32
+    return:
+      type: LiteDB.Query
+    content.vb: Public Shared Function All(field As String, order As Integer = 1) As Query
+  overload: LiteDB.Query.All*
+  nameWithType.vb: Query.All(String, Integer)
+  fullName.vb: LiteDB.Query.All(String, Integer)
+  name.vb: All(String, Integer)
+- uid: LiteDB.Query.EQ(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.EQ(System.String,LiteDB.BsonValue)
+  id: EQ(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: EQ(string, BsonValue)
+  nameWithType: Query.EQ(string, BsonValue)
+  fullName: LiteDB.Query.EQ(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: EQ
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 56
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that value are equals to value (=)
+  example: []
+  syntax:
+    content: public static BsonExpression EQ(string field, BsonValue value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function EQ(field As String, value As BsonValue) As BsonExpression
+  overload: LiteDB.Query.EQ*
+  nameWithType.vb: Query.EQ(String, BsonValue)
+  fullName.vb: LiteDB.Query.EQ(String, LiteDB.BsonValue)
+  name.vb: EQ(String, BsonValue)
+- uid: LiteDB.Query.LT(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.LT(System.String,LiteDB.BsonValue)
+  id: LT(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: LT(string, BsonValue)
+  nameWithType: Query.LT(string, BsonValue)
+  fullName: LiteDB.Query.LT(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: LT
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 66
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that value are less than value (&lt;)
+  example: []
+  syntax:
+    content: public static BsonExpression LT(string field, BsonValue value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function LT(field As String, value As BsonValue) As BsonExpression
+  overload: LiteDB.Query.LT*
+  nameWithType.vb: Query.LT(String, BsonValue)
+  fullName.vb: LiteDB.Query.LT(String, LiteDB.BsonValue)
+  name.vb: LT(String, BsonValue)
+- uid: LiteDB.Query.LTE(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.LTE(System.String,LiteDB.BsonValue)
+  id: LTE(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: LTE(string, BsonValue)
+  nameWithType: Query.LTE(string, BsonValue)
+  fullName: LiteDB.Query.LTE(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: LTE
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 76
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that value are less than or equals value (&lt;=)
+  example: []
+  syntax:
+    content: public static BsonExpression LTE(string field, BsonValue value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function LTE(field As String, value As BsonValue) As BsonExpression
+  overload: LiteDB.Query.LTE*
+  nameWithType.vb: Query.LTE(String, BsonValue)
+  fullName.vb: LiteDB.Query.LTE(String, LiteDB.BsonValue)
+  name.vb: LTE(String, BsonValue)
+- uid: LiteDB.Query.GT(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.GT(System.String,LiteDB.BsonValue)
+  id: GT(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: GT(string, BsonValue)
+  nameWithType: Query.GT(string, BsonValue)
+  fullName: LiteDB.Query.GT(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: GT
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 86
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all document that value are greater than value (&gt;)
+  example: []
+  syntax:
+    content: public static BsonExpression GT(string field, BsonValue value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function GT(field As String, value As BsonValue) As BsonExpression
+  overload: LiteDB.Query.GT*
+  nameWithType.vb: Query.GT(String, BsonValue)
+  fullName.vb: LiteDB.Query.GT(String, LiteDB.BsonValue)
+  name.vb: GT(String, BsonValue)
+- uid: LiteDB.Query.GTE(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.GTE(System.String,LiteDB.BsonValue)
+  id: GTE(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: GTE(string, BsonValue)
+  nameWithType: Query.GTE(string, BsonValue)
+  fullName: LiteDB.Query.GTE(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: GTE
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 96
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that value are greater than or equals value (&gt;=)
+  example: []
+  syntax:
+    content: public static BsonExpression GTE(string field, BsonValue value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function GTE(field As String, value As BsonValue) As BsonExpression
+  overload: LiteDB.Query.GTE*
+  nameWithType.vb: Query.GTE(String, BsonValue)
+  fullName.vb: LiteDB.Query.GTE(String, LiteDB.BsonValue)
+  name.vb: GTE(String, BsonValue)
+- uid: LiteDB.Query.Between(System.String,LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.Between(System.String,LiteDB.BsonValue,LiteDB.BsonValue)
+  id: Between(System.String,LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Between(string, BsonValue, BsonValue)
+  nameWithType: Query.Between(string, BsonValue, BsonValue)
+  fullName: LiteDB.Query.Between(string, LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Between
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 106
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all document that values are between "start" and "end" values (BETWEEN)
+  example: []
+  syntax:
+    content: public static BsonExpression Between(string field, BsonValue start, BsonValue end)
+    parameters:
+    - id: field
+      type: System.String
+    - id: start
+      type: LiteDB.BsonValue
+    - id: end
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function Between(field As String, start As BsonValue, [end] As BsonValue) As BsonExpression
+  overload: LiteDB.Query.Between*
+  nameWithType.vb: Query.Between(String, BsonValue, BsonValue)
+  fullName.vb: LiteDB.Query.Between(String, LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: Between(String, BsonValue, BsonValue)
+- uid: LiteDB.Query.StartsWith(System.String,System.String)
+  commentId: M:LiteDB.Query.StartsWith(System.String,System.String)
+  id: StartsWith(System.String,System.String)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: StartsWith(string, string)
+  nameWithType: Query.StartsWith(string, string)
+  fullName: LiteDB.Query.StartsWith(string, string)
+  type: Method
+  source:
+    id: StartsWith
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 116
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that starts with value (LIKE)
+  example: []
+  syntax:
+    content: public static BsonExpression StartsWith(string field, string value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: System.String
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function StartsWith(field As String, value As String) As BsonExpression
+  overload: LiteDB.Query.StartsWith*
+  nameWithType.vb: Query.StartsWith(String, String)
+  fullName.vb: LiteDB.Query.StartsWith(String, String)
+  name.vb: StartsWith(String, String)
+- uid: LiteDB.Query.Contains(System.String,System.String)
+  commentId: M:LiteDB.Query.Contains(System.String,System.String)
+  id: Contains(System.String,System.String)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Contains(string, string)
+  nameWithType: Query.Contains(string, string)
+  fullName: LiteDB.Query.Contains(string, string)
+  type: Method
+  source:
+    id: Contains
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 127
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that contains value (CONTAINS) - string Contains
+  example: []
+  syntax:
+    content: public static BsonExpression Contains(string field, string value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: System.String
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function Contains(field As String, value As String) As BsonExpression
+  overload: LiteDB.Query.Contains*
+  nameWithType.vb: Query.Contains(String, String)
+  fullName.vb: LiteDB.Query.Contains(String, String)
+  name.vb: Contains(String, String)
+- uid: LiteDB.Query.Not(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.Query.Not(System.String,LiteDB.BsonValue)
+  id: Not(System.String,LiteDB.BsonValue)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Not(string, BsonValue)
+  nameWithType: Query.Not(string, BsonValue)
+  fullName: LiteDB.Query.Not(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Not
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 138
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that are not equals to value (not equals)
+  example: []
+  syntax:
+    content: public static BsonExpression Not(string field, BsonValue value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [Not](field As String, value As BsonValue) As BsonExpression
+  overload: LiteDB.Query.Not*
+  nameWithType.vb: Query.Not(String, BsonValue)
+  fullName.vb: LiteDB.Query.Not(String, LiteDB.BsonValue)
+  name.vb: Not(String, BsonValue)
+- uid: LiteDB.Query.In(System.String,LiteDB.BsonArray)
+  commentId: M:LiteDB.Query.In(System.String,LiteDB.BsonArray)
+  id: In(System.String,LiteDB.BsonArray)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: In(string, BsonArray)
+  nameWithType: Query.In(string, BsonArray)
+  fullName: LiteDB.Query.In(string, LiteDB.BsonArray)
+  type: Method
+  source:
+    id: In
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 148
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that has value in values list (IN)
+  example: []
+  syntax:
+    content: public static BsonExpression In(string field, BsonArray value)
+    parameters:
+    - id: field
+      type: System.String
+    - id: value
+      type: LiteDB.BsonArray
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [In](field As String, value As BsonArray) As BsonExpression
+  overload: LiteDB.Query.In*
+  nameWithType.vb: Query.In(String, BsonArray)
+  fullName.vb: LiteDB.Query.In(String, LiteDB.BsonArray)
+  name.vb: In(String, BsonArray)
+- uid: LiteDB.Query.In(System.String,LiteDB.BsonValue[])
+  commentId: M:LiteDB.Query.In(System.String,LiteDB.BsonValue[])
+  id: In(System.String,LiteDB.BsonValue[])
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: In(string, params BsonValue[])
+  nameWithType: Query.In(string, params BsonValue[])
+  fullName: LiteDB.Query.In(string, params LiteDB.BsonValue[])
+  type: Method
+  source:
+    id: In
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 159
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that has value in values list (IN)
+  example: []
+  syntax:
+    content: public static BsonExpression In(string field, params BsonValue[] values)
+    parameters:
+    - id: field
+      type: System.String
+    - id: values
+      type: LiteDB.BsonValue[]
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [In](field As String, ParamArray values As BsonValue()) As BsonExpression
+  overload: LiteDB.Query.In*
+  nameWithType.vb: Query.In(String, ParamArray BsonValue())
+  fullName.vb: LiteDB.Query.In(String, ParamArray LiteDB.BsonValue())
+  name.vb: In(String, ParamArray BsonValue())
+- uid: LiteDB.Query.In(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  commentId: M:LiteDB.Query.In(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  id: In(System.String,System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: In(string, IEnumerable<BsonValue>)
+  nameWithType: Query.In(string, IEnumerable<BsonValue>)
+  fullName: LiteDB.Query.In(string, System.Collections.Generic.IEnumerable<LiteDB.BsonValue>)
+  type: Method
+  source:
+    id: In
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 167
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all documents that has value in values list (IN)
+  example: []
+  syntax:
+    content: public static BsonExpression In(string field, IEnumerable<BsonValue> values)
+    parameters:
+    - id: field
+      type: System.String
+    - id: values
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [In](field As String, values As IEnumerable(Of BsonValue)) As BsonExpression
+  overload: LiteDB.Query.In*
+  nameWithType.vb: Query.In(String, IEnumerable(Of BsonValue))
+  fullName.vb: LiteDB.Query.In(String, System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue))
+  name.vb: In(String, IEnumerable(Of BsonValue))
+- uid: LiteDB.Query.Any
+  commentId: M:LiteDB.Query.Any
+  id: Any
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Any()
+  nameWithType: Query.Any()
+  fullName: LiteDB.Query.Any()
+  type: Method
+  source:
+    id: Any
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 175
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get all operands to works with array or enumerable values
+  example: []
+  syntax:
+    content: public static QueryAny Any()
+    return:
+      type: LiteDB.QueryAny
+    content.vb: Public Shared Function Any() As QueryAny
+  overload: LiteDB.Query.Any*
+- uid: LiteDB.Query.And(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  commentId: M:LiteDB.Query.And(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  id: And(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: And(BsonExpression, BsonExpression)
+  nameWithType: Query.And(BsonExpression, BsonExpression)
+  fullName: LiteDB.Query.And(LiteDB.BsonExpression, LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: And
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 180
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns document that exists in BOTH queries results. If both queries has indexes, left query has index preference (other side will be run in full scan)
+  example: []
+  syntax:
+    content: public static BsonExpression And(BsonExpression left, BsonExpression right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonExpression
+    - id: right
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [And](left As BsonExpression, right As BsonExpression) As BsonExpression
+  overload: LiteDB.Query.And*
+- uid: LiteDB.Query.And(LiteDB.BsonExpression[])
+  commentId: M:LiteDB.Query.And(LiteDB.BsonExpression[])
+  id: And(LiteDB.BsonExpression[])
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: And(params BsonExpression[])
+  nameWithType: Query.And(params BsonExpression[])
+  fullName: LiteDB.Query.And(params LiteDB.BsonExpression[])
+  type: Method
+  source:
+    id: And
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 191
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns document that exists in ALL queries results.
+  example: []
+  syntax:
+    content: public static BsonExpression And(params BsonExpression[] queries)
+    parameters:
+    - id: queries
+      type: LiteDB.BsonExpression[]
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [And](ParamArray queries As BsonExpression()) As BsonExpression
+  overload: LiteDB.Query.And*
+  nameWithType.vb: Query.And(ParamArray BsonExpression())
+  fullName.vb: LiteDB.Query.And(ParamArray LiteDB.BsonExpression())
+  name.vb: And(ParamArray BsonExpression())
+- uid: LiteDB.Query.Or(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  commentId: M:LiteDB.Query.Or(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  id: Or(LiteDB.BsonExpression,LiteDB.BsonExpression)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Or(BsonExpression, BsonExpression)
+  nameWithType: Query.Or(BsonExpression, BsonExpression)
+  fullName: LiteDB.Query.Or(LiteDB.BsonExpression, LiteDB.BsonExpression)
+  type: Method
+  source:
+    id: Or
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 208
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns documents that exists in ANY queries results (Union).
+  example: []
+  syntax:
+    content: public static BsonExpression Or(BsonExpression left, BsonExpression right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonExpression
+    - id: right
+      type: LiteDB.BsonExpression
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [Or](left As BsonExpression, right As BsonExpression) As BsonExpression
+  overload: LiteDB.Query.Or*
+- uid: LiteDB.Query.Or(LiteDB.BsonExpression[])
+  commentId: M:LiteDB.Query.Or(LiteDB.BsonExpression[])
+  id: Or(LiteDB.BsonExpression[])
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Or(params BsonExpression[])
+  nameWithType: Query.Or(params BsonExpression[])
+  fullName: LiteDB.Query.Or(params LiteDB.BsonExpression[])
+  type: Method
+  source:
+    id: Or
+    path: /workspace/LiteDB/LiteDB/Client/Structures/Query.cs
+    startLine: 219
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns document that exists in ANY queries results (Union).
+  example: []
+  syntax:
+    content: public static BsonExpression Or(params BsonExpression[] queries)
+    parameters:
+    - id: queries
+      type: LiteDB.BsonExpression[]
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Shared Function [Or](ParamArray queries As BsonExpression()) As BsonExpression
+  overload: LiteDB.Query.Or*
+  nameWithType.vb: Query.Or(ParamArray BsonExpression())
+  fullName.vb: LiteDB.Query.Or(ParamArray LiteDB.BsonExpression())
+  name.vb: Or(ParamArray BsonExpression())
+- uid: LiteDB.Query.Select
+  commentId: P:LiteDB.Query.Select
+  id: Select
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Select
+  nameWithType: Query.Select
+  fullName: LiteDB.Query.Select
+  type: Property
+  source:
+    id: Select
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonExpression Select { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Property [Select] As BsonExpression
+  overload: LiteDB.Query.Select*
+- uid: LiteDB.Query.Includes
+  commentId: P:LiteDB.Query.Includes
+  id: Includes
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Includes
+  nameWithType: Query.Includes
+  fullName: LiteDB.Query.Includes
+  type: Property
+  source:
+    id: Includes
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 16
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public List<BsonExpression> Includes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{LiteDB.BsonExpression}
+    content.vb: Public ReadOnly Property Includes As List(Of BsonExpression)
+  overload: LiteDB.Query.Includes*
+- uid: LiteDB.Query.Where
+  commentId: P:LiteDB.Query.Where
+  id: Where
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Where
+  nameWithType: Query.Where
+  fullName: LiteDB.Query.Where
+  type: Property
+  source:
+    id: Where
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 17
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public List<BsonExpression> Where { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{LiteDB.BsonExpression}
+    content.vb: Public ReadOnly Property Where As List(Of BsonExpression)
+  overload: LiteDB.Query.Where*
+- uid: LiteDB.Query.OrderBy
+  commentId: P:LiteDB.Query.OrderBy
+  id: OrderBy
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: OrderBy
+  nameWithType: Query.OrderBy
+  fullName: LiteDB.Query.OrderBy
+  type: Property
+  source:
+    id: OrderBy
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 19
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public List<QueryOrder> OrderBy { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{LiteDB.QueryOrder}
+    content.vb: Public ReadOnly Property OrderBy As List(Of QueryOrder)
+  overload: LiteDB.Query.OrderBy*
+- uid: LiteDB.Query.GroupBy
+  commentId: P:LiteDB.Query.GroupBy
+  id: GroupBy
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: GroupBy
+  nameWithType: Query.GroupBy
+  fullName: LiteDB.Query.GroupBy
+  type: Property
+  source:
+    id: GroupBy
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonExpression GroupBy { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Property GroupBy As BsonExpression
+  overload: LiteDB.Query.GroupBy*
+- uid: LiteDB.Query.Having
+  commentId: P:LiteDB.Query.Having
+  id: Having
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Having
+  nameWithType: Query.Having
+  fullName: LiteDB.Query.Having
+  type: Property
+  source:
+    id: Having
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 22
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonExpression Having { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Property Having As BsonExpression
+  overload: LiteDB.Query.Having*
+- uid: LiteDB.Query.Offset
+  commentId: P:LiteDB.Query.Offset
+  id: Offset
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: Query.Offset
+  fullName: LiteDB.Query.Offset
+  type: Property
+  source:
+    id: Offset
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 24
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public int Offset { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Offset As Integer
+  overload: LiteDB.Query.Offset*
+- uid: LiteDB.Query.Limit
+  commentId: P:LiteDB.Query.Limit
+  id: Limit
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: Query.Limit
+  fullName: LiteDB.Query.Limit
+  type: Property
+  source:
+    id: Limit
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 25
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public int Limit { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Limit As Integer
+  overload: LiteDB.Query.Limit*
+- uid: LiteDB.Query.ForUpdate
+  commentId: P:LiteDB.Query.ForUpdate
+  id: ForUpdate
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: ForUpdate
+  nameWithType: Query.ForUpdate
+  fullName: LiteDB.Query.ForUpdate
+  type: Property
+  source:
+    id: ForUpdate
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 26
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool ForUpdate { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ForUpdate As Boolean
+  overload: LiteDB.Query.ForUpdate*
+- uid: LiteDB.Query.Into
+  commentId: P:LiteDB.Query.Into
+  id: Into
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: Into
+  nameWithType: Query.Into
+  fullName: LiteDB.Query.Into
+  type: Property
+  source:
+    id: Into
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 28
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public string Into { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Into As String
+  overload: LiteDB.Query.Into*
+- uid: LiteDB.Query.IntoAutoId
+  commentId: P:LiteDB.Query.IntoAutoId
+  id: IntoAutoId
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: IntoAutoId
+  nameWithType: Query.IntoAutoId
+  fullName: LiteDB.Query.IntoAutoId
+  type: Property
+  source:
+    id: IntoAutoId
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 29
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonAutoId IntoAutoId { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.BsonAutoId
+    content.vb: Public Property IntoAutoId As BsonAutoId
+  overload: LiteDB.Query.IntoAutoId*
+- uid: LiteDB.Query.ExplainPlan
+  commentId: P:LiteDB.Query.ExplainPlan
+  id: ExplainPlan
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: ExplainPlan
+  nameWithType: Query.ExplainPlan
+  fullName: LiteDB.Query.ExplainPlan
+  type: Property
+  source:
+    id: ExplainPlan
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool ExplainPlan { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ExplainPlan As Boolean
+  overload: LiteDB.Query.ExplainPlan*
+- uid: LiteDB.Query.ToSQL(System.String)
+  commentId: M:LiteDB.Query.ToSQL(System.String)
+  id: ToSQL(System.String)
+  parent: LiteDB.Query
+  langs:
+  - csharp
+  - vb
+  name: ToSQL(string)
+  nameWithType: Query.ToSQL(string)
+  fullName: LiteDB.Query.ToSQL(string)
+  type: Method
+  source:
+    id: ToSQL
+    path: /workspace/LiteDB/LiteDB/Engine/Query/Query.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    [ EXPLAIN ]
+       SELECT {selectExpr}
+       [ INTO {newcollection|$function} [ : {autoId} ] ]
+       [ FROM {collection|$function} ]
+    [ INCLUDE {pathExpr0} [, {pathExprN} ]
+      [ WHERE {filterExpr} ]
+      [ GROUP BY {groupByExpr} ]
+     [ HAVING {filterExpr} ]
+      [ ORDER BY {orderByExpr} [ ASC | DESC ] ]
+      [ LIMIT {number} ]
+     [ OFFSET {number} ]
+        [ FOR UPDATE ]
+  example: []
+  syntax:
+    content: public string ToSQL(string collection)
+    parameters:
+    - id: collection
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function ToSQL(collection As String) As String
+  overload: LiteDB.Query.ToSQL*
+  nameWithType.vb: Query.ToSQL(String)
+  fullName.vb: LiteDB.Query.ToSQL(String)
+  name.vb: ToSQL(String)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LiteDB.Query.All*
+  commentId: Overload:LiteDB.Query.All
+  href: LiteDB.Query.html#LiteDB_Query_All
+  name: All
+  nameWithType: Query.All
+  fullName: LiteDB.Query.All
+- uid: LiteDB.Query
+  commentId: T:LiteDB.Query
+  parent: LiteDB
+  href: LiteDB.Query.html
+  name: Query
+  nameWithType: Query
+  fullName: LiteDB.Query
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.Query.EQ*
+  commentId: Overload:LiteDB.Query.EQ
+  href: LiteDB.Query.html#LiteDB_Query_EQ_System_String_LiteDB_BsonValue_
+  name: EQ
+  nameWithType: Query.EQ
+  fullName: LiteDB.Query.EQ
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: LiteDB.Query.LT*
+  commentId: Overload:LiteDB.Query.LT
+  href: LiteDB.Query.html#LiteDB_Query_LT_System_String_LiteDB_BsonValue_
+  name: LT
+  nameWithType: Query.LT
+  fullName: LiteDB.Query.LT
+- uid: LiteDB.Query.LTE*
+  commentId: Overload:LiteDB.Query.LTE
+  href: LiteDB.Query.html#LiteDB_Query_LTE_System_String_LiteDB_BsonValue_
+  name: LTE
+  nameWithType: Query.LTE
+  fullName: LiteDB.Query.LTE
+- uid: LiteDB.Query.GT*
+  commentId: Overload:LiteDB.Query.GT
+  href: LiteDB.Query.html#LiteDB_Query_GT_System_String_LiteDB_BsonValue_
+  name: GT
+  nameWithType: Query.GT
+  fullName: LiteDB.Query.GT
+- uid: LiteDB.Query.GTE*
+  commentId: Overload:LiteDB.Query.GTE
+  href: LiteDB.Query.html#LiteDB_Query_GTE_System_String_LiteDB_BsonValue_
+  name: GTE
+  nameWithType: Query.GTE
+  fullName: LiteDB.Query.GTE
+- uid: LiteDB.Query.Between*
+  commentId: Overload:LiteDB.Query.Between
+  href: LiteDB.Query.html#LiteDB_Query_Between_System_String_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: Between
+  nameWithType: Query.Between
+  fullName: LiteDB.Query.Between
+- uid: LiteDB.Query.StartsWith*
+  commentId: Overload:LiteDB.Query.StartsWith
+  href: LiteDB.Query.html#LiteDB_Query_StartsWith_System_String_System_String_
+  name: StartsWith
+  nameWithType: Query.StartsWith
+  fullName: LiteDB.Query.StartsWith
+- uid: LiteDB.Query.Contains*
+  commentId: Overload:LiteDB.Query.Contains
+  href: LiteDB.Query.html#LiteDB_Query_Contains_System_String_System_String_
+  name: Contains
+  nameWithType: Query.Contains
+  fullName: LiteDB.Query.Contains
+- uid: LiteDB.Query.Not*
+  commentId: Overload:LiteDB.Query.Not
+  href: LiteDB.Query.html#LiteDB_Query_Not_System_String_LiteDB_BsonValue_
+  name: Not
+  nameWithType: Query.Not
+  fullName: LiteDB.Query.Not
+- uid: LiteDB.Query.In*
+  commentId: Overload:LiteDB.Query.In
+  href: LiteDB.Query.html#LiteDB_Query_In_System_String_LiteDB_BsonArray_
+  name: In
+  nameWithType: Query.In
+  fullName: LiteDB.Query.In
+- uid: LiteDB.BsonArray
+  commentId: T:LiteDB.BsonArray
+  parent: LiteDB
+  href: LiteDB.BsonArray.html
+  name: BsonArray
+  nameWithType: BsonArray
+  fullName: LiteDB.BsonArray
+- uid: LiteDB.BsonValue[]
+  isExternal: true
+  href: LiteDB.BsonValue.html
+  name: BsonValue[]
+  nameWithType: BsonValue[]
+  fullName: LiteDB.BsonValue[]
+  nameWithType.vb: BsonValue()
+  fullName.vb: LiteDB.BsonValue()
+  name.vb: BsonValue()
+  spec.csharp:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BsonValue>
+  nameWithType: IEnumerable<BsonValue>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonValue>
+  nameWithType.vb: IEnumerable(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue)
+  name.vb: IEnumerable(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LiteDB.Query.Any*
+  commentId: Overload:LiteDB.Query.Any
+  href: LiteDB.Query.html#LiteDB_Query_Any
+  name: Any
+  nameWithType: Query.Any
+  fullName: LiteDB.Query.Any
+- uid: LiteDB.QueryAny
+  commentId: T:LiteDB.QueryAny
+  parent: LiteDB
+  href: LiteDB.QueryAny.html
+  name: QueryAny
+  nameWithType: QueryAny
+  fullName: LiteDB.QueryAny
+- uid: LiteDB.Query.And*
+  commentId: Overload:LiteDB.Query.And
+  href: LiteDB.Query.html#LiteDB_Query_And_LiteDB_BsonExpression_LiteDB_BsonExpression_
+  name: And
+  nameWithType: Query.And
+  fullName: LiteDB.Query.And
+- uid: LiteDB.BsonExpression[]
+  isExternal: true
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression[]
+  nameWithType: BsonExpression[]
+  fullName: LiteDB.BsonExpression[]
+  nameWithType.vb: BsonExpression()
+  fullName.vb: LiteDB.BsonExpression()
+  name.vb: BsonExpression()
+  spec.csharp:
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: (
+  - name: )
+- uid: LiteDB.Query.Or*
+  commentId: Overload:LiteDB.Query.Or
+  href: LiteDB.Query.html#LiteDB_Query_Or_LiteDB_BsonExpression_LiteDB_BsonExpression_
+  name: Or
+  nameWithType: Query.Or
+  fullName: LiteDB.Query.Or
+- uid: LiteDB.Query.Select*
+  commentId: Overload:LiteDB.Query.Select
+  href: LiteDB.Query.html#LiteDB_Query_Select
+  name: Select
+  nameWithType: Query.Select
+  fullName: LiteDB.Query.Select
+- uid: LiteDB.Query.Includes*
+  commentId: Overload:LiteDB.Query.Includes
+  href: LiteDB.Query.html#LiteDB_Query_Includes
+  name: Includes
+  nameWithType: Query.Includes
+  fullName: LiteDB.Query.Includes
+- uid: System.Collections.Generic.List{LiteDB.BsonExpression}
+  commentId: T:System.Collections.Generic.List{LiteDB.BsonExpression}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<BsonExpression>
+  nameWithType: List<BsonExpression>
+  fullName: System.Collections.Generic.List<LiteDB.BsonExpression>
+  nameWithType.vb: List(Of BsonExpression)
+  fullName.vb: System.Collections.Generic.List(Of LiteDB.BsonExpression)
+  name.vb: List(Of BsonExpression)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    href: LiteDB.BsonExpression.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.Query.Where*
+  commentId: Overload:LiteDB.Query.Where
+  href: LiteDB.Query.html#LiteDB_Query_Where
+  name: Where
+  nameWithType: Query.Where
+  fullName: LiteDB.Query.Where
+- uid: LiteDB.Query.OrderBy*
+  commentId: Overload:LiteDB.Query.OrderBy
+  href: LiteDB.Query.html#LiteDB_Query_OrderBy
+  name: OrderBy
+  nameWithType: Query.OrderBy
+  fullName: LiteDB.Query.OrderBy
+- uid: System.Collections.Generic.List{LiteDB.QueryOrder}
+  commentId: T:System.Collections.Generic.List{LiteDB.QueryOrder}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<QueryOrder>
+  nameWithType: List<QueryOrder>
+  fullName: System.Collections.Generic.List<LiteDB.QueryOrder>
+  nameWithType.vb: List(Of QueryOrder)
+  fullName.vb: System.Collections.Generic.List(Of LiteDB.QueryOrder)
+  name.vb: List(Of QueryOrder)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: LiteDB.QueryOrder
+    name: QueryOrder
+    href: LiteDB.QueryOrder.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.QueryOrder
+    name: QueryOrder
+    href: LiteDB.QueryOrder.html
+  - name: )
+- uid: LiteDB.Query.GroupBy*
+  commentId: Overload:LiteDB.Query.GroupBy
+  href: LiteDB.Query.html#LiteDB_Query_GroupBy
+  name: GroupBy
+  nameWithType: Query.GroupBy
+  fullName: LiteDB.Query.GroupBy
+- uid: LiteDB.Query.Having*
+  commentId: Overload:LiteDB.Query.Having
+  href: LiteDB.Query.html#LiteDB_Query_Having
+  name: Having
+  nameWithType: Query.Having
+  fullName: LiteDB.Query.Having
+- uid: LiteDB.Query.Offset*
+  commentId: Overload:LiteDB.Query.Offset
+  href: LiteDB.Query.html#LiteDB_Query_Offset
+  name: Offset
+  nameWithType: Query.Offset
+  fullName: LiteDB.Query.Offset
+- uid: LiteDB.Query.Limit*
+  commentId: Overload:LiteDB.Query.Limit
+  href: LiteDB.Query.html#LiteDB_Query_Limit
+  name: Limit
+  nameWithType: Query.Limit
+  fullName: LiteDB.Query.Limit
+- uid: LiteDB.Query.ForUpdate*
+  commentId: Overload:LiteDB.Query.ForUpdate
+  href: LiteDB.Query.html#LiteDB_Query_ForUpdate
+  name: ForUpdate
+  nameWithType: Query.ForUpdate
+  fullName: LiteDB.Query.ForUpdate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.Query.Into*
+  commentId: Overload:LiteDB.Query.Into
+  href: LiteDB.Query.html#LiteDB_Query_Into
+  name: Into
+  nameWithType: Query.Into
+  fullName: LiteDB.Query.Into
+- uid: LiteDB.Query.IntoAutoId*
+  commentId: Overload:LiteDB.Query.IntoAutoId
+  href: LiteDB.Query.html#LiteDB_Query_IntoAutoId
+  name: IntoAutoId
+  nameWithType: Query.IntoAutoId
+  fullName: LiteDB.Query.IntoAutoId
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  parent: LiteDB
+  href: LiteDB.BsonAutoId.html
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId
+- uid: LiteDB.Query.ExplainPlan*
+  commentId: Overload:LiteDB.Query.ExplainPlan
+  href: LiteDB.Query.html#LiteDB_Query_ExplainPlan
+  name: ExplainPlan
+  nameWithType: Query.ExplainPlan
+  fullName: LiteDB.Query.ExplainPlan
+- uid: LiteDB.Query.ToSQL*
+  commentId: Overload:LiteDB.Query.ToSQL
+  href: LiteDB.Query.html#LiteDB_Query_ToSQL_System_String_
+  name: ToSQL
+  nameWithType: Query.ToSQL
+  fullName: LiteDB.Query.ToSQL

@@ -1,0 +1,721 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.EntityMapper
+  commentId: T:LiteDB.EntityMapper
+  id: EntityMapper
+  parent: LiteDB
+  children:
+  - LiteDB.EntityMapper.#ctor(System.Type,System.Threading.CancellationToken)
+  - LiteDB.EntityMapper.CreateInstance
+  - LiteDB.EntityMapper.ForType
+  - LiteDB.EntityMapper.GetMember(System.Linq.Expressions.Expression)
+  - LiteDB.EntityMapper.Id
+  - LiteDB.EntityMapper.Members
+  - LiteDB.EntityMapper.WaitForInitialization
+  langs:
+  - csharp
+  - vb
+  name: EntityMapper
+  nameWithType: EntityMapper
+  fullName: LiteDB.EntityMapper
+  type: Class
+  source:
+    id: EntityMapper
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Class to map entity class to BsonDocument
+  example: []
+  syntax:
+    content: public class EntityMapper
+    content.vb: Public Class EntityMapper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.EntityMapper.ForType
+  commentId: P:LiteDB.EntityMapper.ForType
+  id: ForType
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: ForType
+  nameWithType: EntityMapper.ForType
+  fullName: LiteDB.EntityMapper.ForType
+  type: Property
+  source:
+    id: ForType
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Indicate which Type this entity mapper is
+  example: []
+  syntax:
+    content: public Type ForType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property ForType As Type
+  overload: LiteDB.EntityMapper.ForType*
+- uid: LiteDB.EntityMapper.Members
+  commentId: P:LiteDB.EntityMapper.Members
+  id: Members
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: EntityMapper.Members
+  fullName: LiteDB.EntityMapper.Members
+  type: Property
+  source:
+    id: Members
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 26
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: List all type members that will be mapped to/from BsonDocument
+  example: []
+  syntax:
+    content: public List<MemberMapper> Members { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{LiteDB.MemberMapper}
+    content.vb: Public ReadOnly Property Members As List(Of MemberMapper)
+  overload: LiteDB.EntityMapper.Members*
+- uid: LiteDB.EntityMapper.Id
+  commentId: P:LiteDB.EntityMapper.Id
+  id: Id
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: EntityMapper.Id
+  fullName: LiteDB.EntityMapper.Id
+  type: Property
+  source:
+    id: Id
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Indicate which member is _id
+  example: []
+  syntax:
+    content: public MemberMapper Id { get; }
+    parameters: []
+    return:
+      type: LiteDB.MemberMapper
+    content.vb: Public ReadOnly Property Id As MemberMapper
+  overload: LiteDB.EntityMapper.Id*
+- uid: LiteDB.EntityMapper.CreateInstance
+  commentId: P:LiteDB.EntityMapper.CreateInstance
+  id: CreateInstance
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: CreateInstance
+  nameWithType: EntityMapper.CreateInstance
+  fullName: LiteDB.EntityMapper.CreateInstance
+  type: Property
+  source:
+    id: CreateInstance
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 36
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set a custom ctor function to create new entity instance
+  example: []
+  syntax:
+    content: public CreateObject CreateInstance { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.CreateObject
+    content.vb: Public Property CreateInstance As CreateObject
+  overload: LiteDB.EntityMapper.CreateInstance*
+- uid: LiteDB.EntityMapper.#ctor(System.Type,System.Threading.CancellationToken)
+  commentId: M:LiteDB.EntityMapper.#ctor(System.Type,System.Threading.CancellationToken)
+  id: '#ctor(System.Type,System.Threading.CancellationToken)'
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: EntityMapper(Type, CancellationToken)
+  nameWithType: EntityMapper.EntityMapper(Type, CancellationToken)
+  fullName: LiteDB.EntityMapper.EntityMapper(System.Type, System.Threading.CancellationToken)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 38
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public EntityMapper(Type forType, CancellationToken initializationToken = default)
+    parameters:
+    - id: forType
+      type: System.Type
+    - id: initializationToken
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub New(forType As Type, initializationToken As CancellationToken = Nothing)
+  overload: LiteDB.EntityMapper.#ctor*
+  nameWithType.vb: EntityMapper.New(Type, CancellationToken)
+  fullName.vb: LiteDB.EntityMapper.New(System.Type, System.Threading.CancellationToken)
+  name.vb: New(Type, CancellationToken)
+- uid: LiteDB.EntityMapper.GetMember(System.Linq.Expressions.Expression)
+  commentId: M:LiteDB.EntityMapper.GetMember(System.Linq.Expressions.Expression)
+  id: GetMember(System.Linq.Expressions.Expression)
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: GetMember(Expression)
+  nameWithType: EntityMapper.GetMember(Expression)
+  fullName: LiteDB.EntityMapper.GetMember(System.Linq.Expressions.Expression)
+  type: Method
+  source:
+    id: GetMember
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Resolve expression to get member mapped
+  example: []
+  syntax:
+    content: public MemberMapper GetMember(Expression expr)
+    parameters:
+    - id: expr
+      type: System.Linq.Expressions.Expression
+    return:
+      type: LiteDB.MemberMapper
+    content.vb: Public Function GetMember(expr As Expression) As MemberMapper
+  overload: LiteDB.EntityMapper.GetMember*
+- uid: LiteDB.EntityMapper.WaitForInitialization
+  commentId: M:LiteDB.EntityMapper.WaitForInitialization
+  id: WaitForInitialization
+  parent: LiteDB.EntityMapper
+  langs:
+  - csharp
+  - vb
+  name: WaitForInitialization()
+  nameWithType: EntityMapper.WaitForInitialization()
+  fullName: LiteDB.EntityMapper.WaitForInitialization()
+  type: Method
+  source:
+    id: WaitForInitialization
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityMapper.cs
+    startLine: 52
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public void WaitForInitialization()
+    content.vb: Public Sub WaitForInitialization()
+  overload: LiteDB.EntityMapper.WaitForInitialization*
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.EntityMapper.ForType*
+  commentId: Overload:LiteDB.EntityMapper.ForType
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper_ForType
+  name: ForType
+  nameWithType: EntityMapper.ForType
+  fullName: LiteDB.EntityMapper.ForType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: LiteDB.EntityMapper.Members*
+  commentId: Overload:LiteDB.EntityMapper.Members
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper_Members
+  name: Members
+  nameWithType: EntityMapper.Members
+  fullName: LiteDB.EntityMapper.Members
+- uid: System.Collections.Generic.List{LiteDB.MemberMapper}
+  commentId: T:System.Collections.Generic.List{LiteDB.MemberMapper}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<MemberMapper>
+  nameWithType: List<MemberMapper>
+  fullName: System.Collections.Generic.List<LiteDB.MemberMapper>
+  nameWithType.vb: List(Of MemberMapper)
+  fullName.vb: System.Collections.Generic.List(Of LiteDB.MemberMapper)
+  name.vb: List(Of MemberMapper)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: LiteDB.MemberMapper
+    name: MemberMapper
+    href: LiteDB.MemberMapper.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.MemberMapper
+    name: MemberMapper
+    href: LiteDB.MemberMapper.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LiteDB.EntityMapper.Id*
+  commentId: Overload:LiteDB.EntityMapper.Id
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper_Id
+  name: Id
+  nameWithType: EntityMapper.Id
+  fullName: LiteDB.EntityMapper.Id
+- uid: LiteDB.MemberMapper
+  commentId: T:LiteDB.MemberMapper
+  parent: LiteDB
+  href: LiteDB.MemberMapper.html
+  name: MemberMapper
+  nameWithType: MemberMapper
+  fullName: LiteDB.MemberMapper
+- uid: LiteDB.EntityMapper.CreateInstance*
+  commentId: Overload:LiteDB.EntityMapper.CreateInstance
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper_CreateInstance
+  name: CreateInstance
+  nameWithType: EntityMapper.CreateInstance
+  fullName: LiteDB.EntityMapper.CreateInstance
+- uid: LiteDB.CreateObject
+  commentId: T:LiteDB.CreateObject
+  parent: LiteDB
+  href: LiteDB.CreateObject.html
+  name: CreateObject
+  nameWithType: CreateObject
+  fullName: LiteDB.CreateObject
+- uid: LiteDB.EntityMapper.#ctor*
+  commentId: Overload:LiteDB.EntityMapper.#ctor
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper__ctor_System_Type_System_Threading_CancellationToken_
+  name: EntityMapper
+  nameWithType: EntityMapper.EntityMapper
+  fullName: LiteDB.EntityMapper.EntityMapper
+  nameWithType.vb: EntityMapper.New
+  fullName.vb: LiteDB.EntityMapper.New
+  name.vb: New
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: LiteDB.EntityMapper.GetMember*
+  commentId: Overload:LiteDB.EntityMapper.GetMember
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper_GetMember_System_Linq_Expressions_Expression_
+  name: GetMember
+  nameWithType: EntityMapper.GetMember
+  fullName: LiteDB.EntityMapper.GetMember
+- uid: System.Linq.Expressions.Expression
+  commentId: T:System.Linq.Expressions.Expression
+  parent: System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression
+  name: Expression
+  nameWithType: Expression
+  fullName: System.Linq.Expressions.Expression
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: LiteDB.EntityMapper.WaitForInitialization*
+  commentId: Overload:LiteDB.EntityMapper.WaitForInitialization
+  href: LiteDB.EntityMapper.html#LiteDB_EntityMapper_WaitForInitialization
+  name: WaitForInitialization
+  nameWithType: EntityMapper.WaitForInitialization
+  fullName: LiteDB.EntityMapper.WaitForInitialization

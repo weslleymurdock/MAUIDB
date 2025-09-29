@@ -1,0 +1,2748 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.LiteDatabase
+  commentId: T:LiteDB.LiteDatabase
+  id: LiteDatabase
+  parent: LiteDB
+  children:
+  - LiteDB.LiteDatabase.#ctor(LiteDB.ConnectionString,LiteDB.BsonMapper)
+  - LiteDB.LiteDatabase.#ctor(LiteDB.Engine.ILiteEngine,LiteDB.BsonMapper,System.Boolean)
+  - LiteDB.LiteDatabase.#ctor(System.IO.Stream,LiteDB.BsonMapper,System.IO.Stream)
+  - LiteDB.LiteDatabase.#ctor(System.String,LiteDB.BsonMapper)
+  - LiteDB.LiteDatabase.BeginTrans
+  - LiteDB.LiteDatabase.Checkpoint
+  - LiteDB.LiteDatabase.CheckpointSize
+  - LiteDB.LiteDatabase.Collation
+  - LiteDB.LiteDatabase.CollectionExists(System.String)
+  - LiteDB.LiteDatabase.Commit
+  - LiteDB.LiteDatabase.Dispose
+  - LiteDB.LiteDatabase.Dispose(System.Boolean)
+  - LiteDB.LiteDatabase.DropCollection(System.String)
+  - LiteDB.LiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+  - LiteDB.LiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+  - LiteDB.LiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+  - LiteDB.LiteDatabase.FileStorage
+  - LiteDB.LiteDatabase.Finalize
+  - LiteDB.LiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+  - LiteDB.LiteDatabase.GetCollectionNames
+  - LiteDB.LiteDatabase.GetCollection``1
+  - LiteDB.LiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+  - LiteDB.LiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+  - LiteDB.LiteDatabase.GetStorage``1(System.String,System.String)
+  - LiteDB.LiteDatabase.LimitSize
+  - LiteDB.LiteDatabase.Mapper
+  - LiteDB.LiteDatabase.Pragma(System.String)
+  - LiteDB.LiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+  - LiteDB.LiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  - LiteDB.LiteDatabase.RenameCollection(System.String,System.String)
+  - LiteDB.LiteDatabase.Rollback
+  - LiteDB.LiteDatabase.Timeout
+  - LiteDB.LiteDatabase.UserVersion
+  - LiteDB.LiteDatabase.UtcDate
+  langs:
+  - csharp
+  - vb
+  name: LiteDatabase
+  nameWithType: LiteDatabase
+  fullName: LiteDB.LiteDatabase
+  type: Class
+  source:
+    id: LiteDatabase
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: The LiteDB database. Used for create a LiteDB instance and use all storage resources. It's the database connection
+  example: []
+  syntax:
+    content: 'public class LiteDatabase : ILiteDatabase, IDisposable'
+    content.vb: Public Class LiteDatabase Implements ILiteDatabase, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - LiteDB.ILiteDatabase
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.LiteDatabase.Mapper
+  commentId: P:LiteDB.LiteDatabase.Mapper
+  id: Mapper
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Mapper
+  nameWithType: LiteDatabase.Mapper
+  fullName: LiteDB.LiteDatabase.Mapper
+  type: Property
+  source:
+    id: Mapper
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 26
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get current instance of BsonMapper used in this database instance (can be BsonMapper.Global)
+  example: []
+  syntax:
+    content: public BsonMapper Mapper { get; }
+    parameters: []
+    return:
+      type: LiteDB.BsonMapper
+    content.vb: Public ReadOnly Property Mapper As BsonMapper
+  overload: LiteDB.LiteDatabase.Mapper*
+  implements:
+  - LiteDB.ILiteDatabase.Mapper
+- uid: LiteDB.LiteDatabase.#ctor(System.String,LiteDB.BsonMapper)
+  commentId: M:LiteDB.LiteDatabase.#ctor(System.String,LiteDB.BsonMapper)
+  id: '#ctor(System.String,LiteDB.BsonMapper)'
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: LiteDatabase(string, BsonMapper)
+  nameWithType: LiteDatabase.LiteDatabase(string, BsonMapper)
+  fullName: LiteDB.LiteDatabase.LiteDatabase(string, LiteDB.BsonMapper)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 35
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Starts LiteDB database using a connection string for file system database
+  example: []
+  syntax:
+    content: public LiteDatabase(string connectionString, BsonMapper mapper = null)
+    parameters:
+    - id: connectionString
+      type: System.String
+    - id: mapper
+      type: LiteDB.BsonMapper
+    content.vb: Public Sub New(connectionString As String, mapper As BsonMapper = Nothing)
+  overload: LiteDB.LiteDatabase.#ctor*
+  nameWithType.vb: LiteDatabase.New(String, BsonMapper)
+  fullName.vb: LiteDB.LiteDatabase.New(String, LiteDB.BsonMapper)
+  name.vb: New(String, BsonMapper)
+- uid: LiteDB.LiteDatabase.#ctor(LiteDB.ConnectionString,LiteDB.BsonMapper)
+  commentId: M:LiteDB.LiteDatabase.#ctor(LiteDB.ConnectionString,LiteDB.BsonMapper)
+  id: '#ctor(LiteDB.ConnectionString,LiteDB.BsonMapper)'
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: LiteDatabase(ConnectionString, BsonMapper)
+  nameWithType: LiteDatabase.LiteDatabase(ConnectionString, BsonMapper)
+  fullName: LiteDB.LiteDatabase.LiteDatabase(LiteDB.ConnectionString, LiteDB.BsonMapper)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 43
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Starts LiteDB database using a connection string for file system database
+  example: []
+  syntax:
+    content: public LiteDatabase(ConnectionString connectionString, BsonMapper mapper = null)
+    parameters:
+    - id: connectionString
+      type: LiteDB.ConnectionString
+    - id: mapper
+      type: LiteDB.BsonMapper
+    content.vb: Public Sub New(connectionString As ConnectionString, mapper As BsonMapper = Nothing)
+  overload: LiteDB.LiteDatabase.#ctor*
+  nameWithType.vb: LiteDatabase.New(ConnectionString, BsonMapper)
+  fullName.vb: LiteDB.LiteDatabase.New(LiteDB.ConnectionString, LiteDB.BsonMapper)
+  name.vb: New(ConnectionString, BsonMapper)
+- uid: LiteDB.LiteDatabase.#ctor(System.IO.Stream,LiteDB.BsonMapper,System.IO.Stream)
+  commentId: M:LiteDB.LiteDatabase.#ctor(System.IO.Stream,LiteDB.BsonMapper,System.IO.Stream)
+  id: '#ctor(System.IO.Stream,LiteDB.BsonMapper,System.IO.Stream)'
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: LiteDatabase(Stream, BsonMapper, Stream)
+  nameWithType: LiteDatabase.LiteDatabase(Stream, BsonMapper, Stream)
+  fullName: LiteDB.LiteDatabase.LiteDatabase(System.IO.Stream, LiteDB.BsonMapper, System.IO.Stream)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 58
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Starts LiteDB database using a generic Stream implementation (mostly MemoryStream).
+  example: []
+  syntax:
+    content: public LiteDatabase(Stream stream, BsonMapper mapper = null, Stream logStream = null)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: DataStream reference
+    - id: mapper
+      type: LiteDB.BsonMapper
+      description: BsonMapper mapper reference
+    - id: logStream
+      type: System.IO.Stream
+      description: LogStream reference
+    content.vb: Public Sub New(stream As Stream, mapper As BsonMapper = Nothing, logStream As Stream = Nothing)
+  overload: LiteDB.LiteDatabase.#ctor*
+  nameWithType.vb: LiteDatabase.New(Stream, BsonMapper, Stream)
+  fullName.vb: LiteDB.LiteDatabase.New(System.IO.Stream, LiteDB.BsonMapper, System.IO.Stream)
+  name.vb: New(Stream, BsonMapper, Stream)
+- uid: LiteDB.LiteDatabase.#ctor(LiteDB.Engine.ILiteEngine,LiteDB.BsonMapper,System.Boolean)
+  commentId: M:LiteDB.LiteDatabase.#ctor(LiteDB.Engine.ILiteEngine,LiteDB.BsonMapper,System.Boolean)
+  id: '#ctor(LiteDB.Engine.ILiteEngine,LiteDB.BsonMapper,System.Boolean)'
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: LiteDatabase(ILiteEngine, BsonMapper, bool)
+  nameWithType: LiteDatabase.LiteDatabase(ILiteEngine, BsonMapper, bool)
+  fullName: LiteDB.LiteDatabase.LiteDatabase(LiteDB.Engine.ILiteEngine, LiteDB.BsonMapper, bool)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 95
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Start LiteDB database using a pre-exiting engine. When LiteDatabase instance dispose engine instance will be disposed too
+  example: []
+  syntax:
+    content: public LiteDatabase(ILiteEngine engine, BsonMapper mapper = null, bool disposeOnClose = true)
+    parameters:
+    - id: engine
+      type: LiteDB.Engine.ILiteEngine
+    - id: mapper
+      type: LiteDB.BsonMapper
+    - id: disposeOnClose
+      type: System.Boolean
+    content.vb: Public Sub New(engine As ILiteEngine, mapper As BsonMapper = Nothing, disposeOnClose As Boolean = True)
+  overload: LiteDB.LiteDatabase.#ctor*
+  nameWithType.vb: LiteDatabase.New(ILiteEngine, BsonMapper, Boolean)
+  fullName.vb: LiteDB.LiteDatabase.New(LiteDB.Engine.ILiteEngine, LiteDB.BsonMapper, Boolean)
+  name.vb: New(ILiteEngine, BsonMapper, Boolean)
+- uid: LiteDB.LiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.LiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+  id: GetCollection``1(System.String,LiteDB.BsonAutoId)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetCollection<T>(string, BsonAutoId)
+  nameWithType: LiteDatabase.GetCollection<T>(string, BsonAutoId)
+  fullName: LiteDB.LiteDatabase.GetCollection<T>(string, LiteDB.BsonAutoId)
+  type: Method
+  source:
+    id: GetCollection
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 111
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get a collection using an entity class as strong typed document. If collection does not exist, create a new one.
+  example: []
+  syntax:
+    content: public ILiteCollection<T> GetCollection<T>(string name, BsonAutoId autoId = BsonAutoId.ObjectId)
+    parameters:
+    - id: name
+      type: System.String
+      description: Collection name (case insensitive)
+    - id: autoId
+      type: LiteDB.BsonAutoId
+      description: Define autoId data type (when object contains no id field)
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.ILiteCollection{{T}}
+    content.vb: Public Function GetCollection(Of T)(name As String, autoId As BsonAutoId = BsonAutoId.ObjectId) As ILiteCollection(Of T)
+  overload: LiteDB.LiteDatabase.GetCollection*
+  implements:
+  - LiteDB.ILiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+  nameWithType.vb: LiteDatabase.GetCollection(Of T)(String, BsonAutoId)
+  fullName.vb: LiteDB.LiteDatabase.GetCollection(Of T)(String, LiteDB.BsonAutoId)
+  name.vb: GetCollection(Of T)(String, BsonAutoId)
+- uid: LiteDB.LiteDatabase.GetCollection``1
+  commentId: M:LiteDB.LiteDatabase.GetCollection``1
+  id: GetCollection``1
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetCollection<T>()
+  nameWithType: LiteDatabase.GetCollection<T>()
+  fullName: LiteDB.LiteDatabase.GetCollection<T>()
+  type: Method
+  source:
+    id: GetCollection
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 119
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get a collection using a name based on typeof(T).Name (BsonMapper.ResolveCollectionName function)
+  example: []
+  syntax:
+    content: public ILiteCollection<T> GetCollection<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.ILiteCollection{{T}}
+    content.vb: Public Function GetCollection(Of T)() As ILiteCollection(Of T)
+  overload: LiteDB.LiteDatabase.GetCollection*
+  implements:
+  - LiteDB.ILiteDatabase.GetCollection``1
+  nameWithType.vb: LiteDatabase.GetCollection(Of T)()
+  fullName.vb: LiteDB.LiteDatabase.GetCollection(Of T)()
+  name.vb: GetCollection(Of T)()
+- uid: LiteDB.LiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+  commentId: M:LiteDB.LiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+  id: GetCollection``1(LiteDB.BsonAutoId)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetCollection<T>(BsonAutoId)
+  nameWithType: LiteDatabase.GetCollection<T>(BsonAutoId)
+  fullName: LiteDB.LiteDatabase.GetCollection<T>(LiteDB.BsonAutoId)
+  type: Method
+  source:
+    id: GetCollection
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 127
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get a collection using a name based on typeof(T).Name (BsonMapper.ResolveCollectionName function)
+  example: []
+  syntax:
+    content: public ILiteCollection<T> GetCollection<T>(BsonAutoId autoId)
+    parameters:
+    - id: autoId
+      type: LiteDB.BsonAutoId
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.ILiteCollection{{T}}
+    content.vb: Public Function GetCollection(Of T)(autoId As BsonAutoId) As ILiteCollection(Of T)
+  overload: LiteDB.LiteDatabase.GetCollection*
+  implements:
+  - LiteDB.ILiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+  nameWithType.vb: LiteDatabase.GetCollection(Of T)(BsonAutoId)
+  fullName.vb: LiteDB.LiteDatabase.GetCollection(Of T)(LiteDB.BsonAutoId)
+  name.vb: GetCollection(Of T)(BsonAutoId)
+- uid: LiteDB.LiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.LiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+  id: GetCollection(System.String,LiteDB.BsonAutoId)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetCollection(string, BsonAutoId)
+  nameWithType: LiteDatabase.GetCollection(string, BsonAutoId)
+  fullName: LiteDB.LiteDatabase.GetCollection(string, LiteDB.BsonAutoId)
+  type: Method
+  source:
+    id: GetCollection
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 137
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get a collection using a generic BsonDocument. If collection does not exist, create a new one.
+  example: []
+  syntax:
+    content: public ILiteCollection<BsonDocument> GetCollection(string name, BsonAutoId autoId = BsonAutoId.ObjectId)
+    parameters:
+    - id: name
+      type: System.String
+      description: Collection name (case insensitive)
+    - id: autoId
+      type: LiteDB.BsonAutoId
+      description: Define autoId data type (when document contains no _id field)
+    return:
+      type: LiteDB.ILiteCollection{LiteDB.BsonDocument}
+    content.vb: Public Function GetCollection(name As String, autoId As BsonAutoId = BsonAutoId.ObjectId) As ILiteCollection(Of BsonDocument)
+  overload: LiteDB.LiteDatabase.GetCollection*
+  implements:
+  - LiteDB.ILiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+  nameWithType.vb: LiteDatabase.GetCollection(String, BsonAutoId)
+  fullName.vb: LiteDB.LiteDatabase.GetCollection(String, LiteDB.BsonAutoId)
+  name.vb: GetCollection(String, BsonAutoId)
+- uid: LiteDB.LiteDatabase.BeginTrans
+  commentId: M:LiteDB.LiteDatabase.BeginTrans
+  id: BeginTrans
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: BeginTrans()
+  nameWithType: LiteDatabase.BeginTrans()
+  fullName: LiteDB.LiteDatabase.BeginTrans()
+  type: Method
+  source:
+    id: BeginTrans
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 152
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Initialize a new transaction. Transaction are created "per-thread". There is only one single transaction per thread.
+
+    Return true if transaction was created or false if current thread already in a transaction.
+  example: []
+  syntax:
+    content: public bool BeginTrans()
+    return:
+      type: System.Boolean
+    content.vb: Public Function BeginTrans() As Boolean
+  overload: LiteDB.LiteDatabase.BeginTrans*
+  implements:
+  - LiteDB.ILiteDatabase.BeginTrans
+- uid: LiteDB.LiteDatabase.Commit
+  commentId: M:LiteDB.LiteDatabase.Commit
+  id: Commit
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Commit()
+  nameWithType: LiteDatabase.Commit()
+  fullName: LiteDB.LiteDatabase.Commit()
+  type: Method
+  source:
+    id: Commit
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 157
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Commit current transaction
+  example: []
+  syntax:
+    content: public bool Commit()
+    return:
+      type: System.Boolean
+    content.vb: Public Function Commit() As Boolean
+  overload: LiteDB.LiteDatabase.Commit*
+  implements:
+  - LiteDB.ILiteDatabase.Commit
+- uid: LiteDB.LiteDatabase.Rollback
+  commentId: M:LiteDB.LiteDatabase.Rollback
+  id: Rollback
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Rollback()
+  nameWithType: LiteDatabase.Rollback()
+  fullName: LiteDB.LiteDatabase.Rollback()
+  type: Method
+  source:
+    id: Rollback
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 162
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Rollback current transaction
+  example: []
+  syntax:
+    content: public bool Rollback()
+    return:
+      type: System.Boolean
+    content.vb: Public Function Rollback() As Boolean
+  overload: LiteDB.LiteDatabase.Rollback*
+  implements:
+  - LiteDB.ILiteDatabase.Rollback
+- uid: LiteDB.LiteDatabase.FileStorage
+  commentId: P:LiteDB.LiteDatabase.FileStorage
+  id: FileStorage
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: FileStorage
+  nameWithType: LiteDatabase.FileStorage
+  fullName: LiteDB.LiteDatabase.FileStorage
+  type: Property
+  source:
+    id: FileStorage
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 173
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns a special collection for storage files/stream inside datafile. Use _files and _chunks collection names. FileId is implemented as string. Use "GetStorage" for custom options
+  example: []
+  syntax:
+    content: public ILiteStorage<string> FileStorage { get; }
+    parameters: []
+    return:
+      type: LiteDB.ILiteStorage{System.String}
+    content.vb: Public ReadOnly Property FileStorage As ILiteStorage(Of String)
+  overload: LiteDB.LiteDatabase.FileStorage*
+  implements:
+  - LiteDB.ILiteDatabase.FileStorage
+- uid: LiteDB.LiteDatabase.GetStorage``1(System.String,System.String)
+  commentId: M:LiteDB.LiteDatabase.GetStorage``1(System.String,System.String)
+  id: GetStorage``1(System.String,System.String)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetStorage<TFileId>(string, string)
+  nameWithType: LiteDatabase.GetStorage<TFileId>(string, string)
+  fullName: LiteDB.LiteDatabase.GetStorage<TFileId>(string, string)
+  type: Method
+  source:
+    id: GetStorage
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 181
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get new instance of Storage using custom FileId type, custom "_files" collection name and custom "_chunks" collection. LiteDB support multiples file storages (using different files/chunks collection names)
+  example: []
+  syntax:
+    content: public ILiteStorage<TFileId> GetStorage<TFileId>(string filesCollection = "_files", string chunksCollection = "_chunks")
+    parameters:
+    - id: filesCollection
+      type: System.String
+    - id: chunksCollection
+      type: System.String
+    typeParameters:
+    - id: TFileId
+    return:
+      type: LiteDB.ILiteStorage{{TFileId}}
+    content.vb: Public Function GetStorage(Of TFileId)(filesCollection As String = "_files", chunksCollection As String = "_chunks") As ILiteStorage(Of TFileId)
+  overload: LiteDB.LiteDatabase.GetStorage*
+  implements:
+  - LiteDB.ILiteDatabase.GetStorage``1(System.String,System.String)
+  nameWithType.vb: LiteDatabase.GetStorage(Of TFileId)(String, String)
+  fullName.vb: LiteDB.LiteDatabase.GetStorage(Of TFileId)(String, String)
+  name.vb: GetStorage(Of TFileId)(String, String)
+- uid: LiteDB.LiteDatabase.GetCollectionNames
+  commentId: M:LiteDB.LiteDatabase.GetCollectionNames
+  id: GetCollectionNames
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetCollectionNames()
+  nameWithType: LiteDatabase.GetCollectionNames()
+  fullName: LiteDB.LiteDatabase.GetCollectionNames()
+  type: Method
+  source:
+    id: GetCollectionNames
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 193
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get all collections name inside this database.
+  example: []
+  syntax:
+    content: public IEnumerable<string> GetCollectionNames()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public Function GetCollectionNames() As IEnumerable(Of String)
+  overload: LiteDB.LiteDatabase.GetCollectionNames*
+  implements:
+  - LiteDB.ILiteDatabase.GetCollectionNames
+- uid: LiteDB.LiteDatabase.CollectionExists(System.String)
+  commentId: M:LiteDB.LiteDatabase.CollectionExists(System.String)
+  id: CollectionExists(System.String)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: CollectionExists(string)
+  nameWithType: LiteDatabase.CollectionExists(string)
+  fullName: LiteDB.LiteDatabase.CollectionExists(string)
+  type: Method
+  source:
+    id: CollectionExists
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 209
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Checks if a collection exists on database. Collection name is case insensitive
+  example: []
+  syntax:
+    content: public bool CollectionExists(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function CollectionExists(name As String) As Boolean
+  overload: LiteDB.LiteDatabase.CollectionExists*
+  implements:
+  - LiteDB.ILiteDatabase.CollectionExists(System.String)
+  nameWithType.vb: LiteDatabase.CollectionExists(String)
+  fullName.vb: LiteDB.LiteDatabase.CollectionExists(String)
+  name.vb: CollectionExists(String)
+- uid: LiteDB.LiteDatabase.DropCollection(System.String)
+  commentId: M:LiteDB.LiteDatabase.DropCollection(System.String)
+  id: DropCollection(System.String)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: DropCollection(string)
+  nameWithType: LiteDatabase.DropCollection(string)
+  fullName: LiteDB.LiteDatabase.DropCollection(string)
+  type: Method
+  source:
+    id: DropCollection
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 219
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Drop a collection and all data + indexes
+  example: []
+  syntax:
+    content: public bool DropCollection(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function DropCollection(name As String) As Boolean
+  overload: LiteDB.LiteDatabase.DropCollection*
+  implements:
+  - LiteDB.ILiteDatabase.DropCollection(System.String)
+  nameWithType.vb: LiteDatabase.DropCollection(String)
+  fullName.vb: LiteDB.LiteDatabase.DropCollection(String)
+  name.vb: DropCollection(String)
+- uid: LiteDB.LiteDatabase.RenameCollection(System.String,System.String)
+  commentId: M:LiteDB.LiteDatabase.RenameCollection(System.String,System.String)
+  id: RenameCollection(System.String,System.String)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: RenameCollection(string, string)
+  nameWithType: LiteDatabase.RenameCollection(string, string)
+  fullName: LiteDB.LiteDatabase.RenameCollection(string, string)
+  type: Method
+  source:
+    id: RenameCollection
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 229
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Rename a collection. Returns false if oldName does not exists or newName already exists
+  example: []
+  syntax:
+    content: public bool RenameCollection(string oldName, string newName)
+    parameters:
+    - id: oldName
+      type: System.String
+    - id: newName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function RenameCollection(oldName As String, newName As String) As Boolean
+  overload: LiteDB.LiteDatabase.RenameCollection*
+  implements:
+  - LiteDB.ILiteDatabase.RenameCollection(System.String,System.String)
+  nameWithType.vb: LiteDatabase.RenameCollection(String, String)
+  fullName.vb: LiteDB.LiteDatabase.RenameCollection(String, String)
+  name.vb: RenameCollection(String, String)
+- uid: LiteDB.LiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+  commentId: M:LiteDB.LiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+  id: Execute(System.IO.TextReader,LiteDB.BsonDocument)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Execute(TextReader, BsonDocument)
+  nameWithType: LiteDatabase.Execute(TextReader, BsonDocument)
+  fullName: LiteDB.LiteDatabase.Execute(System.IO.TextReader, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: Execute
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 244
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute SQL commands and return as data reader.
+  example: []
+  syntax:
+    content: public IBsonDataReader Execute(TextReader commandReader, BsonDocument parameters = null)
+    parameters:
+    - id: commandReader
+      type: System.IO.TextReader
+    - id: parameters
+      type: LiteDB.BsonDocument
+    return:
+      type: LiteDB.IBsonDataReader
+    content.vb: Public Function Execute(commandReader As TextReader, parameters As BsonDocument = Nothing) As IBsonDataReader
+  overload: LiteDB.LiteDatabase.Execute*
+  implements:
+  - LiteDB.ILiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+- uid: LiteDB.LiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+  commentId: M:LiteDB.LiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+  id: Execute(System.String,LiteDB.BsonDocument)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Execute(string, BsonDocument)
+  nameWithType: LiteDatabase.Execute(string, BsonDocument)
+  fullName: LiteDB.LiteDatabase.Execute(string, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: Execute
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 258
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute SQL commands and return as data reader
+  example: []
+  syntax:
+    content: public IBsonDataReader Execute(string command, BsonDocument parameters = null)
+    parameters:
+    - id: command
+      type: System.String
+    - id: parameters
+      type: LiteDB.BsonDocument
+    return:
+      type: LiteDB.IBsonDataReader
+    content.vb: Public Function Execute(command As String, parameters As BsonDocument = Nothing) As IBsonDataReader
+  overload: LiteDB.LiteDatabase.Execute*
+  implements:
+  - LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+  nameWithType.vb: LiteDatabase.Execute(String, BsonDocument)
+  fullName.vb: LiteDB.LiteDatabase.Execute(String, LiteDB.BsonDocument)
+  name.vb: Execute(String, BsonDocument)
+- uid: LiteDB.LiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+  commentId: M:LiteDB.LiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+  id: Execute(System.String,LiteDB.BsonValue[])
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Execute(string, params BsonValue[])
+  nameWithType: LiteDatabase.Execute(string, params BsonValue[])
+  fullName: LiteDB.LiteDatabase.Execute(string, params LiteDB.BsonValue[])
+  type: Method
+  source:
+    id: Execute
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 272
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Execute SQL commands and return as data reader
+  example: []
+  syntax:
+    content: public IBsonDataReader Execute(string command, params BsonValue[] args)
+    parameters:
+    - id: command
+      type: System.String
+    - id: args
+      type: LiteDB.BsonValue[]
+    return:
+      type: LiteDB.IBsonDataReader
+    content.vb: Public Function Execute(command As String, ParamArray args As BsonValue()) As IBsonDataReader
+  overload: LiteDB.LiteDatabase.Execute*
+  implements:
+  - LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+  nameWithType.vb: LiteDatabase.Execute(String, ParamArray BsonValue())
+  fullName.vb: LiteDB.LiteDatabase.Execute(String, ParamArray LiteDB.BsonValue())
+  name.vb: Execute(String, ParamArray BsonValue())
+- uid: LiteDB.LiteDatabase.Checkpoint
+  commentId: M:LiteDB.LiteDatabase.Checkpoint
+  id: Checkpoint
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Checkpoint()
+  nameWithType: LiteDatabase.Checkpoint()
+  fullName: LiteDB.LiteDatabase.Checkpoint()
+  type: Method
+  source:
+    id: Checkpoint
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 293
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Do database checkpoint. Copy all commited transaction from log file into datafile.
+  example: []
+  syntax:
+    content: public void Checkpoint()
+    content.vb: Public Sub Checkpoint()
+  overload: LiteDB.LiteDatabase.Checkpoint*
+  implements:
+  - LiteDB.ILiteDatabase.Checkpoint
+- uid: LiteDB.LiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  commentId: M:LiteDB.LiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  id: Rebuild(LiteDB.Engine.RebuildOptions)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Rebuild(RebuildOptions)
+  nameWithType: LiteDatabase.Rebuild(RebuildOptions)
+  fullName: LiteDB.LiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  type: Method
+  source:
+    id: Rebuild
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 301
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Rebuild all database to remove unused pages - reduce data file
+  example: []
+  syntax:
+    content: public long Rebuild(RebuildOptions options = null)
+    parameters:
+    - id: options
+      type: LiteDB.Engine.RebuildOptions
+    return:
+      type: System.Int64
+    content.vb: Public Function Rebuild(options As RebuildOptions = Nothing) As Long
+  overload: LiteDB.LiteDatabase.Rebuild*
+  implements:
+  - LiteDB.ILiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+- uid: LiteDB.LiteDatabase.Pragma(System.String)
+  commentId: M:LiteDB.LiteDatabase.Pragma(System.String)
+  id: Pragma(System.String)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Pragma(string)
+  nameWithType: LiteDatabase.Pragma(string)
+  fullName: LiteDB.LiteDatabase.Pragma(string)
+  type: Method
+  source:
+    id: Pragma
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 313
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get value from internal engine variables
+  example: []
+  syntax:
+    content: public BsonValue Pragma(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Function Pragma(name As String) As BsonValue
+  overload: LiteDB.LiteDatabase.Pragma*
+  implements:
+  - LiteDB.ILiteDatabase.Pragma(System.String)
+  nameWithType.vb: LiteDatabase.Pragma(String)
+  fullName.vb: LiteDB.LiteDatabase.Pragma(String)
+  name.vb: Pragma(String)
+- uid: LiteDB.LiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.LiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+  id: Pragma(System.String,LiteDB.BsonValue)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Pragma(string, BsonValue)
+  nameWithType: LiteDatabase.Pragma(string, BsonValue)
+  fullName: LiteDB.LiteDatabase.Pragma(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Pragma
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 321
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Set new value to internal engine variables
+  example: []
+  syntax:
+    content: public BsonValue Pragma(string name, BsonValue value)
+    parameters:
+    - id: name
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Function Pragma(name As String, value As BsonValue) As BsonValue
+  overload: LiteDB.LiteDatabase.Pragma*
+  implements:
+  - LiteDB.ILiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+  nameWithType.vb: LiteDatabase.Pragma(String, BsonValue)
+  fullName.vb: LiteDB.LiteDatabase.Pragma(String, LiteDB.BsonValue)
+  name.vb: Pragma(String, BsonValue)
+- uid: LiteDB.LiteDatabase.UserVersion
+  commentId: P:LiteDB.LiteDatabase.UserVersion
+  id: UserVersion
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: UserVersion
+  nameWithType: LiteDatabase.UserVersion
+  fullName: LiteDB.LiteDatabase.UserVersion
+  type: Property
+  source:
+    id: UserVersion
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 329
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set database user version - use this version number to control database change model
+  example: []
+  syntax:
+    content: public int UserVersion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property UserVersion As Integer
+  overload: LiteDB.LiteDatabase.UserVersion*
+  implements:
+  - LiteDB.ILiteDatabase.UserVersion
+- uid: LiteDB.LiteDatabase.Timeout
+  commentId: P:LiteDB.LiteDatabase.Timeout
+  id: Timeout
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: LiteDatabase.Timeout
+  fullName: LiteDB.LiteDatabase.Timeout
+  type: Property
+  source:
+    id: Timeout
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 338
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set database timeout - this timeout is used to wait for unlock using transactions
+  example: []
+  syntax:
+    content: public TimeSpan Timeout { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property Timeout As TimeSpan
+  overload: LiteDB.LiteDatabase.Timeout*
+  implements:
+  - LiteDB.ILiteDatabase.Timeout
+- uid: LiteDB.LiteDatabase.UtcDate
+  commentId: P:LiteDB.LiteDatabase.UtcDate
+  id: UtcDate
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: UtcDate
+  nameWithType: LiteDatabase.UtcDate
+  fullName: LiteDB.LiteDatabase.UtcDate
+  type: Property
+  source:
+    id: UtcDate
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 347
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: 'Get/Set if database will deserialize dates in UTC timezone or Local timezone (default: Local)'
+  example: []
+  syntax:
+    content: public bool UtcDate { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UtcDate As Boolean
+  overload: LiteDB.LiteDatabase.UtcDate*
+  implements:
+  - LiteDB.ILiteDatabase.UtcDate
+- uid: LiteDB.LiteDatabase.LimitSize
+  commentId: P:LiteDB.LiteDatabase.LimitSize
+  id: LimitSize
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: LimitSize
+  nameWithType: LiteDatabase.LimitSize
+  fullName: LiteDB.LiteDatabase.LimitSize
+  type: Property
+  source:
+    id: LimitSize
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 356
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set database limit size (in bytes). New value must be equals or larger than current database size
+  example: []
+  syntax:
+    content: public long LimitSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property LimitSize As Long
+  overload: LiteDB.LiteDatabase.LimitSize*
+  implements:
+  - LiteDB.ILiteDatabase.LimitSize
+- uid: LiteDB.LiteDatabase.CheckpointSize
+  commentId: P:LiteDB.LiteDatabase.CheckpointSize
+  id: CheckpointSize
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: CheckpointSize
+  nameWithType: LiteDatabase.CheckpointSize
+  fullName: LiteDB.LiteDatabase.CheckpointSize
+  type: Property
+  source:
+    id: CheckpointSize
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 366
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Get/Set in how many pages (8 Kb each page) log file will auto checkpoint (copy from log file to data file). Use 0 to manual-only checkpoint (and no checkpoint on dispose)
+
+    Default: 1000 pages
+  example: []
+  syntax:
+    content: public int CheckpointSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CheckpointSize As Integer
+  overload: LiteDB.LiteDatabase.CheckpointSize*
+  implements:
+  - LiteDB.ILiteDatabase.CheckpointSize
+- uid: LiteDB.LiteDatabase.Collation
+  commentId: P:LiteDB.LiteDatabase.Collation
+  id: Collation
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Collation
+  nameWithType: LiteDatabase.Collation
+  fullName: LiteDB.LiteDatabase.Collation
+  type: Property
+  source:
+    id: Collation
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 375
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get database collection (this options can be changed only in rebuild proces)
+  example: []
+  syntax:
+    content: public Collation Collation { get; }
+    parameters: []
+    return:
+      type: LiteDB.Collation
+    content.vb: Public ReadOnly Property Collation As Collation
+  overload: LiteDB.LiteDatabase.Collation*
+  implements:
+  - LiteDB.ILiteDatabase.Collation
+- uid: LiteDB.LiteDatabase.Dispose
+  commentId: M:LiteDB.LiteDatabase.Dispose
+  id: Dispose
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: LiteDatabase.Dispose()
+  fullName: LiteDB.LiteDatabase.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 382
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: LiteDB.LiteDatabase.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: LiteDB.LiteDatabase.Finalize
+  commentId: M:LiteDB.LiteDatabase.Finalize
+  id: Finalize
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: ~LiteDatabase()
+  nameWithType: LiteDatabase.~LiteDatabase()
+  fullName: LiteDB.LiteDatabase.~LiteDatabase()
+  type: Method
+  source:
+    id: Finalize
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 388
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: protected ~LiteDatabase()
+    content.vb: 'Protected '
+  overload: LiteDB.LiteDatabase.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: LiteDB.LiteDatabase.Dispose(System.Boolean)
+  commentId: M:LiteDB.LiteDatabase.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: LiteDB.LiteDatabase
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: LiteDatabase.Dispose(bool)
+  fullName: LiteDB.LiteDatabase.Dispose(bool)
+  type: Method
+  source:
+    id: Dispose
+    path: /workspace/LiteDB/LiteDB/Client/Database/LiteDatabase.cs
+    startLine: 393
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: LiteDB.LiteDatabase.Dispose*
+  nameWithType.vb: LiteDatabase.Dispose(Boolean)
+  fullName.vb: LiteDB.LiteDatabase.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LiteDB.ILiteDatabase
+  commentId: T:LiteDB.ILiteDatabase
+  parent: LiteDB
+  href: LiteDB.ILiteDatabase.html
+  name: ILiteDatabase
+  nameWithType: ILiteDatabase
+  fullName: LiteDB.ILiteDatabase
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.LiteDatabase.Mapper*
+  commentId: Overload:LiteDB.LiteDatabase.Mapper
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Mapper
+  name: Mapper
+  nameWithType: LiteDatabase.Mapper
+  fullName: LiteDB.LiteDatabase.Mapper
+- uid: LiteDB.ILiteDatabase.Mapper
+  commentId: P:LiteDB.ILiteDatabase.Mapper
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Mapper
+  name: Mapper
+  nameWithType: ILiteDatabase.Mapper
+  fullName: LiteDB.ILiteDatabase.Mapper
+- uid: LiteDB.BsonMapper
+  commentId: T:LiteDB.BsonMapper
+  parent: LiteDB
+  href: LiteDB.BsonMapper.html
+  name: BsonMapper
+  nameWithType: BsonMapper
+  fullName: LiteDB.BsonMapper
+- uid: LiteDB.LiteDatabase.#ctor*
+  commentId: Overload:LiteDB.LiteDatabase.#ctor
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase__ctor_System_String_LiteDB_BsonMapper_
+  name: LiteDatabase
+  nameWithType: LiteDatabase.LiteDatabase
+  fullName: LiteDB.LiteDatabase.LiteDatabase
+  nameWithType.vb: LiteDatabase.New
+  fullName.vb: LiteDB.LiteDatabase.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.ConnectionString
+  commentId: T:LiteDB.ConnectionString
+  parent: LiteDB
+  href: LiteDB.ConnectionString.html
+  name: ConnectionString
+  nameWithType: ConnectionString
+  fullName: LiteDB.ConnectionString
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: LiteDB.Engine.ILiteEngine
+  commentId: T:LiteDB.Engine.ILiteEngine
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.ILiteEngine.html
+  name: ILiteEngine
+  nameWithType: ILiteEngine
+  fullName: LiteDB.Engine.ILiteEngine
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+- uid: LiteDB.LiteDatabase.GetCollection*
+  commentId: Overload:LiteDB.LiteDatabase.GetCollection
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_GetCollection__1_System_String_LiteDB_BsonAutoId_
+  name: GetCollection
+  nameWithType: LiteDatabase.GetCollection
+  fullName: LiteDB.LiteDatabase.GetCollection
+- uid: LiteDB.ILiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.ILiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1_System_String_LiteDB_BsonAutoId_
+  name: GetCollection<T>(string, BsonAutoId)
+  nameWithType: ILiteDatabase.GetCollection<T>(string, BsonAutoId)
+  fullName: LiteDB.ILiteDatabase.GetCollection<T>(string, LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteDatabase.GetCollection(Of T)(String, BsonAutoId)
+  fullName.vb: LiteDB.ILiteDatabase.GetCollection(Of T)(String, LiteDB.BsonAutoId)
+  name.vb: GetCollection(Of T)(String, BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1_System_String_LiteDB_BsonAutoId_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.GetCollection``1(System.String,LiteDB.BsonAutoId)
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  parent: LiteDB
+  href: LiteDB.BsonAutoId.html
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId
+- uid: LiteDB.ILiteCollection{{T}}
+  commentId: T:LiteDB.ILiteCollection{`0}
+  parent: LiteDB
+  definition: LiteDB.ILiteCollection`1
+  href: LiteDB.ILiteCollection-1.html
+  name: ILiteCollection<T>
+  nameWithType: ILiteCollection<T>
+  fullName: LiteDB.ILiteCollection<T>
+  nameWithType.vb: ILiteCollection(Of T)
+  fullName.vb: LiteDB.ILiteCollection(Of T)
+  name.vb: ILiteCollection(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteCollection`1
+  commentId: T:LiteDB.ILiteCollection`1
+  parent: LiteDB
+  href: LiteDB.ILiteCollection-1.html
+  name: ILiteCollection<T>
+  nameWithType: ILiteCollection<T>
+  fullName: LiteDB.ILiteCollection<T>
+  nameWithType.vb: ILiteCollection(Of T)
+  fullName.vb: LiteDB.ILiteCollection(Of T)
+  name.vb: ILiteCollection(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteDatabase.GetCollection``1
+  commentId: M:LiteDB.ILiteDatabase.GetCollection``1
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1
+  name: GetCollection<T>()
+  nameWithType: ILiteDatabase.GetCollection<T>()
+  fullName: LiteDB.ILiteDatabase.GetCollection<T>()
+  nameWithType.vb: ILiteDatabase.GetCollection(Of T)()
+  fullName.vb: LiteDB.ILiteDatabase.GetCollection(Of T)()
+  name.vb: GetCollection(Of T)()
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.GetCollection``1
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.GetCollection``1
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+  commentId: M:LiteDB.ILiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1_LiteDB_BsonAutoId_
+  name: GetCollection<T>(BsonAutoId)
+  nameWithType: ILiteDatabase.GetCollection<T>(BsonAutoId)
+  fullName: LiteDB.ILiteDatabase.GetCollection<T>(LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteDatabase.GetCollection(Of T)(BsonAutoId)
+  fullName.vb: LiteDB.ILiteDatabase.GetCollection(Of T)(LiteDB.BsonAutoId)
+  name.vb: GetCollection(Of T)(BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1_LiteDB_BsonAutoId_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.GetCollection``1(LiteDB.BsonAutoId)
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection__1_LiteDB_BsonAutoId_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: LiteDB.ILiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.ILiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection_System_String_LiteDB_BsonAutoId_
+  name: GetCollection(string, BsonAutoId)
+  nameWithType: ILiteDatabase.GetCollection(string, BsonAutoId)
+  fullName: LiteDB.ILiteDatabase.GetCollection(string, LiteDB.BsonAutoId)
+  nameWithType.vb: ILiteDatabase.GetCollection(String, BsonAutoId)
+  fullName.vb: LiteDB.ILiteDatabase.GetCollection(String, LiteDB.BsonAutoId)
+  name.vb: GetCollection(String, BsonAutoId)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.GetCollection(System.String,LiteDB.BsonAutoId)
+    name: GetCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollection_System_String_LiteDB_BsonAutoId_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    href: LiteDB.BsonAutoId.html
+  - name: )
+- uid: LiteDB.ILiteCollection{LiteDB.BsonDocument}
+  commentId: T:LiteDB.ILiteCollection{LiteDB.BsonDocument}
+  parent: LiteDB
+  definition: LiteDB.ILiteCollection`1
+  href: LiteDB.ILiteCollection-1.html
+  name: ILiteCollection<BsonDocument>
+  nameWithType: ILiteCollection<BsonDocument>
+  fullName: LiteDB.ILiteCollection<LiteDB.BsonDocument>
+  nameWithType.vb: ILiteCollection(Of BsonDocument)
+  fullName.vb: LiteDB.ILiteCollection(Of LiteDB.BsonDocument)
+  name.vb: ILiteCollection(Of BsonDocument)
+  spec.csharp:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+- uid: LiteDB.LiteDatabase.BeginTrans*
+  commentId: Overload:LiteDB.LiteDatabase.BeginTrans
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_BeginTrans
+  name: BeginTrans
+  nameWithType: LiteDatabase.BeginTrans
+  fullName: LiteDB.LiteDatabase.BeginTrans
+- uid: LiteDB.ILiteDatabase.BeginTrans
+  commentId: M:LiteDB.ILiteDatabase.BeginTrans
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_BeginTrans
+  name: BeginTrans()
+  nameWithType: ILiteDatabase.BeginTrans()
+  fullName: LiteDB.ILiteDatabase.BeginTrans()
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.BeginTrans
+    name: BeginTrans
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_BeginTrans
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.BeginTrans
+    name: BeginTrans
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_BeginTrans
+  - name: (
+  - name: )
+- uid: LiteDB.LiteDatabase.Commit*
+  commentId: Overload:LiteDB.LiteDatabase.Commit
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Commit
+  name: Commit
+  nameWithType: LiteDatabase.Commit
+  fullName: LiteDB.LiteDatabase.Commit
+- uid: LiteDB.ILiteDatabase.Commit
+  commentId: M:LiteDB.ILiteDatabase.Commit
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Commit
+  name: Commit()
+  nameWithType: ILiteDatabase.Commit()
+  fullName: LiteDB.ILiteDatabase.Commit()
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Commit
+    name: Commit
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Commit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Commit
+    name: Commit
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Commit
+  - name: (
+  - name: )
+- uid: LiteDB.LiteDatabase.Rollback*
+  commentId: Overload:LiteDB.LiteDatabase.Rollback
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Rollback
+  name: Rollback
+  nameWithType: LiteDatabase.Rollback
+  fullName: LiteDB.LiteDatabase.Rollback
+- uid: LiteDB.ILiteDatabase.Rollback
+  commentId: M:LiteDB.ILiteDatabase.Rollback
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Rollback
+  name: Rollback()
+  nameWithType: ILiteDatabase.Rollback()
+  fullName: LiteDB.ILiteDatabase.Rollback()
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Rollback
+    name: Rollback
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Rollback
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Rollback
+    name: Rollback
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Rollback
+  - name: (
+  - name: )
+- uid: LiteDB.LiteDatabase.FileStorage*
+  commentId: Overload:LiteDB.LiteDatabase.FileStorage
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_FileStorage
+  name: FileStorage
+  nameWithType: LiteDatabase.FileStorage
+  fullName: LiteDB.LiteDatabase.FileStorage
+- uid: LiteDB.ILiteDatabase.FileStorage
+  commentId: P:LiteDB.ILiteDatabase.FileStorage
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_FileStorage
+  name: FileStorage
+  nameWithType: ILiteDatabase.FileStorage
+  fullName: LiteDB.ILiteDatabase.FileStorage
+- uid: LiteDB.ILiteStorage{System.String}
+  commentId: T:LiteDB.ILiteStorage{System.String}
+  parent: LiteDB
+  definition: LiteDB.ILiteStorage`1
+  href: LiteDB.ILiteStorage-1.html
+  name: ILiteStorage<string>
+  nameWithType: ILiteStorage<string>
+  fullName: LiteDB.ILiteStorage<string>
+  nameWithType.vb: ILiteStorage(Of String)
+  fullName.vb: LiteDB.ILiteStorage(Of String)
+  name.vb: ILiteStorage(Of String)
+  spec.csharp:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.ILiteStorage`1
+  commentId: T:LiteDB.ILiteStorage`1
+  href: LiteDB.ILiteStorage-1.html
+  name: ILiteStorage<TFileId>
+  nameWithType: ILiteStorage<TFileId>
+  fullName: LiteDB.ILiteStorage<TFileId>
+  nameWithType.vb: ILiteStorage(Of TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId)
+  name.vb: ILiteStorage(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.LiteDatabase.GetStorage*
+  commentId: Overload:LiteDB.LiteDatabase.GetStorage
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_GetStorage__1_System_String_System_String_
+  name: GetStorage
+  nameWithType: LiteDatabase.GetStorage
+  fullName: LiteDB.LiteDatabase.GetStorage
+- uid: LiteDB.ILiteDatabase.GetStorage``1(System.String,System.String)
+  commentId: M:LiteDB.ILiteDatabase.GetStorage``1(System.String,System.String)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetStorage__1_System_String_System_String_
+  name: GetStorage<TFileId>(string, string)
+  nameWithType: ILiteDatabase.GetStorage<TFileId>(string, string)
+  fullName: LiteDB.ILiteDatabase.GetStorage<TFileId>(string, string)
+  nameWithType.vb: ILiteDatabase.GetStorage(Of TFileId)(String, String)
+  fullName.vb: LiteDB.ILiteDatabase.GetStorage(Of TFileId)(String, String)
+  name.vb: GetStorage(Of TFileId)(String, String)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.GetStorage``1(System.String,System.String)
+    name: GetStorage
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetStorage__1_System_String_System_String_
+  - name: <
+  - name: TFileId
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.GetStorage``1(System.String,System.String)
+    name: GetStorage
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetStorage__1_System_String_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.ILiteStorage{{TFileId}}
+  commentId: T:LiteDB.ILiteStorage{``0}
+  parent: LiteDB
+  definition: LiteDB.ILiteStorage`1
+  href: LiteDB.ILiteStorage-1.html
+  name: ILiteStorage<TFileId>
+  nameWithType: ILiteStorage<TFileId>
+  fullName: LiteDB.ILiteStorage<TFileId>
+  nameWithType.vb: ILiteStorage(Of TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId)
+  name.vb: ILiteStorage(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.LiteDatabase.GetCollectionNames*
+  commentId: Overload:LiteDB.LiteDatabase.GetCollectionNames
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_GetCollectionNames
+  name: GetCollectionNames
+  nameWithType: LiteDatabase.GetCollectionNames
+  fullName: LiteDB.LiteDatabase.GetCollectionNames
+- uid: LiteDB.ILiteDatabase.GetCollectionNames
+  commentId: M:LiteDB.ILiteDatabase.GetCollectionNames
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollectionNames
+  name: GetCollectionNames()
+  nameWithType: ILiteDatabase.GetCollectionNames()
+  fullName: LiteDB.ILiteDatabase.GetCollectionNames()
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.GetCollectionNames
+    name: GetCollectionNames
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollectionNames
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.GetCollectionNames
+    name: GetCollectionNames
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_GetCollectionNames
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LiteDB.LiteDatabase.CollectionExists*
+  commentId: Overload:LiteDB.LiteDatabase.CollectionExists
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_CollectionExists_System_String_
+  name: CollectionExists
+  nameWithType: LiteDatabase.CollectionExists
+  fullName: LiteDB.LiteDatabase.CollectionExists
+- uid: LiteDB.ILiteDatabase.CollectionExists(System.String)
+  commentId: M:LiteDB.ILiteDatabase.CollectionExists(System.String)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_CollectionExists_System_String_
+  name: CollectionExists(string)
+  nameWithType: ILiteDatabase.CollectionExists(string)
+  fullName: LiteDB.ILiteDatabase.CollectionExists(string)
+  nameWithType.vb: ILiteDatabase.CollectionExists(String)
+  fullName.vb: LiteDB.ILiteDatabase.CollectionExists(String)
+  name.vb: CollectionExists(String)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.CollectionExists(System.String)
+    name: CollectionExists
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_CollectionExists_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.CollectionExists(System.String)
+    name: CollectionExists
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_CollectionExists_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.LiteDatabase.DropCollection*
+  commentId: Overload:LiteDB.LiteDatabase.DropCollection
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_DropCollection_System_String_
+  name: DropCollection
+  nameWithType: LiteDatabase.DropCollection
+  fullName: LiteDB.LiteDatabase.DropCollection
+- uid: LiteDB.ILiteDatabase.DropCollection(System.String)
+  commentId: M:LiteDB.ILiteDatabase.DropCollection(System.String)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_DropCollection_System_String_
+  name: DropCollection(string)
+  nameWithType: ILiteDatabase.DropCollection(string)
+  fullName: LiteDB.ILiteDatabase.DropCollection(string)
+  nameWithType.vb: ILiteDatabase.DropCollection(String)
+  fullName.vb: LiteDB.ILiteDatabase.DropCollection(String)
+  name.vb: DropCollection(String)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.DropCollection(System.String)
+    name: DropCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_DropCollection_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.DropCollection(System.String)
+    name: DropCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_DropCollection_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.LiteDatabase.RenameCollection*
+  commentId: Overload:LiteDB.LiteDatabase.RenameCollection
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_RenameCollection_System_String_System_String_
+  name: RenameCollection
+  nameWithType: LiteDatabase.RenameCollection
+  fullName: LiteDB.LiteDatabase.RenameCollection
+- uid: LiteDB.ILiteDatabase.RenameCollection(System.String,System.String)
+  commentId: M:LiteDB.ILiteDatabase.RenameCollection(System.String,System.String)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_RenameCollection_System_String_System_String_
+  name: RenameCollection(string, string)
+  nameWithType: ILiteDatabase.RenameCollection(string, string)
+  fullName: LiteDB.ILiteDatabase.RenameCollection(string, string)
+  nameWithType.vb: ILiteDatabase.RenameCollection(String, String)
+  fullName.vb: LiteDB.ILiteDatabase.RenameCollection(String, String)
+  name.vb: RenameCollection(String, String)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.RenameCollection(System.String,System.String)
+    name: RenameCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_RenameCollection_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.RenameCollection(System.String,System.String)
+    name: RenameCollection
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_RenameCollection_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.LiteDatabase.Execute*
+  commentId: Overload:LiteDB.LiteDatabase.Execute
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Execute_System_IO_TextReader_LiteDB_BsonDocument_
+  name: Execute
+  nameWithType: LiteDatabase.Execute
+  fullName: LiteDB.LiteDatabase.Execute
+- uid: LiteDB.ILiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_IO_TextReader_LiteDB_BsonDocument_
+  name: Execute(TextReader, BsonDocument)
+  nameWithType: ILiteDatabase.Execute(TextReader, BsonDocument)
+  fullName: LiteDB.ILiteDatabase.Execute(System.IO.TextReader, LiteDB.BsonDocument)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+    name: Execute
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_IO_TextReader_LiteDB_BsonDocument_
+  - name: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.textreader
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Execute(System.IO.TextReader,LiteDB.BsonDocument)
+    name: Execute
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_IO_TextReader_LiteDB_BsonDocument_
+  - name: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.textreader
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.textreader
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: LiteDB.IBsonDataReader
+  commentId: T:LiteDB.IBsonDataReader
+  parent: LiteDB
+  href: LiteDB.IBsonDataReader.html
+  name: IBsonDataReader
+  nameWithType: IBsonDataReader
+  fullName: LiteDB.IBsonDataReader
+- uid: LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+  commentId: M:LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_String_LiteDB_BsonDocument_
+  name: Execute(string, BsonDocument)
+  nameWithType: ILiteDatabase.Execute(string, BsonDocument)
+  fullName: LiteDB.ILiteDatabase.Execute(string, LiteDB.BsonDocument)
+  nameWithType.vb: ILiteDatabase.Execute(String, BsonDocument)
+  fullName.vb: LiteDB.ILiteDatabase.Execute(String, LiteDB.BsonDocument)
+  name.vb: Execute(String, BsonDocument)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+    name: Execute
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_String_LiteDB_BsonDocument_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonDocument)
+    name: Execute
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_String_LiteDB_BsonDocument_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+- uid: LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+  commentId: M:LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_String_LiteDB_BsonValue___
+  name: Execute(string, params BsonValue[])
+  nameWithType: ILiteDatabase.Execute(string, params BsonValue[])
+  fullName: LiteDB.ILiteDatabase.Execute(string, params LiteDB.BsonValue[])
+  nameWithType.vb: ILiteDatabase.Execute(String, ParamArray BsonValue())
+  fullName.vb: LiteDB.ILiteDatabase.Execute(String, ParamArray LiteDB.BsonValue())
+  name.vb: Execute(String, ParamArray BsonValue())
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+    name: Execute
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_String_LiteDB_BsonValue___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Execute(System.String,LiteDB.BsonValue[])
+    name: Execute
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Execute_System_String_LiteDB_BsonValue___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+  - name: )
+- uid: LiteDB.BsonValue[]
+  isExternal: true
+  href: LiteDB.BsonValue.html
+  name: BsonValue[]
+  nameWithType: BsonValue[]
+  fullName: LiteDB.BsonValue[]
+  nameWithType.vb: BsonValue()
+  fullName.vb: LiteDB.BsonValue()
+  name.vb: BsonValue()
+  spec.csharp:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+- uid: LiteDB.LiteDatabase.Checkpoint*
+  commentId: Overload:LiteDB.LiteDatabase.Checkpoint
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Checkpoint
+  name: Checkpoint
+  nameWithType: LiteDatabase.Checkpoint
+  fullName: LiteDB.LiteDatabase.Checkpoint
+- uid: LiteDB.ILiteDatabase.Checkpoint
+  commentId: M:LiteDB.ILiteDatabase.Checkpoint
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Checkpoint
+  name: Checkpoint()
+  nameWithType: ILiteDatabase.Checkpoint()
+  fullName: LiteDB.ILiteDatabase.Checkpoint()
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Checkpoint
+    name: Checkpoint
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Checkpoint
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Checkpoint
+    name: Checkpoint
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Checkpoint
+  - name: (
+  - name: )
+- uid: LiteDB.LiteDatabase.Rebuild*
+  commentId: Overload:LiteDB.LiteDatabase.Rebuild
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Rebuild_LiteDB_Engine_RebuildOptions_
+  name: Rebuild
+  nameWithType: LiteDatabase.Rebuild
+  fullName: LiteDB.LiteDatabase.Rebuild
+- uid: LiteDB.ILiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  commentId: M:LiteDB.ILiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Rebuild_LiteDB_Engine_RebuildOptions_
+  name: Rebuild(RebuildOptions)
+  nameWithType: ILiteDatabase.Rebuild(RebuildOptions)
+  fullName: LiteDB.ILiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+    name: Rebuild
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Rebuild_LiteDB_Engine_RebuildOptions_
+  - name: (
+  - uid: LiteDB.Engine.RebuildOptions
+    name: RebuildOptions
+    href: LiteDB.Engine.RebuildOptions.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Rebuild(LiteDB.Engine.RebuildOptions)
+    name: Rebuild
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Rebuild_LiteDB_Engine_RebuildOptions_
+  - name: (
+  - uid: LiteDB.Engine.RebuildOptions
+    name: RebuildOptions
+    href: LiteDB.Engine.RebuildOptions.html
+  - name: )
+- uid: LiteDB.Engine.RebuildOptions
+  commentId: T:LiteDB.Engine.RebuildOptions
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.RebuildOptions.html
+  name: RebuildOptions
+  nameWithType: RebuildOptions
+  fullName: LiteDB.Engine.RebuildOptions
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: LiteDB.LiteDatabase.Pragma*
+  commentId: Overload:LiteDB.LiteDatabase.Pragma
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Pragma_System_String_
+  name: Pragma
+  nameWithType: LiteDatabase.Pragma
+  fullName: LiteDB.LiteDatabase.Pragma
+- uid: LiteDB.ILiteDatabase.Pragma(System.String)
+  commentId: M:LiteDB.ILiteDatabase.Pragma(System.String)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Pragma_System_String_
+  name: Pragma(string)
+  nameWithType: ILiteDatabase.Pragma(string)
+  fullName: LiteDB.ILiteDatabase.Pragma(string)
+  nameWithType.vb: ILiteDatabase.Pragma(String)
+  fullName.vb: LiteDB.ILiteDatabase.Pragma(String)
+  name.vb: Pragma(String)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Pragma(System.String)
+    name: Pragma
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Pragma_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Pragma(System.String)
+    name: Pragma
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Pragma_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.ILiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.ILiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+  parent: LiteDB.ILiteDatabase
+  isExternal: true
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Pragma_System_String_LiteDB_BsonValue_
+  name: Pragma(string, BsonValue)
+  nameWithType: ILiteDatabase.Pragma(string, BsonValue)
+  fullName: LiteDB.ILiteDatabase.Pragma(string, LiteDB.BsonValue)
+  nameWithType.vb: ILiteDatabase.Pragma(String, BsonValue)
+  fullName.vb: LiteDB.ILiteDatabase.Pragma(String, LiteDB.BsonValue)
+  name.vb: Pragma(String, BsonValue)
+  spec.csharp:
+  - uid: LiteDB.ILiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+    name: Pragma
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Pragma_System_String_LiteDB_BsonValue_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.ILiteDatabase.Pragma(System.String,LiteDB.BsonValue)
+    name: Pragma
+    href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Pragma_System_String_LiteDB_BsonValue_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: LiteDB.LiteDatabase.UserVersion*
+  commentId: Overload:LiteDB.LiteDatabase.UserVersion
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_UserVersion
+  name: UserVersion
+  nameWithType: LiteDatabase.UserVersion
+  fullName: LiteDB.LiteDatabase.UserVersion
+- uid: LiteDB.ILiteDatabase.UserVersion
+  commentId: P:LiteDB.ILiteDatabase.UserVersion
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_UserVersion
+  name: UserVersion
+  nameWithType: ILiteDatabase.UserVersion
+  fullName: LiteDB.ILiteDatabase.UserVersion
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LiteDB.LiteDatabase.Timeout*
+  commentId: Overload:LiteDB.LiteDatabase.Timeout
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Timeout
+  name: Timeout
+  nameWithType: LiteDatabase.Timeout
+  fullName: LiteDB.LiteDatabase.Timeout
+- uid: LiteDB.ILiteDatabase.Timeout
+  commentId: P:LiteDB.ILiteDatabase.Timeout
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Timeout
+  name: Timeout
+  nameWithType: ILiteDatabase.Timeout
+  fullName: LiteDB.ILiteDatabase.Timeout
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: LiteDB.LiteDatabase.UtcDate*
+  commentId: Overload:LiteDB.LiteDatabase.UtcDate
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_UtcDate
+  name: UtcDate
+  nameWithType: LiteDatabase.UtcDate
+  fullName: LiteDB.LiteDatabase.UtcDate
+- uid: LiteDB.ILiteDatabase.UtcDate
+  commentId: P:LiteDB.ILiteDatabase.UtcDate
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_UtcDate
+  name: UtcDate
+  nameWithType: ILiteDatabase.UtcDate
+  fullName: LiteDB.ILiteDatabase.UtcDate
+- uid: LiteDB.LiteDatabase.LimitSize*
+  commentId: Overload:LiteDB.LiteDatabase.LimitSize
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_LimitSize
+  name: LimitSize
+  nameWithType: LiteDatabase.LimitSize
+  fullName: LiteDB.LiteDatabase.LimitSize
+- uid: LiteDB.ILiteDatabase.LimitSize
+  commentId: P:LiteDB.ILiteDatabase.LimitSize
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_LimitSize
+  name: LimitSize
+  nameWithType: ILiteDatabase.LimitSize
+  fullName: LiteDB.ILiteDatabase.LimitSize
+- uid: LiteDB.LiteDatabase.CheckpointSize*
+  commentId: Overload:LiteDB.LiteDatabase.CheckpointSize
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_CheckpointSize
+  name: CheckpointSize
+  nameWithType: LiteDatabase.CheckpointSize
+  fullName: LiteDB.LiteDatabase.CheckpointSize
+- uid: LiteDB.ILiteDatabase.CheckpointSize
+  commentId: P:LiteDB.ILiteDatabase.CheckpointSize
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_CheckpointSize
+  name: CheckpointSize
+  nameWithType: ILiteDatabase.CheckpointSize
+  fullName: LiteDB.ILiteDatabase.CheckpointSize
+- uid: LiteDB.LiteDatabase.Collation*
+  commentId: Overload:LiteDB.LiteDatabase.Collation
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Collation
+  name: Collation
+  nameWithType: LiteDatabase.Collation
+  fullName: LiteDB.LiteDatabase.Collation
+- uid: LiteDB.ILiteDatabase.Collation
+  commentId: P:LiteDB.ILiteDatabase.Collation
+  parent: LiteDB.ILiteDatabase
+  href: LiteDB.ILiteDatabase.html#LiteDB_ILiteDatabase_Collation
+  name: Collation
+  nameWithType: ILiteDatabase.Collation
+  fullName: LiteDB.ILiteDatabase.Collation
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB.LiteDatabase.Dispose*
+  commentId: Overload:LiteDB.LiteDatabase.Dispose
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Dispose
+  name: Dispose
+  nameWithType: LiteDatabase.Dispose
+  fullName: LiteDB.LiteDatabase.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: LiteDB.LiteDatabase.Finalize*
+  commentId: Overload:LiteDB.LiteDatabase.Finalize
+  href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Finalize
+  name: ~LiteDatabase
+  nameWithType: LiteDatabase.~LiteDatabase
+  fullName: LiteDB.LiteDatabase.~LiteDatabase
+  spec.csharp:
+  - name: "~"
+  - uid: LiteDB.LiteDatabase.Finalize*
+    name: LiteDatabase
+    href: LiteDB.LiteDatabase.html#LiteDB_LiteDatabase_Finalize

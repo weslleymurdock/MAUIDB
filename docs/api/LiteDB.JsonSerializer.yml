@@ -1,0 +1,734 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.JsonSerializer
+  commentId: T:LiteDB.JsonSerializer
+  id: JsonSerializer
+  parent: LiteDB
+  children:
+  - LiteDB.JsonSerializer.Deserialize(System.IO.TextReader)
+  - LiteDB.JsonSerializer.Deserialize(System.String)
+  - LiteDB.JsonSerializer.DeserializeArray(System.IO.TextReader)
+  - LiteDB.JsonSerializer.DeserializeArray(System.String)
+  - LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Boolean)
+  - LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.IO.TextWriter,System.Boolean)
+  - LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Text.StringBuilder,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: JsonSerializer
+  nameWithType: JsonSerializer
+  fullName: LiteDB.JsonSerializer
+  type: Class
+  source:
+    id: JsonSerializer
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 11
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Static class for serialize/deserialize BsonDocuments into json extended format
+  example: []
+  syntax:
+    content: public class JsonSerializer
+    content.vb: Public Class JsonSerializer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Boolean)
+  commentId: M:LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Boolean)
+  id: Serialize(LiteDB.BsonValue,System.Boolean)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(BsonValue, bool)
+  nameWithType: JsonSerializer.Serialize(BsonValue, bool)
+  fullName: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue, bool)
+  type: Method
+  source:
+    id: Serialize
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 18
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Json serialize a BsonValue into a String
+  example: []
+  syntax:
+    content: public static string Serialize(BsonValue value, bool indent = false)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    - id: indent
+      type: System.Boolean
+    return:
+      type: System.String
+    content.vb: Public Shared Function Serialize(value As BsonValue, indent As Boolean = False) As String
+  overload: LiteDB.JsonSerializer.Serialize*
+  nameWithType.vb: JsonSerializer.Serialize(BsonValue, Boolean)
+  fullName.vb: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue, Boolean)
+  name.vb: Serialize(BsonValue, Boolean)
+- uid: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.IO.TextWriter,System.Boolean)
+  commentId: M:LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.IO.TextWriter,System.Boolean)
+  id: Serialize(LiteDB.BsonValue,System.IO.TextWriter,System.Boolean)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(BsonValue, TextWriter, bool)
+  nameWithType: JsonSerializer.Serialize(BsonValue, TextWriter, bool)
+  fullName: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue, System.IO.TextWriter, bool)
+  type: Method
+  source:
+    id: Serialize
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 30
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Json serialize a BsonValue into a TextWriter
+  example: []
+  syntax:
+    content: public static void Serialize(BsonValue value, TextWriter writer, bool indent = false)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    - id: writer
+      type: System.IO.TextWriter
+    - id: indent
+      type: System.Boolean
+    content.vb: Public Shared Sub Serialize(value As BsonValue, writer As TextWriter, indent As Boolean = False)
+  overload: LiteDB.JsonSerializer.Serialize*
+  nameWithType.vb: JsonSerializer.Serialize(BsonValue, TextWriter, Boolean)
+  fullName.vb: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue, System.IO.TextWriter, Boolean)
+  name.vb: Serialize(BsonValue, TextWriter, Boolean)
+- uid: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Text.StringBuilder,System.Boolean)
+  commentId: M:LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Text.StringBuilder,System.Boolean)
+  id: Serialize(LiteDB.BsonValue,System.Text.StringBuilder,System.Boolean)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(BsonValue, StringBuilder, bool)
+  nameWithType: JsonSerializer.Serialize(BsonValue, StringBuilder, bool)
+  fullName: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue, System.Text.StringBuilder, bool)
+  type: Method
+  source:
+    id: Serialize
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 43
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Json serialize a BsonValue into a StringBuilder
+  example: []
+  syntax:
+    content: public static void Serialize(BsonValue value, StringBuilder sb, bool indent = false)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    - id: sb
+      type: System.Text.StringBuilder
+    - id: indent
+      type: System.Boolean
+    content.vb: Public Shared Sub Serialize(value As BsonValue, sb As StringBuilder, indent As Boolean = False)
+  overload: LiteDB.JsonSerializer.Serialize*
+  nameWithType.vb: JsonSerializer.Serialize(BsonValue, StringBuilder, Boolean)
+  fullName.vb: LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue, System.Text.StringBuilder, Boolean)
+  name.vb: Serialize(BsonValue, StringBuilder, Boolean)
+- uid: LiteDB.JsonSerializer.Deserialize(System.String)
+  commentId: M:LiteDB.JsonSerializer.Deserialize(System.String)
+  id: Deserialize(System.String)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(string)
+  nameWithType: JsonSerializer.Deserialize(string)
+  fullName: LiteDB.JsonSerializer.Deserialize(string)
+  type: Method
+  source:
+    id: Deserialize
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 63
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a Json string into a BsonValue
+  example: []
+  syntax:
+    content: public static BsonValue Deserialize(string json)
+    parameters:
+    - id: json
+      type: System.String
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Function Deserialize(json As String) As BsonValue
+  overload: LiteDB.JsonSerializer.Deserialize*
+  nameWithType.vb: JsonSerializer.Deserialize(String)
+  fullName.vb: LiteDB.JsonSerializer.Deserialize(String)
+  name.vb: Deserialize(String)
+- uid: LiteDB.JsonSerializer.Deserialize(System.IO.TextReader)
+  commentId: M:LiteDB.JsonSerializer.Deserialize(System.IO.TextReader)
+  id: Deserialize(System.IO.TextReader)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(TextReader)
+  nameWithType: JsonSerializer.Deserialize(TextReader)
+  fullName: LiteDB.JsonSerializer.Deserialize(System.IO.TextReader)
+  type: Method
+  source:
+    id: Deserialize
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 78
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a Json TextReader into a BsonValue
+  example: []
+  syntax:
+    content: public static BsonValue Deserialize(TextReader reader)
+    parameters:
+    - id: reader
+      type: System.IO.TextReader
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Function Deserialize(reader As TextReader) As BsonValue
+  overload: LiteDB.JsonSerializer.Deserialize*
+- uid: LiteDB.JsonSerializer.DeserializeArray(System.String)
+  commentId: M:LiteDB.JsonSerializer.DeserializeArray(System.String)
+  id: DeserializeArray(System.String)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeArray(string)
+  nameWithType: JsonSerializer.DeserializeArray(string)
+  fullName: LiteDB.JsonSerializer.DeserializeArray(string)
+  type: Method
+  source:
+    id: DeserializeArray
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 90
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a json array as an IEnumerable of BsonValue
+  example: []
+  syntax:
+    content: public static IEnumerable<BsonValue> DeserializeArray(string json)
+    parameters:
+    - id: json
+      type: System.String
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+    content.vb: Public Shared Function DeserializeArray(json As String) As IEnumerable(Of BsonValue)
+  overload: LiteDB.JsonSerializer.DeserializeArray*
+  nameWithType.vb: JsonSerializer.DeserializeArray(String)
+  fullName.vb: LiteDB.JsonSerializer.DeserializeArray(String)
+  name.vb: DeserializeArray(String)
+- uid: LiteDB.JsonSerializer.DeserializeArray(System.IO.TextReader)
+  commentId: M:LiteDB.JsonSerializer.DeserializeArray(System.IO.TextReader)
+  id: DeserializeArray(System.IO.TextReader)
+  parent: LiteDB.JsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeArray(TextReader)
+  nameWithType: JsonSerializer.DeserializeArray(TextReader)
+  fullName: LiteDB.JsonSerializer.DeserializeArray(System.IO.TextReader)
+  type: Method
+  source:
+    id: DeserializeArray
+    path: /workspace/LiteDB/LiteDB/Document/Json/JsonSerializer.cs
+    startLine: 102
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a json array as an IEnumerable of BsonValue reading on demand TextReader
+  example: []
+  syntax:
+    content: public static IEnumerable<BsonValue> DeserializeArray(TextReader reader)
+    parameters:
+    - id: reader
+      type: System.IO.TextReader
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+    content.vb: Public Shared Function DeserializeArray(reader As TextReader) As IEnumerable(Of BsonValue)
+  overload: LiteDB.JsonSerializer.DeserializeArray*
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.JsonSerializer.Serialize*
+  commentId: Overload:LiteDB.JsonSerializer.Serialize
+  href: LiteDB.JsonSerializer.html#LiteDB_JsonSerializer_Serialize_LiteDB_BsonValue_System_Boolean_
+  name: Serialize
+  nameWithType: JsonSerializer.Serialize
+  fullName: LiteDB.JsonSerializer.Serialize
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: LiteDB.JsonSerializer.Deserialize*
+  commentId: Overload:LiteDB.JsonSerializer.Deserialize
+  href: LiteDB.JsonSerializer.html#LiteDB_JsonSerializer_Deserialize_System_String_
+  name: Deserialize
+  nameWithType: JsonSerializer.Deserialize
+  fullName: LiteDB.JsonSerializer.Deserialize
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.textreader
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: LiteDB.JsonSerializer.DeserializeArray*
+  commentId: Overload:LiteDB.JsonSerializer.DeserializeArray
+  href: LiteDB.JsonSerializer.html#LiteDB_JsonSerializer_DeserializeArray_System_String_
+  name: DeserializeArray
+  nameWithType: JsonSerializer.DeserializeArray
+  fullName: LiteDB.JsonSerializer.DeserializeArray
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BsonValue>
+  nameWithType: IEnumerable<BsonValue>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonValue>
+  nameWithType.vb: IEnumerable(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue)
+  name.vb: IEnumerable(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

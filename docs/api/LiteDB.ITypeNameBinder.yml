@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ITypeNameBinder
+  commentId: T:LiteDB.ITypeNameBinder
+  id: ITypeNameBinder
+  parent: LiteDB
+  children:
+  - LiteDB.ITypeNameBinder.GetName(System.Type)
+  - LiteDB.ITypeNameBinder.GetType(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITypeNameBinder
+  nameWithType: ITypeNameBinder
+  fullName: LiteDB.ITypeNameBinder
+  type: Interface
+  source:
+    id: ITypeNameBinder
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/TypeNameBinder/ITypeNameBinder.cs
+    startLine: 4
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public interface ITypeNameBinder
+    content.vb: Public Interface ITypeNameBinder
+- uid: LiteDB.ITypeNameBinder.GetName(System.Type)
+  commentId: M:LiteDB.ITypeNameBinder.GetName(System.Type)
+  id: GetName(System.Type)
+  parent: LiteDB.ITypeNameBinder
+  langs:
+  - csharp
+  - vb
+  name: GetName(Type)
+  nameWithType: ITypeNameBinder.GetName(Type)
+  fullName: LiteDB.ITypeNameBinder.GetName(System.Type)
+  type: Method
+  source:
+    id: GetName
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/TypeNameBinder/ITypeNameBinder.cs
+    startLine: 6
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: string GetName(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    return:
+      type: System.String
+    content.vb: Function GetName(type As Type) As String
+  overload: LiteDB.ITypeNameBinder.GetName*
+- uid: LiteDB.ITypeNameBinder.GetType(System.String)
+  commentId: M:LiteDB.ITypeNameBinder.GetType(System.String)
+  id: GetType(System.String)
+  parent: LiteDB.ITypeNameBinder
+  langs:
+  - csharp
+  - vb
+  name: GetType(string)
+  nameWithType: ITypeNameBinder.GetType(string)
+  fullName: LiteDB.ITypeNameBinder.GetType(string)
+  type: Method
+  source:
+    id: GetType
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/TypeNameBinder/ITypeNameBinder.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Type GetType(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Type
+    content.vb: Function [GetType](name As String) As Type
+  overload: LiteDB.ITypeNameBinder.GetType*
+  nameWithType.vb: ITypeNameBinder.GetType(String)
+  fullName.vb: LiteDB.ITypeNameBinder.GetType(String)
+  name.vb: GetType(String)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.ITypeNameBinder.GetName*
+  commentId: Overload:LiteDB.ITypeNameBinder.GetName
+  href: LiteDB.ITypeNameBinder.html#LiteDB_ITypeNameBinder_GetName_System_Type_
+  name: GetName
+  nameWithType: ITypeNameBinder.GetName
+  fullName: LiteDB.ITypeNameBinder.GetName
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.ITypeNameBinder.GetType*
+  commentId: Overload:LiteDB.ITypeNameBinder.GetType
+  href: LiteDB.ITypeNameBinder.html#LiteDB_ITypeNameBinder_GetType_System_String_
+  name: GetType
+  nameWithType: ITypeNameBinder.GetType
+  fullName: LiteDB.ITypeNameBinder.GetType

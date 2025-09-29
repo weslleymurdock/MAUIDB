@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  id: BsonAutoId
+  parent: LiteDB
+  children:
+  - LiteDB.BsonAutoId.Guid
+  - LiteDB.BsonAutoId.Int32
+  - LiteDB.BsonAutoId.Int64
+  - LiteDB.BsonAutoId.ObjectId
+  langs:
+  - csharp
+  - vb
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId
+  type: Enum
+  source:
+    id: BsonAutoId
+    path: /workspace/LiteDB/LiteDB/Document/BsonAutoId.cs
+    startLine: 5
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: All supported BsonTypes supported in AutoId insert operation
+  example: []
+  syntax:
+    content: public enum BsonAutoId
+    content.vb: Public Enum BsonAutoId
+- uid: LiteDB.BsonAutoId.Int32
+  commentId: F:LiteDB.BsonAutoId.Int32
+  id: Int32
+  parent: LiteDB.BsonAutoId
+  langs:
+  - csharp
+  - vb
+  name: Int32
+  nameWithType: BsonAutoId.Int32
+  fullName: LiteDB.BsonAutoId.Int32
+  type: Field
+  source:
+    id: Int32
+    path: /workspace/LiteDB/LiteDB/Document/BsonAutoId.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Int32 = 2
+    return:
+      type: LiteDB.BsonAutoId
+- uid: LiteDB.BsonAutoId.Int64
+  commentId: F:LiteDB.BsonAutoId.Int64
+  id: Int64
+  parent: LiteDB.BsonAutoId
+  langs:
+  - csharp
+  - vb
+  name: Int64
+  nameWithType: BsonAutoId.Int64
+  fullName: LiteDB.BsonAutoId.Int64
+  type: Field
+  source:
+    id: Int64
+    path: /workspace/LiteDB/LiteDB/Document/BsonAutoId.cs
+    startLine: 8
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Int64 = 3
+    return:
+      type: LiteDB.BsonAutoId
+- uid: LiteDB.BsonAutoId.ObjectId
+  commentId: F:LiteDB.BsonAutoId.ObjectId
+  id: ObjectId
+  parent: LiteDB.BsonAutoId
+  langs:
+  - csharp
+  - vb
+  name: ObjectId
+  nameWithType: BsonAutoId.ObjectId
+  fullName: LiteDB.BsonAutoId.ObjectId
+  type: Field
+  source:
+    id: ObjectId
+    path: /workspace/LiteDB/LiteDB/Document/BsonAutoId.cs
+    startLine: 9
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ObjectId = 10
+    return:
+      type: LiteDB.BsonAutoId
+- uid: LiteDB.BsonAutoId.Guid
+  commentId: F:LiteDB.BsonAutoId.Guid
+  id: Guid
+  parent: LiteDB.BsonAutoId
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: BsonAutoId.Guid
+  fullName: LiteDB.BsonAutoId.Guid
+  type: Field
+  source:
+    id: Guid
+    path: /workspace/LiteDB/LiteDB/Document/BsonAutoId.cs
+    startLine: 10
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Guid = 11
+    return:
+      type: LiteDB.BsonAutoId
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  parent: LiteDB
+  href: LiteDB.BsonAutoId.html
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId

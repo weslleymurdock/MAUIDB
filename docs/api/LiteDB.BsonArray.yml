@@ -1,0 +1,2711 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.BsonArray
+  commentId: T:LiteDB.BsonArray
+  id: BsonArray
+  parent: LiteDB
+  children:
+  - LiteDB.BsonArray.#ctor
+  - LiteDB.BsonArray.#ctor(LiteDB.BsonArray)
+  - LiteDB.BsonArray.#ctor(LiteDB.BsonValue[])
+  - LiteDB.BsonArray.#ctor(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  - LiteDB.BsonArray.#ctor(System.Collections.Generic.List{LiteDB.BsonValue})
+  - LiteDB.BsonArray.Add(LiteDB.BsonValue)
+  - LiteDB.BsonArray.AddRange(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  - LiteDB.BsonArray.AddRange``1(``0)
+  - LiteDB.BsonArray.Clear
+  - LiteDB.BsonArray.CompareTo(LiteDB.BsonValue)
+  - LiteDB.BsonArray.Contains(LiteDB.BsonValue)
+  - LiteDB.BsonArray.CopyTo(LiteDB.BsonValue[],System.Int32)
+  - LiteDB.BsonArray.Count
+  - LiteDB.BsonArray.GetEnumerator
+  - LiteDB.BsonArray.IndexOf(LiteDB.BsonValue)
+  - LiteDB.BsonArray.Insert(System.Int32,LiteDB.BsonValue)
+  - LiteDB.BsonArray.IsReadOnly
+  - LiteDB.BsonArray.Item(System.Int32)
+  - LiteDB.BsonArray.RawValue
+  - LiteDB.BsonArray.Remove(LiteDB.BsonValue)
+  - LiteDB.BsonArray.RemoveAt(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: BsonArray
+  nameWithType: BsonArray
+  fullName: LiteDB.BsonArray
+  type: Class
+  source:
+    id: BsonArray
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 8
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: 'public class BsonArray : BsonValue, IComparable<BsonValue>, IEquatable<BsonValue>, IList<BsonValue>, ICollection<BsonValue>, IEnumerable<BsonValue>, IEnumerable'
+    content.vb: Public Class BsonArray Inherits BsonValue Implements IComparable(Of BsonValue), IEquatable(Of BsonValue), IList(Of BsonValue), ICollection(Of BsonValue), IEnumerable(Of BsonValue), IEnumerable
+  inheritance:
+  - System.Object
+  - LiteDB.BsonValue
+  implements:
+  - System.IComparable{LiteDB.BsonValue}
+  - System.IEquatable{LiteDB.BsonValue}
+  - System.Collections.Generic.IList{LiteDB.BsonValue}
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  - System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - LiteDB.BsonValue.UnixEpoch
+  - LiteDB.BsonValue.Null
+  - LiteDB.BsonValue.MinValue
+  - LiteDB.BsonValue.MaxValue
+  - LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+  - LiteDB.BsonValue.Type
+  - LiteDB.BsonValue.Item(System.String)
+  - LiteDB.BsonValue.AsArray
+  - LiteDB.BsonValue.AsDocument
+  - LiteDB.BsonValue.AsBinary
+  - LiteDB.BsonValue.AsBoolean
+  - LiteDB.BsonValue.AsString
+  - LiteDB.BsonValue.AsInt32
+  - LiteDB.BsonValue.AsInt64
+  - LiteDB.BsonValue.AsDouble
+  - LiteDB.BsonValue.AsDecimal
+  - LiteDB.BsonValue.AsDateTime
+  - LiteDB.BsonValue.AsObjectId
+  - LiteDB.BsonValue.AsGuid
+  - LiteDB.BsonValue.IsNull
+  - LiteDB.BsonValue.IsArray
+  - LiteDB.BsonValue.IsDocument
+  - LiteDB.BsonValue.IsInt32
+  - LiteDB.BsonValue.IsInt64
+  - LiteDB.BsonValue.IsDouble
+  - LiteDB.BsonValue.IsDecimal
+  - LiteDB.BsonValue.IsNumber
+  - LiteDB.BsonValue.IsBinary
+  - LiteDB.BsonValue.IsBoolean
+  - LiteDB.BsonValue.IsString
+  - LiteDB.BsonValue.IsObjectId
+  - LiteDB.BsonValue.IsGuid
+  - LiteDB.BsonValue.IsDateTime
+  - LiteDB.BsonValue.IsMinValue
+  - LiteDB.BsonValue.IsMaxValue
+  - LiteDB.BsonValue.ToString
+  - LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  - LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  - LiteDB.BsonValue.Equals(System.Object)
+  - LiteDB.BsonValue.GetHashCode
+  - LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: LiteDB.BsonArray.#ctor
+  commentId: M:LiteDB.BsonArray.#ctor
+  id: '#ctor'
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: BsonArray()
+  nameWithType: BsonArray.BsonArray()
+  fullName: LiteDB.BsonArray.BsonArray()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 10
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonArray()
+    content.vb: Public Sub New()
+  overload: LiteDB.BsonArray.#ctor*
+  nameWithType.vb: BsonArray.New()
+  fullName.vb: LiteDB.BsonArray.New()
+  name.vb: New()
+- uid: LiteDB.BsonArray.#ctor(System.Collections.Generic.List{LiteDB.BsonValue})
+  commentId: M:LiteDB.BsonArray.#ctor(System.Collections.Generic.List{LiteDB.BsonValue})
+  id: '#ctor(System.Collections.Generic.List{LiteDB.BsonValue})'
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: BsonArray(List<BsonValue>)
+  nameWithType: BsonArray.BsonArray(List<BsonValue>)
+  fullName: LiteDB.BsonArray.BsonArray(System.Collections.Generic.List<LiteDB.BsonValue>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 15
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonArray(List<BsonValue> array)
+    parameters:
+    - id: array
+      type: System.Collections.Generic.List{LiteDB.BsonValue}
+    content.vb: Public Sub New(array As List(Of BsonValue))
+  overload: LiteDB.BsonArray.#ctor*
+  nameWithType.vb: BsonArray.New(List(Of BsonValue))
+  fullName.vb: LiteDB.BsonArray.New(System.Collections.Generic.List(Of LiteDB.BsonValue))
+  name.vb: New(List(Of BsonValue))
+- uid: LiteDB.BsonArray.#ctor(LiteDB.BsonValue[])
+  commentId: M:LiteDB.BsonArray.#ctor(LiteDB.BsonValue[])
+  id: '#ctor(LiteDB.BsonValue[])'
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: BsonArray(params BsonValue[])
+  nameWithType: BsonArray.BsonArray(params BsonValue[])
+  fullName: LiteDB.BsonArray.BsonArray(params LiteDB.BsonValue[])
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 23
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonArray(params BsonValue[] array)
+    parameters:
+    - id: array
+      type: LiteDB.BsonValue[]
+    content.vb: Public Sub New(ParamArray array As BsonValue())
+  overload: LiteDB.BsonArray.#ctor*
+  nameWithType.vb: BsonArray.New(ParamArray BsonValue())
+  fullName.vb: LiteDB.BsonArray.New(ParamArray LiteDB.BsonValue())
+  name.vb: New(ParamArray BsonValue())
+- uid: LiteDB.BsonArray.#ctor(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  commentId: M:LiteDB.BsonArray.#ctor(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  id: '#ctor(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})'
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: BsonArray(IEnumerable<BsonValue>)
+  nameWithType: BsonArray.BsonArray(IEnumerable<BsonValue>)
+  fullName: LiteDB.BsonArray.BsonArray(System.Collections.Generic.IEnumerable<LiteDB.BsonValue>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 31
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonArray(IEnumerable<BsonValue> items)
+    parameters:
+    - id: items
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+    content.vb: Public Sub New(items As IEnumerable(Of BsonValue))
+  overload: LiteDB.BsonArray.#ctor*
+  nameWithType.vb: BsonArray.New(IEnumerable(Of BsonValue))
+  fullName.vb: LiteDB.BsonArray.New(System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue))
+  name.vb: New(IEnumerable(Of BsonValue))
+- uid: LiteDB.BsonArray.#ctor(LiteDB.BsonArray)
+  commentId: M:LiteDB.BsonArray.#ctor(LiteDB.BsonArray)
+  id: '#ctor(LiteDB.BsonArray)'
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: BsonArray(BsonArray)
+  nameWithType: BsonArray.BsonArray(BsonArray)
+  fullName: LiteDB.BsonArray.BsonArray(LiteDB.BsonArray)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 39
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonArray(BsonArray items)
+    parameters:
+    - id: items
+      type: LiteDB.BsonArray
+    content.vb: Public Sub New(items As BsonArray)
+  overload: LiteDB.BsonArray.#ctor*
+  nameWithType.vb: BsonArray.New(BsonArray)
+  fullName.vb: LiteDB.BsonArray.New(LiteDB.BsonArray)
+  name.vb: New(BsonArray)
+- uid: LiteDB.BsonArray.RawValue
+  commentId: P:LiteDB.BsonArray.RawValue
+  id: RawValue
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: RawValue
+  nameWithType: BsonArray.RawValue
+  fullName: LiteDB.BsonArray.RawValue
+  type: Property
+  source:
+    id: RawValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public IList<BsonValue> RawValue { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{LiteDB.BsonValue}
+    content.vb: Public ReadOnly Property RawValue As IList(Of BsonValue)
+  overload: LiteDB.BsonArray.RawValue*
+- uid: LiteDB.BsonArray.Item(System.Int32)
+  commentId: P:LiteDB.BsonArray.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: BsonArray.this[int]
+  fullName: LiteDB.BsonArray.this[int]
+  type: Property
+  source:
+    id: this[]
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 49
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set value in array position. Works only when value are array
+  example: []
+  syntax:
+    content: public override BsonValue this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Overrides Default Property this[](index As Integer) As BsonValue
+  overridden: LiteDB.BsonValue.Item(System.Int32)
+  overload: LiteDB.BsonArray.Item*
+  implements:
+  - System.Collections.Generic.IList{LiteDB.BsonValue}.Item(System.Int32)
+  nameWithType.vb: BsonArray.this[](Integer)
+  fullName.vb: LiteDB.BsonArray.this[](Integer)
+  name.vb: this[](Integer)
+- uid: LiteDB.BsonArray.Count
+  commentId: P:LiteDB.BsonArray.Count
+  id: Count
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: BsonArray.Count
+  fullName: LiteDB.BsonArray.Count
+  type: Property
+  source:
+    id: Count
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 61
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: LiteDB.BsonArray.Count*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.Count
+- uid: LiteDB.BsonArray.IsReadOnly
+  commentId: P:LiteDB.BsonArray.IsReadOnly
+  id: IsReadOnly
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: BsonArray.IsReadOnly
+  fullName: LiteDB.BsonArray.IsReadOnly
+  type: Property
+  source:
+    id: IsReadOnly
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 63
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: LiteDB.BsonArray.IsReadOnly*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.IsReadOnly
+- uid: LiteDB.BsonArray.Add(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonArray.Add(LiteDB.BsonValue)
+  id: Add(LiteDB.BsonValue)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: Add(BsonValue)
+  nameWithType: BsonArray.Add(BsonValue)
+  fullName: LiteDB.BsonArray.Add(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Add
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 65
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void Add(BsonValue item)
+    parameters:
+    - id: item
+      type: LiteDB.BsonValue
+    content.vb: Public Sub Add(item As BsonValue)
+  overload: LiteDB.BsonArray.Add*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.Add(LiteDB.BsonValue)
+- uid: LiteDB.BsonArray.AddRange``1(``0)
+  commentId: M:LiteDB.BsonArray.AddRange``1(``0)
+  id: AddRange``1(``0)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: AddRange<TCollection>(TCollection)
+  nameWithType: BsonArray.AddRange<TCollection>(TCollection)
+  fullName: LiteDB.BsonArray.AddRange<TCollection>(TCollection)
+  type: Method
+  source:
+    id: AddRange
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 67
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: 'public void AddRange<TCollection>(TCollection collection) where TCollection : ICollection<BsonValue>'
+    parameters:
+    - id: collection
+      type: '{TCollection}'
+    typeParameters:
+    - id: TCollection
+    content.vb: Public Sub AddRange(Of TCollection As ICollection(Of BsonValue))(collection As TCollection)
+  overload: LiteDB.BsonArray.AddRange*
+  nameWithType.vb: BsonArray.AddRange(Of TCollection)(TCollection)
+  fullName.vb: LiteDB.BsonArray.AddRange(Of TCollection)(TCollection)
+  name.vb: AddRange(Of TCollection)(TCollection)
+- uid: LiteDB.BsonArray.AddRange(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  commentId: M:LiteDB.BsonArray.AddRange(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  id: AddRange(System.Collections.Generic.IEnumerable{LiteDB.BsonValue})
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: AddRange(IEnumerable<BsonValue>)
+  nameWithType: BsonArray.AddRange(IEnumerable<BsonValue>)
+  fullName: LiteDB.BsonArray.AddRange(System.Collections.Generic.IEnumerable<LiteDB.BsonValue>)
+  type: Method
+  source:
+    id: AddRange
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 87
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public void AddRange(IEnumerable<BsonValue> items)
+    parameters:
+    - id: items
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+    content.vb: Public Sub AddRange(items As IEnumerable(Of BsonValue))
+  overload: LiteDB.BsonArray.AddRange*
+  nameWithType.vb: BsonArray.AddRange(IEnumerable(Of BsonValue))
+  fullName.vb: LiteDB.BsonArray.AddRange(System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue))
+  name.vb: AddRange(IEnumerable(Of BsonValue))
+- uid: LiteDB.BsonArray.Clear
+  commentId: M:LiteDB.BsonArray.Clear
+  id: Clear
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: BsonArray.Clear()
+  fullName: LiteDB.BsonArray.Clear()
+  type: Method
+  source:
+    id: Clear
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 97
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: LiteDB.BsonArray.Clear*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.Clear
+- uid: LiteDB.BsonArray.Contains(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonArray.Contains(LiteDB.BsonValue)
+  id: Contains(LiteDB.BsonValue)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: Contains(BsonValue)
+  nameWithType: BsonArray.Contains(BsonValue)
+  fullName: LiteDB.BsonArray.Contains(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Contains
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 99
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool Contains(BsonValue item)
+    parameters:
+    - id: item
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(item As BsonValue) As Boolean
+  overload: LiteDB.BsonArray.Contains*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.Contains(LiteDB.BsonValue)
+- uid: LiteDB.BsonArray.CopyTo(LiteDB.BsonValue[],System.Int32)
+  commentId: M:LiteDB.BsonArray.CopyTo(LiteDB.BsonValue[],System.Int32)
+  id: CopyTo(LiteDB.BsonValue[],System.Int32)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(BsonValue[], int)
+  nameWithType: BsonArray.CopyTo(BsonValue[], int)
+  fullName: LiteDB.BsonArray.CopyTo(LiteDB.BsonValue[], int)
+  type: Method
+  source:
+    id: CopyTo
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 101
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void CopyTo(BsonValue[] array, int arrayIndex)
+    parameters:
+    - id: array
+      type: LiteDB.BsonValue[]
+    - id: arrayIndex
+      type: System.Int32
+    content.vb: Public Sub CopyTo(array As BsonValue(), arrayIndex As Integer)
+  overload: LiteDB.BsonArray.CopyTo*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.CopyTo(LiteDB.BsonValue[],System.Int32)
+  nameWithType.vb: BsonArray.CopyTo(BsonValue(), Integer)
+  fullName.vb: LiteDB.BsonArray.CopyTo(LiteDB.BsonValue(), Integer)
+  name.vb: CopyTo(BsonValue(), Integer)
+- uid: LiteDB.BsonArray.GetEnumerator
+  commentId: M:LiteDB.BsonArray.GetEnumerator
+  id: GetEnumerator
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: BsonArray.GetEnumerator()
+  fullName: LiteDB.BsonArray.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 103
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public IEnumerator<BsonValue> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{LiteDB.BsonValue}
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of BsonValue)
+  overload: LiteDB.BsonArray.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{LiteDB.BsonValue}.GetEnumerator
+- uid: LiteDB.BsonArray.IndexOf(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonArray.IndexOf(LiteDB.BsonValue)
+  id: IndexOf(LiteDB.BsonValue)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: IndexOf(BsonValue)
+  nameWithType: BsonArray.IndexOf(BsonValue)
+  fullName: LiteDB.BsonArray.IndexOf(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: IndexOf
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 105
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public int IndexOf(BsonValue item)
+    parameters:
+    - id: item
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Public Function IndexOf(item As BsonValue) As Integer
+  overload: LiteDB.BsonArray.IndexOf*
+  implements:
+  - System.Collections.Generic.IList{LiteDB.BsonValue}.IndexOf(LiteDB.BsonValue)
+- uid: LiteDB.BsonArray.Insert(System.Int32,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonArray.Insert(System.Int32,LiteDB.BsonValue)
+  id: Insert(System.Int32,LiteDB.BsonValue)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: Insert(int, BsonValue)
+  nameWithType: BsonArray.Insert(int, BsonValue)
+  fullName: LiteDB.BsonArray.Insert(int, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Insert
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 107
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void Insert(int index, BsonValue item)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: item
+      type: LiteDB.BsonValue
+    content.vb: Public Sub Insert(index As Integer, item As BsonValue)
+  overload: LiteDB.BsonArray.Insert*
+  implements:
+  - System.Collections.Generic.IList{LiteDB.BsonValue}.Insert(System.Int32,LiteDB.BsonValue)
+  nameWithType.vb: BsonArray.Insert(Integer, BsonValue)
+  fullName.vb: LiteDB.BsonArray.Insert(Integer, LiteDB.BsonValue)
+  name.vb: Insert(Integer, BsonValue)
+- uid: LiteDB.BsonArray.Remove(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonArray.Remove(LiteDB.BsonValue)
+  id: Remove(LiteDB.BsonValue)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: Remove(BsonValue)
+  nameWithType: BsonArray.Remove(BsonValue)
+  fullName: LiteDB.BsonArray.Remove(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Remove
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 109
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool Remove(BsonValue item)
+    parameters:
+    - id: item
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Function Remove(item As BsonValue) As Boolean
+  overload: LiteDB.BsonArray.Remove*
+  implements:
+  - System.Collections.Generic.ICollection{LiteDB.BsonValue}.Remove(LiteDB.BsonValue)
+- uid: LiteDB.BsonArray.RemoveAt(System.Int32)
+  commentId: M:LiteDB.BsonArray.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: RemoveAt(int)
+  nameWithType: BsonArray.RemoveAt(int)
+  fullName: LiteDB.BsonArray.RemoveAt(int)
+  type: Method
+  source:
+    id: RemoveAt
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 111
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public void RemoveAt(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Public Sub RemoveAt(index As Integer)
+  overload: LiteDB.BsonArray.RemoveAt*
+  implements:
+  - System.Collections.Generic.IList{LiteDB.BsonValue}.RemoveAt(System.Int32)
+  nameWithType.vb: BsonArray.RemoveAt(Integer)
+  fullName.vb: LiteDB.BsonArray.RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+- uid: LiteDB.BsonArray.CompareTo(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonArray.CompareTo(LiteDB.BsonValue)
+  id: CompareTo(LiteDB.BsonValue)
+  parent: LiteDB.BsonArray
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(BsonValue)
+  nameWithType: BsonArray.CompareTo(BsonValue)
+  fullName: LiteDB.BsonArray.CompareTo(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: CompareTo
+    path: /workspace/LiteDB/LiteDB/Document/BsonArray.cs
+    startLine: 121
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public override int CompareTo(BsonValue other)
+    parameters:
+    - id: other
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function CompareTo(other As BsonValue) As Integer
+  overridden: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  overload: LiteDB.BsonArray.CompareTo*
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: System.IComparable{LiteDB.BsonValue}
+  commentId: T:System.IComparable{LiteDB.BsonValue}
+  parent: System
+  definition: System.IComparable`1
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<BsonValue>
+  nameWithType: IComparable<BsonValue>
+  fullName: System.IComparable<LiteDB.BsonValue>
+  nameWithType.vb: IComparable(Of BsonValue)
+  fullName.vb: System.IComparable(Of LiteDB.BsonValue)
+  name.vb: IComparable(Of BsonValue)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.IEquatable{LiteDB.BsonValue}
+  commentId: T:System.IEquatable{LiteDB.BsonValue}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<BsonValue>
+  nameWithType: IEquatable<BsonValue>
+  fullName: System.IEquatable<LiteDB.BsonValue>
+  nameWithType.vb: IEquatable(Of BsonValue)
+  fullName.vb: System.IEquatable(Of LiteDB.BsonValue)
+  name.vb: IEquatable(Of BsonValue)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IList{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IList{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<BsonValue>
+  nameWithType: IList<BsonValue>
+  fullName: System.Collections.Generic.IList<LiteDB.BsonValue>
+  nameWithType.vb: IList(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IList(Of LiteDB.BsonValue)
+  name.vb: IList(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<BsonValue>
+  nameWithType: ICollection<BsonValue>
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>
+  nameWithType.vb: ICollection(Of BsonValue)
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue)
+  name.vb: ICollection(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BsonValue>
+  nameWithType: IEnumerable<BsonValue>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonValue>
+  nameWithType.vb: IEnumerable(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue)
+  name.vb: IEnumerable(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: LiteDB.BsonValue.UnixEpoch
+  commentId: F:LiteDB.BsonValue.UnixEpoch
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_UnixEpoch
+  name: UnixEpoch
+  nameWithType: BsonValue.UnixEpoch
+  fullName: LiteDB.BsonValue.UnixEpoch
+- uid: LiteDB.BsonValue.Null
+  commentId: F:LiteDB.BsonValue.Null
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Null
+  name: "Null"
+  nameWithType: BsonValue.Null
+  fullName: LiteDB.BsonValue.Null
+- uid: LiteDB.BsonValue.MinValue
+  commentId: F:LiteDB.BsonValue.MinValue
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_MinValue
+  name: MinValue
+  nameWithType: BsonValue.MinValue
+  fullName: LiteDB.BsonValue.MinValue
+- uid: LiteDB.BsonValue.MaxValue
+  commentId: F:LiteDB.BsonValue.MaxValue
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_MaxValue
+  name: MaxValue
+  nameWithType: BsonValue.MaxValue
+  fullName: LiteDB.BsonValue.MaxValue
+- uid: LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+  commentId: M:LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+  parent: LiteDB.BsonValue
+  isExternal: true
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_DbRef_LiteDB_BsonValue_System_String_
+  name: DbRef(BsonValue, string)
+  nameWithType: BsonValue.DbRef(BsonValue, string)
+  fullName: LiteDB.BsonValue.DbRef(LiteDB.BsonValue, string)
+  nameWithType.vb: BsonValue.DbRef(BsonValue, String)
+  fullName.vb: LiteDB.BsonValue.DbRef(LiteDB.BsonValue, String)
+  name.vb: DbRef(BsonValue, String)
+  spec.csharp:
+  - uid: LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+    name: DbRef
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_DbRef_LiteDB_BsonValue_System_String_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+    name: DbRef
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_DbRef_LiteDB_BsonValue_System_String_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.BsonValue.Type
+  commentId: P:LiteDB.BsonValue.Type
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Type
+  name: Type
+  nameWithType: BsonValue.Type
+  fullName: LiteDB.BsonValue.Type
+- uid: LiteDB.BsonValue.Item(System.String)
+  commentId: P:LiteDB.BsonValue.Item(System.String)
+  parent: LiteDB.BsonValue
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: this[string]
+  nameWithType: BsonValue.this[string]
+  fullName: LiteDB.BsonValue.this[string]
+  nameWithType.vb: BsonValue.this[](String)
+  fullName.vb: LiteDB.BsonValue.this[](String)
+  name.vb: this[](String)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue.Item(System.String)
+    name: this[]
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_Item_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.BsonValue.AsArray
+  commentId: P:LiteDB.BsonValue.AsArray
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsArray
+  name: AsArray
+  nameWithType: BsonValue.AsArray
+  fullName: LiteDB.BsonValue.AsArray
+- uid: LiteDB.BsonValue.AsDocument
+  commentId: P:LiteDB.BsonValue.AsDocument
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDocument
+  name: AsDocument
+  nameWithType: BsonValue.AsDocument
+  fullName: LiteDB.BsonValue.AsDocument
+- uid: LiteDB.BsonValue.AsBinary
+  commentId: P:LiteDB.BsonValue.AsBinary
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsBinary
+  name: AsBinary
+  nameWithType: BsonValue.AsBinary
+  fullName: LiteDB.BsonValue.AsBinary
+- uid: LiteDB.BsonValue.AsBoolean
+  commentId: P:LiteDB.BsonValue.AsBoolean
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsBoolean
+  name: AsBoolean
+  nameWithType: BsonValue.AsBoolean
+  fullName: LiteDB.BsonValue.AsBoolean
+- uid: LiteDB.BsonValue.AsString
+  commentId: P:LiteDB.BsonValue.AsString
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsString
+  name: AsString
+  nameWithType: BsonValue.AsString
+  fullName: LiteDB.BsonValue.AsString
+- uid: LiteDB.BsonValue.AsInt32
+  commentId: P:LiteDB.BsonValue.AsInt32
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsInt32
+  name: AsInt32
+  nameWithType: BsonValue.AsInt32
+  fullName: LiteDB.BsonValue.AsInt32
+- uid: LiteDB.BsonValue.AsInt64
+  commentId: P:LiteDB.BsonValue.AsInt64
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsInt64
+  name: AsInt64
+  nameWithType: BsonValue.AsInt64
+  fullName: LiteDB.BsonValue.AsInt64
+- uid: LiteDB.BsonValue.AsDouble
+  commentId: P:LiteDB.BsonValue.AsDouble
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDouble
+  name: AsDouble
+  nameWithType: BsonValue.AsDouble
+  fullName: LiteDB.BsonValue.AsDouble
+- uid: LiteDB.BsonValue.AsDecimal
+  commentId: P:LiteDB.BsonValue.AsDecimal
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDecimal
+  name: AsDecimal
+  nameWithType: BsonValue.AsDecimal
+  fullName: LiteDB.BsonValue.AsDecimal
+- uid: LiteDB.BsonValue.AsDateTime
+  commentId: P:LiteDB.BsonValue.AsDateTime
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDateTime
+  name: AsDateTime
+  nameWithType: BsonValue.AsDateTime
+  fullName: LiteDB.BsonValue.AsDateTime
+- uid: LiteDB.BsonValue.AsObjectId
+  commentId: P:LiteDB.BsonValue.AsObjectId
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsObjectId
+  name: AsObjectId
+  nameWithType: BsonValue.AsObjectId
+  fullName: LiteDB.BsonValue.AsObjectId
+- uid: LiteDB.BsonValue.AsGuid
+  commentId: P:LiteDB.BsonValue.AsGuid
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsGuid
+  name: AsGuid
+  nameWithType: BsonValue.AsGuid
+  fullName: LiteDB.BsonValue.AsGuid
+- uid: LiteDB.BsonValue.IsNull
+  commentId: P:LiteDB.BsonValue.IsNull
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsNull
+  name: IsNull
+  nameWithType: BsonValue.IsNull
+  fullName: LiteDB.BsonValue.IsNull
+- uid: LiteDB.BsonValue.IsArray
+  commentId: P:LiteDB.BsonValue.IsArray
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsArray
+  name: IsArray
+  nameWithType: BsonValue.IsArray
+  fullName: LiteDB.BsonValue.IsArray
+- uid: LiteDB.BsonValue.IsDocument
+  commentId: P:LiteDB.BsonValue.IsDocument
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDocument
+  name: IsDocument
+  nameWithType: BsonValue.IsDocument
+  fullName: LiteDB.BsonValue.IsDocument
+- uid: LiteDB.BsonValue.IsInt32
+  commentId: P:LiteDB.BsonValue.IsInt32
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsInt32
+  name: IsInt32
+  nameWithType: BsonValue.IsInt32
+  fullName: LiteDB.BsonValue.IsInt32
+- uid: LiteDB.BsonValue.IsInt64
+  commentId: P:LiteDB.BsonValue.IsInt64
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsInt64
+  name: IsInt64
+  nameWithType: BsonValue.IsInt64
+  fullName: LiteDB.BsonValue.IsInt64
+- uid: LiteDB.BsonValue.IsDouble
+  commentId: P:LiteDB.BsonValue.IsDouble
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDouble
+  name: IsDouble
+  nameWithType: BsonValue.IsDouble
+  fullName: LiteDB.BsonValue.IsDouble
+- uid: LiteDB.BsonValue.IsDecimal
+  commentId: P:LiteDB.BsonValue.IsDecimal
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDecimal
+  name: IsDecimal
+  nameWithType: BsonValue.IsDecimal
+  fullName: LiteDB.BsonValue.IsDecimal
+- uid: LiteDB.BsonValue.IsNumber
+  commentId: P:LiteDB.BsonValue.IsNumber
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsNumber
+  name: IsNumber
+  nameWithType: BsonValue.IsNumber
+  fullName: LiteDB.BsonValue.IsNumber
+- uid: LiteDB.BsonValue.IsBinary
+  commentId: P:LiteDB.BsonValue.IsBinary
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsBinary
+  name: IsBinary
+  nameWithType: BsonValue.IsBinary
+  fullName: LiteDB.BsonValue.IsBinary
+- uid: LiteDB.BsonValue.IsBoolean
+  commentId: P:LiteDB.BsonValue.IsBoolean
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsBoolean
+  name: IsBoolean
+  nameWithType: BsonValue.IsBoolean
+  fullName: LiteDB.BsonValue.IsBoolean
+- uid: LiteDB.BsonValue.IsString
+  commentId: P:LiteDB.BsonValue.IsString
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsString
+  name: IsString
+  nameWithType: BsonValue.IsString
+  fullName: LiteDB.BsonValue.IsString
+- uid: LiteDB.BsonValue.IsObjectId
+  commentId: P:LiteDB.BsonValue.IsObjectId
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsObjectId
+  name: IsObjectId
+  nameWithType: BsonValue.IsObjectId
+  fullName: LiteDB.BsonValue.IsObjectId
+- uid: LiteDB.BsonValue.IsGuid
+  commentId: P:LiteDB.BsonValue.IsGuid
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsGuid
+  name: IsGuid
+  nameWithType: BsonValue.IsGuid
+  fullName: LiteDB.BsonValue.IsGuid
+- uid: LiteDB.BsonValue.IsDateTime
+  commentId: P:LiteDB.BsonValue.IsDateTime
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDateTime
+  name: IsDateTime
+  nameWithType: BsonValue.IsDateTime
+  fullName: LiteDB.BsonValue.IsDateTime
+- uid: LiteDB.BsonValue.IsMinValue
+  commentId: P:LiteDB.BsonValue.IsMinValue
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsMinValue
+  name: IsMinValue
+  nameWithType: BsonValue.IsMinValue
+  fullName: LiteDB.BsonValue.IsMinValue
+- uid: LiteDB.BsonValue.IsMaxValue
+  commentId: P:LiteDB.BsonValue.IsMaxValue
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsMaxValue
+  name: IsMaxValue
+  nameWithType: BsonValue.IsMaxValue
+  fullName: LiteDB.BsonValue.IsMaxValue
+- uid: LiteDB.BsonValue.ToString
+  commentId: M:LiteDB.BsonValue.ToString
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_ToString
+  name: ToString()
+  nameWithType: BsonValue.ToString()
+  fullName: LiteDB.BsonValue.ToString()
+  spec.csharp:
+  - uid: LiteDB.BsonValue.ToString
+    name: ToString
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.ToString
+    name: ToString
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_ToString
+  - name: (
+  - name: )
+- uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  commentId: M:LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_LiteDB_Collation_
+  name: CompareTo(BsonValue, Collation)
+  nameWithType: BsonValue.CompareTo(BsonValue, Collation)
+  fullName: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue, LiteDB.Collation)
+  spec.csharp:
+  - uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+    name: CompareTo
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_LiteDB_Collation_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.Collation
+    name: Collation
+    href: LiteDB.Collation.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+    name: CompareTo
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_LiteDB_Collation_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: LiteDB.Collation
+    name: Collation
+    href: LiteDB.Collation.html
+  - name: )
+- uid: LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_LiteDB_BsonValue_
+  name: Equals(BsonValue)
+  nameWithType: BsonValue.Equals(BsonValue)
+  fullName: LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+    name: Equals
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_LiteDB_BsonValue_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+    name: Equals
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_LiteDB_BsonValue_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: LiteDB.BsonValue.Equals(System.Object)
+  commentId: M:LiteDB.BsonValue.Equals(System.Object)
+  parent: LiteDB.BsonValue
+  isExternal: true
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: BsonValue.Equals(object)
+  fullName: LiteDB.BsonValue.Equals(object)
+  nameWithType.vb: BsonValue.Equals(Object)
+  fullName.vb: LiteDB.BsonValue.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: LiteDB.BsonValue.Equals(System.Object)
+    name: Equals
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.Equals(System.Object)
+    name: Equals
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: LiteDB.BsonValue.GetHashCode
+  commentId: M:LiteDB.BsonValue.GetHashCode
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetHashCode
+  name: GetHashCode()
+  nameWithType: BsonValue.GetHashCode()
+  fullName: LiteDB.BsonValue.GetHashCode()
+  spec.csharp:
+  - uid: LiteDB.BsonValue.GetHashCode
+    name: GetHashCode
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.GetHashCode
+    name: GetHashCode
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetHashCode
+  - name: (
+  - name: )
+- uid: LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  isExternal: true
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetBytesCountElement_System_String_LiteDB_BsonValue_
+  name: GetBytesCountElement(string, BsonValue)
+  nameWithType: BsonValue.GetBytesCountElement(string, BsonValue)
+  fullName: LiteDB.BsonValue.GetBytesCountElement(string, LiteDB.BsonValue)
+  nameWithType.vb: BsonValue.GetBytesCountElement(String, BsonValue)
+  fullName.vb: LiteDB.BsonValue.GetBytesCountElement(String, LiteDB.BsonValue)
+  name.vb: GetBytesCountElement(String, BsonValue)
+  spec.csharp:
+  - uid: LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+    name: GetBytesCountElement
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetBytesCountElement_System_String_LiteDB_BsonValue_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+    name: GetBytesCountElement
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetBytesCountElement_System_String_LiteDB_BsonValue_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: LiteDB.BsonArray.#ctor*
+  commentId: Overload:LiteDB.BsonArray.#ctor
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray__ctor
+  name: BsonArray
+  nameWithType: BsonArray.BsonArray
+  fullName: LiteDB.BsonArray.BsonArray
+  nameWithType.vb: BsonArray.New
+  fullName.vb: LiteDB.BsonArray.New
+  name.vb: New
+- uid: System.Collections.Generic.List{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.List{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<BsonValue>
+  nameWithType: List<BsonValue>
+  fullName: System.Collections.Generic.List<LiteDB.BsonValue>
+  nameWithType.vb: List(Of BsonValue)
+  fullName.vb: System.Collections.Generic.List(Of LiteDB.BsonValue)
+  name.vb: List(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.BsonValue[]
+  isExternal: true
+  href: LiteDB.BsonValue.html
+  name: BsonValue[]
+  nameWithType: BsonValue[]
+  fullName: LiteDB.BsonValue[]
+  nameWithType.vb: BsonValue()
+  fullName.vb: LiteDB.BsonValue()
+  name.vb: BsonValue()
+  spec.csharp:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+- uid: LiteDB.BsonArray
+  commentId: T:LiteDB.BsonArray
+  parent: LiteDB
+  href: LiteDB.BsonArray.html
+  name: BsonArray
+  nameWithType: BsonArray
+  fullName: LiteDB.BsonArray
+- uid: LiteDB.BsonArray.RawValue*
+  commentId: Overload:LiteDB.BsonArray.RawValue
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_RawValue
+  name: RawValue
+  nameWithType: BsonArray.RawValue
+  fullName: LiteDB.BsonArray.RawValue
+- uid: LiteDB.BsonValue.Item(System.Int32)
+  commentId: P:LiteDB.BsonValue.Item(System.Int32)
+  parent: LiteDB.BsonValue
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: BsonValue.this[int]
+  fullName: LiteDB.BsonValue.this[int]
+  nameWithType.vb: BsonValue.this[](Integer)
+  fullName.vb: LiteDB.BsonValue.this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: LiteDB.BsonValue.Item(System.Int32)
+    name: this[]
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_Item_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.BsonArray.Item*
+  commentId: Overload:LiteDB.BsonArray.Item
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Item_System_Int32_
+  name: this
+  nameWithType: BsonArray.this
+  fullName: LiteDB.BsonArray.this
+  nameWithType.vb: BsonArray.this[]
+  fullName.vb: LiteDB.BsonArray.this[]
+  name.vb: this[]
+- uid: System.Collections.Generic.IList{LiteDB.BsonValue}.Item(System.Int32)
+  commentId: P:System.Collections.Generic.IList{LiteDB.BsonValue}.Item(System.Int32)
+  parent: System.Collections.Generic.IList{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IList`1.Item(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: IList<BsonValue>.this[int]
+  fullName: System.Collections.Generic.IList<LiteDB.BsonValue>.this[int]
+  nameWithType.vb: IList(Of BsonValue).this[](Integer)
+  fullName.vb: System.Collections.Generic.IList(Of LiteDB.BsonValue).this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.item
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IList`1.Item(System.Int32)
+  commentId: P:System.Collections.Generic.IList`1.Item(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: IList<T>.this[int]
+  fullName: System.Collections.Generic.IList<T>.this[int]
+  nameWithType.vb: IList(Of T).this[](Integer)
+  fullName.vb: System.Collections.Generic.IList(Of T).this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.item
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.BsonArray.Count*
+  commentId: Overload:LiteDB.BsonArray.Count
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Count
+  name: Count
+  nameWithType: BsonArray.Count
+  fullName: LiteDB.BsonArray.Count
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Count
+  commentId: P:System.Collections.Generic.ICollection{LiteDB.BsonValue}.Count
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.Count
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.count
+  name: Count
+  nameWithType: ICollection<BsonValue>.Count
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.Count
+  nameWithType.vb: ICollection(Of BsonValue).Count
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).Count
+- uid: System.Collections.Generic.ICollection`1.Count
+  commentId: P:System.Collections.Generic.ICollection`1.Count
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.count
+  name: Count
+  nameWithType: ICollection<T>.Count
+  fullName: System.Collections.Generic.ICollection<T>.Count
+  nameWithType.vb: ICollection(Of T).Count
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Count
+- uid: LiteDB.BsonArray.IsReadOnly*
+  commentId: Overload:LiteDB.BsonArray.IsReadOnly
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_IsReadOnly
+  name: IsReadOnly
+  nameWithType: BsonArray.IsReadOnly
+  fullName: LiteDB.BsonArray.IsReadOnly
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.IsReadOnly
+  commentId: P:System.Collections.Generic.ICollection{LiteDB.BsonValue}.IsReadOnly
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.IsReadOnly
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.isreadonly
+  name: IsReadOnly
+  nameWithType: ICollection<BsonValue>.IsReadOnly
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.IsReadOnly
+  nameWithType.vb: ICollection(Of BsonValue).IsReadOnly
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).IsReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.ICollection`1.IsReadOnly
+  commentId: P:System.Collections.Generic.ICollection`1.IsReadOnly
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.isreadonly
+  name: IsReadOnly
+  nameWithType: ICollection<T>.IsReadOnly
+  fullName: System.Collections.Generic.ICollection<T>.IsReadOnly
+  nameWithType.vb: ICollection(Of T).IsReadOnly
+  fullName.vb: System.Collections.Generic.ICollection(Of T).IsReadOnly
+- uid: LiteDB.BsonArray.Add*
+  commentId: Overload:LiteDB.BsonArray.Add
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Add_LiteDB_BsonValue_
+  name: Add
+  nameWithType: BsonArray.Add
+  fullName: LiteDB.BsonArray.Add
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Add(LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.ICollection{LiteDB.BsonValue}.Add(LiteDB.BsonValue)
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.Add(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add
+  name: Add(BsonValue)
+  nameWithType: ICollection<BsonValue>.Add(BsonValue)
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.Add(LiteDB.BsonValue)
+  nameWithType.vb: ICollection(Of BsonValue).Add(BsonValue)
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).Add(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Add(LiteDB.BsonValue)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Add(LiteDB.BsonValue)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1.Add(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Add(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add
+  name: Add(T)
+  nameWithType: ICollection<T>.Add(T)
+  fullName: System.Collections.Generic.ICollection<T>.Add(T)
+  nameWithType.vb: ICollection(Of T).Add(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Add(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.add
+  - name: (
+  - name: T
+  - name: )
+- uid: LiteDB.BsonArray.AddRange*
+  commentId: Overload:LiteDB.BsonArray.AddRange
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_AddRange__1___0_
+  name: AddRange
+  nameWithType: BsonArray.AddRange
+  fullName: LiteDB.BsonArray.AddRange
+- uid: '{TCollection}'
+  commentId: '!:TCollection'
+  definition: TCollection
+  name: TCollection
+  nameWithType: TCollection
+  fullName: TCollection
+- uid: TCollection
+  commentId: '!:TCollection'
+  name: TCollection
+  nameWithType: TCollection
+  fullName: TCollection
+- uid: LiteDB.BsonArray.Clear*
+  commentId: Overload:LiteDB.BsonArray.Clear
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Clear
+  name: Clear
+  nameWithType: BsonArray.Clear
+  fullName: LiteDB.BsonArray.Clear
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Clear
+  commentId: M:System.Collections.Generic.ICollection{LiteDB.BsonValue}.Clear
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.Clear
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear
+  name: Clear()
+  nameWithType: ICollection<BsonValue>.Clear()
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.Clear()
+  nameWithType.vb: ICollection(Of BsonValue).Clear()
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).Clear()
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.ICollection`1.Clear
+  commentId: M:System.Collections.Generic.ICollection`1.Clear
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear
+  name: Clear()
+  nameWithType: ICollection<T>.Clear()
+  fullName: System.Collections.Generic.ICollection<T>.Clear()
+  nameWithType.vb: ICollection(Of T).Clear()
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Clear()
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.clear
+  - name: (
+  - name: )
+- uid: LiteDB.BsonArray.Contains*
+  commentId: Overload:LiteDB.BsonArray.Contains
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Contains_LiteDB_BsonValue_
+  name: Contains
+  nameWithType: BsonArray.Contains
+  fullName: LiteDB.BsonArray.Contains
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Contains(LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.ICollection{LiteDB.BsonValue}.Contains(LiteDB.BsonValue)
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.Contains(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains
+  name: Contains(BsonValue)
+  nameWithType: ICollection<BsonValue>.Contains(BsonValue)
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.Contains(LiteDB.BsonValue)
+  nameWithType.vb: ICollection(Of BsonValue).Contains(BsonValue)
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).Contains(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Contains(LiteDB.BsonValue)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Contains(LiteDB.BsonValue)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1.Contains(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Contains(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains
+  name: Contains(T)
+  nameWithType: ICollection<T>.Contains(T)
+  fullName: System.Collections.Generic.ICollection<T>.Contains(T)
+  nameWithType.vb: ICollection(Of T).Contains(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Contains(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains
+  - name: (
+  - name: T
+  - name: )
+- uid: LiteDB.BsonArray.CopyTo*
+  commentId: Overload:LiteDB.BsonArray.CopyTo
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_CopyTo_LiteDB_BsonValue___System_Int32_
+  name: CopyTo
+  nameWithType: BsonArray.CopyTo
+  fullName: LiteDB.BsonArray.CopyTo
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.CopyTo(LiteDB.BsonValue[],System.Int32)
+  commentId: M:System.Collections.Generic.ICollection{LiteDB.BsonValue}.CopyTo(LiteDB.BsonValue[],System.Int32)
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto
+  name: CopyTo(BsonValue[], int)
+  nameWithType: ICollection<BsonValue>.CopyTo(BsonValue[], int)
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.CopyTo(LiteDB.BsonValue[], int)
+  nameWithType.vb: ICollection(Of BsonValue).CopyTo(BsonValue(), Integer)
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).CopyTo(LiteDB.BsonValue(), Integer)
+  name.vb: CopyTo(BsonValue(), Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.CopyTo(LiteDB.BsonValue[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.CopyTo(LiteDB.BsonValue[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  commentId: M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto
+  name: CopyTo(T[], int)
+  nameWithType: ICollection<T>.CopyTo(T[], int)
+  fullName: System.Collections.Generic.ICollection<T>.CopyTo(T[], int)
+  nameWithType.vb: ICollection(Of T).CopyTo(T(), Integer)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).CopyTo(T(), Integer)
+  name.vb: CopyTo(T(), Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto
+  - name: (
+  - name: T
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.copyto
+  - name: (
+  - name: T
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.BsonArray.GetEnumerator*
+  commentId: Overload:LiteDB.BsonArray.GetEnumerator
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_GetEnumerator
+  name: GetEnumerator
+  nameWithType: BsonArray.GetEnumerator
+  fullName: LiteDB.BsonArray.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{LiteDB.BsonValue}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<BsonValue>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonValue>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of BsonValue).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonValue).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{LiteDB.BsonValue}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{LiteDB.BsonValue}
+  commentId: T:System.Collections.Generic.IEnumerator{LiteDB.BsonValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<BsonValue>
+  nameWithType: IEnumerator<BsonValue>
+  fullName: System.Collections.Generic.IEnumerator<LiteDB.BsonValue>
+  nameWithType.vb: IEnumerator(Of BsonValue)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of LiteDB.BsonValue)
+  name.vb: IEnumerator(Of BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.BsonArray.IndexOf*
+  commentId: Overload:LiteDB.BsonArray.IndexOf
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_IndexOf_LiteDB_BsonValue_
+  name: IndexOf
+  nameWithType: BsonArray.IndexOf
+  fullName: LiteDB.BsonArray.IndexOf
+- uid: System.Collections.Generic.IList{LiteDB.BsonValue}.IndexOf(LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.IList{LiteDB.BsonValue}.IndexOf(LiteDB.BsonValue)
+  parent: System.Collections.Generic.IList{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IList`1.IndexOf(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.indexof
+  name: IndexOf(BsonValue)
+  nameWithType: IList<BsonValue>.IndexOf(BsonValue)
+  fullName: System.Collections.Generic.IList<LiteDB.BsonValue>.IndexOf(LiteDB.BsonValue)
+  nameWithType.vb: IList(Of BsonValue).IndexOf(BsonValue)
+  fullName.vb: System.Collections.Generic.IList(Of LiteDB.BsonValue).IndexOf(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.IndexOf(LiteDB.BsonValue)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.indexof
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.IndexOf(LiteDB.BsonValue)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.indexof
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IList`1.IndexOf(`0)
+  commentId: M:System.Collections.Generic.IList`1.IndexOf(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.indexof
+  name: IndexOf(T)
+  nameWithType: IList<T>.IndexOf(T)
+  fullName: System.Collections.Generic.IList<T>.IndexOf(T)
+  nameWithType.vb: IList(Of T).IndexOf(T)
+  fullName.vb: System.Collections.Generic.IList(Of T).IndexOf(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.IndexOf(`0)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.indexof
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.IndexOf(`0)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.indexof
+  - name: (
+  - name: T
+  - name: )
+- uid: LiteDB.BsonArray.Insert*
+  commentId: Overload:LiteDB.BsonArray.Insert
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Insert_System_Int32_LiteDB_BsonValue_
+  name: Insert
+  nameWithType: BsonArray.Insert
+  fullName: LiteDB.BsonArray.Insert
+- uid: System.Collections.Generic.IList{LiteDB.BsonValue}.Insert(System.Int32,LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.IList{LiteDB.BsonValue}.Insert(System.Int32,LiteDB.BsonValue)
+  parent: System.Collections.Generic.IList{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.insert
+  name: Insert(int, BsonValue)
+  nameWithType: IList<BsonValue>.Insert(int, BsonValue)
+  fullName: System.Collections.Generic.IList<LiteDB.BsonValue>.Insert(int, LiteDB.BsonValue)
+  nameWithType.vb: IList(Of BsonValue).Insert(Integer, BsonValue)
+  fullName.vb: System.Collections.Generic.IList(Of LiteDB.BsonValue).Insert(Integer, LiteDB.BsonValue)
+  name.vb: Insert(Integer, BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.Insert(System.Int32,LiteDB.BsonValue)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.insert
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.Insert(System.Int32,LiteDB.BsonValue)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.insert
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+  commentId: M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.insert
+  name: Insert(int, T)
+  nameWithType: IList<T>.Insert(int, T)
+  fullName: System.Collections.Generic.IList<T>.Insert(int, T)
+  nameWithType.vb: IList(Of T).Insert(Integer, T)
+  fullName.vb: System.Collections.Generic.IList(Of T).Insert(Integer, T)
+  name.vb: Insert(Integer, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.insert
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.insert
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.BsonArray.Remove*
+  commentId: Overload:LiteDB.BsonArray.Remove
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_Remove_LiteDB_BsonValue_
+  name: Remove
+  nameWithType: BsonArray.Remove
+  fullName: LiteDB.BsonArray.Remove
+- uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Remove(LiteDB.BsonValue)
+  commentId: M:System.Collections.Generic.ICollection{LiteDB.BsonValue}.Remove(LiteDB.BsonValue)
+  parent: System.Collections.Generic.ICollection{LiteDB.BsonValue}
+  definition: System.Collections.Generic.ICollection`1.Remove(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove
+  name: Remove(BsonValue)
+  nameWithType: ICollection<BsonValue>.Remove(BsonValue)
+  fullName: System.Collections.Generic.ICollection<LiteDB.BsonValue>.Remove(LiteDB.BsonValue)
+  nameWithType.vb: ICollection(Of BsonValue).Remove(BsonValue)
+  fullName.vb: System.Collections.Generic.ICollection(Of LiteDB.BsonValue).Remove(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Remove(LiteDB.BsonValue)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection{LiteDB.BsonValue}.Remove(LiteDB.BsonValue)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1.Remove(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Remove(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove
+  name: Remove(T)
+  nameWithType: ICollection<T>.Remove(T)
+  fullName: System.Collections.Generic.ICollection<T>.Remove(T)
+  nameWithType.vb: ICollection(Of T).Remove(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Remove(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1.remove
+  - name: (
+  - name: T
+  - name: )
+- uid: LiteDB.BsonArray.RemoveAt*
+  commentId: Overload:LiteDB.BsonArray.RemoveAt
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_RemoveAt_System_Int32_
+  name: RemoveAt
+  nameWithType: BsonArray.RemoveAt
+  fullName: LiteDB.BsonArray.RemoveAt
+- uid: System.Collections.Generic.IList{LiteDB.BsonValue}.RemoveAt(System.Int32)
+  commentId: M:System.Collections.Generic.IList{LiteDB.BsonValue}.RemoveAt(System.Int32)
+  parent: System.Collections.Generic.IList{LiteDB.BsonValue}
+  definition: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.removeat
+  name: RemoveAt(int)
+  nameWithType: IList<BsonValue>.RemoveAt(int)
+  fullName: System.Collections.Generic.IList<LiteDB.BsonValue>.RemoveAt(int)
+  nameWithType.vb: IList(Of BsonValue).RemoveAt(Integer)
+  fullName.vb: System.Collections.Generic.IList(Of LiteDB.BsonValue).RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList{LiteDB.BsonValue}.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+  commentId: M:System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.removeat
+  name: RemoveAt(int)
+  nameWithType: IList<T>.RemoveAt(int)
+  fullName: System.Collections.Generic.IList<T>.RemoveAt(int)
+  nameWithType.vb: IList(Of T).RemoveAt(Integer)
+  fullName.vb: System.Collections.Generic.IList(Of T).RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_
+  name: CompareTo(BsonValue)
+  nameWithType: BsonValue.CompareTo(BsonValue)
+  fullName: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+    name: CompareTo
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+    name: CompareTo
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: LiteDB.BsonArray.CompareTo*
+  commentId: Overload:LiteDB.BsonArray.CompareTo
+  href: LiteDB.BsonArray.html#LiteDB_BsonArray_CompareTo_LiteDB_BsonValue_
+  name: CompareTo
+  nameWithType: BsonArray.CompareTo
+  fullName: LiteDB.BsonArray.CompareTo

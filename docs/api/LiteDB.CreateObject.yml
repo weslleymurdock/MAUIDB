@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.CreateObject
+  commentId: T:LiteDB.CreateObject
+  id: CreateObject
+  parent: LiteDB
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: CreateObject
+  nameWithType: CreateObject
+  fullName: LiteDB.CreateObject
+  type: Delegate
+  source:
+    id: CreateObject
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/Reflection/Reflection.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public delegate object CreateObject(BsonDocument value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonDocument
+    return:
+      type: System.Object
+    content.vb: Public Delegate Function CreateObject(value As BsonDocument) As Object
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

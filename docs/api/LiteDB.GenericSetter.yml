@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.GenericSetter
+  commentId: T:LiteDB.GenericSetter
+  id: GenericSetter
+  parent: LiteDB
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GenericSetter
+  nameWithType: GenericSetter
+  fullName: LiteDB.GenericSetter
+  type: Delegate
+  source:
+    id: GenericSetter
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/Reflection/Reflection.cs
+    startLine: 16
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public delegate void GenericSetter(object target, object value)
+    parameters:
+    - id: target
+      type: System.Object
+    - id: value
+      type: System.Object
+    content.vb: Public Delegate Sub GenericSetter(target As Object, value As Object)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

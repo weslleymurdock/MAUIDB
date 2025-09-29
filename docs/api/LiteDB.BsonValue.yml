@@ -1,0 +1,3709 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  id: BsonValue
+  parent: LiteDB
+  children:
+  - LiteDB.BsonValue.#ctor
+  - LiteDB.BsonValue.#ctor(LiteDB.BsonType,System.Object)
+  - LiteDB.BsonValue.#ctor(LiteDB.ObjectId)
+  - LiteDB.BsonValue.#ctor(System.Boolean)
+  - LiteDB.BsonValue.#ctor(System.Byte[])
+  - LiteDB.BsonValue.#ctor(System.DateTime)
+  - LiteDB.BsonValue.#ctor(System.Decimal)
+  - LiteDB.BsonValue.#ctor(System.Double)
+  - LiteDB.BsonValue.#ctor(System.Guid)
+  - LiteDB.BsonValue.#ctor(System.Int32)
+  - LiteDB.BsonValue.#ctor(System.Int64)
+  - LiteDB.BsonValue.#ctor(System.Object)
+  - LiteDB.BsonValue.#ctor(System.String)
+  - LiteDB.BsonValue.AsArray
+  - LiteDB.BsonValue.AsBinary
+  - LiteDB.BsonValue.AsBoolean
+  - LiteDB.BsonValue.AsDateTime
+  - LiteDB.BsonValue.AsDecimal
+  - LiteDB.BsonValue.AsDocument
+  - LiteDB.BsonValue.AsDouble
+  - LiteDB.BsonValue.AsGuid
+  - LiteDB.BsonValue.AsInt32
+  - LiteDB.BsonValue.AsInt64
+  - LiteDB.BsonValue.AsObjectId
+  - LiteDB.BsonValue.AsString
+  - LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  - LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  - LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+  - LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  - LiteDB.BsonValue.Equals(System.Object)
+  - LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+  - LiteDB.BsonValue.GetHashCode
+  - LiteDB.BsonValue.IsArray
+  - LiteDB.BsonValue.IsBinary
+  - LiteDB.BsonValue.IsBoolean
+  - LiteDB.BsonValue.IsDateTime
+  - LiteDB.BsonValue.IsDecimal
+  - LiteDB.BsonValue.IsDocument
+  - LiteDB.BsonValue.IsDouble
+  - LiteDB.BsonValue.IsGuid
+  - LiteDB.BsonValue.IsInt32
+  - LiteDB.BsonValue.IsInt64
+  - LiteDB.BsonValue.IsMaxValue
+  - LiteDB.BsonValue.IsMinValue
+  - LiteDB.BsonValue.IsNull
+  - LiteDB.BsonValue.IsNumber
+  - LiteDB.BsonValue.IsObjectId
+  - LiteDB.BsonValue.IsString
+  - LiteDB.BsonValue.Item(System.Int32)
+  - LiteDB.BsonValue.Item(System.String)
+  - LiteDB.BsonValue.MaxValue
+  - LiteDB.BsonValue.MinValue
+  - LiteDB.BsonValue.Null
+  - LiteDB.BsonValue.RawValue
+  - LiteDB.BsonValue.ToString
+  - LiteDB.BsonValue.Type
+  - LiteDB.BsonValue.UnixEpoch
+  - LiteDB.BsonValue.op_Addition(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_Division(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_Equality(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_GreaterThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_GreaterThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~LiteDB.ObjectId
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Boolean
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Byte[]
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.DateTime
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Decimal
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Double
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Guid
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Int32
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Int64
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.String
+  - LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.UInt64
+  - LiteDB.BsonValue.op_Implicit(LiteDB.ObjectId)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Boolean)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Byte[])~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.DateTime)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Decimal)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Double)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Guid)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Int32)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.Int64)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.String)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Implicit(System.UInt64)~LiteDB.BsonValue
+  - LiteDB.BsonValue.op_Inequality(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_LessThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_LessThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_Modulus(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_Multiply(LiteDB.BsonValue,LiteDB.BsonValue)
+  - LiteDB.BsonValue.op_Subtraction(LiteDB.BsonValue,LiteDB.BsonValue)
+  langs:
+  - csharp
+  - vb
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+  type: Class
+  source:
+    id: BsonValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Represent a Bson Value used in BsonDocument
+  example: []
+  syntax:
+    content: 'public class BsonValue : IComparable<BsonValue>, IEquatable<BsonValue>'
+    content.vb: Public Class BsonValue Implements IComparable(Of BsonValue), IEquatable(Of BsonValue)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - LiteDB.BsonArray
+  - LiteDB.BsonDocument
+  implements:
+  - System.IComparable{LiteDB.BsonValue}
+  - System.IEquatable{LiteDB.BsonValue}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: LiteDB.BsonValue.UnixEpoch
+  commentId: F:LiteDB.BsonValue.UnixEpoch
+  id: UnixEpoch
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: UnixEpoch
+  nameWithType: BsonValue.UnixEpoch
+  fullName: LiteDB.BsonValue.UnixEpoch
+  type: Field
+  source:
+    id: UnixEpoch
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 15
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static readonly DateTime UnixEpoch
+    return:
+      type: System.DateTime
+    content.vb: Public Shared ReadOnly UnixEpoch As Date
+- uid: LiteDB.BsonValue.Null
+  commentId: F:LiteDB.BsonValue.Null
+  id: "Null"
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: "Null"
+  nameWithType: BsonValue.Null
+  fullName: LiteDB.BsonValue.Null
+  type: Field
+  source:
+    id: "Null"
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 20
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Represent a Null bson type
+  example: []
+  syntax:
+    content: public static BsonValue Null
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Null As BsonValue
+- uid: LiteDB.BsonValue.MinValue
+  commentId: F:LiteDB.BsonValue.MinValue
+  id: MinValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: BsonValue.MinValue
+  fullName: LiteDB.BsonValue.MinValue
+  type: Field
+  source:
+    id: MinValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 25
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Represent a MinValue bson type
+  example: []
+  syntax:
+    content: public static BsonValue MinValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared MinValue As BsonValue
+- uid: LiteDB.BsonValue.MaxValue
+  commentId: F:LiteDB.BsonValue.MaxValue
+  id: MaxValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: BsonValue.MaxValue
+  fullName: LiteDB.BsonValue.MaxValue
+  type: Field
+  source:
+    id: MaxValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 30
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Represent a MaxValue bson type
+  example: []
+  syntax:
+    content: public static BsonValue MaxValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared MaxValue As BsonValue
+- uid: LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+  commentId: M:LiteDB.BsonValue.DbRef(LiteDB.BsonValue,System.String)
+  id: DbRef(LiteDB.BsonValue,System.String)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: DbRef(BsonValue, string)
+  nameWithType: BsonValue.DbRef(BsonValue, string)
+  fullName: LiteDB.BsonValue.DbRef(LiteDB.BsonValue, string)
+  type: Method
+  source:
+    id: DbRef
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 35
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: 'Create a new document used in DbRef =&gt; { $id: id, $ref: collection }'
+  example: []
+  syntax:
+    content: public static BsonDocument DbRef(BsonValue id, string collection)
+    parameters:
+    - id: id
+      type: LiteDB.BsonValue
+    - id: collection
+      type: System.String
+    return:
+      type: LiteDB.BsonDocument
+    content.vb: Public Shared Function DbRef(id As BsonValue, collection As String) As BsonDocument
+  overload: LiteDB.BsonValue.DbRef*
+  nameWithType.vb: BsonValue.DbRef(BsonValue, String)
+  fullName.vb: LiteDB.BsonValue.DbRef(LiteDB.BsonValue, String)
+  name.vb: DbRef(BsonValue, String)
+- uid: LiteDB.BsonValue.Type
+  commentId: P:LiteDB.BsonValue.Type
+  id: Type
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: BsonValue.Type
+  fullName: LiteDB.BsonValue.Type
+  type: Property
+  source:
+    id: Type
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 40
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Indicate BsonType of this BsonValue
+  example: []
+  syntax:
+    content: public BsonType Type { get; }
+    parameters: []
+    return:
+      type: LiteDB.BsonType
+    content.vb: Public ReadOnly Property Type As BsonType
+  overload: LiteDB.BsonValue.Type*
+- uid: LiteDB.BsonValue.RawValue
+  commentId: P:LiteDB.BsonValue.RawValue
+  id: RawValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: RawValue
+  nameWithType: BsonValue.RawValue
+  fullName: LiteDB.BsonValue.RawValue
+  type: Property
+  source:
+    id: RawValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 45
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get internal .NET value object
+  example: []
+  syntax:
+    content: public virtual object RawValue { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Overridable ReadOnly Property RawValue As Object
+  overload: LiteDB.BsonValue.RawValue*
+- uid: LiteDB.BsonValue.#ctor
+  commentId: M:LiteDB.BsonValue.#ctor
+  id: '#ctor'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue()
+  nameWithType: BsonValue.BsonValue()
+  fullName: LiteDB.BsonValue.BsonValue()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 49
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue()
+    content.vb: Public Sub New()
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New()
+  fullName.vb: LiteDB.BsonValue.New()
+  name.vb: New()
+- uid: LiteDB.BsonValue.#ctor(System.Int32)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(int)
+  nameWithType: BsonValue.BsonValue(int)
+  fullName: LiteDB.BsonValue.BsonValue(int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 55
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    content.vb: Public Sub New(value As Integer)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Integer)
+  fullName.vb: LiteDB.BsonValue.New(Integer)
+  name.vb: New(Integer)
+- uid: LiteDB.BsonValue.#ctor(System.Int64)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(long)
+  nameWithType: BsonValue.BsonValue(long)
+  fullName: LiteDB.BsonValue.BsonValue(long)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 61
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    content.vb: Public Sub New(value As Long)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Long)
+  fullName.vb: LiteDB.BsonValue.New(Long)
+  name.vb: New(Long)
+- uid: LiteDB.BsonValue.#ctor(System.Double)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Double)
+  id: '#ctor(System.Double)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(double)
+  nameWithType: BsonValue.BsonValue(double)
+  fullName: LiteDB.BsonValue.BsonValue(double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 67
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(double value)
+    parameters:
+    - id: value
+      type: System.Double
+    content.vb: Public Sub New(value As Double)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Double)
+  fullName.vb: LiteDB.BsonValue.New(Double)
+  name.vb: New(Double)
+- uid: LiteDB.BsonValue.#ctor(System.Decimal)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Decimal)
+  id: '#ctor(System.Decimal)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(decimal)
+  nameWithType: BsonValue.BsonValue(decimal)
+  fullName: LiteDB.BsonValue.BsonValue(decimal)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 73
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(decimal value)
+    parameters:
+    - id: value
+      type: System.Decimal
+    content.vb: Public Sub New(value As Decimal)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Decimal)
+  fullName.vb: LiteDB.BsonValue.New(Decimal)
+  name.vb: New(Decimal)
+- uid: LiteDB.BsonValue.#ctor(System.String)
+  commentId: M:LiteDB.BsonValue.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(string)
+  nameWithType: BsonValue.BsonValue(string)
+  fullName: LiteDB.BsonValue.BsonValue(string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 79
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(string value)
+    parameters:
+    - id: value
+      type: System.String
+    content.vb: Public Sub New(value As String)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(String)
+  fullName.vb: LiteDB.BsonValue.New(String)
+  name.vb: New(String)
+- uid: LiteDB.BsonValue.#ctor(System.Byte[])
+  commentId: M:LiteDB.BsonValue.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(byte[])
+  nameWithType: BsonValue.BsonValue(byte[])
+  fullName: LiteDB.BsonValue.BsonValue(byte[])
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 85
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(byte[] value)
+    parameters:
+    - id: value
+      type: System.Byte[]
+    content.vb: Public Sub New(value As Byte())
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Byte())
+  fullName.vb: LiteDB.BsonValue.New(Byte())
+  name.vb: New(Byte())
+- uid: LiteDB.BsonValue.#ctor(LiteDB.ObjectId)
+  commentId: M:LiteDB.BsonValue.#ctor(LiteDB.ObjectId)
+  id: '#ctor(LiteDB.ObjectId)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(ObjectId)
+  nameWithType: BsonValue.BsonValue(ObjectId)
+  fullName: LiteDB.BsonValue.BsonValue(LiteDB.ObjectId)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 91
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(ObjectId value)
+    parameters:
+    - id: value
+      type: LiteDB.ObjectId
+    content.vb: Public Sub New(value As ObjectId)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(ObjectId)
+  fullName.vb: LiteDB.BsonValue.New(LiteDB.ObjectId)
+  name.vb: New(ObjectId)
+- uid: LiteDB.BsonValue.#ctor(System.Guid)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(Guid)
+  nameWithType: BsonValue.BsonValue(Guid)
+  fullName: LiteDB.BsonValue.BsonValue(System.Guid)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 97
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(Guid value)
+    parameters:
+    - id: value
+      type: System.Guid
+    content.vb: Public Sub New(value As Guid)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Guid)
+  fullName.vb: LiteDB.BsonValue.New(System.Guid)
+  name.vb: New(Guid)
+- uid: LiteDB.BsonValue.#ctor(System.Boolean)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(bool)
+  nameWithType: BsonValue.BsonValue(bool)
+  fullName: LiteDB.BsonValue.BsonValue(bool)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 103
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+    content.vb: Public Sub New(value As Boolean)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Boolean)
+  fullName.vb: LiteDB.BsonValue.New(Boolean)
+  name.vb: New(Boolean)
+- uid: LiteDB.BsonValue.#ctor(System.DateTime)
+  commentId: M:LiteDB.BsonValue.#ctor(System.DateTime)
+  id: '#ctor(System.DateTime)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(DateTime)
+  nameWithType: BsonValue.BsonValue(DateTime)
+  fullName: LiteDB.BsonValue.BsonValue(System.DateTime)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 109
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(DateTime value)
+    parameters:
+    - id: value
+      type: System.DateTime
+    content.vb: Public Sub New(value As Date)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Date)
+  fullName.vb: LiteDB.BsonValue.New(Date)
+  name.vb: New(Date)
+- uid: LiteDB.BsonValue.#ctor(LiteDB.BsonType,System.Object)
+  commentId: M:LiteDB.BsonValue.#ctor(LiteDB.BsonType,System.Object)
+  id: '#ctor(LiteDB.BsonType,System.Object)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(BsonType, object)
+  nameWithType: BsonValue.BsonValue(BsonType, object)
+  fullName: LiteDB.BsonValue.BsonValue(LiteDB.BsonType, object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 115
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: protected BsonValue(BsonType type, object rawValue)
+    parameters:
+    - id: type
+      type: LiteDB.BsonType
+    - id: rawValue
+      type: System.Object
+    content.vb: Protected Sub New(type As BsonType, rawValue As Object)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(BsonType, Object)
+  fullName.vb: LiteDB.BsonValue.New(LiteDB.BsonType, Object)
+  name.vb: New(BsonType, Object)
+- uid: LiteDB.BsonValue.#ctor(System.Object)
+  commentId: M:LiteDB.BsonValue.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: BsonValue(object)
+  nameWithType: BsonValue.BsonValue(object)
+  fullName: LiteDB.BsonValue.BsonValue(object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 121
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonValue(object value)
+    parameters:
+    - id: value
+      type: System.Object
+    content.vb: Public Sub New(value As Object)
+  overload: LiteDB.BsonValue.#ctor*
+  nameWithType.vb: BsonValue.New(Object)
+  fullName.vb: LiteDB.BsonValue.New(Object)
+  name.vb: New(Object)
+- uid: LiteDB.BsonValue.Item(System.String)
+  commentId: P:LiteDB.BsonValue.Item(System.String)
+  id: Item(System.String)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: this[string]
+  nameWithType: BsonValue.this[string]
+  fullName: LiteDB.BsonValue.this[string]
+  type: Property
+  source:
+    id: this[]
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 193
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set a field for document. Fields are case sensitive - Works only when value are document
+  example: []
+  syntax:
+    content: public virtual BsonValue this[string name] { get; set; }
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Overridable Default Property this[](name As String) As BsonValue
+  overload: LiteDB.BsonValue.Item*
+  nameWithType.vb: BsonValue.this[](String)
+  fullName.vb: LiteDB.BsonValue.this[](String)
+  name.vb: this[](String)
+- uid: LiteDB.BsonValue.Item(System.Int32)
+  commentId: P:LiteDB.BsonValue.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: BsonValue.this[int]
+  fullName: LiteDB.BsonValue.this[int]
+  type: Property
+  source:
+    id: this[]
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 202
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set value in array position. Works only when value are array
+  example: []
+  syntax:
+    content: public virtual BsonValue this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Overridable Default Property this[](index As Integer) As BsonValue
+  overload: LiteDB.BsonValue.Item*
+  nameWithType.vb: BsonValue.this[](Integer)
+  fullName.vb: LiteDB.BsonValue.this[](Integer)
+  name.vb: this[](Integer)
+- uid: LiteDB.BsonValue.AsArray
+  commentId: P:LiteDB.BsonValue.AsArray
+  id: AsArray
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsArray
+  nameWithType: BsonValue.AsArray
+  fullName: LiteDB.BsonValue.AsArray
+  type: Property
+  source:
+    id: AsArray
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 212
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonArray AsArray { get; }
+    parameters: []
+    return:
+      type: LiteDB.BsonArray
+    content.vb: Public ReadOnly Property AsArray As BsonArray
+  overload: LiteDB.BsonValue.AsArray*
+- uid: LiteDB.BsonValue.AsDocument
+  commentId: P:LiteDB.BsonValue.AsDocument
+  id: AsDocument
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsDocument
+  nameWithType: BsonValue.AsDocument
+  fullName: LiteDB.BsonValue.AsDocument
+  type: Property
+  source:
+    id: AsDocument
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 215
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonDocument AsDocument { get; }
+    parameters: []
+    return:
+      type: LiteDB.BsonDocument
+    content.vb: Public ReadOnly Property AsDocument As BsonDocument
+  overload: LiteDB.BsonValue.AsDocument*
+- uid: LiteDB.BsonValue.AsBinary
+  commentId: P:LiteDB.BsonValue.AsBinary
+  id: AsBinary
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsBinary
+  nameWithType: BsonValue.AsBinary
+  fullName: LiteDB.BsonValue.AsBinary
+  type: Property
+  source:
+    id: AsBinary
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 218
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public byte[] AsBinary { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property AsBinary As Byte()
+  overload: LiteDB.BsonValue.AsBinary*
+- uid: LiteDB.BsonValue.AsBoolean
+  commentId: P:LiteDB.BsonValue.AsBoolean
+  id: AsBoolean
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsBoolean
+  nameWithType: BsonValue.AsBoolean
+  fullName: LiteDB.BsonValue.AsBoolean
+  type: Property
+  source:
+    id: AsBoolean
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 221
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool AsBoolean { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AsBoolean As Boolean
+  overload: LiteDB.BsonValue.AsBoolean*
+- uid: LiteDB.BsonValue.AsString
+  commentId: P:LiteDB.BsonValue.AsString
+  id: AsString
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsString
+  nameWithType: BsonValue.AsString
+  fullName: LiteDB.BsonValue.AsString
+  type: Property
+  source:
+    id: AsString
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 224
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public string AsString { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property AsString As String
+  overload: LiteDB.BsonValue.AsString*
+- uid: LiteDB.BsonValue.AsInt32
+  commentId: P:LiteDB.BsonValue.AsInt32
+  id: AsInt32
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsInt32
+  nameWithType: BsonValue.AsInt32
+  fullName: LiteDB.BsonValue.AsInt32
+  type: Property
+  source:
+    id: AsInt32
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 227
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public int AsInt32 { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property AsInt32 As Integer
+  overload: LiteDB.BsonValue.AsInt32*
+- uid: LiteDB.BsonValue.AsInt64
+  commentId: P:LiteDB.BsonValue.AsInt64
+  id: AsInt64
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsInt64
+  nameWithType: BsonValue.AsInt64
+  fullName: LiteDB.BsonValue.AsInt64
+  type: Property
+  source:
+    id: AsInt64
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 230
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public long AsInt64 { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property AsInt64 As Long
+  overload: LiteDB.BsonValue.AsInt64*
+- uid: LiteDB.BsonValue.AsDouble
+  commentId: P:LiteDB.BsonValue.AsDouble
+  id: AsDouble
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsDouble
+  nameWithType: BsonValue.AsDouble
+  fullName: LiteDB.BsonValue.AsDouble
+  type: Property
+  source:
+    id: AsDouble
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 233
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public double AsDouble { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property AsDouble As Double
+  overload: LiteDB.BsonValue.AsDouble*
+- uid: LiteDB.BsonValue.AsDecimal
+  commentId: P:LiteDB.BsonValue.AsDecimal
+  id: AsDecimal
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsDecimal
+  nameWithType: BsonValue.AsDecimal
+  fullName: LiteDB.BsonValue.AsDecimal
+  type: Property
+  source:
+    id: AsDecimal
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 236
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public decimal AsDecimal { get; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public ReadOnly Property AsDecimal As Decimal
+  overload: LiteDB.BsonValue.AsDecimal*
+- uid: LiteDB.BsonValue.AsDateTime
+  commentId: P:LiteDB.BsonValue.AsDateTime
+  id: AsDateTime
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsDateTime
+  nameWithType: BsonValue.AsDateTime
+  fullName: LiteDB.BsonValue.AsDateTime
+  type: Property
+  source:
+    id: AsDateTime
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 239
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public DateTime AsDateTime { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property AsDateTime As Date
+  overload: LiteDB.BsonValue.AsDateTime*
+- uid: LiteDB.BsonValue.AsObjectId
+  commentId: P:LiteDB.BsonValue.AsObjectId
+  id: AsObjectId
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsObjectId
+  nameWithType: BsonValue.AsObjectId
+  fullName: LiteDB.BsonValue.AsObjectId
+  type: Property
+  source:
+    id: AsObjectId
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 242
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public ObjectId AsObjectId { get; }
+    parameters: []
+    return:
+      type: LiteDB.ObjectId
+    content.vb: Public ReadOnly Property AsObjectId As ObjectId
+  overload: LiteDB.BsonValue.AsObjectId*
+- uid: LiteDB.BsonValue.AsGuid
+  commentId: P:LiteDB.BsonValue.AsGuid
+  id: AsGuid
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: AsGuid
+  nameWithType: BsonValue.AsGuid
+  fullName: LiteDB.BsonValue.AsGuid
+  type: Property
+  source:
+    id: AsGuid
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 245
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public Guid AsGuid { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property AsGuid As Guid
+  overload: LiteDB.BsonValue.AsGuid*
+- uid: LiteDB.BsonValue.IsNull
+  commentId: P:LiteDB.BsonValue.IsNull
+  id: IsNull
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsNull
+  nameWithType: BsonValue.IsNull
+  fullName: LiteDB.BsonValue.IsNull
+  type: Property
+  source:
+    id: IsNull
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 252
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsNull { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNull As Boolean
+  overload: LiteDB.BsonValue.IsNull*
+- uid: LiteDB.BsonValue.IsArray
+  commentId: P:LiteDB.BsonValue.IsArray
+  id: IsArray
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsArray
+  nameWithType: BsonValue.IsArray
+  fullName: LiteDB.BsonValue.IsArray
+  type: Property
+  source:
+    id: IsArray
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 255
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsArray { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsArray As Boolean
+  overload: LiteDB.BsonValue.IsArray*
+- uid: LiteDB.BsonValue.IsDocument
+  commentId: P:LiteDB.BsonValue.IsDocument
+  id: IsDocument
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsDocument
+  nameWithType: BsonValue.IsDocument
+  fullName: LiteDB.BsonValue.IsDocument
+  type: Property
+  source:
+    id: IsDocument
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 258
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsDocument { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocument As Boolean
+  overload: LiteDB.BsonValue.IsDocument*
+- uid: LiteDB.BsonValue.IsInt32
+  commentId: P:LiteDB.BsonValue.IsInt32
+  id: IsInt32
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsInt32
+  nameWithType: BsonValue.IsInt32
+  fullName: LiteDB.BsonValue.IsInt32
+  type: Property
+  source:
+    id: IsInt32
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 261
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsInt32 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInt32 As Boolean
+  overload: LiteDB.BsonValue.IsInt32*
+- uid: LiteDB.BsonValue.IsInt64
+  commentId: P:LiteDB.BsonValue.IsInt64
+  id: IsInt64
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsInt64
+  nameWithType: BsonValue.IsInt64
+  fullName: LiteDB.BsonValue.IsInt64
+  type: Property
+  source:
+    id: IsInt64
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 264
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsInt64 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInt64 As Boolean
+  overload: LiteDB.BsonValue.IsInt64*
+- uid: LiteDB.BsonValue.IsDouble
+  commentId: P:LiteDB.BsonValue.IsDouble
+  id: IsDouble
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsDouble
+  nameWithType: BsonValue.IsDouble
+  fullName: LiteDB.BsonValue.IsDouble
+  type: Property
+  source:
+    id: IsDouble
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 267
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsDouble { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDouble As Boolean
+  overload: LiteDB.BsonValue.IsDouble*
+- uid: LiteDB.BsonValue.IsDecimal
+  commentId: P:LiteDB.BsonValue.IsDecimal
+  id: IsDecimal
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsDecimal
+  nameWithType: BsonValue.IsDecimal
+  fullName: LiteDB.BsonValue.IsDecimal
+  type: Property
+  source:
+    id: IsDecimal
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 270
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsDecimal { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDecimal As Boolean
+  overload: LiteDB.BsonValue.IsDecimal*
+- uid: LiteDB.BsonValue.IsNumber
+  commentId: P:LiteDB.BsonValue.IsNumber
+  id: IsNumber
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsNumber
+  nameWithType: BsonValue.IsNumber
+  fullName: LiteDB.BsonValue.IsNumber
+  type: Property
+  source:
+    id: IsNumber
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 273
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsNumber { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNumber As Boolean
+  overload: LiteDB.BsonValue.IsNumber*
+- uid: LiteDB.BsonValue.IsBinary
+  commentId: P:LiteDB.BsonValue.IsBinary
+  id: IsBinary
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsBinary
+  nameWithType: BsonValue.IsBinary
+  fullName: LiteDB.BsonValue.IsBinary
+  type: Property
+  source:
+    id: IsBinary
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 276
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsBinary { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBinary As Boolean
+  overload: LiteDB.BsonValue.IsBinary*
+- uid: LiteDB.BsonValue.IsBoolean
+  commentId: P:LiteDB.BsonValue.IsBoolean
+  id: IsBoolean
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsBoolean
+  nameWithType: BsonValue.IsBoolean
+  fullName: LiteDB.BsonValue.IsBoolean
+  type: Property
+  source:
+    id: IsBoolean
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 279
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsBoolean { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBoolean As Boolean
+  overload: LiteDB.BsonValue.IsBoolean*
+- uid: LiteDB.BsonValue.IsString
+  commentId: P:LiteDB.BsonValue.IsString
+  id: IsString
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsString
+  nameWithType: BsonValue.IsString
+  fullName: LiteDB.BsonValue.IsString
+  type: Property
+  source:
+    id: IsString
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 282
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsString { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsString As Boolean
+  overload: LiteDB.BsonValue.IsString*
+- uid: LiteDB.BsonValue.IsObjectId
+  commentId: P:LiteDB.BsonValue.IsObjectId
+  id: IsObjectId
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsObjectId
+  nameWithType: BsonValue.IsObjectId
+  fullName: LiteDB.BsonValue.IsObjectId
+  type: Property
+  source:
+    id: IsObjectId
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 285
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsObjectId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsObjectId As Boolean
+  overload: LiteDB.BsonValue.IsObjectId*
+- uid: LiteDB.BsonValue.IsGuid
+  commentId: P:LiteDB.BsonValue.IsGuid
+  id: IsGuid
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsGuid
+  nameWithType: BsonValue.IsGuid
+  fullName: LiteDB.BsonValue.IsGuid
+  type: Property
+  source:
+    id: IsGuid
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 288
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsGuid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGuid As Boolean
+  overload: LiteDB.BsonValue.IsGuid*
+- uid: LiteDB.BsonValue.IsDateTime
+  commentId: P:LiteDB.BsonValue.IsDateTime
+  id: IsDateTime
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsDateTime
+  nameWithType: BsonValue.IsDateTime
+  fullName: LiteDB.BsonValue.IsDateTime
+  type: Property
+  source:
+    id: IsDateTime
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 291
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsDateTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDateTime As Boolean
+  overload: LiteDB.BsonValue.IsDateTime*
+- uid: LiteDB.BsonValue.IsMinValue
+  commentId: P:LiteDB.BsonValue.IsMinValue
+  id: IsMinValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsMinValue
+  nameWithType: BsonValue.IsMinValue
+  fullName: LiteDB.BsonValue.IsMinValue
+  type: Property
+  source:
+    id: IsMinValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 294
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsMinValue { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMinValue As Boolean
+  overload: LiteDB.BsonValue.IsMinValue*
+- uid: LiteDB.BsonValue.IsMaxValue
+  commentId: P:LiteDB.BsonValue.IsMaxValue
+  id: IsMaxValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: IsMaxValue
+  nameWithType: BsonValue.IsMaxValue
+  fullName: LiteDB.BsonValue.IsMaxValue
+  type: Property
+  source:
+    id: IsMaxValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 297
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public bool IsMaxValue { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMaxValue As Boolean
+  overload: LiteDB.BsonValue.IsMaxValue*
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Int32
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Int32
+  id: op_Implicit(LiteDB.BsonValue)~System.Int32
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator int(BsonValue)
+  nameWithType: BsonValue.implicit operator int(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator int(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 305
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator int(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Integer
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Int32)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Int32)~LiteDB.BsonValue
+  id: op_Implicit(System.Int32)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(int)
+  nameWithType: BsonValue.implicit operator BsonValue(int)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(int)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 311
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Integer) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Integer)
+  fullName.vb: LiteDB.BsonValue.CType(Integer)
+  name.vb: CType(Integer)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Int64
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Int64
+  id: op_Implicit(LiteDB.BsonValue)~System.Int64
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator long(BsonValue)
+  nameWithType: BsonValue.implicit operator long(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator long(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 317
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator long(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int64
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Long
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Int64)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Int64)~LiteDB.BsonValue
+  id: op_Implicit(System.Int64)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(long)
+  nameWithType: BsonValue.implicit operator BsonValue(long)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(long)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 323
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Long) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Long)
+  fullName.vb: LiteDB.BsonValue.CType(Long)
+  name.vb: CType(Long)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Double
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Double
+  id: op_Implicit(LiteDB.BsonValue)~System.Double
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator double(BsonValue)
+  nameWithType: BsonValue.implicit operator double(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator double(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 329
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator double(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Double
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Double
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Double)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Double)~LiteDB.BsonValue
+  id: op_Implicit(System.Double)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(double)
+  nameWithType: BsonValue.implicit operator BsonValue(double)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(double)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 335
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(double value)
+    parameters:
+    - id: value
+      type: System.Double
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Double) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Double)
+  fullName.vb: LiteDB.BsonValue.CType(Double)
+  name.vb: CType(Double)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Decimal
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Decimal
+  id: op_Implicit(LiteDB.BsonValue)~System.Decimal
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator decimal(BsonValue)
+  nameWithType: BsonValue.implicit operator decimal(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator decimal(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 341
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator decimal(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Decimal
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Decimal
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Decimal)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Decimal)~LiteDB.BsonValue
+  id: op_Implicit(System.Decimal)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(decimal)
+  nameWithType: BsonValue.implicit operator BsonValue(decimal)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(decimal)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 347
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(decimal value)
+    parameters:
+    - id: value
+      type: System.Decimal
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Decimal) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Decimal)
+  fullName.vb: LiteDB.BsonValue.CType(Decimal)
+  name.vb: CType(Decimal)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.UInt64
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.UInt64
+  id: op_Implicit(LiteDB.BsonValue)~System.UInt64
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator ulong(BsonValue)
+  nameWithType: BsonValue.implicit operator ulong(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator ulong(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 353
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator ulong(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As ULong
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.UInt64)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.UInt64)~LiteDB.BsonValue
+  id: op_Implicit(System.UInt64)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(ulong)
+  nameWithType: BsonValue.implicit operator BsonValue(ulong)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(ulong)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 359
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As ULong) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(ULong)
+  fullName.vb: LiteDB.BsonValue.CType(ULong)
+  name.vb: CType(ULong)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.String
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.String
+  id: op_Implicit(LiteDB.BsonValue)~System.String
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator string(BsonValue)
+  nameWithType: BsonValue.implicit operator string(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator string(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 365
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator string(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.String
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As String
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.String)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.String)~LiteDB.BsonValue
+  id: op_Implicit(System.String)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(string)
+  nameWithType: BsonValue.implicit operator BsonValue(string)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(string)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 371
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(string value)
+    parameters:
+    - id: value
+      type: System.String
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As String) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(String)
+  fullName.vb: LiteDB.BsonValue.CType(String)
+  name.vb: CType(String)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Byte[]
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Byte[]
+  id: op_Implicit(LiteDB.BsonValue)~System.Byte[]
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator byte[](BsonValue)
+  nameWithType: BsonValue.implicit operator byte[](BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator byte[](LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 377
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator byte[](BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Byte()
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Byte[])~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Byte[])~LiteDB.BsonValue
+  id: op_Implicit(System.Byte[])~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(byte[])
+  nameWithType: BsonValue.implicit operator BsonValue(byte[])
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(byte[])
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 383
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(byte[] value)
+    parameters:
+    - id: value
+      type: System.Byte[]
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Byte()) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Byte())
+  fullName.vb: LiteDB.BsonValue.CType(Byte())
+  name.vb: CType(Byte())
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~LiteDB.ObjectId
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~LiteDB.ObjectId
+  id: op_Implicit(LiteDB.BsonValue)~LiteDB.ObjectId
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator ObjectId(BsonValue)
+  nameWithType: BsonValue.implicit operator ObjectId(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.ObjectId(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 389
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator ObjectId(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.ObjectId
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As ObjectId
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.ObjectId)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.ObjectId)~LiteDB.BsonValue
+  id: op_Implicit(LiteDB.ObjectId)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(ObjectId)
+  nameWithType: BsonValue.implicit operator BsonValue(ObjectId)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(LiteDB.ObjectId)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 395
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(ObjectId value)
+    parameters:
+    - id: value
+      type: LiteDB.ObjectId
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As ObjectId) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(ObjectId)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.ObjectId)
+  name.vb: CType(ObjectId)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Guid
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Guid
+  id: op_Implicit(LiteDB.BsonValue)~System.Guid
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Guid(BsonValue)
+  nameWithType: BsonValue.implicit operator Guid(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator System.Guid(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 401
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator Guid(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Guid
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Guid
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Guid)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Guid)~LiteDB.BsonValue
+  id: op_Implicit(System.Guid)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(Guid)
+  nameWithType: BsonValue.implicit operator BsonValue(Guid)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(System.Guid)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 407
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(Guid value)
+    parameters:
+    - id: value
+      type: System.Guid
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Guid) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Guid)
+  fullName.vb: LiteDB.BsonValue.CType(System.Guid)
+  name.vb: CType(Guid)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Boolean
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.Boolean
+  id: op_Implicit(LiteDB.BsonValue)~System.Boolean
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator bool(BsonValue)
+  nameWithType: BsonValue.implicit operator bool(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator bool(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 413
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator bool(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.Boolean)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.Boolean)~LiteDB.BsonValue
+  id: op_Implicit(System.Boolean)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(bool)
+  nameWithType: BsonValue.implicit operator BsonValue(bool)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(bool)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 419
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Boolean) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Boolean)
+  fullName.vb: LiteDB.BsonValue.CType(Boolean)
+  name.vb: CType(Boolean)
+- uid: LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.DateTime
+  commentId: M:LiteDB.BsonValue.op_Implicit(LiteDB.BsonValue)~System.DateTime
+  id: op_Implicit(LiteDB.BsonValue)~System.DateTime
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator DateTime(BsonValue)
+  nameWithType: BsonValue.implicit operator DateTime(BsonValue)
+  fullName: LiteDB.BsonValue.implicit operator System.DateTime(LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 425
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator DateTime(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.DateTime
+    content.vb: Public Shared Widening Operator CType(value As BsonValue) As Date
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(BsonValue)
+  fullName.vb: LiteDB.BsonValue.CType(LiteDB.BsonValue)
+  name.vb: CType(BsonValue)
+- uid: LiteDB.BsonValue.op_Implicit(System.DateTime)~LiteDB.BsonValue
+  commentId: M:LiteDB.BsonValue.op_Implicit(System.DateTime)~LiteDB.BsonValue
+  id: op_Implicit(System.DateTime)~LiteDB.BsonValue
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: implicit operator BsonValue(DateTime)
+  nameWithType: BsonValue.implicit operator BsonValue(DateTime)
+  fullName: LiteDB.BsonValue.implicit operator LiteDB.BsonValue(System.DateTime)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 431
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static implicit operator BsonValue(DateTime value)
+    parameters:
+    - id: value
+      type: System.DateTime
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Widening Operator CType(value As Date) As BsonValue
+  overload: LiteDB.BsonValue.op_Implicit*
+  nameWithType.vb: BsonValue.CType(Date)
+  fullName.vb: LiteDB.BsonValue.CType(Date)
+  name.vb: CType(Date)
+- uid: LiteDB.BsonValue.op_Addition(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Addition(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Addition(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator +(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator +(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator +(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Addition
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 437
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static BsonValue operator +(BsonValue left, BsonValue right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonValue
+    - id: right
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Operator +(left As BsonValue, right As BsonValue) As BsonValue
+  overload: LiteDB.BsonValue.op_Addition*
+  nameWithType.vb: BsonValue.+(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.+(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: +(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.op_Subtraction(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Subtraction(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Subtraction(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator -(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator -(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator -(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Subtraction
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 456
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static BsonValue operator -(BsonValue left, BsonValue right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonValue
+    - id: right
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Operator -(left As BsonValue, right As BsonValue) As BsonValue
+  overload: LiteDB.BsonValue.op_Subtraction*
+  nameWithType.vb: BsonValue.-(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.-(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: -(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.op_Multiply(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Multiply(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Multiply(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator *(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator *(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator *(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Multiply
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 475
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static BsonValue operator *(BsonValue left, BsonValue right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonValue
+    - id: right
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Operator *(left As BsonValue, right As BsonValue) As BsonValue
+  overload: LiteDB.BsonValue.op_Multiply*
+  nameWithType.vb: BsonValue.*(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.*(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: '*(BsonValue, BsonValue)'
+- uid: LiteDB.BsonValue.op_Division(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Division(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Division(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator /(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator /(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator /(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Division
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 494
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static BsonValue operator /(BsonValue left, BsonValue right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonValue
+    - id: right
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Operator /(left As BsonValue, right As BsonValue) As BsonValue
+  overload: LiteDB.BsonValue.op_Division*
+  nameWithType.vb: BsonValue./(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue./(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: /(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.op_Modulus(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Modulus(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Modulus(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator %(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator %(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator %(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Modulus
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 503
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static BsonValue operator %(BsonValue left, BsonValue right)
+    parameters:
+    - id: left
+      type: LiteDB.BsonValue
+    - id: right
+      type: LiteDB.BsonValue
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Shared Operator Mod(left As BsonValue, right As BsonValue) As BsonValue
+  overload: LiteDB.BsonValue.op_Modulus*
+  nameWithType.vb: BsonValue.Mod(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.Mod(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: Mod(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.ToString
+  commentId: M:LiteDB.BsonValue.ToString
+  id: ToString
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: BsonValue.ToString()
+  fullName: LiteDB.BsonValue.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 513
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: LiteDB.BsonValue.ToString*
+- uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  id: CompareTo(LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(BsonValue)
+  nameWithType: BsonValue.CompareTo(BsonValue)
+  fullName: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: CompareTo
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 522
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public virtual int CompareTo(BsonValue other)
+    parameters:
+    - id: other
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Public Overridable Function CompareTo(other As BsonValue) As Integer
+  overload: LiteDB.BsonValue.CompareTo*
+  implements:
+  - System.IComparable{LiteDB.BsonValue}.CompareTo(LiteDB.BsonValue)
+- uid: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  commentId: M:LiteDB.BsonValue.CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  id: CompareTo(LiteDB.BsonValue,LiteDB.Collation)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(BsonValue, Collation)
+  nameWithType: BsonValue.CompareTo(BsonValue, Collation)
+  fullName: LiteDB.BsonValue.CompareTo(LiteDB.BsonValue, LiteDB.Collation)
+  type: Method
+  source:
+    id: CompareTo
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 527
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public virtual int CompareTo(BsonValue other, Collation collation)
+    parameters:
+    - id: other
+      type: LiteDB.BsonValue
+    - id: collation
+      type: LiteDB.Collation
+    return:
+      type: System.Int32
+    content.vb: Public Overridable Function CompareTo(other As BsonValue, collation As Collation) As Integer
+  overload: LiteDB.BsonValue.CompareTo*
+- uid: LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  id: Equals(LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: Equals(BsonValue)
+  nameWithType: BsonValue.Equals(BsonValue)
+  fullName: LiteDB.BsonValue.Equals(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Equals
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 580
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public bool Equals(BsonValue other)
+    parameters:
+    - id: other
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.Equals*
+  implements:
+  - System.IEquatable{LiteDB.BsonValue}.Equals(LiteDB.BsonValue)
+- uid: LiteDB.BsonValue.op_Equality(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Equality(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Equality(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator ==(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator ==(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator ==(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Equality
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 589
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static bool operator ==(BsonValue lhs, BsonValue rhs)
+    parameters:
+    - id: lhs
+      type: LiteDB.BsonValue
+    - id: rhs
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(lhs As BsonValue, rhs As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_Equality*
+  nameWithType.vb: BsonValue.=(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.=(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: =(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.op_Inequality(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_Inequality(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_Inequality(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator !=(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator !=(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator !=(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_Inequality
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 597
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static bool operator !=(BsonValue lhs, BsonValue rhs)
+    parameters:
+    - id: lhs
+      type: LiteDB.BsonValue
+    - id: rhs
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(lhs As BsonValue, rhs As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_Inequality*
+  nameWithType.vb: BsonValue.<>(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.<>(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: <>(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.op_GreaterThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_GreaterThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_GreaterThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator >=(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator >=(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator >=(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_GreaterThanOrEqual
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 602
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static bool operator >=(BsonValue lhs, BsonValue rhs)
+    parameters:
+    - id: lhs
+      type: LiteDB.BsonValue
+    - id: rhs
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >=(lhs As BsonValue, rhs As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_GreaterThanOrEqual*
+  nameWithType.vb: BsonValue.>=(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.>=(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: '>=(BsonValue, BsonValue)'
+- uid: LiteDB.BsonValue.op_GreaterThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_GreaterThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_GreaterThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator >(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator >(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator >(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_GreaterThan
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 607
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static bool operator >(BsonValue lhs, BsonValue rhs)
+    parameters:
+    - id: lhs
+      type: LiteDB.BsonValue
+    - id: rhs
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >(lhs As BsonValue, rhs As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_GreaterThan*
+  nameWithType.vb: BsonValue.>(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.>(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: '>(BsonValue, BsonValue)'
+- uid: LiteDB.BsonValue.op_LessThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_LessThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_LessThan(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator <(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator <(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator <(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_LessThan
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 612
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static bool operator <(BsonValue lhs, BsonValue rhs)
+    parameters:
+    - id: lhs
+      type: LiteDB.BsonValue
+    - id: rhs
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <(lhs As BsonValue, rhs As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_LessThan*
+  nameWithType.vb: BsonValue.<(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.<(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: <(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.op_LessThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.op_LessThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  id: op_LessThanOrEqual(LiteDB.BsonValue,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: operator <=(BsonValue, BsonValue)
+  nameWithType: BsonValue.operator <=(BsonValue, BsonValue)
+  fullName: LiteDB.BsonValue.operator <=(LiteDB.BsonValue, LiteDB.BsonValue)
+  type: Operator
+  source:
+    id: op_LessThanOrEqual
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 617
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public static bool operator <=(BsonValue lhs, BsonValue rhs)
+    parameters:
+    - id: lhs
+      type: LiteDB.BsonValue
+    - id: rhs
+      type: LiteDB.BsonValue
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <=(lhs As BsonValue, rhs As BsonValue) As Boolean
+  overload: LiteDB.BsonValue.op_LessThanOrEqual*
+  nameWithType.vb: BsonValue.<=(BsonValue, BsonValue)
+  fullName.vb: LiteDB.BsonValue.<=(LiteDB.BsonValue, LiteDB.BsonValue)
+  name.vb: <=(BsonValue, BsonValue)
+- uid: LiteDB.BsonValue.Equals(System.Object)
+  commentId: M:LiteDB.BsonValue.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: BsonValue.Equals(object)
+  fullName: LiteDB.BsonValue.Equals(object)
+  type: Method
+  source:
+    id: Equals
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 622
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: LiteDB.BsonValue.Equals*
+  nameWithType.vb: BsonValue.Equals(Object)
+  fullName.vb: LiteDB.BsonValue.Equals(Object)
+  name.vb: Equals(Object)
+- uid: LiteDB.BsonValue.GetHashCode
+  commentId: M:LiteDB.BsonValue.GetHashCode
+  id: GetHashCode
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: BsonValue.GetHashCode()
+  fullName: LiteDB.BsonValue.GetHashCode()
+  type: Method
+  source:
+    id: GetHashCode
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 632
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: LiteDB.BsonValue.GetHashCode*
+- uid: LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonValue.GetBytesCountElement(System.String,LiteDB.BsonValue)
+  id: GetBytesCountElement(System.String,LiteDB.BsonValue)
+  parent: LiteDB.BsonValue
+  langs:
+  - csharp
+  - vb
+  name: GetBytesCountElement(string, BsonValue)
+  nameWithType: BsonValue.GetBytesCountElement(string, BsonValue)
+  fullName: LiteDB.BsonValue.GetBytesCountElement(string, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: GetBytesCountElement
+    path: /workspace/LiteDB/LiteDB/Document/BsonValue.cs
+    startLine: 680
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get how many bytes one single element will used in BSON format
+  example: []
+  syntax:
+    content: protected int GetBytesCountElement(string key, BsonValue value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Int32
+    content.vb: Protected Function GetBytesCountElement(key As String, value As BsonValue) As Integer
+  overload: LiteDB.BsonValue.GetBytesCountElement*
+  nameWithType.vb: BsonValue.GetBytesCountElement(String, BsonValue)
+  fullName.vb: LiteDB.BsonValue.GetBytesCountElement(String, LiteDB.BsonValue)
+  name.vb: GetBytesCountElement(String, BsonValue)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IComparable{LiteDB.BsonValue}
+  commentId: T:System.IComparable{LiteDB.BsonValue}
+  parent: System
+  definition: System.IComparable`1
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<BsonValue>
+  nameWithType: IComparable<BsonValue>
+  fullName: System.IComparable<LiteDB.BsonValue>
+  nameWithType.vb: IComparable(Of BsonValue)
+  fullName.vb: System.IComparable(Of LiteDB.BsonValue)
+  name.vb: IComparable(Of BsonValue)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.IEquatable{LiteDB.BsonValue}
+  commentId: T:System.IEquatable{LiteDB.BsonValue}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<BsonValue>
+  nameWithType: IEquatable<BsonValue>
+  fullName: System.IEquatable<LiteDB.BsonValue>
+  nameWithType.vb: IEquatable(Of BsonValue)
+  fullName.vb: System.IEquatable(Of LiteDB.BsonValue)
+  name.vb: IEquatable(Of BsonValue)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.BsonValue.DbRef*
+  commentId: Overload:LiteDB.BsonValue.DbRef
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_DbRef_LiteDB_BsonValue_System_String_
+  name: DbRef
+  nameWithType: BsonValue.DbRef
+  fullName: LiteDB.BsonValue.DbRef
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: LiteDB.BsonValue.Type*
+  commentId: Overload:LiteDB.BsonValue.Type
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Type
+  name: Type
+  nameWithType: BsonValue.Type
+  fullName: LiteDB.BsonValue.Type
+- uid: LiteDB.BsonType
+  commentId: T:LiteDB.BsonType
+  parent: LiteDB
+  href: LiteDB.BsonType.html
+  name: BsonType
+  nameWithType: BsonType
+  fullName: LiteDB.BsonType
+- uid: LiteDB.BsonValue.RawValue*
+  commentId: Overload:LiteDB.BsonValue.RawValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_RawValue
+  name: RawValue
+  nameWithType: BsonValue.RawValue
+  fullName: LiteDB.BsonValue.RawValue
+- uid: LiteDB.BsonValue.#ctor*
+  commentId: Overload:LiteDB.BsonValue.#ctor
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue__ctor
+  name: BsonValue
+  nameWithType: BsonValue.BsonValue
+  fullName: LiteDB.BsonValue.BsonValue
+  nameWithType.vb: BsonValue.New
+  fullName.vb: LiteDB.BsonValue.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: LiteDB.ObjectId
+  commentId: T:LiteDB.ObjectId
+  parent: LiteDB
+  href: LiteDB.ObjectId.html
+  name: ObjectId
+  nameWithType: ObjectId
+  fullName: LiteDB.ObjectId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.BsonValue.Item*
+  commentId: Overload:LiteDB.BsonValue.Item
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Item_System_String_
+  name: this
+  nameWithType: BsonValue.this
+  fullName: LiteDB.BsonValue.this
+  nameWithType.vb: BsonValue.this[]
+  fullName.vb: LiteDB.BsonValue.this[]
+  name.vb: this[]
+- uid: LiteDB.BsonValue.AsArray*
+  commentId: Overload:LiteDB.BsonValue.AsArray
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsArray
+  name: AsArray
+  nameWithType: BsonValue.AsArray
+  fullName: LiteDB.BsonValue.AsArray
+- uid: LiteDB.BsonArray
+  commentId: T:LiteDB.BsonArray
+  parent: LiteDB
+  href: LiteDB.BsonArray.html
+  name: BsonArray
+  nameWithType: BsonArray
+  fullName: LiteDB.BsonArray
+- uid: LiteDB.BsonValue.AsDocument*
+  commentId: Overload:LiteDB.BsonValue.AsDocument
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDocument
+  name: AsDocument
+  nameWithType: BsonValue.AsDocument
+  fullName: LiteDB.BsonValue.AsDocument
+- uid: LiteDB.BsonValue.AsBinary*
+  commentId: Overload:LiteDB.BsonValue.AsBinary
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsBinary
+  name: AsBinary
+  nameWithType: BsonValue.AsBinary
+  fullName: LiteDB.BsonValue.AsBinary
+- uid: LiteDB.BsonValue.AsBoolean*
+  commentId: Overload:LiteDB.BsonValue.AsBoolean
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsBoolean
+  name: AsBoolean
+  nameWithType: BsonValue.AsBoolean
+  fullName: LiteDB.BsonValue.AsBoolean
+- uid: LiteDB.BsonValue.AsString*
+  commentId: Overload:LiteDB.BsonValue.AsString
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsString
+  name: AsString
+  nameWithType: BsonValue.AsString
+  fullName: LiteDB.BsonValue.AsString
+- uid: LiteDB.BsonValue.AsInt32*
+  commentId: Overload:LiteDB.BsonValue.AsInt32
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsInt32
+  name: AsInt32
+  nameWithType: BsonValue.AsInt32
+  fullName: LiteDB.BsonValue.AsInt32
+- uid: LiteDB.BsonValue.AsInt64*
+  commentId: Overload:LiteDB.BsonValue.AsInt64
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsInt64
+  name: AsInt64
+  nameWithType: BsonValue.AsInt64
+  fullName: LiteDB.BsonValue.AsInt64
+- uid: LiteDB.BsonValue.AsDouble*
+  commentId: Overload:LiteDB.BsonValue.AsDouble
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDouble
+  name: AsDouble
+  nameWithType: BsonValue.AsDouble
+  fullName: LiteDB.BsonValue.AsDouble
+- uid: LiteDB.BsonValue.AsDecimal*
+  commentId: Overload:LiteDB.BsonValue.AsDecimal
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDecimal
+  name: AsDecimal
+  nameWithType: BsonValue.AsDecimal
+  fullName: LiteDB.BsonValue.AsDecimal
+- uid: LiteDB.BsonValue.AsDateTime*
+  commentId: Overload:LiteDB.BsonValue.AsDateTime
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsDateTime
+  name: AsDateTime
+  nameWithType: BsonValue.AsDateTime
+  fullName: LiteDB.BsonValue.AsDateTime
+- uid: LiteDB.BsonValue.AsObjectId*
+  commentId: Overload:LiteDB.BsonValue.AsObjectId
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsObjectId
+  name: AsObjectId
+  nameWithType: BsonValue.AsObjectId
+  fullName: LiteDB.BsonValue.AsObjectId
+- uid: LiteDB.BsonValue.AsGuid*
+  commentId: Overload:LiteDB.BsonValue.AsGuid
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_AsGuid
+  name: AsGuid
+  nameWithType: BsonValue.AsGuid
+  fullName: LiteDB.BsonValue.AsGuid
+- uid: LiteDB.BsonValue.IsNull*
+  commentId: Overload:LiteDB.BsonValue.IsNull
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsNull
+  name: IsNull
+  nameWithType: BsonValue.IsNull
+  fullName: LiteDB.BsonValue.IsNull
+- uid: LiteDB.BsonValue.IsArray*
+  commentId: Overload:LiteDB.BsonValue.IsArray
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsArray
+  name: IsArray
+  nameWithType: BsonValue.IsArray
+  fullName: LiteDB.BsonValue.IsArray
+- uid: LiteDB.BsonValue.IsDocument*
+  commentId: Overload:LiteDB.BsonValue.IsDocument
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDocument
+  name: IsDocument
+  nameWithType: BsonValue.IsDocument
+  fullName: LiteDB.BsonValue.IsDocument
+- uid: LiteDB.BsonValue.IsInt32*
+  commentId: Overload:LiteDB.BsonValue.IsInt32
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsInt32
+  name: IsInt32
+  nameWithType: BsonValue.IsInt32
+  fullName: LiteDB.BsonValue.IsInt32
+- uid: LiteDB.BsonValue.IsInt64*
+  commentId: Overload:LiteDB.BsonValue.IsInt64
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsInt64
+  name: IsInt64
+  nameWithType: BsonValue.IsInt64
+  fullName: LiteDB.BsonValue.IsInt64
+- uid: LiteDB.BsonValue.IsDouble*
+  commentId: Overload:LiteDB.BsonValue.IsDouble
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDouble
+  name: IsDouble
+  nameWithType: BsonValue.IsDouble
+  fullName: LiteDB.BsonValue.IsDouble
+- uid: LiteDB.BsonValue.IsDecimal*
+  commentId: Overload:LiteDB.BsonValue.IsDecimal
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDecimal
+  name: IsDecimal
+  nameWithType: BsonValue.IsDecimal
+  fullName: LiteDB.BsonValue.IsDecimal
+- uid: LiteDB.BsonValue.IsNumber*
+  commentId: Overload:LiteDB.BsonValue.IsNumber
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsNumber
+  name: IsNumber
+  nameWithType: BsonValue.IsNumber
+  fullName: LiteDB.BsonValue.IsNumber
+- uid: LiteDB.BsonValue.IsBinary*
+  commentId: Overload:LiteDB.BsonValue.IsBinary
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsBinary
+  name: IsBinary
+  nameWithType: BsonValue.IsBinary
+  fullName: LiteDB.BsonValue.IsBinary
+- uid: LiteDB.BsonValue.IsBoolean*
+  commentId: Overload:LiteDB.BsonValue.IsBoolean
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsBoolean
+  name: IsBoolean
+  nameWithType: BsonValue.IsBoolean
+  fullName: LiteDB.BsonValue.IsBoolean
+- uid: LiteDB.BsonValue.IsString*
+  commentId: Overload:LiteDB.BsonValue.IsString
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsString
+  name: IsString
+  nameWithType: BsonValue.IsString
+  fullName: LiteDB.BsonValue.IsString
+- uid: LiteDB.BsonValue.IsObjectId*
+  commentId: Overload:LiteDB.BsonValue.IsObjectId
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsObjectId
+  name: IsObjectId
+  nameWithType: BsonValue.IsObjectId
+  fullName: LiteDB.BsonValue.IsObjectId
+- uid: LiteDB.BsonValue.IsGuid*
+  commentId: Overload:LiteDB.BsonValue.IsGuid
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsGuid
+  name: IsGuid
+  nameWithType: BsonValue.IsGuid
+  fullName: LiteDB.BsonValue.IsGuid
+- uid: LiteDB.BsonValue.IsDateTime*
+  commentId: Overload:LiteDB.BsonValue.IsDateTime
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsDateTime
+  name: IsDateTime
+  nameWithType: BsonValue.IsDateTime
+  fullName: LiteDB.BsonValue.IsDateTime
+- uid: LiteDB.BsonValue.IsMinValue*
+  commentId: Overload:LiteDB.BsonValue.IsMinValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsMinValue
+  name: IsMinValue
+  nameWithType: BsonValue.IsMinValue
+  fullName: LiteDB.BsonValue.IsMinValue
+- uid: LiteDB.BsonValue.IsMaxValue*
+  commentId: Overload:LiteDB.BsonValue.IsMaxValue
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_IsMaxValue
+  name: IsMaxValue
+  nameWithType: BsonValue.IsMaxValue
+  fullName: LiteDB.BsonValue.IsMaxValue
+- uid: LiteDB.BsonValue.op_Implicit*
+  commentId: Overload:LiteDB.BsonValue.op_Implicit
+  name: implicit operator
+  nameWithType: BsonValue.implicit operator
+  fullName: LiteDB.BsonValue.implicit operator
+  nameWithType.vb: BsonValue.CType
+  fullName.vb: LiteDB.BsonValue.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: LiteDB.BsonValue.op_Addition*
+  commentId: Overload:LiteDB.BsonValue.op_Addition
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Addition_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator +
+  nameWithType: BsonValue.operator +
+  fullName: LiteDB.BsonValue.operator +
+  nameWithType.vb: BsonValue.+
+  fullName.vb: LiteDB.BsonValue.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Addition*
+    name: +
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Addition_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_Subtraction*
+  commentId: Overload:LiteDB.BsonValue.op_Subtraction
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Subtraction_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator -
+  nameWithType: BsonValue.operator -
+  fullName: LiteDB.BsonValue.operator -
+  nameWithType.vb: BsonValue.-
+  fullName.vb: LiteDB.BsonValue.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Subtraction*
+    name: '-'
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Subtraction_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_Multiply*
+  commentId: Overload:LiteDB.BsonValue.op_Multiply
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Multiply_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator *
+  nameWithType: BsonValue.operator *
+  fullName: LiteDB.BsonValue.operator *
+  nameWithType.vb: BsonValue.*
+  fullName.vb: LiteDB.BsonValue.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Multiply*
+    name: '*'
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Multiply_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_Division*
+  commentId: Overload:LiteDB.BsonValue.op_Division
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Division_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator /
+  nameWithType: BsonValue.operator /
+  fullName: LiteDB.BsonValue.operator /
+  nameWithType.vb: BsonValue./
+  fullName.vb: LiteDB.BsonValue./
+  name.vb: /
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Division*
+    name: /
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Division_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_Modulus*
+  commentId: Overload:LiteDB.BsonValue.op_Modulus
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Modulus_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator %
+  nameWithType: BsonValue.operator %
+  fullName: LiteDB.BsonValue.operator %
+  nameWithType.vb: BsonValue.Mod
+  fullName.vb: LiteDB.BsonValue.Mod
+  name.vb: Mod
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Modulus*
+    name: '%'
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Modulus_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: LiteDB.BsonValue.ToString*
+  commentId: Overload:LiteDB.BsonValue.ToString
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_ToString
+  name: ToString
+  nameWithType: BsonValue.ToString
+  fullName: LiteDB.BsonValue.ToString
+- uid: LiteDB.BsonValue.CompareTo*
+  commentId: Overload:LiteDB.BsonValue.CompareTo
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_CompareTo_LiteDB_BsonValue_
+  name: CompareTo
+  nameWithType: BsonValue.CompareTo
+  fullName: LiteDB.BsonValue.CompareTo
+- uid: System.IComparable{LiteDB.BsonValue}.CompareTo(LiteDB.BsonValue)
+  commentId: M:System.IComparable{LiteDB.BsonValue}.CompareTo(LiteDB.BsonValue)
+  parent: System.IComparable{LiteDB.BsonValue}
+  definition: System.IComparable`1.CompareTo(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  name: CompareTo(BsonValue)
+  nameWithType: IComparable<BsonValue>.CompareTo(BsonValue)
+  fullName: System.IComparable<LiteDB.BsonValue>.CompareTo(LiteDB.BsonValue)
+  nameWithType.vb: IComparable(Of BsonValue).CompareTo(BsonValue)
+  fullName.vb: System.IComparable(Of LiteDB.BsonValue).CompareTo(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.IComparable{LiteDB.BsonValue}.CompareTo(LiteDB.BsonValue)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.IComparable{LiteDB.BsonValue}.CompareTo(LiteDB.BsonValue)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - name: T
+  - name: )
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB.BsonValue.Equals*
+  commentId: Overload:LiteDB.BsonValue.Equals
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_Equals_LiteDB_BsonValue_
+  name: Equals
+  nameWithType: BsonValue.Equals
+  fullName: LiteDB.BsonValue.Equals
+- uid: System.IEquatable{LiteDB.BsonValue}.Equals(LiteDB.BsonValue)
+  commentId: M:System.IEquatable{LiteDB.BsonValue}.Equals(LiteDB.BsonValue)
+  parent: System.IEquatable{LiteDB.BsonValue}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(BsonValue)
+  nameWithType: IEquatable<BsonValue>.Equals(BsonValue)
+  fullName: System.IEquatable<LiteDB.BsonValue>.Equals(LiteDB.BsonValue)
+  nameWithType.vb: IEquatable(Of BsonValue).Equals(BsonValue)
+  fullName.vb: System.IEquatable(Of LiteDB.BsonValue).Equals(LiteDB.BsonValue)
+  spec.csharp:
+  - uid: System.IEquatable{LiteDB.BsonValue}.Equals(LiteDB.BsonValue)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{LiteDB.BsonValue}.Equals(LiteDB.BsonValue)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: LiteDB.BsonValue.op_Equality*
+  commentId: Overload:LiteDB.BsonValue.op_Equality
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Equality_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator ==
+  nameWithType: BsonValue.operator ==
+  fullName: LiteDB.BsonValue.operator ==
+  nameWithType.vb: BsonValue.=
+  fullName.vb: LiteDB.BsonValue.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Equality*
+    name: ==
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Equality_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_Inequality*
+  commentId: Overload:LiteDB.BsonValue.op_Inequality
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Inequality_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator !=
+  nameWithType: BsonValue.operator !=
+  fullName: LiteDB.BsonValue.operator !=
+  nameWithType.vb: BsonValue.<>
+  fullName.vb: LiteDB.BsonValue.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_Inequality*
+    name: '!='
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_Inequality_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_GreaterThanOrEqual*
+  commentId: Overload:LiteDB.BsonValue.op_GreaterThanOrEqual
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_GreaterThanOrEqual_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator >=
+  nameWithType: BsonValue.operator >=
+  fullName: LiteDB.BsonValue.operator >=
+  nameWithType.vb: BsonValue.>=
+  fullName.vb: LiteDB.BsonValue.>=
+  name.vb: '>='
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_GreaterThanOrEqual*
+    name: '>='
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_GreaterThanOrEqual_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_GreaterThan*
+  commentId: Overload:LiteDB.BsonValue.op_GreaterThan
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_GreaterThan_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator >
+  nameWithType: BsonValue.operator >
+  fullName: LiteDB.BsonValue.operator >
+  nameWithType.vb: BsonValue.>
+  fullName.vb: LiteDB.BsonValue.>
+  name.vb: '>'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_GreaterThan*
+    name: '>'
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_GreaterThan_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_LessThan*
+  commentId: Overload:LiteDB.BsonValue.op_LessThan
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_LessThan_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator <
+  nameWithType: BsonValue.operator <
+  fullName: LiteDB.BsonValue.operator <
+  nameWithType.vb: BsonValue.<
+  fullName.vb: LiteDB.BsonValue.<
+  name.vb: <
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_LessThan*
+    name: <
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_LessThan_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: LiteDB.BsonValue.op_LessThanOrEqual*
+  commentId: Overload:LiteDB.BsonValue.op_LessThanOrEqual
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_LessThanOrEqual_LiteDB_BsonValue_LiteDB_BsonValue_
+  name: operator <=
+  nameWithType: BsonValue.operator <=
+  fullName: LiteDB.BsonValue.operator <=
+  nameWithType.vb: BsonValue.<=
+  fullName.vb: LiteDB.BsonValue.<=
+  name.vb: <=
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: LiteDB.BsonValue.op_LessThanOrEqual*
+    name: <=
+    href: LiteDB.BsonValue.html#LiteDB_BsonValue_op_LessThanOrEqual_LiteDB_BsonValue_LiteDB_BsonValue_
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: LiteDB.BsonValue.GetHashCode*
+  commentId: Overload:LiteDB.BsonValue.GetHashCode
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetHashCode
+  name: GetHashCode
+  nameWithType: BsonValue.GetHashCode
+  fullName: LiteDB.BsonValue.GetHashCode
+- uid: LiteDB.BsonValue.GetBytesCountElement*
+  commentId: Overload:LiteDB.BsonValue.GetBytesCountElement
+  href: LiteDB.BsonValue.html#LiteDB_BsonValue_GetBytesCountElement_System_String_LiteDB_BsonValue_
+  name: GetBytesCountElement
+  nameWithType: BsonValue.GetBytesCountElement
+  fullName: LiteDB.BsonValue.GetBytesCountElement

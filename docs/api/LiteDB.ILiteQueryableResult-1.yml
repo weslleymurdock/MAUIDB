@@ -1,0 +1,992 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.ILiteQueryableResult`1
+  commentId: T:LiteDB.ILiteQueryableResult`1
+  id: ILiteQueryableResult`1
+  parent: LiteDB
+  children:
+  - LiteDB.ILiteQueryableResult`1.Count
+  - LiteDB.ILiteQueryableResult`1.ExecuteReader
+  - LiteDB.ILiteQueryableResult`1.Exists
+  - LiteDB.ILiteQueryableResult`1.First
+  - LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  - LiteDB.ILiteQueryableResult`1.ForUpdate
+  - LiteDB.ILiteQueryableResult`1.GetPlan
+  - LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+  - LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+  - LiteDB.ILiteQueryableResult`1.LongCount
+  - LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+  - LiteDB.ILiteQueryableResult`1.Single
+  - LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  - LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+  - LiteDB.ILiteQueryableResult`1.ToArray
+  - LiteDB.ILiteQueryableResult`1.ToDocuments
+  - LiteDB.ILiteQueryableResult`1.ToEnumerable
+  - LiteDB.ILiteQueryableResult`1.ToList
+  langs:
+  - csharp
+  - vb
+  name: ILiteQueryableResult<T>
+  nameWithType: ILiteQueryableResult<T>
+  fullName: LiteDB.ILiteQueryableResult<T>
+  type: Interface
+  source:
+    id: ILiteQueryableResult
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 34
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public interface ILiteQueryableResult<T>
+    typeParameters:
+    - id: T
+    content.vb: Public Interface ILiteQueryableResult(Of T)
+  nameWithType.vb: ILiteQueryableResult(Of T)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T)
+  name.vb: ILiteQueryableResult(Of T)
+- uid: LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Limit(System.Int32)
+  id: Limit(System.Int32)
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Limit(int)
+  nameWithType: ILiteQueryableResult<T>.Limit(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Limit(int)
+  type: Method
+  source:
+    id: Limit
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 36
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryableResult<T> Limit(int limit)
+    parameters:
+    - id: limit
+      type: System.Int32
+    return:
+      type: LiteDB.ILiteQueryableResult`1
+    content.vb: Function Limit(limit As Integer) As ILiteQueryableResult(Of T)
+  overload: LiteDB.ILiteQueryableResult`1.Limit*
+  nameWithType.vb: ILiteQueryableResult(Of T).Limit(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Limit(Integer)
+  name.vb: Limit(Integer)
+- uid: LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Skip(System.Int32)
+  id: Skip(System.Int32)
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Skip(int)
+  nameWithType: ILiteQueryableResult<T>.Skip(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Skip(int)
+  type: Method
+  source:
+    id: Skip
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 37
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryableResult<T> Skip(int offset)
+    parameters:
+    - id: offset
+      type: System.Int32
+    return:
+      type: LiteDB.ILiteQueryableResult`1
+    content.vb: Function Skip(offset As Integer) As ILiteQueryableResult(Of T)
+  overload: LiteDB.ILiteQueryableResult`1.Skip*
+  nameWithType.vb: ILiteQueryableResult(Of T).Skip(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Skip(Integer)
+  name.vb: Skip(Integer)
+- uid: LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Offset(System.Int32)
+  id: Offset(System.Int32)
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Offset(int)
+  nameWithType: ILiteQueryableResult<T>.Offset(int)
+  fullName: LiteDB.ILiteQueryableResult<T>.Offset(int)
+  type: Method
+  source:
+    id: Offset
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 38
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryableResult<T> Offset(int offset)
+    parameters:
+    - id: offset
+      type: System.Int32
+    return:
+      type: LiteDB.ILiteQueryableResult`1
+    content.vb: Function Offset(offset As Integer) As ILiteQueryableResult(Of T)
+  overload: LiteDB.ILiteQueryableResult`1.Offset*
+  nameWithType.vb: ILiteQueryableResult(Of T).Offset(Integer)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Offset(Integer)
+  name.vb: Offset(Integer)
+- uid: LiteDB.ILiteQueryableResult`1.ForUpdate
+  commentId: M:LiteDB.ILiteQueryableResult`1.ForUpdate
+  id: ForUpdate
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: ForUpdate()
+  nameWithType: ILiteQueryableResult<T>.ForUpdate()
+  fullName: LiteDB.ILiteQueryableResult<T>.ForUpdate()
+  type: Method
+  source:
+    id: ForUpdate
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 39
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ILiteQueryableResult<T> ForUpdate()
+    return:
+      type: LiteDB.ILiteQueryableResult`1
+    content.vb: Function ForUpdate() As ILiteQueryableResult(Of T)
+  overload: LiteDB.ILiteQueryableResult`1.ForUpdate*
+  nameWithType.vb: ILiteQueryableResult(Of T).ForUpdate()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ForUpdate()
+- uid: LiteDB.ILiteQueryableResult`1.GetPlan
+  commentId: M:LiteDB.ILiteQueryableResult`1.GetPlan
+  id: GetPlan
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: GetPlan()
+  nameWithType: ILiteQueryableResult<T>.GetPlan()
+  fullName: LiteDB.ILiteQueryableResult<T>.GetPlan()
+  type: Method
+  source:
+    id: GetPlan
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 41
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: BsonDocument GetPlan()
+    return:
+      type: LiteDB.BsonDocument
+    content.vb: Function GetPlan() As BsonDocument
+  overload: LiteDB.ILiteQueryableResult`1.GetPlan*
+  nameWithType.vb: ILiteQueryableResult(Of T).GetPlan()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).GetPlan()
+- uid: LiteDB.ILiteQueryableResult`1.ExecuteReader
+  commentId: M:LiteDB.ILiteQueryableResult`1.ExecuteReader
+  id: ExecuteReader
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: ExecuteReader()
+  nameWithType: ILiteQueryableResult<T>.ExecuteReader()
+  fullName: LiteDB.ILiteQueryableResult<T>.ExecuteReader()
+  type: Method
+  source:
+    id: ExecuteReader
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 42
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: IBsonDataReader ExecuteReader()
+    return:
+      type: LiteDB.IBsonDataReader
+    content.vb: Function ExecuteReader() As IBsonDataReader
+  overload: LiteDB.ILiteQueryableResult`1.ExecuteReader*
+  nameWithType.vb: ILiteQueryableResult(Of T).ExecuteReader()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ExecuteReader()
+- uid: LiteDB.ILiteQueryableResult`1.ToDocuments
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToDocuments
+  id: ToDocuments
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: ToDocuments()
+  nameWithType: ILiteQueryableResult<T>.ToDocuments()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToDocuments()
+  type: Method
+  source:
+    id: ToDocuments
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 43
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: IEnumerable<BsonDocument> ToDocuments()
+    return:
+      type: System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+    content.vb: Function ToDocuments() As IEnumerable(Of BsonDocument)
+  overload: LiteDB.ILiteQueryableResult`1.ToDocuments*
+  nameWithType.vb: ILiteQueryableResult(Of T).ToDocuments()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToDocuments()
+- uid: LiteDB.ILiteQueryableResult`1.ToEnumerable
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToEnumerable
+  id: ToEnumerable
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: ToEnumerable()
+  nameWithType: ILiteQueryableResult<T>.ToEnumerable()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToEnumerable()
+  type: Method
+  source:
+    id: ToEnumerable
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 44
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: IEnumerable<T> ToEnumerable()
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Function ToEnumerable() As IEnumerable(Of T)
+  overload: LiteDB.ILiteQueryableResult`1.ToEnumerable*
+  nameWithType.vb: ILiteQueryableResult(Of T).ToEnumerable()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToEnumerable()
+- uid: LiteDB.ILiteQueryableResult`1.ToList
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToList
+  id: ToList
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: ToList()
+  nameWithType: ILiteQueryableResult<T>.ToList()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToList()
+  type: Method
+  source:
+    id: ToList
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 45
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: List<T> ToList()
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Function ToList() As List(Of T)
+  overload: LiteDB.ILiteQueryableResult`1.ToList*
+  nameWithType.vb: ILiteQueryableResult(Of T).ToList()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToList()
+- uid: LiteDB.ILiteQueryableResult`1.ToArray
+  commentId: M:LiteDB.ILiteQueryableResult`1.ToArray
+  id: ToArray
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: ToArray()
+  nameWithType: ILiteQueryableResult<T>.ToArray()
+  fullName: LiteDB.ILiteQueryableResult<T>.ToArray()
+  type: Method
+  source:
+    id: ToArray
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 46
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: T[] ToArray()
+    return:
+      type: '{T}[]'
+    content.vb: Function ToArray() As T()
+  overload: LiteDB.ILiteQueryableResult`1.ToArray*
+  nameWithType.vb: ILiteQueryableResult(Of T).ToArray()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToArray()
+- uid: LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+  commentId: M:LiteDB.ILiteQueryableResult`1.Into(System.String,LiteDB.BsonAutoId)
+  id: Into(System.String,LiteDB.BsonAutoId)
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Into(string, BsonAutoId)
+  nameWithType: ILiteQueryableResult<T>.Into(string, BsonAutoId)
+  fullName: LiteDB.ILiteQueryableResult<T>.Into(string, LiteDB.BsonAutoId)
+  type: Method
+  source:
+    id: Into
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 48
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: int Into(string newCollection, BsonAutoId autoId = BsonAutoId.ObjectId)
+    parameters:
+    - id: newCollection
+      type: System.String
+    - id: autoId
+      type: LiteDB.BsonAutoId
+    return:
+      type: System.Int32
+    content.vb: Function Into(newCollection As String, autoId As BsonAutoId = BsonAutoId.ObjectId) As Integer
+  overload: LiteDB.ILiteQueryableResult`1.Into*
+  nameWithType.vb: ILiteQueryableResult(Of T).Into(String, BsonAutoId)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Into(String, LiteDB.BsonAutoId)
+  name.vb: Into(String, BsonAutoId)
+- uid: LiteDB.ILiteQueryableResult`1.First
+  commentId: M:LiteDB.ILiteQueryableResult`1.First
+  id: First
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: First()
+  nameWithType: ILiteQueryableResult<T>.First()
+  fullName: LiteDB.ILiteQueryableResult<T>.First()
+  type: Method
+  source:
+    id: First
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 50
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: T First()
+    return:
+      type: '{T}'
+    content.vb: Function First() As T
+  overload: LiteDB.ILiteQueryableResult`1.First*
+  nameWithType.vb: ILiteQueryableResult(Of T).First()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).First()
+- uid: LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  commentId: M:LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  id: FirstOrDefault
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: FirstOrDefault()
+  nameWithType: ILiteQueryableResult<T>.FirstOrDefault()
+  fullName: LiteDB.ILiteQueryableResult<T>.FirstOrDefault()
+  type: Method
+  source:
+    id: FirstOrDefault
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 51
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: T FirstOrDefault()
+    return:
+      type: '{T}'
+    content.vb: Function FirstOrDefault() As T
+  overload: LiteDB.ILiteQueryableResult`1.FirstOrDefault*
+  nameWithType.vb: ILiteQueryableResult(Of T).FirstOrDefault()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).FirstOrDefault()
+- uid: LiteDB.ILiteQueryableResult`1.Single
+  commentId: M:LiteDB.ILiteQueryableResult`1.Single
+  id: Single
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Single()
+  nameWithType: ILiteQueryableResult<T>.Single()
+  fullName: LiteDB.ILiteQueryableResult<T>.Single()
+  type: Method
+  source:
+    id: Single
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 52
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: T Single()
+    return:
+      type: '{T}'
+    content.vb: Function [Single]() As T
+  overload: LiteDB.ILiteQueryableResult`1.Single*
+  nameWithType.vb: ILiteQueryableResult(Of T).Single()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Single()
+- uid: LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  commentId: M:LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  id: SingleOrDefault
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: SingleOrDefault()
+  nameWithType: ILiteQueryableResult<T>.SingleOrDefault()
+  fullName: LiteDB.ILiteQueryableResult<T>.SingleOrDefault()
+  type: Method
+  source:
+    id: SingleOrDefault
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 53
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: T SingleOrDefault()
+    return:
+      type: '{T}'
+    content.vb: Function SingleOrDefault() As T
+  overload: LiteDB.ILiteQueryableResult`1.SingleOrDefault*
+  nameWithType.vb: ILiteQueryableResult(Of T).SingleOrDefault()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).SingleOrDefault()
+- uid: LiteDB.ILiteQueryableResult`1.Count
+  commentId: M:LiteDB.ILiteQueryableResult`1.Count
+  id: Count
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Count()
+  nameWithType: ILiteQueryableResult<T>.Count()
+  fullName: LiteDB.ILiteQueryableResult<T>.Count()
+  type: Method
+  source:
+    id: Count
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 55
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: int Count()
+    return:
+      type: System.Int32
+    content.vb: Function Count() As Integer
+  overload: LiteDB.ILiteQueryableResult`1.Count*
+  nameWithType.vb: ILiteQueryableResult(Of T).Count()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Count()
+- uid: LiteDB.ILiteQueryableResult`1.LongCount
+  commentId: M:LiteDB.ILiteQueryableResult`1.LongCount
+  id: LongCount
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: LongCount()
+  nameWithType: ILiteQueryableResult<T>.LongCount()
+  fullName: LiteDB.ILiteQueryableResult<T>.LongCount()
+  type: Method
+  source:
+    id: LongCount
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 56
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: long LongCount()
+    return:
+      type: System.Int64
+    content.vb: Function LongCount() As Long
+  overload: LiteDB.ILiteQueryableResult`1.LongCount*
+  nameWithType.vb: ILiteQueryableResult(Of T).LongCount()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).LongCount()
+- uid: LiteDB.ILiteQueryableResult`1.Exists
+  commentId: M:LiteDB.ILiteQueryableResult`1.Exists
+  id: Exists
+  parent: LiteDB.ILiteQueryableResult`1
+  langs:
+  - csharp
+  - vb
+  name: Exists()
+  nameWithType: ILiteQueryableResult<T>.Exists()
+  fullName: LiteDB.ILiteQueryableResult<T>.Exists()
+  type: Method
+  source:
+    id: Exists
+    path: /workspace/LiteDB/LiteDB/Client/Database/ILiteQueryable.cs
+    startLine: 57
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: bool Exists()
+    return:
+      type: System.Boolean
+    content.vb: Function Exists() As Boolean
+  overload: LiteDB.ILiteQueryableResult`1.Exists*
+  nameWithType.vb: ILiteQueryableResult(Of T).Exists()
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Exists()
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.ILiteQueryableResult`1.Limit*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Limit
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Limit_System_Int32_
+  name: Limit
+  nameWithType: ILiteQueryableResult<T>.Limit
+  fullName: LiteDB.ILiteQueryableResult<T>.Limit
+  nameWithType.vb: ILiteQueryableResult(Of T).Limit
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Limit
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LiteDB.ILiteQueryableResult`1
+  commentId: T:LiteDB.ILiteQueryableResult`1
+  parent: LiteDB
+  href: LiteDB.ILiteQueryableResult-1.html
+  name: ILiteQueryableResult<T>
+  nameWithType: ILiteQueryableResult<T>
+  fullName: LiteDB.ILiteQueryableResult<T>
+  nameWithType.vb: ILiteQueryableResult(Of T)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T)
+  name.vb: ILiteQueryableResult(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.ILiteQueryableResult`1.Skip*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Skip
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Skip_System_Int32_
+  name: Skip
+  nameWithType: ILiteQueryableResult<T>.Skip
+  fullName: LiteDB.ILiteQueryableResult<T>.Skip
+  nameWithType.vb: ILiteQueryableResult(Of T).Skip
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Skip
+- uid: LiteDB.ILiteQueryableResult`1.Offset*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Offset
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Offset_System_Int32_
+  name: Offset
+  nameWithType: ILiteQueryableResult<T>.Offset
+  fullName: LiteDB.ILiteQueryableResult<T>.Offset
+  nameWithType.vb: ILiteQueryableResult(Of T).Offset
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Offset
+- uid: LiteDB.ILiteQueryableResult`1.ForUpdate*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.ForUpdate
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ForUpdate
+  name: ForUpdate
+  nameWithType: ILiteQueryableResult<T>.ForUpdate
+  fullName: LiteDB.ILiteQueryableResult<T>.ForUpdate
+  nameWithType.vb: ILiteQueryableResult(Of T).ForUpdate
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ForUpdate
+- uid: LiteDB.ILiteQueryableResult`1.GetPlan*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.GetPlan
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_GetPlan
+  name: GetPlan
+  nameWithType: ILiteQueryableResult<T>.GetPlan
+  fullName: LiteDB.ILiteQueryableResult<T>.GetPlan
+  nameWithType.vb: ILiteQueryableResult(Of T).GetPlan
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).GetPlan
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: LiteDB.ILiteQueryableResult`1.ExecuteReader*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.ExecuteReader
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ExecuteReader
+  name: ExecuteReader
+  nameWithType: ILiteQueryableResult<T>.ExecuteReader
+  fullName: LiteDB.ILiteQueryableResult<T>.ExecuteReader
+  nameWithType.vb: ILiteQueryableResult(Of T).ExecuteReader
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ExecuteReader
+- uid: LiteDB.IBsonDataReader
+  commentId: T:LiteDB.IBsonDataReader
+  parent: LiteDB
+  href: LiteDB.IBsonDataReader.html
+  name: IBsonDataReader
+  nameWithType: IBsonDataReader
+  fullName: LiteDB.IBsonDataReader
+- uid: LiteDB.ILiteQueryableResult`1.ToDocuments*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.ToDocuments
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToDocuments
+  name: ToDocuments
+  nameWithType: ILiteQueryableResult<T>.ToDocuments
+  fullName: LiteDB.ILiteQueryableResult<T>.ToDocuments
+  nameWithType.vb: ILiteQueryableResult(Of T).ToDocuments
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToDocuments
+- uid: System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+  commentId: T:System.Collections.Generic.IEnumerable{LiteDB.BsonDocument}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BsonDocument>
+  nameWithType: IEnumerable<BsonDocument>
+  fullName: System.Collections.Generic.IEnumerable<LiteDB.BsonDocument>
+  nameWithType.vb: IEnumerable(Of BsonDocument)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of LiteDB.BsonDocument)
+  name.vb: IEnumerable(Of BsonDocument)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LiteDB.ILiteQueryableResult`1.ToEnumerable*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.ToEnumerable
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToEnumerable
+  name: ToEnumerable
+  nameWithType: ILiteQueryableResult<T>.ToEnumerable
+  fullName: LiteDB.ILiteQueryableResult<T>.ToEnumerable
+  nameWithType.vb: ILiteQueryableResult(Of T).ToEnumerable
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToEnumerable
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ToList*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.ToList
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToList
+  name: ToList
+  nameWithType: ILiteQueryableResult<T>.ToList
+  fullName: LiteDB.ILiteQueryableResult<T>.ToList
+  nameWithType.vb: ILiteQueryableResult(Of T).ToList
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToList
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.ToArray*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.ToArray
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_ToArray
+  name: ToArray
+  nameWithType: ILiteQueryableResult<T>.ToArray
+  fullName: LiteDB.ILiteQueryableResult<T>.ToArray
+  nameWithType.vb: ILiteQueryableResult(Of T).ToArray
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).ToArray
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1.Into*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Into
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Into_System_String_LiteDB_BsonAutoId_
+  name: Into
+  nameWithType: ILiteQueryableResult<T>.Into
+  fullName: LiteDB.ILiteQueryableResult<T>.Into
+  nameWithType.vb: ILiteQueryableResult(Of T).Into
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Into
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  parent: LiteDB
+  href: LiteDB.BsonAutoId.html
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId
+- uid: LiteDB.ILiteQueryableResult`1.First*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.First
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_First
+  name: First
+  nameWithType: ILiteQueryableResult<T>.First
+  fullName: LiteDB.ILiteQueryableResult<T>.First
+  nameWithType.vb: ILiteQueryableResult(Of T).First
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).First
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: LiteDB.ILiteQueryableResult`1.FirstOrDefault*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.FirstOrDefault
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_FirstOrDefault
+  name: FirstOrDefault
+  nameWithType: ILiteQueryableResult<T>.FirstOrDefault
+  fullName: LiteDB.ILiteQueryableResult<T>.FirstOrDefault
+  nameWithType.vb: ILiteQueryableResult(Of T).FirstOrDefault
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).FirstOrDefault
+- uid: LiteDB.ILiteQueryableResult`1.Single*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Single
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Single
+  name: Single
+  nameWithType: ILiteQueryableResult<T>.Single
+  fullName: LiteDB.ILiteQueryableResult<T>.Single
+  nameWithType.vb: ILiteQueryableResult(Of T).Single
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Single
+- uid: LiteDB.ILiteQueryableResult`1.SingleOrDefault*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.SingleOrDefault
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_SingleOrDefault
+  name: SingleOrDefault
+  nameWithType: ILiteQueryableResult<T>.SingleOrDefault
+  fullName: LiteDB.ILiteQueryableResult<T>.SingleOrDefault
+  nameWithType.vb: ILiteQueryableResult(Of T).SingleOrDefault
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).SingleOrDefault
+- uid: LiteDB.ILiteQueryableResult`1.Count*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Count
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Count
+  name: Count
+  nameWithType: ILiteQueryableResult<T>.Count
+  fullName: LiteDB.ILiteQueryableResult<T>.Count
+  nameWithType.vb: ILiteQueryableResult(Of T).Count
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Count
+- uid: LiteDB.ILiteQueryableResult`1.LongCount*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.LongCount
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_LongCount
+  name: LongCount
+  nameWithType: ILiteQueryableResult<T>.LongCount
+  fullName: LiteDB.ILiteQueryableResult<T>.LongCount
+  nameWithType.vb: ILiteQueryableResult(Of T).LongCount
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).LongCount
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: LiteDB.ILiteQueryableResult`1.Exists*
+  commentId: Overload:LiteDB.ILiteQueryableResult`1.Exists
+  href: LiteDB.ILiteQueryableResult-1.html#LiteDB_ILiteQueryableResult_1_Exists
+  name: Exists
+  nameWithType: ILiteQueryableResult<T>.Exists
+  fullName: LiteDB.ILiteQueryableResult<T>.Exists
+  nameWithType.vb: ILiteQueryableResult(Of T).Exists
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T).Exists
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

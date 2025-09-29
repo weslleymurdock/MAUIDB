@@ -1,0 +1,2304 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.BsonMapper
+  commentId: T:LiteDB.BsonMapper
+  id: BsonMapper
+  parent: LiteDB
+  children:
+  - LiteDB.BsonMapper.#ctor(System.Func{System.Type,System.Object},LiteDB.ITypeNameBinder)
+  - LiteDB.BsonMapper.BuildEntityMapper(LiteDB.EntityMapper)
+  - LiteDB.BsonMapper.Deserialize(System.Type,LiteDB.BsonValue)
+  - LiteDB.BsonMapper.Deserialize``1(LiteDB.BsonValue)
+  - LiteDB.BsonMapper.EmptyStringToNull
+  - LiteDB.BsonMapper.Entity``1
+  - LiteDB.BsonMapper.EnumAsInteger
+  - LiteDB.BsonMapper.GetExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  - LiteDB.BsonMapper.GetIdMember(System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo})
+  - LiteDB.BsonMapper.GetIndexExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  - LiteDB.BsonMapper.GetTypeCtor(LiteDB.EntityMapper)
+  - LiteDB.BsonMapper.GetTypeMembers(System.Type)
+  - LiteDB.BsonMapper.Global
+  - LiteDB.BsonMapper.IncludeFields
+  - LiteDB.BsonMapper.IncludeNonPublic
+  - LiteDB.BsonMapper.MaxDepth
+  - LiteDB.BsonMapper.OnDeserialization
+  - LiteDB.BsonMapper.RegisterType(System.Type,System.Func{System.Object,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,System.Object})
+  - LiteDB.BsonMapper.RegisterType``1(System.Func{``0,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,``0})
+  - LiteDB.BsonMapper.ResolveCollectionName
+  - LiteDB.BsonMapper.ResolveFieldName
+  - LiteDB.BsonMapper.ResolveMember
+  - LiteDB.BsonMapper.Serialize(System.Type,System.Object)
+  - LiteDB.BsonMapper.SerializeNullValues
+  - LiteDB.BsonMapper.Serialize``1(``0)
+  - LiteDB.BsonMapper.ToDocument(System.Type,System.Object)
+  - LiteDB.BsonMapper.ToDocument``1(``0)
+  - LiteDB.BsonMapper.ToObject(System.Type,LiteDB.BsonDocument)
+  - LiteDB.BsonMapper.ToObject``1(LiteDB.BsonDocument)
+  - LiteDB.BsonMapper.TrimWhitespace
+  - LiteDB.BsonMapper.UseCamelCase
+  - LiteDB.BsonMapper.UseLowerCaseDelimiter(System.Char)
+  langs:
+  - csharp
+  - vb
+  name: BsonMapper
+  nameWithType: BsonMapper
+  fullName: LiteDB.BsonMapper
+  type: Class
+  source:
+    id: BsonMapper
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Serialize.cs
+    startLine: 9
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Class that converts your entity class to/from BsonDocument
+
+    If you prefer use a new instance of BsonMapper (not Global), be sure cache this instance for better performance
+
+    Serialization rules:
+        - Classes must be "public" with a public constructor (without parameters)
+        - Properties must have public getter (can be read-only)
+        - Entity class must have Id property, [ClassName]Id property or [BsonId] attribute
+        - No circular references
+        - Fields are not valid
+        - IList, Array supports
+        - IDictionary supports (Key must be a simple datatype - converted by ChangeType)
+  example: []
+  syntax:
+    content: public class BsonMapper
+    content.vb: Public Class BsonMapper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.BsonMapper.Global
+  commentId: F:LiteDB.BsonMapper.Global
+  id: Global
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: Global
+  nameWithType: BsonMapper.Global
+  fullName: LiteDB.BsonMapper.Global
+  type: Field
+  source:
+    id: Global
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 47
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Global instance used when no BsonMapper are passed in LiteDatabase ctor
+  example: []
+  syntax:
+    content: public static BsonMapper Global
+    return:
+      type: LiteDB.BsonMapper
+    content.vb: Public Shared [Global] As BsonMapper
+- uid: LiteDB.BsonMapper.ResolveFieldName
+  commentId: F:LiteDB.BsonMapper.ResolveFieldName
+  id: ResolveFieldName
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ResolveFieldName
+  nameWithType: BsonMapper.ResolveFieldName
+  fullName: LiteDB.BsonMapper.ResolveFieldName
+  type: Field
+  source:
+    id: ResolveFieldName
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 52
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: A resolver name for field
+  example: []
+  syntax:
+    content: public Func<string, string> ResolveFieldName
+    return:
+      type: System.Func{System.String,System.String}
+    content.vb: Public ResolveFieldName As Func(Of String, String)
+- uid: LiteDB.BsonMapper.SerializeNullValues
+  commentId: P:LiteDB.BsonMapper.SerializeNullValues
+  id: SerializeNullValues
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: SerializeNullValues
+  nameWithType: BsonMapper.SerializeNullValues
+  fullName: LiteDB.BsonMapper.SerializeNullValues
+  type: Property
+  source:
+    id: SerializeNullValues
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 57
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Indicate that mapper do not serialize null values (default false)
+  example: []
+  syntax:
+    content: public bool SerializeNullValues { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SerializeNullValues As Boolean
+  overload: LiteDB.BsonMapper.SerializeNullValues*
+- uid: LiteDB.BsonMapper.TrimWhitespace
+  commentId: P:LiteDB.BsonMapper.TrimWhitespace
+  id: TrimWhitespace
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: TrimWhitespace
+  nameWithType: BsonMapper.TrimWhitespace
+  fullName: LiteDB.BsonMapper.TrimWhitespace
+  type: Property
+  source:
+    id: TrimWhitespace
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 62
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Apply .Trim() in strings when serialize (default true)
+  example: []
+  syntax:
+    content: public bool TrimWhitespace { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property TrimWhitespace As Boolean
+  overload: LiteDB.BsonMapper.TrimWhitespace*
+- uid: LiteDB.BsonMapper.EmptyStringToNull
+  commentId: P:LiteDB.BsonMapper.EmptyStringToNull
+  id: EmptyStringToNull
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: EmptyStringToNull
+  nameWithType: BsonMapper.EmptyStringToNull
+  fullName: LiteDB.BsonMapper.EmptyStringToNull
+  type: Property
+  source:
+    id: EmptyStringToNull
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 67
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Convert EmptyString to Null (default true)
+  example: []
+  syntax:
+    content: public bool EmptyStringToNull { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EmptyStringToNull As Boolean
+  overload: LiteDB.BsonMapper.EmptyStringToNull*
+- uid: LiteDB.BsonMapper.EnumAsInteger
+  commentId: P:LiteDB.BsonMapper.EnumAsInteger
+  id: EnumAsInteger
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: EnumAsInteger
+  nameWithType: BsonMapper.EnumAsInteger
+  fullName: LiteDB.BsonMapper.EnumAsInteger
+  type: Property
+  source:
+    id: EnumAsInteger
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 73
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Get/Set if enum must be converted into Integer value. If false, enum will be converted into String value.
+
+    MUST BE "true" to support LINQ expressions (default false)
+  example: []
+  syntax:
+    content: public bool EnumAsInteger { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnumAsInteger As Boolean
+  overload: LiteDB.BsonMapper.EnumAsInteger*
+- uid: LiteDB.BsonMapper.IncludeFields
+  commentId: P:LiteDB.BsonMapper.IncludeFields
+  id: IncludeFields
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: IncludeFields
+  nameWithType: BsonMapper.IncludeFields
+  fullName: LiteDB.BsonMapper.IncludeFields
+  type: Property
+  source:
+    id: IncludeFields
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 78
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: 'Get/Set that mapper must include fields (default: false)'
+  example: []
+  syntax:
+    content: public bool IncludeFields { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeFields As Boolean
+  overload: LiteDB.BsonMapper.IncludeFields*
+- uid: LiteDB.BsonMapper.IncludeNonPublic
+  commentId: P:LiteDB.BsonMapper.IncludeNonPublic
+  id: IncludeNonPublic
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: IncludeNonPublic
+  nameWithType: BsonMapper.IncludeNonPublic
+  fullName: LiteDB.BsonMapper.IncludeNonPublic
+  type: Property
+  source:
+    id: IncludeNonPublic
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 83
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: 'Get/Set that mapper must include non public (private, protected and internal) (default: false)'
+  example: []
+  syntax:
+    content: public bool IncludeNonPublic { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeNonPublic As Boolean
+  overload: LiteDB.BsonMapper.IncludeNonPublic*
+- uid: LiteDB.BsonMapper.MaxDepth
+  commentId: P:LiteDB.BsonMapper.MaxDepth
+  id: MaxDepth
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: MaxDepth
+  nameWithType: BsonMapper.MaxDepth
+  fullName: LiteDB.BsonMapper.MaxDepth
+  type: Property
+  source:
+    id: MaxDepth
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 88
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Get/Set maximum depth for nested object (default 20)
+  example: []
+  syntax:
+    content: public int MaxDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxDepth As Integer
+  overload: LiteDB.BsonMapper.MaxDepth*
+- uid: LiteDB.BsonMapper.ResolveMember
+  commentId: F:LiteDB.BsonMapper.ResolveMember
+  id: ResolveMember
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ResolveMember
+  nameWithType: BsonMapper.ResolveMember
+  fullName: LiteDB.BsonMapper.ResolveMember
+  type: Field
+  source:
+    id: ResolveMember
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 95
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    A custom callback to change MemberInfo behavior when converting to MemberMapper.
+
+    Use mapper.ResolveMember(Type entity, MemberInfo property, MemberMapper documentMappedField)
+
+    Set FieldName to null if you want remove from mapped document
+  example: []
+  syntax:
+    content: public Action<Type, MemberInfo, MemberMapper> ResolveMember
+    return:
+      type: System.Action{System.Type,System.Reflection.MemberInfo,LiteDB.MemberMapper}
+    content.vb: Public ResolveMember As Action(Of Type, MemberInfo, MemberMapper)
+- uid: LiteDB.BsonMapper.ResolveCollectionName
+  commentId: F:LiteDB.BsonMapper.ResolveCollectionName
+  id: ResolveCollectionName
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ResolveCollectionName
+  nameWithType: BsonMapper.ResolveCollectionName
+  fullName: LiteDB.BsonMapper.ResolveCollectionName
+  type: Field
+  source:
+    id: ResolveCollectionName
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 100
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Custom resolve name collection based on Type
+  example: []
+  syntax:
+    content: public Func<Type, string> ResolveCollectionName
+    return:
+      type: System.Func{System.Type,System.String}
+    content.vb: Public ResolveCollectionName As Func(Of Type, String)
+- uid: LiteDB.BsonMapper.#ctor(System.Func{System.Type,System.Object},LiteDB.ITypeNameBinder)
+  commentId: M:LiteDB.BsonMapper.#ctor(System.Func{System.Type,System.Object},LiteDB.ITypeNameBinder)
+  id: '#ctor(System.Func{System.Type,System.Object},LiteDB.ITypeNameBinder)'
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: BsonMapper(Func<Type, object>, ITypeNameBinder)
+  nameWithType: BsonMapper.BsonMapper(Func<Type, object>, ITypeNameBinder)
+  fullName: LiteDB.BsonMapper.BsonMapper(System.Func<System.Type, object>, LiteDB.ITypeNameBinder)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 104
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public BsonMapper(Func<Type, object> customTypeInstantiator = null, ITypeNameBinder typeNameBinder = null)
+    parameters:
+    - id: customTypeInstantiator
+      type: System.Func{System.Type,System.Object}
+    - id: typeNameBinder
+      type: LiteDB.ITypeNameBinder
+    content.vb: Public Sub New(customTypeInstantiator As Func(Of Type, Object) = Nothing, typeNameBinder As ITypeNameBinder = Nothing)
+  overload: LiteDB.BsonMapper.#ctor*
+  nameWithType.vb: BsonMapper.New(Func(Of Type, Object), ITypeNameBinder)
+  fullName.vb: LiteDB.BsonMapper.New(System.Func(Of System.Type, Object), LiteDB.ITypeNameBinder)
+  name.vb: New(Func(Of Type, Object), ITypeNameBinder)
+- uid: LiteDB.BsonMapper.RegisterType``1(System.Func{``0,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,``0})
+  commentId: M:LiteDB.BsonMapper.RegisterType``1(System.Func{``0,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,``0})
+  id: RegisterType``1(System.Func{``0,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,``0})
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: RegisterType<T>(Func<T, BsonValue>, Func<BsonValue, T>)
+  nameWithType: BsonMapper.RegisterType<T>(Func<T, BsonValue>, Func<BsonValue, T>)
+  fullName: LiteDB.BsonMapper.RegisterType<T>(System.Func<T, LiteDB.BsonValue>, System.Func<LiteDB.BsonValue, T>)
+  type: Method
+  source:
+    id: RegisterType
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 139
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Register a custom type serializer/deserialize function
+  example: []
+  syntax:
+    content: public void RegisterType<T>(Func<T, BsonValue> serialize, Func<BsonValue, T> deserialize)
+    parameters:
+    - id: serialize
+      type: System.Func{{T},LiteDB.BsonValue}
+    - id: deserialize
+      type: System.Func{LiteDB.BsonValue,{T}}
+    typeParameters:
+    - id: T
+    content.vb: Public Sub RegisterType(Of T)(serialize As Func(Of T, BsonValue), deserialize As Func(Of BsonValue, T))
+  overload: LiteDB.BsonMapper.RegisterType*
+  nameWithType.vb: BsonMapper.RegisterType(Of T)(Func(Of T, BsonValue), Func(Of BsonValue, T))
+  fullName.vb: LiteDB.BsonMapper.RegisterType(Of T)(System.Func(Of T, LiteDB.BsonValue), System.Func(Of LiteDB.BsonValue, T))
+  name.vb: RegisterType(Of T)(Func(Of T, BsonValue), Func(Of BsonValue, T))
+- uid: LiteDB.BsonMapper.RegisterType(System.Type,System.Func{System.Object,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,System.Object})
+  commentId: M:LiteDB.BsonMapper.RegisterType(System.Type,System.Func{System.Object,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,System.Object})
+  id: RegisterType(System.Type,System.Func{System.Object,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,System.Object})
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: RegisterType(Type, Func<object, BsonValue>, Func<BsonValue, object>)
+  nameWithType: BsonMapper.RegisterType(Type, Func<object, BsonValue>, Func<BsonValue, object>)
+  fullName: LiteDB.BsonMapper.RegisterType(System.Type, System.Func<object, LiteDB.BsonValue>, System.Func<LiteDB.BsonValue, object>)
+  type: Method
+  source:
+    id: RegisterType
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 148
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Register a custom type serializer/deserialize function
+  example: []
+  syntax:
+    content: public void RegisterType(Type type, Func<object, BsonValue> serialize, Func<BsonValue, object> deserialize)
+    parameters:
+    - id: type
+      type: System.Type
+    - id: serialize
+      type: System.Func{System.Object,LiteDB.BsonValue}
+    - id: deserialize
+      type: System.Func{LiteDB.BsonValue,System.Object}
+    content.vb: Public Sub RegisterType(type As Type, serialize As Func(Of Object, BsonValue), deserialize As Func(Of BsonValue, Object))
+  overload: LiteDB.BsonMapper.RegisterType*
+  nameWithType.vb: BsonMapper.RegisterType(Type, Func(Of Object, BsonValue), Func(Of BsonValue, Object))
+  fullName.vb: LiteDB.BsonMapper.RegisterType(System.Type, System.Func(Of Object, LiteDB.BsonValue), System.Func(Of LiteDB.BsonValue, Object))
+  name.vb: RegisterType(Type, Func(Of Object, BsonValue), Func(Of BsonValue, Object))
+- uid: LiteDB.BsonMapper.Entity``1
+  commentId: M:LiteDB.BsonMapper.Entity``1
+  id: Entity``1
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: Entity<T>()
+  nameWithType: BsonMapper.Entity<T>()
+  fullName: LiteDB.BsonMapper.Entity<T>()
+  type: Method
+  source:
+    id: Entity
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 159
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Map your entity class to BsonDocument using fluent API
+  example: []
+  syntax:
+    content: public EntityBuilder<T> Entity<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.EntityBuilder{{T}}
+    content.vb: Public Function Entity(Of T)() As EntityBuilder(Of T)
+  overload: LiteDB.BsonMapper.Entity*
+  nameWithType.vb: BsonMapper.Entity(Of T)()
+  fullName.vb: LiteDB.BsonMapper.Entity(Of T)()
+  name.vb: Entity(Of T)()
+- uid: LiteDB.BsonMapper.GetExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  commentId: M:LiteDB.BsonMapper.GetExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  id: GetExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: GetExpression<T, K>(Expression<Func<T, K>>)
+  nameWithType: BsonMapper.GetExpression<T, K>(Expression<Func<T, K>>)
+  fullName: LiteDB.BsonMapper.GetExpression<T, K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: GetExpression
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 169
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Resolve LINQ expression into BsonExpression
+  example: []
+  syntax:
+    content: public BsonExpression GetExpression<T, K>(Expression<Func<T, K>> predicate)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: T
+    - id: K
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Function GetExpression(Of T, K)(predicate As Expression(Of Func(Of T, K))) As BsonExpression
+  overload: LiteDB.BsonMapper.GetExpression*
+  nameWithType.vb: BsonMapper.GetExpression(Of T, K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.BsonMapper.GetExpression(Of T, K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: GetExpression(Of T, K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.BsonMapper.GetIndexExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  commentId: M:LiteDB.BsonMapper.GetIndexExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  id: GetIndexExpression``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: GetIndexExpression<T, K>(Expression<Func<T, K>>)
+  nameWithType: BsonMapper.GetIndexExpression<T, K>(Expression<Func<T, K>>)
+  fullName: LiteDB.BsonMapper.GetIndexExpression<T, K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: GetIndexExpression
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 183
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Resolve LINQ expression into BsonExpression (for index only)
+  example: []
+  syntax:
+    content: public BsonExpression GetIndexExpression<T, K>(Expression<Func<T, K>> predicate)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: T
+    - id: K
+    return:
+      type: LiteDB.BsonExpression
+    content.vb: Public Function GetIndexExpression(Of T, K)(predicate As Expression(Of Func(Of T, K))) As BsonExpression
+  overload: LiteDB.BsonMapper.GetIndexExpression*
+  nameWithType.vb: BsonMapper.GetIndexExpression(Of T, K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.BsonMapper.GetIndexExpression(Of T, K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: GetIndexExpression(Of T, K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.BsonMapper.UseCamelCase
+  commentId: M:LiteDB.BsonMapper.UseCamelCase
+  id: UseCamelCase
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: UseCamelCase()
+  nameWithType: BsonMapper.UseCamelCase()
+  fullName: LiteDB.BsonMapper.UseCamelCase()
+  type: Method
+  source:
+    id: UseCamelCase
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 201
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Use lower camel case resolution for convert property names to field names
+  example: []
+  syntax:
+    content: public BsonMapper UseCamelCase()
+    return:
+      type: LiteDB.BsonMapper
+    content.vb: Public Function UseCamelCase() As BsonMapper
+  overload: LiteDB.BsonMapper.UseCamelCase*
+- uid: LiteDB.BsonMapper.UseLowerCaseDelimiter(System.Char)
+  commentId: M:LiteDB.BsonMapper.UseLowerCaseDelimiter(System.Char)
+  id: UseLowerCaseDelimiter(System.Char)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: UseLowerCaseDelimiter(char)
+  nameWithType: BsonMapper.UseLowerCaseDelimiter(char)
+  fullName: LiteDB.BsonMapper.UseLowerCaseDelimiter(char)
+  type: Method
+  source:
+    id: UseLowerCaseDelimiter
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.cs
+    startLine: 213
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Uses lower camel case with delimiter to convert property names to field names
+  example: []
+  syntax:
+    content: public BsonMapper UseLowerCaseDelimiter(char delimiter = '_')
+    parameters:
+    - id: delimiter
+      type: System.Char
+    return:
+      type: LiteDB.BsonMapper
+    content.vb: Public Function UseLowerCaseDelimiter(delimiter As Char = "_"c) As BsonMapper
+  overload: LiteDB.BsonMapper.UseLowerCaseDelimiter*
+  nameWithType.vb: BsonMapper.UseLowerCaseDelimiter(Char)
+  fullName.vb: LiteDB.BsonMapper.UseLowerCaseDelimiter(Char)
+  name.vb: UseLowerCaseDelimiter(Char)
+- uid: LiteDB.BsonMapper.OnDeserialization
+  commentId: P:LiteDB.BsonMapper.OnDeserialization
+  id: OnDeserialization
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: OnDeserialization
+  nameWithType: BsonMapper.OnDeserialization
+  fullName: LiteDB.BsonMapper.OnDeserialization
+  type: Property
+  source:
+    id: OnDeserialization
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Deserialize.cs
+    startLine: 25
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Gets called before deserialization of a value
+  example: []
+  syntax:
+    content: public BsonMapper.DeserializationCallback? OnDeserialization { get; set; }
+    parameters: []
+    return:
+      type: LiteDB.BsonMapper.DeserializationCallback
+    content.vb: Public Property OnDeserialization As BsonMapper.DeserializationCallback
+  overload: LiteDB.BsonMapper.OnDeserialization*
+- uid: LiteDB.BsonMapper.ToObject(System.Type,LiteDB.BsonDocument)
+  commentId: M:LiteDB.BsonMapper.ToObject(System.Type,LiteDB.BsonDocument)
+  id: ToObject(System.Type,LiteDB.BsonDocument)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ToObject(Type, BsonDocument)
+  nameWithType: BsonMapper.ToObject(Type, BsonDocument)
+  fullName: LiteDB.BsonMapper.ToObject(System.Type, LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: ToObject
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Deserialize.cs
+    startLine: 63
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a BsonDocument to entity class
+  example: []
+  syntax:
+    content: public virtual object ToObject(Type type, BsonDocument doc)
+    parameters:
+    - id: type
+      type: System.Type
+    - id: doc
+      type: LiteDB.BsonDocument
+    return:
+      type: System.Object
+    content.vb: Public Overridable Function ToObject(type As Type, doc As BsonDocument) As Object
+  overload: LiteDB.BsonMapper.ToObject*
+- uid: LiteDB.BsonMapper.ToObject``1(LiteDB.BsonDocument)
+  commentId: M:LiteDB.BsonMapper.ToObject``1(LiteDB.BsonDocument)
+  id: ToObject``1(LiteDB.BsonDocument)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ToObject<T>(BsonDocument)
+  nameWithType: BsonMapper.ToObject<T>(BsonDocument)
+  fullName: LiteDB.BsonMapper.ToObject<T>(LiteDB.BsonDocument)
+  type: Method
+  source:
+    id: ToObject
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Deserialize.cs
+    startLine: 76
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a BsonDocument to entity class
+  example: []
+  syntax:
+    content: public virtual T ToObject<T>(BsonDocument doc)
+    parameters:
+    - id: doc
+      type: LiteDB.BsonDocument
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Overridable Function ToObject(Of T)(doc As BsonDocument) As T
+  overload: LiteDB.BsonMapper.ToObject*
+  nameWithType.vb: BsonMapper.ToObject(Of T)(BsonDocument)
+  fullName.vb: LiteDB.BsonMapper.ToObject(Of T)(LiteDB.BsonDocument)
+  name.vb: ToObject(Of T)(BsonDocument)
+- uid: LiteDB.BsonMapper.Deserialize``1(LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonMapper.Deserialize``1(LiteDB.BsonValue)
+  id: Deserialize``1(LiteDB.BsonValue)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: Deserialize<T>(BsonValue)
+  nameWithType: BsonMapper.Deserialize<T>(BsonValue)
+  fullName: LiteDB.BsonMapper.Deserialize<T>(LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Deserialize
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Deserialize.cs
+    startLine: 84
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserialize a BsonValue to .NET object typed in T
+  example: []
+  syntax:
+    content: public T Deserialize<T>(BsonValue value)
+    parameters:
+    - id: value
+      type: LiteDB.BsonValue
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Deserialize(Of T)(value As BsonValue) As T
+  overload: LiteDB.BsonMapper.Deserialize*
+  nameWithType.vb: BsonMapper.Deserialize(Of T)(BsonValue)
+  fullName.vb: LiteDB.BsonMapper.Deserialize(Of T)(LiteDB.BsonValue)
+  name.vb: Deserialize(Of T)(BsonValue)
+- uid: LiteDB.BsonMapper.Deserialize(System.Type,LiteDB.BsonValue)
+  commentId: M:LiteDB.BsonMapper.Deserialize(System.Type,LiteDB.BsonValue)
+  id: Deserialize(System.Type,LiteDB.BsonValue)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(Type, BsonValue)
+  nameWithType: BsonMapper.Deserialize(Type, BsonValue)
+  fullName: LiteDB.BsonMapper.Deserialize(System.Type, LiteDB.BsonValue)
+  type: Method
+  source:
+    id: Deserialize
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Deserialize.cs
+    startLine: 96
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Deserilize a BsonValue to .NET object based on type parameter
+  example: []
+  syntax:
+    content: public object Deserialize(Type type, BsonValue value)
+    parameters:
+    - id: type
+      type: System.Type
+    - id: value
+      type: LiteDB.BsonValue
+    return:
+      type: System.Object
+    content.vb: Public Function Deserialize(type As Type, value As BsonValue) As Object
+  overload: LiteDB.BsonMapper.Deserialize*
+- uid: LiteDB.BsonMapper.BuildEntityMapper(LiteDB.EntityMapper)
+  commentId: M:LiteDB.BsonMapper.BuildEntityMapper(LiteDB.EntityMapper)
+  id: BuildEntityMapper(LiteDB.EntityMapper)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: BuildEntityMapper(EntityMapper)
+  nameWithType: BsonMapper.BuildEntityMapper(EntityMapper)
+  fullName: LiteDB.BsonMapper.BuildEntityMapper(LiteDB.EntityMapper)
+  type: Method
+  source:
+    id: BuildEntityMapper
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.GetEntityMapper.cs
+    startLine: 58
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Use this method to override how your class can be, by default, mapped from entity to Bson document.
+
+    Returns an EntityMapper from each requested Type
+  example: []
+  syntax:
+    content: protected void BuildEntityMapper(EntityMapper mapper)
+    parameters:
+    - id: mapper
+      type: LiteDB.EntityMapper
+    content.vb: Protected Sub BuildEntityMapper(mapper As EntityMapper)
+  overload: LiteDB.BsonMapper.BuildEntityMapper*
+- uid: LiteDB.BsonMapper.GetIdMember(System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo})
+  commentId: M:LiteDB.BsonMapper.GetIdMember(System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo})
+  id: GetIdMember(System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo})
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: GetIdMember(IEnumerable<MemberInfo>)
+  nameWithType: BsonMapper.GetIdMember(IEnumerable<MemberInfo>)
+  fullName: LiteDB.BsonMapper.GetIdMember(System.Collections.Generic.IEnumerable<System.Reflection.MemberInfo>)
+  type: Method
+  source:
+    id: GetIdMember
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.GetEntityMapper.cs
+    startLine: 148
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Gets MemberInfo that refers to Id from a document object.
+  example: []
+  syntax:
+    content: protected virtual MemberInfo GetIdMember(IEnumerable<MemberInfo> members)
+    parameters:
+    - id: members
+      type: System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+    return:
+      type: System.Reflection.MemberInfo
+    content.vb: Protected Overridable Function GetIdMember(members As IEnumerable(Of MemberInfo)) As MemberInfo
+  overload: LiteDB.BsonMapper.GetIdMember*
+  nameWithType.vb: BsonMapper.GetIdMember(IEnumerable(Of MemberInfo))
+  fullName.vb: LiteDB.BsonMapper.GetIdMember(System.Collections.Generic.IEnumerable(Of System.Reflection.MemberInfo))
+  name.vb: GetIdMember(IEnumerable(Of MemberInfo))
+- uid: LiteDB.BsonMapper.GetTypeMembers(System.Type)
+  commentId: M:LiteDB.BsonMapper.GetTypeMembers(System.Type)
+  id: GetTypeMembers(System.Type)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: GetTypeMembers(Type)
+  nameWithType: BsonMapper.GetTypeMembers(Type)
+  fullName: LiteDB.BsonMapper.GetTypeMembers(System.Type)
+  type: Method
+  source:
+    id: GetTypeMembers
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.GetEntityMapper.cs
+    startLine: 159
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Returns all member that will be have mapper between POCO class to document
+  example: []
+  syntax:
+    content: protected virtual IEnumerable<MemberInfo> GetTypeMembers(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+    content.vb: Protected Overridable Function GetTypeMembers(type As Type) As IEnumerable(Of MemberInfo)
+  overload: LiteDB.BsonMapper.GetTypeMembers*
+- uid: LiteDB.BsonMapper.GetTypeCtor(LiteDB.EntityMapper)
+  commentId: M:LiteDB.BsonMapper.GetTypeCtor(LiteDB.EntityMapper)
+  id: GetTypeCtor(LiteDB.EntityMapper)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: GetTypeCtor(EntityMapper)
+  nameWithType: BsonMapper.GetTypeCtor(EntityMapper)
+  fullName: LiteDB.BsonMapper.GetTypeCtor(LiteDB.EntityMapper)
+  type: Method
+  source:
+    id: GetTypeCtor
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.GetEntityMapper.cs
+    startLine: 189
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: >-
+    Get best construtor to use to initialize this entity.
+
+    - Look if contains [BsonCtor] attribute
+
+    - Look for parameterless ctor
+
+    - Look for first contructor with parameter and use BsonDocument to send RawValue
+  example: []
+  syntax:
+    content: protected virtual CreateObject GetTypeCtor(EntityMapper mapper)
+    parameters:
+    - id: mapper
+      type: LiteDB.EntityMapper
+    return:
+      type: LiteDB.CreateObject
+    content.vb: Protected Overridable Function GetTypeCtor(mapper As EntityMapper) As CreateObject
+  overload: LiteDB.BsonMapper.GetTypeCtor*
+- uid: LiteDB.BsonMapper.ToDocument(System.Type,System.Object)
+  commentId: M:LiteDB.BsonMapper.ToDocument(System.Type,System.Object)
+  id: ToDocument(System.Type,System.Object)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ToDocument(Type, object)
+  nameWithType: BsonMapper.ToDocument(Type, object)
+  fullName: LiteDB.BsonMapper.ToDocument(System.Type, object)
+  type: Method
+  source:
+    id: ToDocument
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Serialize.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Serialize a entity class to BsonDocument
+  example: []
+  syntax:
+    content: public virtual BsonDocument ToDocument(Type type, object entity)
+    parameters:
+    - id: type
+      type: System.Type
+    - id: entity
+      type: System.Object
+    return:
+      type: LiteDB.BsonDocument
+    content.vb: Public Overridable Function ToDocument(type As Type, entity As Object) As BsonDocument
+  overload: LiteDB.BsonMapper.ToDocument*
+  nameWithType.vb: BsonMapper.ToDocument(Type, Object)
+  fullName.vb: LiteDB.BsonMapper.ToDocument(System.Type, Object)
+  name.vb: ToDocument(Type, Object)
+- uid: LiteDB.BsonMapper.ToDocument``1(``0)
+  commentId: M:LiteDB.BsonMapper.ToDocument``1(``0)
+  id: ToDocument``1(``0)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: ToDocument<T>(T)
+  nameWithType: BsonMapper.ToDocument<T>(T)
+  fullName: LiteDB.BsonMapper.ToDocument<T>(T)
+  type: Method
+  source:
+    id: ToDocument
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Serialize.cs
+    startLine: 27
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Serialize a entity class to BsonDocument
+  example: []
+  syntax:
+    content: public virtual BsonDocument ToDocument<T>(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.BsonDocument
+    content.vb: Public Overridable Function ToDocument(Of T)(entity As T) As BsonDocument
+  overload: LiteDB.BsonMapper.ToDocument*
+  nameWithType.vb: BsonMapper.ToDocument(Of T)(T)
+  fullName.vb: LiteDB.BsonMapper.ToDocument(Of T)(T)
+  name.vb: ToDocument(Of T)(T)
+- uid: LiteDB.BsonMapper.Serialize``1(``0)
+  commentId: M:LiteDB.BsonMapper.Serialize``1(``0)
+  id: Serialize``1(``0)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: Serialize<T>(T)
+  nameWithType: BsonMapper.Serialize<T>(T)
+  fullName: LiteDB.BsonMapper.Serialize<T>(T)
+  type: Method
+  source:
+    id: Serialize
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Serialize.cs
+    startLine: 35
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Serialize to BsonValue any .NET object based on T type (using mapping rules)
+  example: []
+  syntax:
+    content: public BsonValue Serialize<T>(T obj)
+    parameters:
+    - id: obj
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Function Serialize(Of T)(obj As T) As BsonValue
+  overload: LiteDB.BsonMapper.Serialize*
+  nameWithType.vb: BsonMapper.Serialize(Of T)(T)
+  fullName.vb: LiteDB.BsonMapper.Serialize(Of T)(T)
+  name.vb: Serialize(Of T)(T)
+- uid: LiteDB.BsonMapper.Serialize(System.Type,System.Object)
+  commentId: M:LiteDB.BsonMapper.Serialize(System.Type,System.Object)
+  id: Serialize(System.Type,System.Object)
+  parent: LiteDB.BsonMapper
+  langs:
+  - csharp
+  - vb
+  name: Serialize(Type, object)
+  nameWithType: BsonMapper.Serialize(Type, object)
+  fullName: LiteDB.BsonMapper.Serialize(System.Type, object)
+  type: Method
+  source:
+    id: Serialize
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/BsonMapper.Serialize.cs
+    startLine: 43
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Serialize to BsonValue any .NET object based on type parameter (using mapping rules)
+  example: []
+  syntax:
+    content: public BsonValue Serialize(Type type, object obj)
+    parameters:
+    - id: type
+      type: System.Type
+    - id: obj
+      type: System.Object
+    return:
+      type: LiteDB.BsonValue
+    content.vb: Public Function Serialize(type As Type, obj As Object) As BsonValue
+  overload: LiteDB.BsonMapper.Serialize*
+  nameWithType.vb: BsonMapper.Serialize(Type, Object)
+  fullName.vb: LiteDB.BsonMapper.Serialize(System.Type, Object)
+  name.vb: Serialize(Type, Object)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.BsonMapper
+  commentId: T:LiteDB.BsonMapper
+  parent: LiteDB
+  href: LiteDB.BsonMapper.html
+  name: BsonMapper
+  nameWithType: BsonMapper
+  fullName: LiteDB.BsonMapper
+- uid: System.Func{System.String,System.String}
+  commentId: T:System.Func{System.String,System.String}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<string, string>
+  nameWithType: Func<string, string>
+  fullName: System.Func<string, string>
+  nameWithType.vb: Func(Of String, String)
+  fullName.vb: System.Func(Of String, String)
+  name.vb: Func(Of String, String)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: LiteDB.BsonMapper.SerializeNullValues*
+  commentId: Overload:LiteDB.BsonMapper.SerializeNullValues
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_SerializeNullValues
+  name: SerializeNullValues
+  nameWithType: BsonMapper.SerializeNullValues
+  fullName: LiteDB.BsonMapper.SerializeNullValues
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.BsonMapper.TrimWhitespace*
+  commentId: Overload:LiteDB.BsonMapper.TrimWhitespace
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_TrimWhitespace
+  name: TrimWhitespace
+  nameWithType: BsonMapper.TrimWhitespace
+  fullName: LiteDB.BsonMapper.TrimWhitespace
+- uid: LiteDB.BsonMapper.EmptyStringToNull*
+  commentId: Overload:LiteDB.BsonMapper.EmptyStringToNull
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_EmptyStringToNull
+  name: EmptyStringToNull
+  nameWithType: BsonMapper.EmptyStringToNull
+  fullName: LiteDB.BsonMapper.EmptyStringToNull
+- uid: LiteDB.BsonMapper.EnumAsInteger*
+  commentId: Overload:LiteDB.BsonMapper.EnumAsInteger
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_EnumAsInteger
+  name: EnumAsInteger
+  nameWithType: BsonMapper.EnumAsInteger
+  fullName: LiteDB.BsonMapper.EnumAsInteger
+- uid: LiteDB.BsonMapper.IncludeFields*
+  commentId: Overload:LiteDB.BsonMapper.IncludeFields
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_IncludeFields
+  name: IncludeFields
+  nameWithType: BsonMapper.IncludeFields
+  fullName: LiteDB.BsonMapper.IncludeFields
+- uid: LiteDB.BsonMapper.IncludeNonPublic*
+  commentId: Overload:LiteDB.BsonMapper.IncludeNonPublic
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_IncludeNonPublic
+  name: IncludeNonPublic
+  nameWithType: BsonMapper.IncludeNonPublic
+  fullName: LiteDB.BsonMapper.IncludeNonPublic
+- uid: LiteDB.BsonMapper.MaxDepth*
+  commentId: Overload:LiteDB.BsonMapper.MaxDepth
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_MaxDepth
+  name: MaxDepth
+  nameWithType: BsonMapper.MaxDepth
+  fullName: LiteDB.BsonMapper.MaxDepth
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Action{System.Type,System.Reflection.MemberInfo,LiteDB.MemberMapper}
+  commentId: T:System.Action{System.Type,System.Reflection.MemberInfo,LiteDB.MemberMapper}
+  parent: System
+  definition: System.Action`3
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<Type, MemberInfo, MemberMapper>
+  nameWithType: Action<Type, MemberInfo, MemberMapper>
+  fullName: System.Action<System.Type, System.Reflection.MemberInfo, LiteDB.MemberMapper>
+  nameWithType.vb: Action(Of Type, MemberInfo, MemberMapper)
+  fullName.vb: System.Action(Of System.Type, System.Reflection.MemberInfo, LiteDB.MemberMapper)
+  name.vb: Action(Of Type, MemberInfo, MemberMapper)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: ','
+  - name: " "
+  - uid: LiteDB.MemberMapper
+    name: MemberMapper
+    href: LiteDB.MemberMapper.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: ','
+  - name: " "
+  - uid: LiteDB.MemberMapper
+    name: MemberMapper
+    href: LiteDB.MemberMapper.html
+  - name: )
+- uid: System.Action`3
+  commentId: T:System.Action`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<T1, T2, T3>
+  nameWithType: Action<T1, T2, T3>
+  fullName: System.Action<T1, T2, T3>
+  nameWithType.vb: Action(Of T1, T2, T3)
+  fullName.vb: System.Action(Of T1, T2, T3)
+  name.vb: Action(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: System.Func{System.Type,System.String}
+  commentId: T:System.Func{System.Type,System.String}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<Type, string>
+  nameWithType: Func<Type, string>
+  fullName: System.Func<System.Type, string>
+  nameWithType.vb: Func(Of Type, String)
+  fullName.vb: System.Func(Of System.Type, String)
+  name.vb: Func(Of Type, String)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: LiteDB.BsonMapper.#ctor*
+  commentId: Overload:LiteDB.BsonMapper.#ctor
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper__ctor_System_Func_System_Type_System_Object__LiteDB_ITypeNameBinder_
+  name: BsonMapper
+  nameWithType: BsonMapper.BsonMapper
+  fullName: LiteDB.BsonMapper.BsonMapper
+  nameWithType.vb: BsonMapper.New
+  fullName.vb: LiteDB.BsonMapper.New
+  name.vb: New
+- uid: System.Func{System.Type,System.Object}
+  commentId: T:System.Func{System.Type,System.Object}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<Type, object>
+  nameWithType: Func<Type, object>
+  fullName: System.Func<System.Type, object>
+  nameWithType.vb: Func(Of Type, Object)
+  fullName.vb: System.Func(Of System.Type, Object)
+  name.vb: Func(Of Type, Object)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: LiteDB.ITypeNameBinder
+  commentId: T:LiteDB.ITypeNameBinder
+  parent: LiteDB
+  href: LiteDB.ITypeNameBinder.html
+  name: ITypeNameBinder
+  nameWithType: ITypeNameBinder
+  fullName: LiteDB.ITypeNameBinder
+- uid: LiteDB.BsonMapper.RegisterType*
+  commentId: Overload:LiteDB.BsonMapper.RegisterType
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_RegisterType__1_System_Func___0_LiteDB_BsonValue__System_Func_LiteDB_BsonValue___0__
+  name: RegisterType
+  nameWithType: BsonMapper.RegisterType
+  fullName: LiteDB.BsonMapper.RegisterType
+- uid: System.Func{{T},LiteDB.BsonValue}
+  commentId: T:System.Func{``0,LiteDB.BsonValue}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, BsonValue>
+  nameWithType: Func<T, BsonValue>
+  fullName: System.Func<T, LiteDB.BsonValue>
+  nameWithType.vb: Func(Of T, BsonValue)
+  fullName.vb: System.Func(Of T, LiteDB.BsonValue)
+  name.vb: Func(Of T, BsonValue)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Func{LiteDB.BsonValue,{T}}
+  commentId: T:System.Func{LiteDB.BsonValue,``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<BsonValue, T>
+  nameWithType: Func<BsonValue, T>
+  fullName: System.Func<LiteDB.BsonValue, T>
+  nameWithType.vb: Func(Of BsonValue, T)
+  fullName.vb: System.Func(Of LiteDB.BsonValue, T)
+  name.vb: Func(Of BsonValue, T)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Func{System.Object,LiteDB.BsonValue}
+  commentId: T:System.Func{System.Object,LiteDB.BsonValue}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<object, BsonValue>
+  nameWithType: Func<object, BsonValue>
+  fullName: System.Func<object, LiteDB.BsonValue>
+  nameWithType.vb: Func(Of Object, BsonValue)
+  fullName.vb: System.Func(Of Object, LiteDB.BsonValue)
+  name.vb: Func(Of Object, BsonValue)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: )
+- uid: System.Func{LiteDB.BsonValue,System.Object}
+  commentId: T:System.Func{LiteDB.BsonValue,System.Object}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<BsonValue, object>
+  nameWithType: Func<BsonValue, object>
+  fullName: System.Func<LiteDB.BsonValue, object>
+  nameWithType.vb: Func(Of BsonValue, Object)
+  fullName.vb: System.Func(Of LiteDB.BsonValue, Object)
+  name.vb: Func(Of BsonValue, Object)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    href: LiteDB.BsonValue.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: LiteDB.BsonMapper.Entity*
+  commentId: Overload:LiteDB.BsonMapper.Entity
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_Entity__1
+  name: Entity
+  nameWithType: BsonMapper.Entity
+  fullName: LiteDB.BsonMapper.Entity
+- uid: LiteDB.EntityBuilder{{T}}
+  commentId: T:LiteDB.EntityBuilder{``0}
+  parent: LiteDB
+  definition: LiteDB.EntityBuilder`1
+  href: LiteDB.EntityBuilder-1.html
+  name: EntityBuilder<T>
+  nameWithType: EntityBuilder<T>
+  fullName: LiteDB.EntityBuilder<T>
+  nameWithType.vb: EntityBuilder(Of T)
+  fullName.vb: LiteDB.EntityBuilder(Of T)
+  name.vb: EntityBuilder(Of T)
+  spec.csharp:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.EntityBuilder`1
+  commentId: T:LiteDB.EntityBuilder`1
+  parent: LiteDB
+  href: LiteDB.EntityBuilder-1.html
+  name: EntityBuilder<T>
+  nameWithType: EntityBuilder<T>
+  fullName: LiteDB.EntityBuilder<T>
+  nameWithType.vb: EntityBuilder(Of T)
+  fullName.vb: LiteDB.EntityBuilder(Of T)
+  name.vb: EntityBuilder(Of T)
+  spec.csharp:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.BsonMapper.GetExpression*
+  commentId: Overload:LiteDB.BsonMapper.GetExpression
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_GetExpression__2_System_Linq_Expressions_Expression_System_Func___0___1___
+  name: GetExpression
+  nameWithType: BsonMapper.GetExpression
+  fullName: LiteDB.BsonMapper.GetExpression
+- uid: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,``0}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, K>>
+  nameWithType: Expression<Func<T, K>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, K>>
+  nameWithType.vb: Expression(Of Func(Of T, K))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, K))
+  name.vb: Expression(Of Func(Of T, K))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: )
+  - name: )
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: LiteDB.BsonMapper.GetIndexExpression*
+  commentId: Overload:LiteDB.BsonMapper.GetIndexExpression
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_GetIndexExpression__2_System_Linq_Expressions_Expression_System_Func___0___1___
+  name: GetIndexExpression
+  nameWithType: BsonMapper.GetIndexExpression
+  fullName: LiteDB.BsonMapper.GetIndexExpression
+- uid: LiteDB.BsonMapper.UseCamelCase*
+  commentId: Overload:LiteDB.BsonMapper.UseCamelCase
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_UseCamelCase
+  name: UseCamelCase
+  nameWithType: BsonMapper.UseCamelCase
+  fullName: LiteDB.BsonMapper.UseCamelCase
+- uid: LiteDB.BsonMapper.UseLowerCaseDelimiter*
+  commentId: Overload:LiteDB.BsonMapper.UseLowerCaseDelimiter
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_UseLowerCaseDelimiter_System_Char_
+  name: UseLowerCaseDelimiter
+  nameWithType: BsonMapper.UseLowerCaseDelimiter
+  fullName: LiteDB.BsonMapper.UseLowerCaseDelimiter
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: LiteDB.BsonMapper.OnDeserialization*
+  commentId: Overload:LiteDB.BsonMapper.OnDeserialization
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_OnDeserialization
+  name: OnDeserialization
+  nameWithType: BsonMapper.OnDeserialization
+  fullName: LiteDB.BsonMapper.OnDeserialization
+- uid: LiteDB.BsonMapper.DeserializationCallback
+  commentId: T:LiteDB.BsonMapper.DeserializationCallback
+  parent: LiteDB
+  href: LiteDB.BsonMapper.html
+  name: BsonMapper.DeserializationCallback
+  nameWithType: BsonMapper.DeserializationCallback
+  fullName: LiteDB.BsonMapper.DeserializationCallback
+  spec.csharp:
+  - uid: LiteDB.BsonMapper
+    name: BsonMapper
+    href: LiteDB.BsonMapper.html
+  - name: .
+  - uid: LiteDB.BsonMapper.DeserializationCallback
+    name: DeserializationCallback
+    href: LiteDB.BsonMapper.DeserializationCallback.html
+  spec.vb:
+  - uid: LiteDB.BsonMapper
+    name: BsonMapper
+    href: LiteDB.BsonMapper.html
+  - name: .
+  - uid: LiteDB.BsonMapper.DeserializationCallback
+    name: DeserializationCallback
+    href: LiteDB.BsonMapper.DeserializationCallback.html
+- uid: LiteDB.BsonMapper.ToObject*
+  commentId: Overload:LiteDB.BsonMapper.ToObject
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_ToObject_System_Type_LiteDB_BsonDocument_
+  name: ToObject
+  nameWithType: BsonMapper.ToObject
+  fullName: LiteDB.BsonMapper.ToObject
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: LiteDB.BsonMapper.Deserialize*
+  commentId: Overload:LiteDB.BsonMapper.Deserialize
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_Deserialize__1_LiteDB_BsonValue_
+  name: Deserialize
+  nameWithType: BsonMapper.Deserialize
+  fullName: LiteDB.BsonMapper.Deserialize
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.BsonMapper.BuildEntityMapper*
+  commentId: Overload:LiteDB.BsonMapper.BuildEntityMapper
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_BuildEntityMapper_LiteDB_EntityMapper_
+  name: BuildEntityMapper
+  nameWithType: BsonMapper.BuildEntityMapper
+  fullName: LiteDB.BsonMapper.BuildEntityMapper
+- uid: LiteDB.EntityMapper
+  commentId: T:LiteDB.EntityMapper
+  parent: LiteDB
+  href: LiteDB.EntityMapper.html
+  name: EntityMapper
+  nameWithType: EntityMapper
+  fullName: LiteDB.EntityMapper
+- uid: LiteDB.BsonMapper.GetIdMember*
+  commentId: Overload:LiteDB.BsonMapper.GetIdMember
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_GetIdMember_System_Collections_Generic_IEnumerable_System_Reflection_MemberInfo__
+  name: GetIdMember
+  nameWithType: BsonMapper.GetIdMember
+  fullName: LiteDB.BsonMapper.GetIdMember
+- uid: System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<MemberInfo>
+  nameWithType: IEnumerable<MemberInfo>
+  fullName: System.Collections.Generic.IEnumerable<System.Reflection.MemberInfo>
+  nameWithType.vb: IEnumerable(Of MemberInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.MemberInfo)
+  name.vb: IEnumerable(Of MemberInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: )
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: LiteDB.BsonMapper.GetTypeMembers*
+  commentId: Overload:LiteDB.BsonMapper.GetTypeMembers
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_GetTypeMembers_System_Type_
+  name: GetTypeMembers
+  nameWithType: BsonMapper.GetTypeMembers
+  fullName: LiteDB.BsonMapper.GetTypeMembers
+- uid: LiteDB.BsonMapper.GetTypeCtor*
+  commentId: Overload:LiteDB.BsonMapper.GetTypeCtor
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_GetTypeCtor_LiteDB_EntityMapper_
+  name: GetTypeCtor
+  nameWithType: BsonMapper.GetTypeCtor
+  fullName: LiteDB.BsonMapper.GetTypeCtor
+- uid: LiteDB.CreateObject
+  commentId: T:LiteDB.CreateObject
+  parent: LiteDB
+  href: LiteDB.CreateObject.html
+  name: CreateObject
+  nameWithType: CreateObject
+  fullName: LiteDB.CreateObject
+- uid: LiteDB.BsonMapper.ToDocument*
+  commentId: Overload:LiteDB.BsonMapper.ToDocument
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_ToDocument_System_Type_System_Object_
+  name: ToDocument
+  nameWithType: BsonMapper.ToDocument
+  fullName: LiteDB.BsonMapper.ToDocument
+- uid: LiteDB.BsonMapper.Serialize*
+  commentId: Overload:LiteDB.BsonMapper.Serialize
+  href: LiteDB.BsonMapper.html#LiteDB_BsonMapper_Serialize__1___0_
+  name: Serialize
+  nameWithType: BsonMapper.Serialize
+  fullName: LiteDB.BsonMapper.Serialize

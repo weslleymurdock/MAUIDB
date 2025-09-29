@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.EntityBuilder`1
+  commentId: T:LiteDB.EntityBuilder`1
+  id: EntityBuilder`1
+  parent: LiteDB
+  children:
+  - LiteDB.EntityBuilder`1.Ctor(System.Func{LiteDB.BsonDocument,`0})
+  - LiteDB.EntityBuilder`1.DbRef``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  - LiteDB.EntityBuilder`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  - LiteDB.EntityBuilder`1.Id``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)
+  - LiteDB.EntityBuilder`1.Ignore``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  langs:
+  - csharp
+  - vb
+  name: EntityBuilder<T>
+  nameWithType: EntityBuilder<T>
+  fullName: LiteDB.EntityBuilder<T>
+  type: Class
+  source:
+    id: EntityBuilder
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityBuilder.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Helper class to modify your entity mapping to document. Can be used instead attribute decorates
+  example: []
+  syntax:
+    content: public class EntityBuilder<T>
+    typeParameters:
+    - id: T
+    content.vb: Public Class EntityBuilder(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: EntityBuilder(Of T)
+  fullName.vb: LiteDB.EntityBuilder(Of T)
+  name.vb: EntityBuilder(Of T)
+- uid: LiteDB.EntityBuilder`1.Ignore``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:LiteDB.EntityBuilder`1.Ignore``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  id: Ignore``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  parent: LiteDB.EntityBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Ignore<K>(Expression<Func<T, K>>)
+  nameWithType: EntityBuilder<T>.Ignore<K>(Expression<Func<T, K>>)
+  fullName: LiteDB.EntityBuilder<T>.Ignore<K>(System.Linq.Expressions.Expression<System.Func<T, K>>)
+  type: Method
+  source:
+    id: Ignore
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityBuilder.cs
+    startLine: 28
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Define which property will not be mapped to document
+  example: []
+  syntax:
+    content: public EntityBuilder<T> Ignore<K>(Expression<Func<T, K>> member)
+    parameters:
+    - id: member
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.EntityBuilder`1
+    content.vb: Public Function Ignore(Of K)(member As Expression(Of Func(Of T, K))) As EntityBuilder(Of T)
+  overload: LiteDB.EntityBuilder`1.Ignore*
+  nameWithType.vb: EntityBuilder(Of T).Ignore(Of K)(Expression(Of Func(Of T, K)))
+  fullName.vb: LiteDB.EntityBuilder(Of T).Ignore(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)))
+  name.vb: Ignore(Of K)(Expression(Of Func(Of T, K)))
+- uid: LiteDB.EntityBuilder`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  commentId: M:LiteDB.EntityBuilder`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  id: Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  parent: LiteDB.EntityBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Field<K>(Expression<Func<T, K>>, string)
+  nameWithType: EntityBuilder<T>.Field<K>(Expression<Func<T, K>>, string)
+  fullName: LiteDB.EntityBuilder<T>.Field<K>(System.Linq.Expressions.Expression<System.Func<T, K>>, string)
+  type: Method
+  source:
+    id: Field
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityBuilder.cs
+    startLine: 40
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Define a custom name for a property when mapping to document
+  example: []
+  syntax:
+    content: public EntityBuilder<T> Field<K>(Expression<Func<T, K>> member, string field)
+    parameters:
+    - id: member
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    - id: field
+      type: System.String
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.EntityBuilder`1
+    content.vb: Public Function Field(Of K)(member As Expression(Of Func(Of T, K)), field As String) As EntityBuilder(Of T)
+  overload: LiteDB.EntityBuilder`1.Field*
+  nameWithType.vb: EntityBuilder(Of T).Field(Of K)(Expression(Of Func(Of T, K)), String)
+  fullName.vb: LiteDB.EntityBuilder(Of T).Field(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)), String)
+  name.vb: Field(Of K)(Expression(Of Func(Of T, K)), String)
+- uid: LiteDB.EntityBuilder`1.Id``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)
+  commentId: M:LiteDB.EntityBuilder`1.Id``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)
+  id: Id``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)
+  parent: LiteDB.EntityBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Id<K>(Expression<Func<T, K>>, bool)
+  nameWithType: EntityBuilder<T>.Id<K>(Expression<Func<T, K>>, bool)
+  fullName: LiteDB.EntityBuilder<T>.Id<K>(System.Linq.Expressions.Expression<System.Func<T, K>>, bool)
+  type: Method
+  source:
+    id: Id
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityBuilder.cs
+    startLine: 53
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Define which property is your document id (primary key). Define if this property supports auto-id
+  example: []
+  syntax:
+    content: public EntityBuilder<T> Id<K>(Expression<Func<T, K>> member, bool autoId = true)
+    parameters:
+    - id: member
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    - id: autoId
+      type: System.Boolean
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.EntityBuilder`1
+    content.vb: Public Function Id(Of K)(member As Expression(Of Func(Of T, K)), autoId As Boolean = True) As EntityBuilder(Of T)
+  overload: LiteDB.EntityBuilder`1.Id*
+  nameWithType.vb: EntityBuilder(Of T).Id(Of K)(Expression(Of Func(Of T, K)), Boolean)
+  fullName.vb: LiteDB.EntityBuilder(Of T).Id(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)), Boolean)
+  name.vb: Id(Of K)(Expression(Of Func(Of T, K)), Boolean)
+- uid: LiteDB.EntityBuilder`1.Ctor(System.Func{LiteDB.BsonDocument,`0})
+  commentId: M:LiteDB.EntityBuilder`1.Ctor(System.Func{LiteDB.BsonDocument,`0})
+  id: Ctor(System.Func{LiteDB.BsonDocument,`0})
+  parent: LiteDB.EntityBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Ctor(Func<BsonDocument, T>)
+  nameWithType: EntityBuilder<T>.Ctor(Func<BsonDocument, T>)
+  fullName: LiteDB.EntityBuilder<T>.Ctor(System.Func<LiteDB.BsonDocument, T>)
+  type: Method
+  source:
+    id: Ctor
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityBuilder.cs
+    startLine: 76
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Define which property is your document id (primary key). Define if this property supports auto-id
+  example: []
+  syntax:
+    content: public EntityBuilder<T> Ctor(Func<BsonDocument, T> createInstance)
+    parameters:
+    - id: createInstance
+      type: System.Func{LiteDB.BsonDocument,{T}}
+    return:
+      type: LiteDB.EntityBuilder`1
+    content.vb: Public Function Ctor(createInstance As Func(Of BsonDocument, T)) As EntityBuilder(Of T)
+  overload: LiteDB.EntityBuilder`1.Ctor*
+  nameWithType.vb: EntityBuilder(Of T).Ctor(Func(Of BsonDocument, T))
+  fullName.vb: LiteDB.EntityBuilder(Of T).Ctor(System.Func(Of LiteDB.BsonDocument, T))
+  name.vb: Ctor(Func(Of BsonDocument, T))
+- uid: LiteDB.EntityBuilder`1.DbRef``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  commentId: M:LiteDB.EntityBuilder`1.DbRef``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  id: DbRef``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)
+  parent: LiteDB.EntityBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: DbRef<K>(Expression<Func<T, K>>, string)
+  nameWithType: EntityBuilder<T>.DbRef<K>(Expression<Func<T, K>>, string)
+  fullName: LiteDB.EntityBuilder<T>.DbRef<K>(System.Linq.Expressions.Expression<System.Func<T, K>>, string)
+  type: Method
+  source:
+    id: DbRef
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/EntityBuilder.cs
+    startLine: 87
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: Define a subdocument (or a list of) as a reference
+  example: []
+  syntax:
+    content: public EntityBuilder<T> DbRef<K>(Expression<Func<T, K>> member, string collection = null)
+    parameters:
+    - id: member
+      type: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+    - id: collection
+      type: System.String
+    typeParameters:
+    - id: K
+    return:
+      type: LiteDB.EntityBuilder`1
+    content.vb: Public Function DbRef(Of K)(member As Expression(Of Func(Of T, K)), collection As String = Nothing) As EntityBuilder(Of T)
+  overload: LiteDB.EntityBuilder`1.DbRef*
+  nameWithType.vb: EntityBuilder(Of T).DbRef(Of K)(Expression(Of Func(Of T, K)), String)
+  fullName.vb: LiteDB.EntityBuilder(Of T).DbRef(Of K)(System.Linq.Expressions.Expression(Of System.Func(Of T, K)), String)
+  name.vb: DbRef(Of K)(Expression(Of Func(Of T, K)), String)
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LiteDB.EntityBuilder`1.Ignore*
+  commentId: Overload:LiteDB.EntityBuilder`1.Ignore
+  href: LiteDB.EntityBuilder-1.html#LiteDB_EntityBuilder_1_Ignore__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  name: Ignore
+  nameWithType: EntityBuilder<T>.Ignore
+  fullName: LiteDB.EntityBuilder<T>.Ignore
+  nameWithType.vb: EntityBuilder(Of T).Ignore
+  fullName.vb: LiteDB.EntityBuilder(Of T).Ignore
+- uid: System.Linq.Expressions.Expression{System.Func{{T},{K}}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,``0}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, K>>
+  nameWithType: Expression<Func<T, K>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, K>>
+  nameWithType.vb: Expression(Of Func(Of T, K))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, K))
+  name.vb: Expression(Of Func(Of T, K))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: )
+  - name: )
+- uid: LiteDB.EntityBuilder`1
+  commentId: T:LiteDB.EntityBuilder`1
+  parent: LiteDB
+  href: LiteDB.EntityBuilder-1.html
+  name: EntityBuilder<T>
+  nameWithType: EntityBuilder<T>
+  fullName: LiteDB.EntityBuilder<T>
+  nameWithType.vb: EntityBuilder(Of T)
+  fullName.vb: LiteDB.EntityBuilder(Of T)
+  name.vb: EntityBuilder(Of T)
+  spec.csharp:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: LiteDB.EntityBuilder`1.Field*
+  commentId: Overload:LiteDB.EntityBuilder`1.Field
+  href: LiteDB.EntityBuilder-1.html#LiteDB_EntityBuilder_1_Field__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_
+  name: Field
+  nameWithType: EntityBuilder<T>.Field
+  fullName: LiteDB.EntityBuilder<T>.Field
+  nameWithType.vb: EntityBuilder(Of T).Field
+  fullName.vb: LiteDB.EntityBuilder(Of T).Field
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LiteDB.EntityBuilder`1.Id*
+  commentId: Overload:LiteDB.EntityBuilder`1.Id
+  href: LiteDB.EntityBuilder-1.html#LiteDB_EntityBuilder_1_Id__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Boolean_
+  name: Id
+  nameWithType: EntityBuilder<T>.Id
+  fullName: LiteDB.EntityBuilder<T>.Id
+  nameWithType.vb: EntityBuilder(Of T).Id
+  fullName.vb: LiteDB.EntityBuilder(Of T).Id
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LiteDB.EntityBuilder`1.Ctor*
+  commentId: Overload:LiteDB.EntityBuilder`1.Ctor
+  href: LiteDB.EntityBuilder-1.html#LiteDB_EntityBuilder_1_Ctor_System_Func_LiteDB_BsonDocument__0__
+  name: Ctor
+  nameWithType: EntityBuilder<T>.Ctor
+  fullName: LiteDB.EntityBuilder<T>.Ctor
+  nameWithType.vb: EntityBuilder(Of T).Ctor
+  fullName.vb: LiteDB.EntityBuilder(Of T).Ctor
+- uid: System.Func{LiteDB.BsonDocument,{T}}
+  commentId: T:System.Func{LiteDB.BsonDocument,`0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<BsonDocument, T>
+  nameWithType: Func<BsonDocument, T>
+  fullName: System.Func<LiteDB.BsonDocument, T>
+  nameWithType.vb: Func(Of BsonDocument, T)
+  fullName.vb: System.Func(Of LiteDB.BsonDocument, T)
+  name.vb: Func(Of BsonDocument, T)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    href: LiteDB.BsonDocument.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: LiteDB.EntityBuilder`1.DbRef*
+  commentId: Overload:LiteDB.EntityBuilder`1.DbRef
+  href: LiteDB.EntityBuilder-1.html#LiteDB_EntityBuilder_1_DbRef__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_
+  name: DbRef
+  nameWithType: EntityBuilder<T>.DbRef
+  fullName: LiteDB.EntityBuilder<T>.DbRef
+  nameWithType.vb: EntityBuilder(Of T).DbRef
+  fullName.vb: LiteDB.EntityBuilder(Of T).DbRef

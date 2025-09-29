@@ -6,7 +6,7 @@
 [![](https://dcbadge.limes.pink/api/server/u8seFBH9Zu?style=flat-square)](https://discord.gg/u8seFBH9Zu)
 
 
-LiteDB is a small, fast and lightweight .NET NoSQL embedded database. 
+LiteDB is a small, fast and lightweight .NET NoSQL embedded database.
 
 - Serverless NoSQL Document Store
 - Simple API, similar to MongoDB
@@ -24,6 +24,11 @@ LiteDB is a small, fast and lightweight .NET NoSQL embedded database.
 - [LiteDB Studio](https://github.com/mbdavid/LiteDB.Studio) - Nice UI for data access 
 - Open source and free for everyone - including commercial use
 - Install from NuGet: `Install-Package LiteDB`
+
+
+## Documentation site
+
+The repository ships with a DocFX site that combines conceptual guides and generated API reference content. See [`docs/index.md`](docs/index.md) for the table of contents and [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) for build instructions.
 
 
 ## New v5
@@ -44,9 +49,9 @@ New UI to manage and visualize your database:
 
 ![LiteDB.Studio](https://www.litedb.org/images/banner.gif)
 
-## Documentation
+## Wiki
 
-Visit [the Wiki](https://github.com/mbdavid/LiteDB/wiki) for full documentation. For simplified chinese version, [check here](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn).
+Visit [the Wiki](https://github.com/mbdavid/LiteDB/wiki) for community-maintained tips and legacy content. For simplified Chinese, [check here](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn).
 
 ## LiteDB Community
 

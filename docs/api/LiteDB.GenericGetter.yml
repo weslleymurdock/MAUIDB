@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.GenericGetter
+  commentId: T:LiteDB.GenericGetter
+  id: GenericGetter
+  parent: LiteDB
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GenericGetter
+  nameWithType: GenericGetter
+  fullName: LiteDB.GenericGetter
+  type: Delegate
+  source:
+    id: GenericGetter
+    path: /workspace/LiteDB/LiteDB/Client/Mapper/Reflection/Reflection.cs
+    startLine: 18
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: public delegate object GenericGetter(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Object
+    content.vb: Public Delegate Function GenericGetter(obj As Object) As Object
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

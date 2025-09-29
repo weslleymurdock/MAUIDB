@@ -1,0 +1,198 @@
+### YamlMime:TableOfContent
+items:
+- uid: LiteDB
+  name: LiteDB
+  type: Namespace
+  items:
+  - uid: LiteDB.BsonArray
+    name: BsonArray
+    type: Class
+  - uid: LiteDB.BsonAutoId
+    name: BsonAutoId
+    type: Enum
+  - uid: LiteDB.BsonCtorAttribute
+    name: BsonCtorAttribute
+    type: Class
+  - uid: LiteDB.BsonDataReader
+    name: BsonDataReader
+    type: Class
+  - uid: LiteDB.BsonDataReaderExtensions
+    name: BsonDataReaderExtensions
+    type: Class
+  - uid: LiteDB.BsonDocument
+    name: BsonDocument
+    type: Class
+  - uid: LiteDB.BsonExpression
+    name: BsonExpression
+    type: Class
+  - uid: LiteDB.BsonExpressionType
+    name: BsonExpressionType
+    type: Enum
+  - uid: LiteDB.BsonFieldAttribute
+    name: BsonFieldAttribute
+    type: Class
+  - uid: LiteDB.BsonIdAttribute
+    name: BsonIdAttribute
+    type: Class
+  - uid: LiteDB.BsonIgnoreAttribute
+    name: BsonIgnoreAttribute
+    type: Class
+  - uid: LiteDB.BsonMapper
+    name: BsonMapper
+    type: Class
+  - uid: LiteDB.BsonMapper.DeserializationCallback
+    name: BsonMapper.DeserializationCallback
+    type: Delegate
+  - uid: LiteDB.BsonRefAttribute
+    name: BsonRefAttribute
+    type: Class
+  - uid: LiteDB.BsonSerializer
+    name: BsonSerializer
+    type: Class
+  - uid: LiteDB.BsonType
+    name: BsonType
+    type: Enum
+  - uid: LiteDB.BsonValue
+    name: BsonValue
+    type: Class
+  - uid: LiteDB.Collation
+    name: Collation
+    type: Class
+  - uid: LiteDB.ConnectionString
+    name: ConnectionString
+    type: Class
+  - uid: LiteDB.ConnectionType
+    name: ConnectionType
+    type: Enum
+  - uid: LiteDB.CreateObject
+    name: CreateObject
+    type: Delegate
+  - uid: LiteDB.DefaultTypeNameBinder
+    name: DefaultTypeNameBinder
+    type: Class
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder<T>
+    type: Class
+  - uid: LiteDB.EntityMapper
+    name: EntityMapper
+    type: Class
+  - uid: LiteDB.GenericGetter
+    name: GenericGetter
+    type: Delegate
+  - uid: LiteDB.GenericSetter
+    name: GenericSetter
+    type: Delegate
+  - uid: LiteDB.IBsonDataReader
+    name: IBsonDataReader
+    type: Interface
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection<T>
+    type: Interface
+  - uid: LiteDB.ILiteDatabase
+    name: ILiteDatabase
+    type: Interface
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult<T>
+    type: Interface
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable<T>
+    type: Interface
+  - uid: LiteDB.ILiteRepository
+    name: ILiteRepository
+    type: Interface
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage<TFileId>
+    type: Interface
+  - uid: LiteDB.ITypeNameBinder
+    name: ITypeNameBinder
+    type: Interface
+  - uid: LiteDB.JsonReader
+    name: JsonReader
+    type: Class
+  - uid: LiteDB.JsonSerializer
+    name: JsonSerializer
+    type: Class
+  - uid: LiteDB.JsonWriter
+    name: JsonWriter
+    type: Class
+  - uid: LiteDB.LiteCollection`1
+    name: LiteCollection<T>
+    type: Class
+  - uid: LiteDB.LiteDatabase
+    name: LiteDatabase
+    type: Class
+  - uid: LiteDB.LiteException
+    name: LiteException
+    type: Class
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo<TFileId>
+    type: Class
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream<TFileId>
+    type: Class
+  - uid: LiteDB.LiteQueryable`1
+    name: LiteQueryable<T>
+    type: Class
+  - uid: LiteDB.LiteRepository
+    name: LiteRepository
+    type: Class
+  - uid: LiteDB.LiteStorage`1
+    name: LiteStorage<TFileId>
+    type: Class
+  - uid: LiteDB.MemberMapper
+    name: MemberMapper
+    type: Class
+  - uid: LiteDB.ObjectId
+    name: ObjectId
+    type: Class
+  - uid: LiteDB.Query
+    name: Query
+    type: Class
+  - uid: LiteDB.QueryAny
+    name: QueryAny
+    type: Class
+  - uid: LiteDB.QueryOrder
+    name: QueryOrder
+    type: Class
+  - uid: LiteDB.SharedDataReader
+    name: SharedDataReader
+    type: Class
+  - uid: LiteDB.SharedEngine
+    name: SharedEngine
+    type: Class
+- uid: LiteDB.Engine
+  name: LiteDB.Engine
+  type: Namespace
+  items:
+  - uid: LiteDB.Engine.AesStream
+    name: AesStream
+    type: Class
+  - uid: LiteDB.Engine.EngineSettings
+    name: EngineSettings
+    type: Class
+  - uid: LiteDB.Engine.FileOrigin
+    name: FileOrigin
+    type: Enum
+  - uid: LiteDB.Engine.ILiteEngine
+    name: ILiteEngine
+    type: Interface
+  - uid: LiteDB.Engine.LiteEngine
+    name: LiteEngine
+    type: Class
+  - uid: LiteDB.Engine.Pragmas
+    name: Pragmas
+    type: Class
+  - uid: LiteDB.Engine.RebuildOptions
+    name: RebuildOptions
+    type: Class
+  - uid: LiteDB.Engine.TempStream
+    name: TempStream
+    type: Class
+- uid: LiteDB.Utils.Extensions
+  name: LiteDB.Utils.Extensions
+  type: Namespace
+  items:
+  - uid: LiteDB.Utils.Extensions.StopWatchExtensions
+    name: StopWatchExtensions
+    type: Class
+memberLayout: SamePage

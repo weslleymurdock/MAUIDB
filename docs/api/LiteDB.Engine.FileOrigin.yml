@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Engine.FileOrigin
+  commentId: T:LiteDB.Engine.FileOrigin
+  id: FileOrigin
+  parent: LiteDB.Engine
+  children:
+  - LiteDB.Engine.FileOrigin.Data
+  - LiteDB.Engine.FileOrigin.Log
+  - LiteDB.Engine.FileOrigin.None
+  langs:
+  - csharp
+  - vb
+  name: FileOrigin
+  nameWithType: FileOrigin
+  fullName: LiteDB.Engine.FileOrigin
+  type: Enum
+  source:
+    id: FileOrigin
+    path: /workspace/LiteDB/LiteDB/Engine/Structures/FileOrigin.cs
+    startLine: 2
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: 'public enum FileOrigin : byte'
+    content.vb: Public Enum FileOrigin As Byte
+- uid: LiteDB.Engine.FileOrigin.None
+  commentId: F:LiteDB.Engine.FileOrigin.None
+  id: None
+  parent: LiteDB.Engine.FileOrigin
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: FileOrigin.None
+  fullName: LiteDB.Engine.FileOrigin.None
+  type: Field
+  source:
+    id: None
+    path: /workspace/LiteDB/LiteDB/Engine/Structures/FileOrigin.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: There is no origin (new page)
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: LiteDB.Engine.FileOrigin
+- uid: LiteDB.Engine.FileOrigin.Data
+  commentId: F:LiteDB.Engine.FileOrigin.Data
+  id: Data
+  parent: LiteDB.Engine.FileOrigin
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: FileOrigin.Data
+  fullName: LiteDB.Engine.FileOrigin.Data
+  type: Field
+  source:
+    id: Data
+    path: /workspace/LiteDB/LiteDB/Engine/Structures/FileOrigin.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Data file
+  example: []
+  syntax:
+    content: Data = 1
+    return:
+      type: LiteDB.Engine.FileOrigin
+- uid: LiteDB.Engine.FileOrigin.Log
+  commentId: F:LiteDB.Engine.FileOrigin.Log
+  id: Log
+  parent: LiteDB.Engine.FileOrigin
+  langs:
+  - csharp
+  - vb
+  name: Log
+  nameWithType: FileOrigin.Log
+  fullName: LiteDB.Engine.FileOrigin.Log
+  type: Field
+  source:
+    id: Log
+    path: /workspace/LiteDB/LiteDB/Engine/Structures/FileOrigin.cs
+    startLine: 17
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  summary: Log file (-log)
+  example: []
+  syntax:
+    content: Log = 2
+    return:
+      type: LiteDB.Engine.FileOrigin
+references:
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+- uid: LiteDB.Engine.FileOrigin
+  commentId: T:LiteDB.Engine.FileOrigin
+  parent: LiteDB.Engine
+  href: LiteDB.Engine.FileOrigin.html
+  name: FileOrigin
+  nameWithType: FileOrigin
+  fullName: LiteDB.Engine.FileOrigin

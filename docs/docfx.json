@@ -1,0 +1,79 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../",
+          "files": [
+            "LiteDB/LiteDB.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "index.md",
+          "toc.yml",
+          "CONTRIBUTING.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "articles/**/images/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "LiteDB Documentation",
+      "_appFooter": "© {year} LiteDB contributors",
+      "_disableContribution": false,
+      "_enableSearch": true
+    },
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "fileMetadata": {
+      "ms.author": {
+        "articles/**.md": "litedb-team",
+        "api/index.md": "litedb-team",
+        "CONTRIBUTING.md": "litedb-team"
+      },
+      "ms.topic": {
+        "articles/**.md": "conceptual",
+        "api/**.yml": "reference",
+        "api/index.md": "conceptual",
+        "CONTRIBUTING.md": "conceptual"
+      }
+    },
+    "markdownEngineName": "markdig",
+    "markdig": {
+      "extensions": [
+        "advanced",
+        "alerts",
+        "attributes",
+        "emojipipeline",
+        "gridtables",
+        "pipetables",
+        "tasklists"
+      ]
+    },
+    "template": [
+      "default"
+    ]
+  }
+}

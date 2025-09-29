@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Utils.Extensions
+  commentId: N:LiteDB.Utils.Extensions
+  id: LiteDB.Utils.Extensions
+  children:
+  - LiteDB.Utils.Extensions.StopWatchExtensions
+  langs:
+  - csharp
+  - vb
+  name: LiteDB.Utils.Extensions
+  nameWithType: LiteDB.Utils.Extensions
+  fullName: LiteDB.Utils.Extensions
+  type: Namespace
+  assemblies:
+  - LiteDB
+references:
+- uid: LiteDB.Utils.Extensions.StopWatchExtensions
+  commentId: T:LiteDB.Utils.Extensions.StopWatchExtensions
+  href: LiteDB.Utils.Extensions.StopWatchExtensions.html
+  name: StopWatchExtensions
+  nameWithType: StopWatchExtensions
+  fullName: LiteDB.Utils.Extensions.StopWatchExtensions

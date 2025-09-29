@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB
+  commentId: N:LiteDB
+  id: LiteDB
+  children:
+  - LiteDB.BsonArray
+  - LiteDB.BsonAutoId
+  - LiteDB.BsonCtorAttribute
+  - LiteDB.BsonDataReader
+  - LiteDB.BsonDataReaderExtensions
+  - LiteDB.BsonDocument
+  - LiteDB.BsonExpression
+  - LiteDB.BsonExpressionType
+  - LiteDB.BsonFieldAttribute
+  - LiteDB.BsonIdAttribute
+  - LiteDB.BsonIgnoreAttribute
+  - LiteDB.BsonMapper
+  - LiteDB.BsonMapper.DeserializationCallback
+  - LiteDB.BsonRefAttribute
+  - LiteDB.BsonSerializer
+  - LiteDB.BsonType
+  - LiteDB.BsonValue
+  - LiteDB.Collation
+  - LiteDB.ConnectionString
+  - LiteDB.ConnectionType
+  - LiteDB.CreateObject
+  - LiteDB.DefaultTypeNameBinder
+  - LiteDB.EntityBuilder`1
+  - LiteDB.EntityMapper
+  - LiteDB.GenericGetter
+  - LiteDB.GenericSetter
+  - LiteDB.IBsonDataReader
+  - LiteDB.ILiteCollection`1
+  - LiteDB.ILiteDatabase
+  - LiteDB.ILiteQueryableResult`1
+  - LiteDB.ILiteQueryable`1
+  - LiteDB.ILiteRepository
+  - LiteDB.ILiteStorage`1
+  - LiteDB.ITypeNameBinder
+  - LiteDB.JsonReader
+  - LiteDB.JsonSerializer
+  - LiteDB.JsonWriter
+  - LiteDB.LiteCollection`1
+  - LiteDB.LiteDatabase
+  - LiteDB.LiteException
+  - LiteDB.LiteFileInfo`1
+  - LiteDB.LiteFileStream`1
+  - LiteDB.LiteQueryable`1
+  - LiteDB.LiteRepository
+  - LiteDB.LiteStorage`1
+  - LiteDB.MemberMapper
+  - LiteDB.ObjectId
+  - LiteDB.Query
+  - LiteDB.QueryAny
+  - LiteDB.QueryOrder
+  - LiteDB.SharedDataReader
+  - LiteDB.SharedEngine
+  langs:
+  - csharp
+  - vb
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+  type: Namespace
+  assemblies:
+  - LiteDB
+references:
+- uid: LiteDB.LiteCollection`1
+  commentId: T:LiteDB.LiteCollection`1
+  href: LiteDB.LiteCollection-1.html
+  name: LiteCollection<T>
+  nameWithType: LiteCollection<T>
+  fullName: LiteDB.LiteCollection<T>
+  nameWithType.vb: LiteCollection(Of T)
+  fullName.vb: LiteDB.LiteCollection(Of T)
+  name.vb: LiteCollection(Of T)
+  spec.csharp:
+  - uid: LiteDB.LiteCollection`1
+    name: LiteCollection
+    href: LiteDB.LiteCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteCollection`1
+    name: LiteCollection
+    href: LiteDB.LiteCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteCollection`1
+  commentId: T:LiteDB.ILiteCollection`1
+  parent: LiteDB
+  href: LiteDB.ILiteCollection-1.html
+  name: ILiteCollection<T>
+  nameWithType: ILiteCollection<T>
+  fullName: LiteDB.ILiteCollection<T>
+  nameWithType.vb: ILiteCollection(Of T)
+  fullName.vb: LiteDB.ILiteCollection(Of T)
+  name.vb: ILiteCollection(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteCollection`1
+    name: ILiteCollection
+    href: LiteDB.ILiteCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteDatabase
+  commentId: T:LiteDB.ILiteDatabase
+  parent: LiteDB
+  href: LiteDB.ILiteDatabase.html
+  name: ILiteDatabase
+  nameWithType: ILiteDatabase
+  fullName: LiteDB.ILiteDatabase
+- uid: LiteDB.ILiteQueryable`1
+  commentId: T:LiteDB.ILiteQueryable`1
+  parent: LiteDB
+  href: LiteDB.ILiteQueryable-1.html
+  name: ILiteQueryable<T>
+  nameWithType: ILiteQueryable<T>
+  fullName: LiteDB.ILiteQueryable<T>
+  nameWithType.vb: ILiteQueryable(Of T)
+  fullName.vb: LiteDB.ILiteQueryable(Of T)
+  name.vb: ILiteQueryable(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryable`1
+    name: ILiteQueryable
+    href: LiteDB.ILiteQueryable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteQueryableResult`1
+  commentId: T:LiteDB.ILiteQueryableResult`1
+  parent: LiteDB
+  href: LiteDB.ILiteQueryableResult-1.html
+  name: ILiteQueryableResult<T>
+  nameWithType: ILiteQueryableResult<T>
+  fullName: LiteDB.ILiteQueryableResult<T>
+  nameWithType.vb: ILiteQueryableResult(Of T)
+  fullName.vb: LiteDB.ILiteQueryableResult(Of T)
+  name.vb: ILiteQueryableResult(Of T)
+  spec.csharp:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteQueryableResult`1
+    name: ILiteQueryableResult
+    href: LiteDB.ILiteQueryableResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.ILiteRepository
+  commentId: T:LiteDB.ILiteRepository
+  parent: LiteDB
+  href: LiteDB.ILiteRepository.html
+  name: ILiteRepository
+  nameWithType: ILiteRepository
+  fullName: LiteDB.ILiteRepository
+- uid: LiteDB.LiteDatabase
+  commentId: T:LiteDB.LiteDatabase
+  href: LiteDB.LiteDatabase.html
+  name: LiteDatabase
+  nameWithType: LiteDatabase
+  fullName: LiteDB.LiteDatabase
+- uid: LiteDB.LiteQueryable`1
+  commentId: T:LiteDB.LiteQueryable`1
+  href: LiteDB.LiteQueryable-1.html
+  name: LiteQueryable<T>
+  nameWithType: LiteQueryable<T>
+  fullName: LiteDB.LiteQueryable<T>
+  nameWithType.vb: LiteQueryable(Of T)
+  fullName.vb: LiteDB.LiteQueryable(Of T)
+  name.vb: LiteQueryable(Of T)
+  spec.csharp:
+  - uid: LiteDB.LiteQueryable`1
+    name: LiteQueryable
+    href: LiteDB.LiteQueryable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteQueryable`1
+    name: LiteQueryable
+    href: LiteDB.LiteQueryable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.LiteRepository
+  commentId: T:LiteDB.LiteRepository
+  href: LiteDB.LiteRepository.html
+  name: LiteRepository
+  nameWithType: LiteRepository
+  fullName: LiteDB.LiteRepository
+- uid: LiteDB.BsonCtorAttribute
+  commentId: T:LiteDB.BsonCtorAttribute
+  href: LiteDB.BsonCtorAttribute.html
+  name: BsonCtorAttribute
+  nameWithType: BsonCtorAttribute
+  fullName: LiteDB.BsonCtorAttribute
+- uid: LiteDB.BsonFieldAttribute
+  commentId: T:LiteDB.BsonFieldAttribute
+  parent: LiteDB
+  href: LiteDB.BsonFieldAttribute.html
+  name: BsonFieldAttribute
+  nameWithType: BsonFieldAttribute
+  fullName: LiteDB.BsonFieldAttribute
+- uid: LiteDB.BsonIdAttribute
+  commentId: T:LiteDB.BsonIdAttribute
+  href: LiteDB.BsonIdAttribute.html
+  name: BsonIdAttribute
+  nameWithType: BsonIdAttribute
+  fullName: LiteDB.BsonIdAttribute
+- uid: LiteDB.BsonIgnoreAttribute
+  commentId: T:LiteDB.BsonIgnoreAttribute
+  href: LiteDB.BsonIgnoreAttribute.html
+  name: BsonIgnoreAttribute
+  nameWithType: BsonIgnoreAttribute
+  fullName: LiteDB.BsonIgnoreAttribute
+- uid: LiteDB.BsonRefAttribute
+  commentId: T:LiteDB.BsonRefAttribute
+  href: LiteDB.BsonRefAttribute.html
+  name: BsonRefAttribute
+  nameWithType: BsonRefAttribute
+  fullName: LiteDB.BsonRefAttribute
+- uid: LiteDB.BsonMapper
+  commentId: T:LiteDB.BsonMapper
+  parent: LiteDB
+  href: LiteDB.BsonMapper.html
+  name: BsonMapper
+  nameWithType: BsonMapper
+  fullName: LiteDB.BsonMapper
+- uid: LiteDB.BsonMapper.DeserializationCallback
+  commentId: T:LiteDB.BsonMapper.DeserializationCallback
+  parent: LiteDB
+  href: LiteDB.BsonMapper.html
+  name: BsonMapper.DeserializationCallback
+  nameWithType: BsonMapper.DeserializationCallback
+  fullName: LiteDB.BsonMapper.DeserializationCallback
+  spec.csharp:
+  - uid: LiteDB.BsonMapper
+    name: BsonMapper
+    href: LiteDB.BsonMapper.html
+  - name: .
+  - uid: LiteDB.BsonMapper.DeserializationCallback
+    name: DeserializationCallback
+    href: LiteDB.BsonMapper.DeserializationCallback.html
+  spec.vb:
+  - uid: LiteDB.BsonMapper
+    name: BsonMapper
+    href: LiteDB.BsonMapper.html
+  - name: .
+  - uid: LiteDB.BsonMapper.DeserializationCallback
+    name: DeserializationCallback
+    href: LiteDB.BsonMapper.DeserializationCallback.html
+- uid: LiteDB.EntityBuilder`1
+  commentId: T:LiteDB.EntityBuilder`1
+  parent: LiteDB
+  href: LiteDB.EntityBuilder-1.html
+  name: EntityBuilder<T>
+  nameWithType: EntityBuilder<T>
+  fullName: LiteDB.EntityBuilder<T>
+  nameWithType.vb: EntityBuilder(Of T)
+  fullName.vb: LiteDB.EntityBuilder(Of T)
+  name.vb: EntityBuilder(Of T)
+  spec.csharp:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.EntityBuilder`1
+    name: EntityBuilder
+    href: LiteDB.EntityBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: LiteDB.EntityMapper
+  commentId: T:LiteDB.EntityMapper
+  parent: LiteDB
+  href: LiteDB.EntityMapper.html
+  name: EntityMapper
+  nameWithType: EntityMapper
+  fullName: LiteDB.EntityMapper
+- uid: LiteDB.MemberMapper
+  commentId: T:LiteDB.MemberMapper
+  parent: LiteDB
+  href: LiteDB.MemberMapper.html
+  name: MemberMapper
+  nameWithType: MemberMapper
+  fullName: LiteDB.MemberMapper
+- uid: LiteDB.CreateObject
+  commentId: T:LiteDB.CreateObject
+  parent: LiteDB
+  href: LiteDB.CreateObject.html
+  name: CreateObject
+  nameWithType: CreateObject
+  fullName: LiteDB.CreateObject
+- uid: LiteDB.GenericSetter
+  commentId: T:LiteDB.GenericSetter
+  parent: LiteDB
+  href: LiteDB.GenericSetter.html
+  name: GenericSetter
+  nameWithType: GenericSetter
+  fullName: LiteDB.GenericSetter
+- uid: LiteDB.GenericGetter
+  commentId: T:LiteDB.GenericGetter
+  parent: LiteDB
+  href: LiteDB.GenericGetter.html
+  name: GenericGetter
+  nameWithType: GenericGetter
+  fullName: LiteDB.GenericGetter
+- uid: LiteDB.DefaultTypeNameBinder
+  commentId: T:LiteDB.DefaultTypeNameBinder
+  parent: LiteDB
+  href: LiteDB.DefaultTypeNameBinder.html
+  name: DefaultTypeNameBinder
+  nameWithType: DefaultTypeNameBinder
+  fullName: LiteDB.DefaultTypeNameBinder
+- uid: LiteDB.ITypeNameBinder
+  commentId: T:LiteDB.ITypeNameBinder
+  parent: LiteDB
+  href: LiteDB.ITypeNameBinder.html
+  name: ITypeNameBinder
+  nameWithType: ITypeNameBinder
+  fullName: LiteDB.ITypeNameBinder
+- uid: LiteDB.SharedDataReader
+  commentId: T:LiteDB.SharedDataReader
+  href: LiteDB.SharedDataReader.html
+  name: SharedDataReader
+  nameWithType: SharedDataReader
+  fullName: LiteDB.SharedDataReader
+- uid: LiteDB.SharedEngine
+  commentId: T:LiteDB.SharedEngine
+  href: LiteDB.SharedEngine.html
+  name: SharedEngine
+  nameWithType: SharedEngine
+  fullName: LiteDB.SharedEngine
+- uid: LiteDB.ILiteStorage`1
+  commentId: T:LiteDB.ILiteStorage`1
+  href: LiteDB.ILiteStorage-1.html
+  name: ILiteStorage<TFileId>
+  nameWithType: ILiteStorage<TFileId>
+  fullName: LiteDB.ILiteStorage<TFileId>
+  nameWithType.vb: ILiteStorage(Of TFileId)
+  fullName.vb: LiteDB.ILiteStorage(Of TFileId)
+  name.vb: ILiteStorage(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.ILiteStorage`1
+    name: ILiteStorage
+    href: LiteDB.ILiteStorage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.LiteFileInfo`1
+  commentId: T:LiteDB.LiteFileInfo`1
+  href: LiteDB.LiteFileInfo-1.html
+  name: LiteFileInfo<TFileId>
+  nameWithType: LiteFileInfo<TFileId>
+  fullName: LiteDB.LiteFileInfo<TFileId>
+  nameWithType.vb: LiteFileInfo(Of TFileId)
+  fullName.vb: LiteDB.LiteFileInfo(Of TFileId)
+  name.vb: LiteFileInfo(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteFileInfo`1
+    name: LiteFileInfo
+    href: LiteDB.LiteFileInfo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.LiteFileStream`1
+  commentId: T:LiteDB.LiteFileStream`1
+  href: LiteDB.LiteFileStream-1.html
+  name: LiteFileStream<TFileId>
+  nameWithType: LiteFileStream<TFileId>
+  fullName: LiteDB.LiteFileStream<TFileId>
+  nameWithType.vb: LiteFileStream(Of TFileId)
+  fullName.vb: LiteDB.LiteFileStream(Of TFileId)
+  name.vb: LiteFileStream(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream
+    href: LiteDB.LiteFileStream-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteFileStream`1
+    name: LiteFileStream
+    href: LiteDB.LiteFileStream-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.LiteStorage`1
+  commentId: T:LiteDB.LiteStorage`1
+  href: LiteDB.LiteStorage-1.html
+  name: LiteStorage<TFileId>
+  nameWithType: LiteStorage<TFileId>
+  fullName: LiteDB.LiteStorage<TFileId>
+  nameWithType.vb: LiteStorage(Of TFileId)
+  fullName.vb: LiteDB.LiteStorage(Of TFileId)
+  name.vb: LiteStorage(Of TFileId)
+  spec.csharp:
+  - uid: LiteDB.LiteStorage`1
+    name: LiteStorage
+    href: LiteDB.LiteStorage-1.html
+  - name: <
+  - name: TFileId
+  - name: '>'
+  spec.vb:
+  - uid: LiteDB.LiteStorage`1
+    name: LiteStorage
+    href: LiteDB.LiteStorage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFileId
+  - name: )
+- uid: LiteDB.ConnectionString
+  commentId: T:LiteDB.ConnectionString
+  parent: LiteDB
+  href: LiteDB.ConnectionString.html
+  name: ConnectionString
+  nameWithType: ConnectionString
+  fullName: LiteDB.ConnectionString
+- uid: LiteDB.ConnectionType
+  commentId: T:LiteDB.ConnectionType
+  parent: LiteDB
+  href: LiteDB.ConnectionType.html
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: LiteDB.ConnectionType
+- uid: LiteDB.Query
+  commentId: T:LiteDB.Query
+  parent: LiteDB
+  href: LiteDB.Query.html
+  name: Query
+  nameWithType: Query
+  fullName: LiteDB.Query
+- uid: LiteDB.QueryAny
+  commentId: T:LiteDB.QueryAny
+  parent: LiteDB
+  href: LiteDB.QueryAny.html
+  name: QueryAny
+  nameWithType: QueryAny
+  fullName: LiteDB.QueryAny
+- uid: LiteDB.BsonSerializer
+  commentId: T:LiteDB.BsonSerializer
+  href: LiteDB.BsonSerializer.html
+  name: BsonSerializer
+  nameWithType: BsonSerializer
+  fullName: LiteDB.BsonSerializer
+- uid: LiteDB.BsonArray
+  commentId: T:LiteDB.BsonArray
+  parent: LiteDB
+  href: LiteDB.BsonArray.html
+  name: BsonArray
+  nameWithType: BsonArray
+  fullName: LiteDB.BsonArray
+- uid: LiteDB.BsonAutoId
+  commentId: T:LiteDB.BsonAutoId
+  parent: LiteDB
+  href: LiteDB.BsonAutoId.html
+  name: BsonAutoId
+  nameWithType: BsonAutoId
+  fullName: LiteDB.BsonAutoId
+- uid: LiteDB.BsonDocument
+  commentId: T:LiteDB.BsonDocument
+  parent: LiteDB
+  href: LiteDB.BsonDocument.html
+  name: BsonDocument
+  nameWithType: BsonDocument
+  fullName: LiteDB.BsonDocument
+- uid: LiteDB.BsonType
+  commentId: T:LiteDB.BsonType
+  parent: LiteDB
+  href: LiteDB.BsonType.html
+  name: BsonType
+  nameWithType: BsonType
+  fullName: LiteDB.BsonType
+- uid: LiteDB.BsonValue
+  commentId: T:LiteDB.BsonValue
+  parent: LiteDB
+  href: LiteDB.BsonValue.html
+  name: BsonValue
+  nameWithType: BsonValue
+  fullName: LiteDB.BsonValue
+- uid: LiteDB.BsonDataReader
+  commentId: T:LiteDB.BsonDataReader
+  href: LiteDB.BsonDataReader.html
+  name: BsonDataReader
+  nameWithType: BsonDataReader
+  fullName: LiteDB.BsonDataReader
+- uid: LiteDB.BsonDataReaderExtensions
+  commentId: T:LiteDB.BsonDataReaderExtensions
+  parent: LiteDB
+  href: LiteDB.BsonDataReaderExtensions.html
+  name: BsonDataReaderExtensions
+  nameWithType: BsonDataReaderExtensions
+  fullName: LiteDB.BsonDataReaderExtensions
+- uid: LiteDB.IBsonDataReader
+  commentId: T:LiteDB.IBsonDataReader
+  parent: LiteDB
+  href: LiteDB.IBsonDataReader.html
+  name: IBsonDataReader
+  nameWithType: IBsonDataReader
+  fullName: LiteDB.IBsonDataReader
+- uid: LiteDB.BsonExpression
+  commentId: T:LiteDB.BsonExpression
+  parent: LiteDB
+  href: LiteDB.BsonExpression.html
+  name: BsonExpression
+  nameWithType: BsonExpression
+  fullName: LiteDB.BsonExpression
+- uid: LiteDB.BsonExpressionType
+  commentId: T:LiteDB.BsonExpressionType
+  parent: LiteDB
+  href: LiteDB.BsonExpressionType.html
+  name: BsonExpressionType
+  nameWithType: BsonExpressionType
+  fullName: LiteDB.BsonExpressionType
+- uid: LiteDB.JsonReader
+  commentId: T:LiteDB.JsonReader
+  href: LiteDB.JsonReader.html
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: LiteDB.JsonReader
+- uid: LiteDB.JsonSerializer
+  commentId: T:LiteDB.JsonSerializer
+  href: LiteDB.JsonSerializer.html
+  name: JsonSerializer
+  nameWithType: JsonSerializer
+  fullName: LiteDB.JsonSerializer
+- uid: LiteDB.JsonWriter
+  commentId: T:LiteDB.JsonWriter
+  href: LiteDB.JsonWriter.html
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: LiteDB.JsonWriter
+- uid: LiteDB.ObjectId
+  commentId: T:LiteDB.ObjectId
+  parent: LiteDB
+  href: LiteDB.ObjectId.html
+  name: ObjectId
+  nameWithType: ObjectId
+  fullName: LiteDB.ObjectId
+- uid: LiteDB.QueryOrder
+  commentId: T:LiteDB.QueryOrder
+  href: LiteDB.QueryOrder.html
+  name: QueryOrder
+  nameWithType: QueryOrder
+  fullName: LiteDB.QueryOrder
+- uid: LiteDB.Collation
+  commentId: T:LiteDB.Collation
+  parent: LiteDB
+  href: LiteDB.Collation.html
+  name: Collation
+  nameWithType: Collation
+  fullName: LiteDB.Collation
+- uid: LiteDB.LiteException
+  commentId: T:LiteDB.LiteException
+  href: LiteDB.LiteException.html
+  name: LiteException
+  nameWithType: LiteException
+  fullName: LiteDB.LiteException
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB

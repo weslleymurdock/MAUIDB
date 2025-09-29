@@ -1,0 +1,385 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.BsonType
+  commentId: T:LiteDB.BsonType
+  id: BsonType
+  parent: LiteDB
+  children:
+  - LiteDB.BsonType.Array
+  - LiteDB.BsonType.Binary
+  - LiteDB.BsonType.Boolean
+  - LiteDB.BsonType.DateTime
+  - LiteDB.BsonType.Decimal
+  - LiteDB.BsonType.Document
+  - LiteDB.BsonType.Double
+  - LiteDB.BsonType.Guid
+  - LiteDB.BsonType.Int32
+  - LiteDB.BsonType.Int64
+  - LiteDB.BsonType.MaxValue
+  - LiteDB.BsonType.MinValue
+  - LiteDB.BsonType.Null
+  - LiteDB.BsonType.ObjectId
+  - LiteDB.BsonType.String
+  langs:
+  - csharp
+  - vb
+  name: BsonType
+  nameWithType: BsonType
+  fullName: LiteDB.BsonType
+  type: Enum
+  source:
+    id: BsonType
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 5
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  summary: All supported BsonTypes in sort order
+  example: []
+  syntax:
+    content: 'public enum BsonType : byte'
+    content.vb: Public Enum BsonType As Byte
+- uid: LiteDB.BsonType.MinValue
+  commentId: F:LiteDB.BsonType.MinValue
+  id: MinValue
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: BsonType.MinValue
+  fullName: LiteDB.BsonType.MinValue
+  type: Field
+  source:
+    id: MinValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: MinValue = 0
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Null
+  commentId: F:LiteDB.BsonType.Null
+  id: "Null"
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: "Null"
+  nameWithType: BsonType.Null
+  fullName: LiteDB.BsonType.Null
+  type: Field
+  source:
+    id: "Null"
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 9
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Null = 1
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Int32
+  commentId: F:LiteDB.BsonType.Int32
+  id: Int32
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Int32
+  nameWithType: BsonType.Int32
+  fullName: LiteDB.BsonType.Int32
+  type: Field
+  source:
+    id: Int32
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 11
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Int32 = 2
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Int64
+  commentId: F:LiteDB.BsonType.Int64
+  id: Int64
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Int64
+  nameWithType: BsonType.Int64
+  fullName: LiteDB.BsonType.Int64
+  type: Field
+  source:
+    id: Int64
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 12
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Int64 = 3
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Double
+  commentId: F:LiteDB.BsonType.Double
+  id: Double
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Double
+  nameWithType: BsonType.Double
+  fullName: LiteDB.BsonType.Double
+  type: Field
+  source:
+    id: Double
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 13
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Double = 4
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Decimal
+  commentId: F:LiteDB.BsonType.Decimal
+  id: Decimal
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Decimal
+  nameWithType: BsonType.Decimal
+  fullName: LiteDB.BsonType.Decimal
+  type: Field
+  source:
+    id: Decimal
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 14
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Decimal = 5
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.String
+  commentId: F:LiteDB.BsonType.String
+  id: String
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: BsonType.String
+  fullName: LiteDB.BsonType.String
+  type: Field
+  source:
+    id: String
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 16
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: String = 6
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Document
+  commentId: F:LiteDB.BsonType.Document
+  id: Document
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Document
+  nameWithType: BsonType.Document
+  fullName: LiteDB.BsonType.Document
+  type: Field
+  source:
+    id: Document
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 18
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Document = 7
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Array
+  commentId: F:LiteDB.BsonType.Array
+  id: Array
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Array
+  nameWithType: BsonType.Array
+  fullName: LiteDB.BsonType.Array
+  type: Field
+  source:
+    id: Array
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 19
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Array = 8
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Binary
+  commentId: F:LiteDB.BsonType.Binary
+  id: Binary
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Binary
+  nameWithType: BsonType.Binary
+  fullName: LiteDB.BsonType.Binary
+  type: Field
+  source:
+    id: Binary
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 21
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Binary = 9
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.ObjectId
+  commentId: F:LiteDB.BsonType.ObjectId
+  id: ObjectId
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: ObjectId
+  nameWithType: BsonType.ObjectId
+  fullName: LiteDB.BsonType.ObjectId
+  type: Field
+  source:
+    id: ObjectId
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 22
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: ObjectId = 10
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Guid
+  commentId: F:LiteDB.BsonType.Guid
+  id: Guid
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: BsonType.Guid
+  fullName: LiteDB.BsonType.Guid
+  type: Field
+  source:
+    id: Guid
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 23
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Guid = 11
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.Boolean
+  commentId: F:LiteDB.BsonType.Boolean
+  id: Boolean
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: Boolean
+  nameWithType: BsonType.Boolean
+  fullName: LiteDB.BsonType.Boolean
+  type: Field
+  source:
+    id: Boolean
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 25
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: Boolean = 12
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.DateTime
+  commentId: F:LiteDB.BsonType.DateTime
+  id: DateTime
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: DateTime
+  nameWithType: BsonType.DateTime
+  fullName: LiteDB.BsonType.DateTime
+  type: Field
+  source:
+    id: DateTime
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 26
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: DateTime = 13
+    return:
+      type: LiteDB.BsonType
+- uid: LiteDB.BsonType.MaxValue
+  commentId: F:LiteDB.BsonType.MaxValue
+  id: MaxValue
+  parent: LiteDB.BsonType
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: BsonType.MaxValue
+  fullName: LiteDB.BsonType.MaxValue
+  type: Field
+  source:
+    id: MaxValue
+    path: /workspace/LiteDB/LiteDB/Document/BsonType.cs
+    startLine: 28
+  assemblies:
+  - LiteDB
+  namespace: LiteDB
+  syntax:
+    content: MaxValue = 14
+    return:
+      type: LiteDB.BsonType
+references:
+- uid: LiteDB
+  commentId: N:LiteDB
+  href: LiteDB.html
+  name: LiteDB
+  nameWithType: LiteDB
+  fullName: LiteDB
+- uid: LiteDB.BsonType
+  commentId: T:LiteDB.BsonType
+  parent: LiteDB
+  href: LiteDB.BsonType.html
+  name: BsonType
+  nameWithType: BsonType
+  fullName: LiteDB.BsonType

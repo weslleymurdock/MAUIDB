@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: LiteDB.Engine.Pragmas
+  commentId: T:LiteDB.Engine.Pragmas
+  id: Pragmas
+  parent: LiteDB.Engine
+  children:
+  - LiteDB.Engine.Pragmas.CHECKPOINT
+  - LiteDB.Engine.Pragmas.COLLATION
+  - LiteDB.Engine.Pragmas.LIMIT_SIZE
+  - LiteDB.Engine.Pragmas.TIMEOUT
+  - LiteDB.Engine.Pragmas.USER_VERSION
+  - LiteDB.Engine.Pragmas.UTC_DATE
+  langs:
+  - csharp
+  - vb
+  name: Pragmas
+  nameWithType: Pragmas
+  fullName: LiteDB.Engine.Pragmas
+  type: Class
+  source:
+    id: Pragmas
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 2
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public static class Pragmas
+    content.vb: Public Module Pragmas
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LiteDB.Engine.Pragmas.USER_VERSION
+  commentId: F:LiteDB.Engine.Pragmas.USER_VERSION
+  id: USER_VERSION
+  parent: LiteDB.Engine.Pragmas
+  langs:
+  - csharp
+  - vb
+  name: USER_VERSION
+  nameWithType: Pragmas.USER_VERSION
+  fullName: LiteDB.Engine.Pragmas.USER_VERSION
+  type: Field
+  source:
+    id: USER_VERSION
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 4
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public const string USER_VERSION = "USER_VERSION"
+    return:
+      type: System.String
+    content.vb: Public Const USER_VERSION As String = "USER_VERSION"
+- uid: LiteDB.Engine.Pragmas.COLLATION
+  commentId: F:LiteDB.Engine.Pragmas.COLLATION
+  id: COLLATION
+  parent: LiteDB.Engine.Pragmas
+  langs:
+  - csharp
+  - vb
+  name: COLLATION
+  nameWithType: Pragmas.COLLATION
+  fullName: LiteDB.Engine.Pragmas.COLLATION
+  type: Field
+  source:
+    id: COLLATION
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 5
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public const string COLLATION = "COLLATION"
+    return:
+      type: System.String
+    content.vb: Public Const COLLATION As String = "COLLATION"
+- uid: LiteDB.Engine.Pragmas.TIMEOUT
+  commentId: F:LiteDB.Engine.Pragmas.TIMEOUT
+  id: TIMEOUT
+  parent: LiteDB.Engine.Pragmas
+  langs:
+  - csharp
+  - vb
+  name: TIMEOUT
+  nameWithType: Pragmas.TIMEOUT
+  fullName: LiteDB.Engine.Pragmas.TIMEOUT
+  type: Field
+  source:
+    id: TIMEOUT
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 6
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public const string TIMEOUT = "TIMEOUT"
+    return:
+      type: System.String
+    content.vb: Public Const TIMEOUT As String = "TIMEOUT"
+- uid: LiteDB.Engine.Pragmas.LIMIT_SIZE
+  commentId: F:LiteDB.Engine.Pragmas.LIMIT_SIZE
+  id: LIMIT_SIZE
+  parent: LiteDB.Engine.Pragmas
+  langs:
+  - csharp
+  - vb
+  name: LIMIT_SIZE
+  nameWithType: Pragmas.LIMIT_SIZE
+  fullName: LiteDB.Engine.Pragmas.LIMIT_SIZE
+  type: Field
+  source:
+    id: LIMIT_SIZE
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 7
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public const string LIMIT_SIZE = "LIMIT_SIZE"
+    return:
+      type: System.String
+    content.vb: Public Const LIMIT_SIZE As String = "LIMIT_SIZE"
+- uid: LiteDB.Engine.Pragmas.UTC_DATE
+  commentId: F:LiteDB.Engine.Pragmas.UTC_DATE
+  id: UTC_DATE
+  parent: LiteDB.Engine.Pragmas
+  langs:
+  - csharp
+  - vb
+  name: UTC_DATE
+  nameWithType: Pragmas.UTC_DATE
+  fullName: LiteDB.Engine.Pragmas.UTC_DATE
+  type: Field
+  source:
+    id: UTC_DATE
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 8
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public const string UTC_DATE = "UTC_DATE"
+    return:
+      type: System.String
+    content.vb: Public Const UTC_DATE As String = "UTC_DATE"
+- uid: LiteDB.Engine.Pragmas.CHECKPOINT
+  commentId: F:LiteDB.Engine.Pragmas.CHECKPOINT
+  id: CHECKPOINT
+  parent: LiteDB.Engine.Pragmas
+  langs:
+  - csharp
+  - vb
+  name: CHECKPOINT
+  nameWithType: Pragmas.CHECKPOINT
+  fullName: LiteDB.Engine.Pragmas.CHECKPOINT
+  type: Field
+  source:
+    id: CHECKPOINT
+    path: /workspace/LiteDB/LiteDB/Engine/Pragmas.cs
+    startLine: 9
+  assemblies:
+  - LiteDB
+  namespace: LiteDB.Engine
+  syntax:
+    content: public const string CHECKPOINT = "CHECKPOINT"
+    return:
+      type: System.String
+    content.vb: Public Const CHECKPOINT As String = "CHECKPOINT"
+references:
+- uid: LiteDB.Engine
+  commentId: N:LiteDB.Engine
+  href: LiteDB.html
+  name: LiteDB.Engine
+  nameWithType: LiteDB.Engine
+  fullName: LiteDB.Engine
+  spec.csharp:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+  spec.vb:
+  - uid: LiteDB
+    name: LiteDB
+    href: LiteDB.html
+  - name: .
+  - uid: LiteDB.Engine
+    name: Engine
+    href: LiteDB.Engine.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
