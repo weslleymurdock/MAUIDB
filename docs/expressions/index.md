@@ -1,3 +1,7 @@
+---
+title: Expressions
+---
+
 # Expressions
 
 Expressions are path or formulas to access and modify the data inside a document. Based on the concept of JSON path (<http://goessner.net/articles/JsonPath/),> LiteDB supports a similar syntax to navigate inside a document.

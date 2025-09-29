@@ -1,3 +1,7 @@
+---
+title: Connection String
+---
+
 # Connection String
 
 LiteDatabase can be initialized using a connection string with the `key1=value1; key2=value2; ...` syntax. If there is no `=`, LiteDB assumes the string is the `Filename`. Quote values (`"` or `'`) when they contain reserved characters such as `;` or `=`. **Keys and values are case-insensitive.**

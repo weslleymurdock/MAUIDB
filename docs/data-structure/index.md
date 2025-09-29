@@ -1,3 +1,7 @@
+---
+title: Data Structure
+---
+
 # Data Structure
 
 LiteDB stores data as documents, which are JSON-like objects containing key-value pairs. Documents are a schema-less data structure. Each document stores both its data and its structure.

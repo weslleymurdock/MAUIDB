@@ -1,3 +1,7 @@
+---
+title: Concurrency
+---
+
 # Concurrency
 
 LiteDB v4 supports both thread-safe and process-safe patterns:

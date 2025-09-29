@@ -1,3 +1,7 @@
+---
+title: Getting Started
+---
+
 # Getting Started
 
 LiteDB is a simple, fast, and lightweight embedded .NET document database inspired by MongoDB. The API intentionally mirrors the official MongoDB .NET API so that common persistence patterns feel familiar.

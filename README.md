@@ -46,7 +46,15 @@ New UI to manage and visualize your database:
 
 ## Documentation
 
-Visit [the Wiki](https://github.com/mbdavid/LiteDB/wiki) for full documentation. For simplified chinese version, [check here](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn).
+The `docs/` folder contains a DocFX site that blends conceptual guides with generated API reference. Build and preview it locally with:
+
+```bash
+dotnet tool restore
+dotnet docfx docs/docfx.json
+dotnet docfx serve docs/_site
+```
+
+The historical [GitHub Wiki](https://github.com/mbdavid/LiteDB/wiki) and the [Simplified Chinese translation](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn) remain available while content migrates into the new site.
 
 ## LiteDB Community
 

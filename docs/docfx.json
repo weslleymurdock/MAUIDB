@@ -1,0 +1,74 @@
+{
+  "$schema": "https://dotnet.github.io/docfx/schemas/v1.0/docfx.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../LiteDB",
+          "files": [
+            "LiteDB.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net8.0"
+      }
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/toc.yml"
+        ],
+        "exclude": [
+          "_site/**",
+          "obj/**",
+          "bin/**",
+          "api/**.yml"
+        ]
+      },
+      {
+        "files": [
+          "api/**.yml"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.jpeg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "LiteDB Documentation",
+      "_appFooter": "© LiteDB contributors",
+      "_enableSearch": true,
+      "_disableContribution": false,
+      "_gitContribute": {
+        "repo": "https://github.com/mbdavid/LiteDB",
+        "branch": "master",
+        "path": "docs"
+      }
+    },
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "markdownEngineName": "markdig",
+    "template": [
+      "default"
+    ]
+  }
+}

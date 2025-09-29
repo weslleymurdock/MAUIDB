@@ -1,3 +1,7 @@
+---
+title: Repository Pattern
+---
+
 # Repository Pattern
 
 `LiteRepository` is a new class to access your database. LiteRepository is implemented over `LiteDatabase` and is just a layer to quick access your data without `LiteCollection` class and fluent query

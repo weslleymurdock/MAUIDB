@@ -1,3 +1,7 @@
+---
+title: Collections
+---
+
 # Collections
 
 Documents are stored and organized in collections. `LiteCollection` is the generic class that manages them in LiteDB. A collection name must:

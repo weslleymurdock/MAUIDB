@@ -1,6 +1,10 @@
+---
+title: Collation
+---
+
 # Collation
 
-A collation is a special pragma (for more info, see [Pragmas](../pragmas)) that allows users to specify a culture and string compare options for a datafile.
+A collation is a special pragma (for more info, see [Pragmas](~/pragmas/index.md)) that allows users to specify a culture and string compare options for a datafile.
 
 Collation is a read-only pragma and can only be changed with a rebuild.
 

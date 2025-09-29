@@ -1,3 +1,7 @@
+---
+title: BsonDocument
+---
+
 # BsonDocument
 
 The `BsonDocument` class is LiteDB’s implementation of documents. Internally, a `BsonDocument` stores key-value pairs in a `Dictionary<string, BsonValue>`.

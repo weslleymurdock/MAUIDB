@@ -1,3 +1,7 @@
+---
+title: Versioning
+---
+
 # Versioning
 
 LiteDB uses GitVersion for semantic versioning across local builds and CI. The configuration lives in `GitVersion.yml` and is consumed by both MSBuild (via `GitVersion.MsBuild`) and the GitHub workflows.

@@ -1,3 +1,7 @@
+---
+title: How LiteDB Works
+---
+
 # How LiteDB Works
 
 ## File Format

@@ -1,3 +1,7 @@
+---
+title: Pragmas
+---
+
 # Pragmas
 
 In LiteDB v5, pragmas are variables that can alter the behavior of a datafile. They are stored in the header of the datafile.
@@ -5,7 +9,7 @@ In LiteDB v5, pragmas are variables that can alter the behavior of a datafile. T
 | Name | Read-only | Data type | Description | Default value |
 | --- | --- | --- | --- | --- |
 | USER\_VERSION | no | int | Reserved for version control by the user. Does not affect the behavior of the datafile. | 0 |
-| COLLATION | yes (can be changed with a rebuild) | string (internally stored as int) | Check [Collation](../collation). | `CurrentCulture` and `IgnoreCase` |
+| COLLATION | yes (can be changed with a rebuild) | string (internally stored as int) | Check [Collation](~/collation/index.md). | `CurrentCulture` and `IgnoreCase` |
 | TIMEOUT | no | int | Maximum amount of time (in seconds) that the engine waits for a shared resouce to be unlocked. | 60 |
 | LIMIT\_SIZE | no | long | Maximum size (in bytes) that the datafile can grow to. Cannot be smaller than the current datafile size. Cannot be smaller than 4 pages (32768 bytes). | long.MaxValue |
 | UTC\_DATE | no | bool | If `false`, dates are converted to local time on retrieval. Storage format is not affected (always in UTC). | false |
@@ -23,7 +27,7 @@ Rebuild options are used to configure a rebuild.
 
 | Name | Data type | Description | Default value |
 | --- | --- | --- | --- |
-| collation | string | Check [Collation](../collation). | null (will use `CurrentCulture` and `IgnoreCase` if null) |
+| collation | string | Check [Collation](~/collation/index.md). | null (will use `CurrentCulture` and `IgnoreCase` if null) |
 | password | string | Defines the password for an encrypted datafile. | null (datafile will not be encrypted) |
 
 If the `rebuild` command is issued without options, both are assumed to be null.

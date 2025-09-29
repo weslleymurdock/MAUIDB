@@ -224,3 +224,10 @@ FakesAssemblies/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 /LiteDB.BadJsonTest
+
+# DocFX generated content
+docs/_site/
+docs/**/.cache/
+docs/api/**/*.yml
+docs/api/.manifest
+docs/xrefmap.yml

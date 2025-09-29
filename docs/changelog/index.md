@@ -1,3 +1,7 @@
+---
+title: ChangeLog
+---
+
 # ChangeLog
 
 ## New Features

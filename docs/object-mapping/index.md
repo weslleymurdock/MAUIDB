@@ -1,3 +1,7 @@
+---
+title: Object Mapping
+---
+
 # Object Mapping
 
 The LiteDB mapper converts POCO classes documents. When you get a `ILiteCollection<T>` instance from `LiteDatabase.GetCollection<T>`, `T` will be your document type. If `T` is not a `BsonDocument`, LiteDB internally maps your class to `BsonDocument`. To do this, LiteDB uses the `BsonMapper` class:
