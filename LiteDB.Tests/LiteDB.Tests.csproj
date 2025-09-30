@@ -46,8 +46,12 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(UseLiteDBPackage)' != 'false'">
-    <PackageReference Include="LiteDB" Version="$(LiteDBPackageVersion)" />
+  <Target Name="EnsureLiteDBPackageVersion" BeforeTargets="ResolveReferences" Condition="'$(UseLiteDBPackage)' != 'false' and '$(LiteDBPackageVersion)' == ''">
+    <Error Text="LiteDBPackageVersion must be set when UseLiteDBPackage is enabled." />
+  </Target>
+
+  <ItemGroup Condition="'$(UseLiteDBPackage)' != 'false' and '$(LiteDBPackageVersion)' != ''">
+    <PackageReference Include="LiteDB" Version="[$(LiteDBPackageVersion)]" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(UseLiteDBPackage)' == 'false'">
