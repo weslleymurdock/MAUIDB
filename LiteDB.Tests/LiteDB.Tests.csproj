@@ -45,7 +45,11 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(UseLiteDBPackage)' == 'true'">
+    <PackageReference Include="LiteDB" Version="$(LiteDBPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseLiteDBPackage)' != 'true'">
     <ProjectReference Include="..\LiteDB\LiteDB.csproj" />
   </ItemGroup>
 
