@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    name: Build (net8 artifacts)
     runs-on: ubuntu-latest
 
     steps:
@@ -13,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up .NET SDK
+      - name: Set up .NET 8 SDK
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
@@ -24,6 +25,131 @@ jobs:
       - name: Build
         run: dotnet build LiteDB.sln --configuration Release --no-restore /p:DefineConstants=TESTING
 
-      - name: Test
-        timeout-minutes: 5
-        run: dotnet test LiteDB.sln --configuration Release --no-build --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed" /p:DefineConstants=TESTING
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: net8-build
+          if-no-files-found: error
+          path: |
+            LiteDB/bin/Release
+            LiteDB/obj
+            LiteDB.Tests/bin/Release
+            LiteDB.Tests/obj
+
+  test:
+    name: Test on SDK ${{ matrix.dotnet-version }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        include:
+          - dotnet-version: 6.0.x
+            quality: ga
+          - dotnet-version: 7.0.x
+            quality: ga
+          - dotnet-version: 8.0.x
+            quality: ga
+          - dotnet-version: 9.0.x
+            quality: preview
+          - dotnet-version: 10.0.x
+            quality: preview
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install matrix SDK
+        if: matrix.dotnet-version != '8.0.x'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-quality: ${{ matrix.quality }}
+
+      - name: Download build outputs
+        uses: actions/download-artifact@v4
+        with:
+          name: net8-build
+          path: .
+
+      - name: Run tests without rebuilding
+        run: dotnet test LiteDB.Tests/LiteDB.Tests.csproj --configuration Release --no-build --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed" /p:DefineConstants=TESTING
+
+      - name: Summarize test results
+        if: always()
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          results_path = Path("LiteDB.Tests/TestResults/TestResults.trx")
+          if not results_path.exists():
+              print(f"Test results not found at {results_path} - skipping summary")
+              raise SystemExit(0)
+
+          ns = {"t": "http://microsoft.com/schemas/VisualStudio/TeamTest/2010"}
+          root = ET.parse(results_path).getroot()
+          counters = root.find('.//t:ResultSummary/t:Counters', ns)
+
+          def _get_count(name: str) -> int:
+              return int(counters.attrib.get(name, "0")) if counters is not None else 0
+
+          passed = _get_count("passed")
+          total = _get_count("total")
+
+          # Combine failure buckets that VSTest tracks separately.
+          failed = sum(
+              _get_count(key)
+              for key in ("failed", "error", "timeout", "aborted", "notRunnable")
+          )
+
+          skipped = _get_count("notExecuted")
+          if skipped == 0:
+              results = root.findall('.//t:UnitTestResult', ns)
+              skipped = sum(1 for result in results if result.attrib.get("outcome") == "NotExecuted")
+
+          if not total:
+              total = passed + failed + skipped
+
+          times = root.find('.//t:Times', ns)
+          duration = "unknown"
+          if times is not None and all(k in times.attrib for k in ("start", "finish")):
+              start = datetime.fromisoformat(times.attrib["start"])
+              finish = datetime.fromisoformat(times.attrib["finish"])
+              duration = str(finish - start)
+
+          summary_lines = [
+              f"Succeeded: {passed}",
+              f"Failed: {failed}",
+              f"Skipped: {skipped}",
+              f"Total: {total}",
+              f"Duration: {duration}",
+          ]
+
+          print("\n".join(summary_lines))
+
+          summary_md = [
+              "### Test Summary",
+              "",
+              f"- Succeeded: **{passed}**",
+              f"- Failed: **{failed}**",
+              f"- Skipped: **{skipped}**",
+              f"- Total: **{total}**",
+              f"- Duration: **{duration}**",
+              "",
+          ]
+
+          summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary_file:
+              with open(summary_file, "a", encoding="utf-8") as handle:
+                  handle.write("\n".join(summary_md))
+          PY
