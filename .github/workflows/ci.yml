@@ -5,7 +5,12 @@ on:
 
 jobs:
   build:
+    name: Build (net8 artifacts)
     runs-on: ubuntu-latest
+    env:
+      NUGET_PACKAGES: ${{ github.workspace }}/artifacts_temp/packages
+    outputs:
+      package-version: ${{ steps.package_version.outputs.value }}
 
     steps:
       - name: Check out repository
@@ -13,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up .NET SDK
+      - name: Set up .NET 8 SDK
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
@@ -24,6 +29,88 @@ jobs:
       - name: Build
         run: dotnet build LiteDB.sln --configuration Release --no-restore /p:DefineConstants=TESTING
 
-      - name: Test
-        timeout-minutes: 5
-        run: dotnet test LiteDB.sln --configuration Release --no-build --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed" /p:DefineConstants=TESTING
+      - name: Determine temporary package version
+        id: package_version
+        run: echo "value=0.0.0-ci.${{ github.run_id }}.${{ github.run_attempt }}" >> "$GITHUB_OUTPUT"
+
+      - name: Pack LiteDB
+        run: dotnet pack LiteDB/LiteDB.csproj --configuration Release --no-build --output artifacts_temp /p:PackageVersion=${{ steps.package_version.outputs.value }}
+
+      - name: Restore tests against temporary package
+        run: |
+          dotnet restore LiteDB.Tests/LiteDB.Tests.csproj \
+            --source "$(pwd)/artifacts_temp" \
+            --source "https://api.nuget.org/v3/index.json" \
+            /p:UseLiteDBPackage=true \
+            /p:LiteDBPackageVersion=${{ steps.package_version.outputs.value }} \
+            /p:DefineConstants=TESTING
+
+      - name: Build tests against temporary package
+        run: dotnet build LiteDB.Tests/LiteDB.Tests.csproj --configuration Release --no-restore /p:UseLiteDBPackage=true /p:LiteDBPackageVersion=${{ steps.package_version.outputs.value }} /p:DefineConstants=TESTING
+
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: net8-build
+          if-no-files-found: error
+          path: |
+            LiteDB/bin/Release
+            LiteDB/obj
+            LiteDB.Tests/bin/Release
+            LiteDB.Tests/obj
+            artifacts_temp
+
+  test:
+    name: Test on SDK ${{ matrix.dotnet-version }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      DOTNET_ROLL_FORWARD: LatestMajor
+      NUGET_PACKAGES: ${{ github.workspace }}/artifacts_temp/packages
+    strategy:
+      matrix:
+        include:
+          - dotnet-version: 6.0.x
+            quality: ga
+          - dotnet-version: 7.0.x
+            quality: ga
+          - dotnet-version: 8.0.x
+            quality: ga
+          - dotnet-version: 9.0.x
+            quality: preview
+          - dotnet-version: 10.0.x
+            quality: preview
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install matrix SDK
+        if: matrix.dotnet-version != '8.0.x'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-quality: ${{ matrix.quality }}
+
+      - name: Download build outputs
+        uses: actions/download-artifact@v4
+        with:
+          name: net8-build
+          path: .
+
+      - name: Restore tests for matrix runtime
+        run: dotnet restore LiteDB.Tests/LiteDB.Tests.csproj \
+          /p:UseLiteDBPackage=true \
+          /p:LiteDBPackageVersion=${{ needs.build.outputs.package-version }} \
+          /p:LiteDBPackageSource=${{ github.workspace }}/artifacts_temp
+
+      - name: Run tests without rebuilding
+        run: dotnet test LiteDB.Tests/LiteDB.Tests.csproj --configuration Release --no-build --no-restore --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed" /p:DefineConstants=TESTING /p:UseLiteDBPackage=true /p:LiteDBPackageVersion=${{ needs.build.outputs.package-version }}

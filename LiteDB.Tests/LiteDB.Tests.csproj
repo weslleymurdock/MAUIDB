@@ -9,6 +9,13 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <NoWarn>1701;1702;1705;1591;0618</NoWarn>
+    <UseLiteDBPackage Condition="'$(UseLiteDBPackage)' == ''">false</UseLiteDBPackage>
+    <LiteDBPackageSource Condition="'$(LiteDBPackageSource)' == ''">$([System.IO.Path]::Combine('$(MSBuildThisFileDirectory)', '..', 'artifacts_temp'))</LiteDBPackageSource>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(UseLiteDBPackage)' != 'false' and Exists('$(LiteDBPackageSource)')">
+    <LiteDBPackageSource>$([System.IO.Path]::GetFullPath('$(LiteDBPackageSource)'))</LiteDBPackageSource>
+    <RestoreAdditionalProjectSources>$(RestoreAdditionalProjectSources);$(LiteDBPackageSource)</RestoreAdditionalProjectSources>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,8 +52,16 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(UseLiteDBPackage)' != 'false'">
+    <PackageReference Include="LiteDB" Version="$(LiteDBPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseLiteDBPackage)' == 'false'">
     <ProjectReference Include="..\LiteDB\LiteDB.csproj" />
   </ItemGroup>
+
+  <Target Name="EnsureLiteDBPackageVersion" BeforeTargets="CollectPackageReferences" Condition="'$(UseLiteDBPackage)' != 'false'">
+    <Error Condition="'$(LiteDBPackageVersion)' == ''" Text="LiteDBPackageVersion must be set when UseLiteDBPackage is not 'false'." />
+  </Target>
 
 </Project>
