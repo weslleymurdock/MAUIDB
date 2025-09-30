@@ -41,6 +41,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      DOTNET_ROLL_FORWARD: Major
     strategy:
       matrix:
         include:
@@ -81,3 +83,31 @@ jobs:
 
       - name: Run tests without rebuilding
         run: dotnet test LiteDB.Tests/LiteDB.Tests.csproj --configuration Release --no-build --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed" /p:DefineConstants=TESTING
+
+      - name: Summarize test results
+        if: always()
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          trx_dir = Path('LiteDB.Tests/TestResults')
+          candidates = sorted(trx_dir.glob('*.trx'), key=lambda p: p.stat().st_mtime, reverse=True)
+          if not candidates:
+              raise SystemExit('No TRX files were produced by dotnet test')
+
+          latest = candidates[0]
+          ns = {'t': 'http://microsoft.com/schemas/VisualStudio/TeamTest/2010'}
+          root = ET.parse(latest).getroot()
+          counters = root.find('.//t:Counters', ns)
+          if counters is None:
+              raise SystemExit('TRX file is missing Counters data')
+
+          total = int(counters.get('total', 0))
+          executed = int(counters.get('executed', 0))
+          passed = int(counters.get('passed', 0))
+          failed = sum(int(counters.get(key, 0)) for key in ('failed', 'error', 'timeout', 'aborted'))
+          skipped = total - executed
+
+          print(f'Test summary ({latest.name}): total={total}, passed={passed}, failed={failed}, skipped={skipped}')
+          PY
