@@ -9,6 +9,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <NoWarn>1701;1702;1705;1591;0618</NoWarn>
+    <UseLiteDBPackage Condition="'$(UseLiteDBPackage)' == ''">false</UseLiteDBPackage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,7 +46,16 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
+  <PropertyGroup Condition="'$(UseLiteDBPackage)' != 'false'">
+    <LiteDBPackageSource Condition="'$(LiteDBPackageSource)' == ''">$(MSBuildProjectDirectory)/../artifacts_temp</LiteDBPackageSource>
+    <RestoreAdditionalProjectSources>$(LiteDBPackageSource);$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(UseLiteDBPackage)' != 'false'">
+    <PackageReference Include="LiteDB" Version="$(LiteDBPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseLiteDBPackage)' == 'false'">
     <ProjectReference Include="..\LiteDB\LiteDB.csproj" />
   </ItemGroup>
 
