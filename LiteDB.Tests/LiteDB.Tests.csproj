@@ -9,6 +9,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <NoWarn>1701;1702;1705;1591;0618</NoWarn>
+    <UseLiteDBPackage Condition="'$(UseLiteDBPackage)' == ''">false</UseLiteDBPackage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,8 +46,16 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(UseLiteDBPackage)' != 'false'">
+    <PackageReference Include="LiteDB" Version="[$(LiteDBPackageVersion)]" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseLiteDBPackage)' == 'false'">
     <ProjectReference Include="..\LiteDB\LiteDB.csproj" />
   </ItemGroup>
+
+  <Target Name="ValidateLiteDBPackage" BeforeTargets="ResolveReferences" Condition="'$(UseLiteDBPackage)' != 'false' and '$(LiteDBPackageVersion)' == ''">
+    <Error Text="LiteDBPackageVersion must be provided when UseLiteDBPackage is enabled." />
+  </Target>
 
 </Project>
