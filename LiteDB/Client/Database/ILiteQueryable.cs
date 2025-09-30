@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -30,6 +30,7 @@ namespace LiteDB
 
         ILiteQueryableResult<BsonDocument> Select(BsonExpression selector);
         ILiteQueryableResult<K> Select<K>(Expression<Func<T, K>> selector);
+
     }
 
     public interface ILiteQueryableResult<T>
