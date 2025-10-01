@@ -2,6 +2,8 @@
 using System.Buffers;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using static LiteDB.Constants;
 
 namespace LiteDB.Engine
@@ -125,6 +127,28 @@ namespace LiteDB.Engine
         /// Write bytes from buffer into segmentsr. Return how many bytes was write
         /// </summary>
         public int Write(byte[] buffer) => this.Write(buffer, 0, buffer.Length);
+
+        private void Write(ReadOnlySpan<byte> source)
+        {
+            var written = 0;
+
+            while (written < source.Length)
+            {
+                var bytesLeft = _current.Count - _currentPosition;
+                var bytesToCopy = Math.Min(source.Length - written, bytesLeft);
+
+                source.Slice(written, bytesToCopy)
+                    .CopyTo(new Span<byte>(_current.Array, _current.Offset + _currentPosition, bytesToCopy));
+
+                written += bytesToCopy;
+
+                this.MoveForward(bytesToCopy);
+
+                if (_isEOF) break;
+            }
+
+            ENSURE(written == source.Length, "current value must fit inside defined buffer");
+        }
 
         /// <summary>
         /// Skip bytes (same as Write but with no array copy)
@@ -277,10 +301,36 @@ namespace LiteDB.Engine
         /// </summary>
         public void Write(Guid value)
         {
-            // there is no avaiable value.TryWriteBytes (TODO: implement conditional compile)?
-            var bytes = value.ToByteArray();
+            if (_currentPosition + 16 <= _current.Count)
+            {
+                var span = new Span<byte>(_current.Array, _current.Offset + _currentPosition, 16);
 
-            this.Write(bytes, 0, 16);
+#if NET8_0_OR_GREATER
+                if (!value.TryWriteBytes(span))
+                {
+                    throw new InvalidOperationException("Failed to write Guid into span.");
+                }
+#else
+                Unsafe.WriteUnaligned(ref MemoryMarshal.GetReference(span), value);
+#endif
+
+                this.MoveForward(16);
+            }
+            else
+            {
+                Span<byte> buffer = stackalloc byte[16];
+
+#if NET8_0_OR_GREATER
+                if (!value.TryWriteBytes(buffer))
+                {
+                    throw new InvalidOperationException("Failed to write Guid into span.");
+                }
+#else
+                Unsafe.WriteUnaligned(ref MemoryMarshal.GetReference(buffer), value);
+#endif
+
+                this.Write(buffer);
+            }
         }
 
         /// <summary>
@@ -290,19 +340,19 @@ namespace LiteDB.Engine
         {
             if (_currentPosition + 12 <= _current.Count)
             {
-                value.ToByteArray(_current.Array, _current.Offset + _currentPosition);
+                var span = new Span<byte>(_current.Array, _current.Offset + _currentPosition, 12);
+
+                BufferSliceExtensions.Write(span, value);
 
                 this.MoveForward(12);
             }
             else
             {
-                var buffer = _bufferPool.Rent(12);
+                Span<byte> buffer = stackalloc byte[12];
 
-                value.ToByteArray(buffer, 0);
+                BufferSliceExtensions.Write(buffer, value);
 
-                this.Write(buffer, 0, 12);
-
-                _bufferPool.Return(buffer, true);
+                this.Write(buffer);
             }
         }
 
