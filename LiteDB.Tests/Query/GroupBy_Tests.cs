@@ -71,26 +71,39 @@ namespace LiteDB.Tests.QueryTest
             using var db = new LiteDatabase(stream);
             var col = db.GetCollection<CategoryItem>("items");
 
-            col.Insert(new CategoryItem { Id = 1, Category = "A" });
-            col.Insert(new CategoryItem { Id = 2, Category = "A" });
-            col.Insert(new CategoryItem { Id = 3, Category = "A" });
-            col.Insert(new CategoryItem { Id = 4, Category = "B" });
-            col.Insert(new CategoryItem { Id = 5, Category = "B" });
-            col.Insert(new CategoryItem { Id = 6, Category = "C" });
-
+            var items = new[] 
+            {
+                new CategoryItem { Id = 1, Category = "A" },
+                new CategoryItem { Id = 2, Category = "A" },
+                new CategoryItem { Id = 3, Category = "A" },
+                new CategoryItem { Id = 4, Category = "B" },
+                new CategoryItem { Id = 5, Category = "B" },
+                new CategoryItem { Id = 6, Category = "C" }
+            };
+            
+            col.InsertBulk(items);
+            
             var ascending = col.Query()
+                .GroupBy(x => x.Category)
+                .OrderBy(g => g.Count())
+                .Select(g => new { g.Key, Size = g.Count() })
+                .ToArray();
+            
+            var expectedAscending = items
                 .GroupBy(x => x.Category)
                 .OrderBy(g => g.Count())
                 .Select(g => new { g.Key, Size = g.Count() })
                 .ToArray();
 
             var ascendingSizes = ascending.Select(x => x.Size).ToArray();
-            ascendingSizes.Should().Equal(new[] { 1, 2, 3 },
+            var expectedAscendingSizes = expectedAscending.Select(x => x.Size).ToArray();
+            ascendingSizes.Should().Equal(expectedAscendingSizes, //new[] { 1, 2, 3 }
                 "OrderBy aggregate must be evaluated over the group source before projection (ascending). Actual: {0}",
                 string.Join(", ", ascendingSizes));
 
             var ascendingKeys = ascending.Select(x => x.Key).ToArray();
-            ascendingKeys.Should().Equal(new[] { "C", "B", "A" },
+            var expectedAscendingKeys = expectedAscending.Select(x => x.Key).ToArray();
+            ascendingKeys.Should().Equal(expectedAscendingKeys, //new[] { "C", "B", "A" }
                 "OrderBy aggregate must order groups by their aggregated size (ascending). Actual: {0}",
                 string.Join(", ", ascendingKeys));
 
@@ -99,14 +112,22 @@ namespace LiteDB.Tests.QueryTest
                 .OrderByDescending(g => g.Count())
                 .Select(g => new { g.Key, Size = g.Count() })
                 .ToArray();
+            
+            var expectedDescending = items
+                .GroupBy(x => x.Category)
+                .OrderByDescending(g => g.Count())
+                .Select(g => new { g.Key, Size = g.Count() })
+                .ToArray();
 
             var descendingSizes = descending.Select(x => x.Size).ToArray();
-            descendingSizes.Should().Equal(new[] { 3, 2, 1 },
+            var expectedDescendingSizes = expectedDescending.Select(x => x.Size).ToArray();
+            descendingSizes.Should().Equal(expectedDescendingSizes, // new[] { 3, 2, 1 }
                 "OrderBy aggregate must be evaluated over the group source before projection (descending). Actual: {0}",
                 string.Join(", ", descendingSizes));
 
             var descendingKeys = descending.Select(x => x.Key).ToArray();
-            descendingKeys.Should().Equal(new[] { "A", "B", "C" },
+            var expectedDescendingKeys = expectedDescending.Select(x => x.Key).ToArray();
+            descendingKeys.Should().Equal(expectedDescendingKeys, //new[] { "A", "B", "C" }
                 "OrderBy aggregate must order groups by their aggregated size (descending). Actual: {0}",
                 string.Join(", ", descendingKeys));
         }
