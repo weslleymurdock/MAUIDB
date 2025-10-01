@@ -34,6 +34,16 @@ namespace LiteDB
             set => this.Array[this.Offset + index] = value;
         }
 
+        public ReadOnlySpan<byte> AsSpan(int offset, int length)
+        {
+            return new ReadOnlySpan<byte>(this.Array, this.Offset + offset, length);
+        }
+
+        public Span<byte> AsWritableSpan(int offset, int length)
+        {
+            return new Span<byte>(this.Array, this.Offset + offset, length);
+        }
+
         /// <summary>
         /// Clear all page content byte array (not controls)
         /// </summary>

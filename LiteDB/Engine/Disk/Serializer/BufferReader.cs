@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Buffers;
+using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.IO;
 using static LiteDB.Constants;
@@ -89,45 +90,106 @@ namespace LiteDB.Engine
             return false;
         }
 
+        private void EnsureCurrentSegment()
+        {
+            if (_currentPosition < _current.Count)
+            {
+                return;
+            }
+
+            if (this.MoveForward(0) == false && _isEOF)
+            {
+                return;
+            }
+        }
+
+        private void Advance(int count)
+        {
+            var remaining = count;
+
+            while (remaining > 0)
+            {
+                this.EnsureCurrentSegment();
+
+                if (_isEOF)
+                {
+                    break;
+                }
+
+                var bytesLeft = _current.Count - _currentPosition;
+                var bytesToSkip = Math.Min(remaining, bytesLeft);
+
+                this.MoveForward(bytesToSkip);
+
+                remaining -= bytesToSkip;
+            }
+
+            ENSURE(remaining == 0, "current value must fit inside defined buffer");
+        }
+
+        private void ReadTo(Span<byte> destination)
+        {
+            var remaining = destination.Length;
+            var destOffset = 0;
+
+            while (remaining > 0)
+            {
+                this.EnsureCurrentSegment();
+
+                if (_isEOF)
+                {
+                    break;
+                }
+
+                var bytesLeft = _current.Count - _currentPosition;
+                var bytesToCopy = Math.Min(remaining, bytesLeft);
+
+                _current.AsSpan(_currentPosition, bytesToCopy)
+                    .CopyTo(destination.Slice(destOffset, bytesToCopy));
+
+                this.MoveForward(bytesToCopy);
+
+                destOffset += bytesToCopy;
+                remaining -= bytesToCopy;
+            }
+
+            ENSURE(remaining == 0, "current value must fit inside defined buffer");
+        }
+
         /// <summary>
         /// Read bytes from source and copy into buffer. Return how many bytes was read
         /// </summary>
         public int Read(byte[] buffer, int offset, int count)
         {
-            var bufferPosition = 0;
-
-            while (bufferPosition < count)
+            if (count == 0)
             {
-                var bytesLeft = _current.Count - _currentPosition;
-                var bytesToCopy = Math.Min(count - bufferPosition, bytesLeft);
-
-                // fill buffer
-                if (buffer != null)
-                {
-                    Buffer.BlockCopy(_current.Array,
-                        _current.Offset + _currentPosition,
-                        buffer,
-                        offset + bufferPosition,
-                        bytesToCopy);
-                }
-
-                bufferPosition += bytesToCopy;
-
-                // move position in current segment (and go to next segment if finish)
-                this.MoveForward(bytesToCopy);
-
-                if (_isEOF) break;
+                return 0;
             }
 
-            ENSURE(count == bufferPosition, "current value must fit inside defined buffer");
+            if (buffer == null)
+            {
+                this.Advance(count);
+                return count;
+            }
 
-            return bufferPosition;
+            this.ReadTo(buffer.AsSpan(offset, count));
+
+            return count;
         }
 
         /// <summary>
         /// Skip bytes (same as Read but with no array copy)
         /// </summary>
-        public int Skip(int count) => this.Read(null, 0, count);
+        public int Skip(int count)
+        {
+            if (count == 0)
+            {
+                return 0;
+            }
+
+            this.Advance(count);
+            return count;
+        }
 
         /// <summary>
         /// Consume all data source until finish
@@ -240,35 +302,87 @@ namespace LiteDB.Engine
 
         #region Read Numbers
 
-        private T ReadNumber<T>(Func<byte[], int, T> convert, int size)
+        public Int32 ReadInt32()
         {
-            T value;
+            const int size = 4;
 
-            // if fits in current segment, use inner array - otherwise copy from multiples segments
             if (_currentPosition + size <= _current.Count)
             {
-                value = convert(_current.Array, _current.Offset + _currentPosition);
+                var value = BinaryPrimitives.ReadInt32LittleEndian(_current.AsSpan(_currentPosition, size));
 
                 this.MoveForward(size);
-            }
-            else
-            {
-                var buffer = _bufferPool.Rent(size);
 
-                this.Read(buffer, 0, size);
-
-                value = convert(buffer, 0);
-
-                _bufferPool.Return(buffer, true);
+                return value;
             }
 
-            return value;
+            Span<byte> buffer = stackalloc byte[size];
+
+            this.ReadTo(buffer);
+
+            return BinaryPrimitives.ReadInt32LittleEndian(buffer);
         }
 
-        public Int32 ReadInt32() => this.ReadNumber(BitConverter.ToInt32, 4);
-        public Int64 ReadInt64() => this.ReadNumber(BitConverter.ToInt64, 8);
-        public UInt32 ReadUInt32() => this.ReadNumber(BitConverter.ToUInt32, 4);
-        public Double ReadDouble() => this.ReadNumber(BitConverter.ToDouble, 8);
+        public Int64 ReadInt64()
+        {
+            const int size = 8;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                var value = BinaryPrimitives.ReadInt64LittleEndian(_current.AsSpan(_currentPosition, size));
+
+                this.MoveForward(size);
+
+                return value;
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            this.ReadTo(buffer);
+
+            return BinaryPrimitives.ReadInt64LittleEndian(buffer);
+        }
+
+        public UInt32 ReadUInt32()
+        {
+            const int size = 4;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                var value = BinaryPrimitives.ReadUInt32LittleEndian(_current.AsSpan(_currentPosition, size));
+
+                this.MoveForward(size);
+
+                return value;
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            this.ReadTo(buffer);
+
+            return BinaryPrimitives.ReadUInt32LittleEndian(buffer);
+        }
+
+        public Double ReadDouble()
+        {
+            const int size = 8;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                var value = BinaryPrimitives.ReadInt64LittleEndian(_current.AsSpan(_currentPosition, size));
+
+                this.MoveForward(size);
+
+                return BitConverter.Int64BitsToDouble(value);
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            this.ReadTo(buffer);
+
+            var bits = BinaryPrimitives.ReadInt64LittleEndian(buffer);
+
+            return BitConverter.Int64BitsToDouble(bits);
+        }
 
         public Decimal ReadDecimal()
         {

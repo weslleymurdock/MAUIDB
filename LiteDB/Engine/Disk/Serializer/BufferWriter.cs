@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Buffers;
+using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.InteropServices;
 using static LiteDB.Constants;
 
 namespace LiteDB.Engine
@@ -86,39 +88,91 @@ namespace LiteDB.Engine
             return false;
         }
 
+        private void EnsureCurrentSegment()
+        {
+            if (_currentPosition < _current.Count)
+            {
+                return;
+            }
+
+            if (this.MoveForward(0) == false && _isEOF)
+            {
+                return;
+            }
+        }
+
+        private void Advance(int count)
+        {
+            var remaining = count;
+
+            while (remaining > 0)
+            {
+                this.EnsureCurrentSegment();
+
+                if (_isEOF)
+                {
+                    break;
+                }
+
+                var bytesLeft = _current.Count - _currentPosition;
+                var bytesToSkip = Math.Min(remaining, bytesLeft);
+
+                this.MoveForward(bytesToSkip);
+
+                remaining -= bytesToSkip;
+            }
+
+            ENSURE(remaining == 0, "current value must fit inside defined buffer");
+        }
+
+        private void Write(ReadOnlySpan<byte> source)
+        {
+            var remaining = source.Length;
+            var sourceOffset = 0;
+
+            while (remaining > 0)
+            {
+                this.EnsureCurrentSegment();
+
+                if (_isEOF)
+                {
+                    break;
+                }
+
+                var bytesLeft = _current.Count - _currentPosition;
+                var bytesToCopy = Math.Min(remaining, bytesLeft);
+
+                source.Slice(sourceOffset, bytesToCopy)
+                    .CopyTo(_current.AsWritableSpan(_currentPosition, bytesToCopy));
+
+                this.MoveForward(bytesToCopy);
+
+                sourceOffset += bytesToCopy;
+                remaining -= bytesToCopy;
+            }
+
+            ENSURE(remaining == 0, "current value must fit inside defined buffer");
+        }
+
         /// <summary>
         /// Write bytes from buffer into segmentsr. Return how many bytes was write
         /// </summary>
         public int Write(byte[] buffer, int offset, int count)
         {
-            var bufferPosition = 0;
-
-            while (bufferPosition < count)
+            if (count == 0)
             {
-                var bytesLeft = _current.Count - _currentPosition;
-                var bytesToCopy = Math.Min(count - bufferPosition, bytesLeft);
-
-                // fill buffer
-                if (buffer != null)
-                {
-                    Buffer.BlockCopy(buffer,
-                        offset + bufferPosition,
-                        _current.Array,
-                        _current.Offset + _currentPosition,
-                        bytesToCopy);
-                }
-
-                bufferPosition += bytesToCopy;
-
-                // move position in current segment (and go to next segment if finish)
-                this.MoveForward(bytesToCopy);
-
-                if (_isEOF) break;
+                return 0;
             }
 
-            ENSURE(count == bufferPosition, "current value must fit inside defined buffer");
+            if (buffer == null)
+            {
+                this.Advance(count);
+                return count;
+            }
 
-            return bufferPosition;
+            this.Write(buffer.AsSpan(offset, count));
+
+            return count;
         }
 
         /// <summary>
@@ -129,7 +183,16 @@ namespace LiteDB.Engine
         /// <summary>
         /// Skip bytes (same as Write but with no array copy)
         /// </summary>
-        public int Skip(int count) => this.Write(null, 0, count);
+        public int Skip(int count)
+        {
+            if (count == 0)
+            {
+                return 0;
+            }
+
+            this.Advance(count);
+            return count;
+        }
 
         /// <summary>
         /// Consume all data source until finish
@@ -224,30 +287,82 @@ namespace LiteDB.Engine
 
         #region Numbers
 
-        private void WriteNumber<T>(T value, Action<T, byte[], int> toBytes, int size)
+        public void Write(Int32 value)
         {
+            const int size = 4;
+
             if (_currentPosition + size <= _current.Count)
             {
-                toBytes(value, _current.Array, _current.Offset + _currentPosition);
+                BinaryPrimitives.WriteInt32LittleEndian(_current.AsWritableSpan(_currentPosition, size), value);
 
                 this.MoveForward(size);
+                return;
             }
-            else
-            {
-                var buffer = _bufferPool.Rent(size);
 
-                toBytes(value, buffer, 0);
+            Span<byte> buffer = stackalloc byte[size];
 
-                this.Write(buffer, 0, size);
+            BinaryPrimitives.WriteInt32LittleEndian(buffer, value);
 
-                _bufferPool.Return(buffer, true);
-            }
+            this.Write(buffer);
         }
 
-        public void Write(Int32 value) => this.WriteNumber(value, BufferExtensions.ToBytes, 4);
-        public void Write(Int64 value) => this.WriteNumber(value, BufferExtensions.ToBytes, 8);
-        public void Write(UInt32 value) => this.WriteNumber(value, BufferExtensions.ToBytes, 4);
-        public void Write(Double value) => this.WriteNumber(value, BufferExtensions.ToBytes, 8);
+        public void Write(Int64 value)
+        {
+            const int size = 8;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                BinaryPrimitives.WriteInt64LittleEndian(_current.AsWritableSpan(_currentPosition, size), value);
+
+                this.MoveForward(size);
+                return;
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            BinaryPrimitives.WriteInt64LittleEndian(buffer, value);
+
+            this.Write(buffer);
+        }
+
+        public void Write(UInt32 value)
+        {
+            const int size = 4;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                BinaryPrimitives.WriteUInt32LittleEndian(_current.AsWritableSpan(_currentPosition, size), value);
+
+                this.MoveForward(size);
+                return;
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            BinaryPrimitives.WriteUInt32LittleEndian(buffer, value);
+
+            this.Write(buffer);
+        }
+
+        public void Write(Double value)
+        {
+            const int size = 8;
+            var bits = BitConverter.DoubleToInt64Bits(value);
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                BinaryPrimitives.WriteInt64LittleEndian(_current.AsWritableSpan(_currentPosition, size), bits);
+
+                this.MoveForward(size);
+                return;
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            BinaryPrimitives.WriteInt64LittleEndian(buffer, bits);
+
+            this.Write(buffer);
+        }
 
         public void Write(Decimal value)
         {
@@ -277,10 +392,22 @@ namespace LiteDB.Engine
         /// </summary>
         public void Write(Guid value)
         {
-            // there is no avaiable value.TryWriteBytes (TODO: implement conditional compile)?
-            var bytes = value.ToByteArray();
+            const int size = 16;
 
-            this.Write(bytes, 0, 16);
+            if (_currentPosition + size <= _current.Count)
+            {
+                MemoryMarshal.Write(_current.AsWritableSpan(_currentPosition, size), ref value);
+
+                this.MoveForward(size);
+            }
+            else
+            {
+                Span<byte> buffer = stackalloc byte[size];
+
+                MemoryMarshal.Write(buffer, ref value);
+
+                this.Write(buffer);
+            }
         }
 
         /// <summary>
