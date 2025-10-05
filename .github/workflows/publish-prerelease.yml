@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - dev
+    paths:
+      - 'LiteDB/**'
 
 jobs:
   publish:
@@ -22,28 +24,72 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
+      - name: Restore .NET tools
+        run: dotnet tool restore
+
+      - name: Compute semantic version
+        id: gitversion
+        shell: bash
+        run: |
+          set -euo pipefail
+          JSON=$(dotnet tool run dotnet-gitversion /output json)
+          echo "$JSON"
+
+          NUGET_VERSION=$(echo "$JSON" | jq -r '.NuGetVersion')
+          FULL_SEMVER=$(echo "$JSON" | jq -r '.FullSemVer')
+          SHORT_SHA=$(echo "$JSON" | jq -r '.ShortSha')
+          MAJOR_MINOR_PATCH=$(echo "$JSON" | jq -r '.MajorMinorPatch')
+          PR_LABEL=$(echo "$JSON" | jq -r '.PreReleaseLabel')
+          PR_NUMBER=$(echo "$JSON" | jq -r '.PreReleaseNumber')
+
+          if [[ "$PR_LABEL" != "" && "$PR_LABEL" != "null" ]]; then
+            printf -v PR_PADDED '%04d' "$PR_NUMBER"
+            RELEASE_VERSION_PADDED="${MAJOR_MINOR_PATCH}-${PR_LABEL}.${PR_PADDED}"
+          else
+            RELEASE_VERSION_PADDED="$MAJOR_MINOR_PATCH"
+          fi
+
+          echo "nugetVersion=$NUGET_VERSION" >> "$GITHUB_OUTPUT"
+          echo "fullSemVer=$FULL_SEMVER" >> "$GITHUB_OUTPUT"
+          echo "releaseVersionPadded=$RELEASE_VERSION_PADDED" >> "$GITHUB_OUTPUT"
+          echo "informational=${NUGET_VERSION}+${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+
       - name: Restore
         run: dotnet restore LiteDB.sln
 
-      - name: Build
-        run: dotnet build LiteDB.sln --configuration Release --no-restore
-
       - name: Test
         timeout-minutes: 5
-        run: dotnet test LiteDB.sln --configuration Release --no-build --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed"
+        run: dotnet test LiteDB.sln --configuration Release --verbosity normal --settings tests.runsettings --logger "trx;LogFileName=TestResults.trx" --logger "console;verbosity=detailed" /p:DefineConstants=TESTING
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: "**/*TestResults*.trx"
+
+      - name: Upload hang dumps (if any)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hangdumps
+          path: |
+            hangdumps
+            **/TestResults/**/*.dmp
+          if-no-files-found: ignore
+
+      - name: Build
+        if: success()
+        run: dotnet build LiteDB/LiteDB.csproj --configuration Release --no-restore /p:ContinuousIntegrationBuild=true
 
       - name: Pack
-        run: |
-          dotnet pack LiteDB/LiteDB.csproj --configuration Release --no-build -o artifacts
+        if: success()
+        run: dotnet pack LiteDB/LiteDB.csproj --configuration Release --no-build -o artifacts /p:ContinuousIntegrationBuild=true
 
-      - name: Capture package version
-        id: version
+      # if delete all nuget packages which are named ``0.0.0-detached.nupkg`` (leftover from detached builds)
+      - name: Clean up detached packages
         run: |
-          PACKAGE_PATH=$(ls artifacts/LiteDB.*.nupkg | head -n 1)
-          PACKAGE_FILENAME=$(basename "$PACKAGE_PATH")
-          PACKAGE_VERSION=${PACKAGE_FILENAME#LiteDB.}
-          PACKAGE_VERSION=${PACKAGE_VERSION%.nupkg}
-          echo "package_version=${PACKAGE_VERSION}" >> "$GITHUB_OUTPUT"
+          find artifacts -name "0.0.0-detached.nupkg" -delete
 
       - name: Retrieve secrets from Bitwarden
         uses: bitwarden/sm-action@v2
@@ -54,16 +100,9 @@ jobs:
             265b2fb6-2cf0-4859-9bc8-b24c00ab4378 > NUGET_API_KEY
 
       - name: Push package to NuGet
-        run: |
-          dotnet nuget push "artifacts/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
-
-      - name: Publish GitHub prerelease
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ steps.version.outputs.package_version }}
-          name: LiteDB ${{ steps.version.outputs.package_version }}
-          generate_release_notes: true
-          prerelease: true
-          files: artifacts/*.nupkg
+        if: success()
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_VERSION: ${{ steps.gitversion.outputs.nugetVersion }}
+        run: |
+          echo "Pushing LiteDB version $PACKAGE_VERSION"
+          dotnet nuget push "artifacts/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
