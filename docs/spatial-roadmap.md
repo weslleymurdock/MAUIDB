@@ -35,35 +35,34 @@ dotnet test LiteDB.Tests/LiteDB.Tests.csproj -f net8.0 --filter FullyQualifiedNa
 
 ## Roadmap
 
-### 1. Index-Aware Query Execution (High Priority)
-- Translate query shapes (circles, polygons) into `_gh` range windows and `_mbb` filters.
-- Hook range scans into the query pipeline to avoid `FindAll()` enumeration.
-- Benchmark on large datasets to confirm IO/CPU gains.
+### 1. Index-Aware Query Execution (Delivered)
+- Circle and polygon queries now materialise `_gh` range windows through `SpatialIndexing.GetMortonRanges` and apply `_mbb` intersection checks via `SPATIAL_MBB_INTERSECTS`.
+- `Spatial.Near`, `Within`, `Intersects`, and `Contains` issue targeted `Query` pipelines instead of enumerating `FindAll()`, honouring Morton index scans automatically.
+- BenchmarkDotNet coverage (`SpatialNearBenchmark`) tracks the delta between brute-force scans and the indexed implementation.
 
-### 2. LINQ & Expression Support
-- Introduce spatial operators into the BsonExpression engine (e.g., `$near`, `$within`, `$intersects`).
-- Extend the LINQ translator to recognise Spatial methods and emit the new operators.
+### 2. LINQ & Expression Support (Delivered)
+- `$near`, `$within`, `$within_box`, `$intersects`, and `$contains` are exposed as `SPATIAL_*` expression methods for the BsonExpression engine.
+- `SpatialExpressions` enables LINQ scenarios (`collection.Query().Where(...)`) that translate into the new operators via a dedicated LINQ resolver.
 
 ### 3. 3D & Extended Geometry
 - Design GeoPoint3D / GeoBoundingBox3D / GeoPolyhedron structures.
 - Evaluate 3D Morton hashing and mixed distance metrics.
 - Provide opt-in configuration to preserve backward compatibility with 2D collections.
 
-### 4. Precision & Options
-- Surface defaults via SpatialOptions (index precision, tolerance, distance formula).
-- Persist precision metadata alongside index definitions for smarter range calculations.
+### 4. Precision & Options (Delivered)
+- `SpatialOptions` exposes defaults for index precision, bounding-box padding, and distance tolerances.
+- Precision metadata is written to `_spatial_indexes` when `EnsurePointIndex` executes and reloaded on demand for subsequent sessions.
 
 ### 5. Migration & Tooling
 - Offer shell commands or utility APIs to backfill `_gh`/`_mbb` for existing datasets.
 - Document migration paths and antimeridian edge cases.
 
-### 6. Performance Tracking
-- Add BenchmarkDotNet scenarios targeting Near/Within/Intersects across dataset sizes.
-- Monitor allocations and wall-clock time before/after index-aware implementation.
+### 6. Performance Tracking (Delivered)
+- `SpatialNearBenchmark` contrasts brute-force scans with the index-aware pipeline across multiple dataset sizes, reporting allocation and runtime metrics.
 
-### 7. Documentation & Samples
-- Expand docs with tutorials covering spatial CRUD, indexing, and querying patterns.
-- Provide sample apps (e.g., REST endpoint performing radius searches).
+### 7. Documentation & Samples (Delivered)
+- `docs/spatial-getting-started.md` provides an end-to-end quickstart, LINQ examples, and a minimal HTTP sample for radius searches.
+- Roadmap sections now reflect available operators and links to the benchmark suite for validation.
 
 ## Open Questions
 - Should `_gh`/`_mbb` remain internal fields or become part of the public query DSL?

@@ -14,7 +14,7 @@ namespace LiteDB.Spatial
 
         public static SpatialOptions Options { get; set; } = new SpatialOptions();
 
-        public static void EnsurePointIndex<T>(ILiteCollection<T> collection, Expression<Func<T, GeoPoint>> selector, int precisionBits = 52)
+        public static void EnsurePointIndex<T>(ILiteCollection<T> collection, Expression<Func<T, GeoPoint>> selector, int? precisionBits = null)
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
             if (selector == null) throw new ArgumentNullException(nameof(selector));
@@ -24,6 +24,7 @@ namespace LiteDB.Spatial
             EnsureMapperRegistration(mapper);
 
             var getter = selector.Compile();
+            var precision = precisionBits ?? SpatialIndexMetadata.GetPrecision(lite, Options.DefaultIndexPrecisionBits);
 
             SpatialMapping.EnsureComputedMember(lite, "_gh", typeof(long), entity =>
             {
@@ -34,12 +35,14 @@ namespace LiteDB.Spatial
                 }
 
                 var normalized = point.Normalize();
-                return SpatialIndexing.ComputeMorton(normalized, precisionBits);
+                return SpatialIndexing.ComputeMorton(normalized, precision);
             });
 
             SpatialMapping.EnsureBoundingBox(lite, entity => getter(entity)?.Normalize());
 
             lite.EnsureIndex("_gh", BsonExpression.Create("$._gh"));
+
+            SpatialIndexMetadata.RecordPrecision(lite, precision);
         }
 
         public static void EnsureShapeIndex<T>(ILiteCollection<T> collection, Expression<Func<T, GeoShape>> selector)
@@ -80,9 +83,16 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
+            var centerNormalized = center.Normalize();
+            var fieldExpression = mapper.GetExpression(selector);
+            var predicate = SpatialQuery.Near(fieldExpression, centerNormalized, radiusMeters, lite);
+
+            var query = new Query();
+            query.Where.Add(predicate);
+
             var candidates = new List<(T item, double distance)>();
 
-            foreach (var item in lite.FindAll())
+            foreach (var item in lite.Find(query))
             {
                 var point = selector(item);
                 if (point == null)
@@ -90,8 +100,8 @@ namespace LiteDB.Spatial
                     continue;
                 }
 
-                var distance = GeoMath.DistanceMeters(center, point, Options.Distance);
-                if (distance <= radiusMeters)
+                var distance = GeoMath.DistanceMeters(centerNormalized, point, Options.Distance);
+                if (distance <= radiusMeters + Options.DistanceToleranceMeters)
                 {
                     candidates.Add((item, distance));
                 }
@@ -119,19 +129,18 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            var latitudeRange = (min: Math.Min(minLat, maxLat), max: Math.Max(minLat, maxLat));
-            var longitudeRange = new LongitudeRange(minLon, maxLon);
+            var box = new GeoBoundingBox(minLat, minLon, maxLat, maxLon);
+            var fieldExpression = mapper.GetExpression(selector);
+            var predicate = SpatialQuery.WithinBoundingBox(fieldExpression, box);
 
-            return lite.FindAll()
+            var query = new Query();
+            query.Where.Add(predicate);
+
+            return lite.Find(query)
                 .Where(entity =>
                 {
                     var point = selector(entity);
-                    if (point == null)
-                    {
-                        return false;
-                    }
-
-                    return point.Lat >= latitudeRange.min && point.Lat <= latitudeRange.max && longitudeRange.Contains(point.Lon);
+                    return point != null && box.Contains(point);
                 })
                 .ToList();
         }
@@ -146,7 +155,13 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            return lite.FindAll().Where(entity =>
+            var fieldExpression = mapper.GetExpression(selector);
+            var predicate = SpatialQuery.Within(fieldExpression, area);
+
+            var query = new Query();
+            query.Where.Add(predicate);
+
+            return lite.Find(query).Where(entity =>
             {
                 var shape = selector(entity);
                 if (shape == null)
@@ -174,7 +189,13 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            return lite.FindAll().Where(entity =>
+            var fieldExpression = mapper.GetExpression(selector);
+            var predicate = SpatialQuery.Intersects(fieldExpression, query);
+
+            var liteQuery = new Query();
+            liteQuery.Where.Add(predicate);
+
+            return lite.Find(liteQuery).Where(entity =>
             {
                 var shape = selector(entity);
                 if (shape == null)
@@ -203,7 +224,13 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            return lite.FindAll().Where(entity =>
+            var fieldExpression = mapper.GetExpression(selector);
+            var predicate = SpatialQuery.Contains(fieldExpression, point);
+
+            var query = new Query();
+            query.Where.Add(predicate);
+
+            return lite.Find(query).Where(entity =>
             {
                 var shape = selector(entity);
                 if (shape == null)

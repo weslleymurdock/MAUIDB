@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LiteDB.Spatial
 {
@@ -33,6 +35,64 @@ namespace LiteDB.Spatial
             var morton = Interleave(lonBits, latBits, bitsPerCoordinate);
 
             return unchecked((long)morton);
+        }
+
+        public static IReadOnlyList<(long Min, long Max)> GetMortonRanges(GeoBoundingBox box, int precisionBits)
+        {
+            if (box.Equals(default(GeoBoundingBox)))
+            {
+                throw new ArgumentException("Bounding box must be defined", nameof(box));
+            }
+
+            var ranges = new List<(long Min, long Max)>();
+            var lonRange = new LongitudeRange(box.MinLon, box.MaxLon);
+
+            foreach (var (start, end) in lonRange.GetSegments())
+            {
+                var corners = new[]
+                {
+                    new GeoPoint(box.MinLat, start),
+                    new GeoPoint(box.MinLat, end),
+                    new GeoPoint(box.MaxLat, start),
+                    new GeoPoint(box.MaxLat, end)
+                };
+
+                var min = corners.Min(c => ComputeMorton(c, precisionBits));
+                var max = corners.Max(c => ComputeMorton(c, precisionBits));
+
+                if (min > max)
+                {
+                    (min, max) = (max, min);
+                }
+
+                ranges.Add((min, max));
+            }
+
+            if (ranges.Count <= 1)
+            {
+                return ranges;
+            }
+
+            ranges.Sort((a, b) => a.Min.CompareTo(b.Min));
+
+            var merged = new List<(long Min, long Max)> { ranges[0] };
+
+            for (var i = 1; i < ranges.Count; i++)
+            {
+                var last = merged[^1];
+                var current = ranges[i];
+
+                if (current.Min <= last.Max + 1)
+                {
+                    merged[^1] = (last.Min, Math.Max(last.Max, current.Max));
+                }
+                else
+                {
+                    merged.Add(current);
+                }
+            }
+
+            return merged;
         }
 
         private static ulong Interleave(ulong x, ulong y, int bits)

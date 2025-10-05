@@ -30,6 +30,29 @@ namespace LiteDB.Tests.Spatial
         }
 
         [Fact]
+        public void Near_Queryable_Expression_Uses_Spatial_Functions()
+        {
+            using var db = new LiteDatabase(":memory:");
+            var col = db.GetCollection<Place>("p");
+            SpatialApi.EnsurePointIndex(col, x => x.Location);
+
+            var center = new GeoPoint(48.2082, 16.3738);
+
+            col.Insert(new[]
+            {
+                new Place { Name = "A", Location = new GeoPoint(48.215, 16.355) },
+                new Place { Name = "B", Location = new GeoPoint(48.185, 16.38) },
+                new Place { Name = "C", Location = new GeoPoint(48.300, 16.450) }
+            });
+
+            var results = col.Query()
+                .Where(x => SpatialExpressions.Near(x.Location, center, 5_000))
+                .ToList();
+
+            Assert.Equal(new[] { "A", "B" }, results.Select(x => x.Name));
+        }
+
+        [Fact]
         public void BoundingBox_Crosses_Antimeridian()
         {
             using var db = new LiteDatabase(":memory:");
@@ -164,6 +187,32 @@ namespace LiteDB.Tests.Spatial
             var hits = SpatialApi.Intersects(roads, r => r.Path, square).ToList();
 
             Assert.NotEmpty(hits);
+        }
+
+        [Fact]
+        public void Precision_Metadata_Is_Persisted()
+        {
+            using var file = new TempFile();
+
+            using (var db = new LiteDatabase(file))
+            {
+                var col = db.GetCollection<Place>("places");
+                SpatialApi.EnsurePointIndex(col, x => x.Location, 40);
+
+                var meta = db.GetCollection("_spatial_indexes").FindById("places/_gh");
+                Assert.NotNull(meta);
+                Assert.Equal(40, meta["precisionBits"].AsInt32);
+            }
+
+            using (var db = new LiteDatabase(file))
+            {
+                var col = db.GetCollection<Place>("places");
+                SpatialApi.EnsurePointIndex(col, x => x.Location);
+
+                var meta = db.GetCollection("_spatial_indexes").FindById("places/_gh");
+                Assert.NotNull(meta);
+                Assert.Equal(40, meta["precisionBits"].AsInt32);
+            }
         }
 
         private class Place
