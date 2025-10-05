@@ -40,6 +40,11 @@ namespace LiteDB
             return BinaryPrimitives.ReadUInt32LittleEndian(buffer.AsSpan(offset, sizeof(uint)));
         }
 
+        public static float ReadSingle(this BufferSlice buffer, int offset)
+        {
+            return BitConverter.ToSingle(buffer.Array, buffer.Offset + offset);
+        }
+
         public static Int64 ReadInt64(this BufferSlice buffer, int offset)
         {
             return BinaryPrimitives.ReadInt64LittleEndian(buffer.AsSpan(offset, sizeof(long)));
@@ -87,6 +92,18 @@ namespace LiteDB
             if (ticks == 3155378975999999999) return DateTime.MaxValue;
 
             return new DateTime(ticks, DateTimeKind.Utc);
+        }
+
+        public static float[] ReadVector(this BufferSlice buffer, int offset)
+        {
+            var count = buffer.ReadUInt16(offset); 
+            offset += 2; // move offset to first float
+            var vector = new float[count];
+            for (var i = 0; i < count; i++)
+            {
+                vector[i] = BitConverter.ToSingle(buffer.Array, buffer.Offset + offset + (i * 4));
+            }
+            return vector;
         }
 
         public static PageAddress ReadPageAddress(this BufferSlice buffer, int offset)
@@ -163,6 +180,7 @@ namespace LiteDB
 
                 case BsonType.MinValue: return BsonValue.MinValue;
                 case BsonType.MaxValue: return BsonValue.MaxValue;
+                case BsonType.Vector: return buffer.ReadVector(offset);
 
                 default: throw new NotImplementedException();
             }
@@ -202,6 +220,11 @@ namespace LiteDB
             BinaryPrimitives.WriteUInt32LittleEndian(buffer.AsWritableSpan(offset, sizeof(uint)), value);
         }
 
+        public static void Write(this BufferSlice buffer, float value, int offset)
+        {
+            BitConverter.GetBytes(value).CopyTo(buffer.Array, buffer.Offset + offset);
+        }
+
         public static void Write(this BufferSlice buffer, Int64 value, int offset)
         {
             BinaryPrimitives.WriteInt64LittleEndian(buffer.AsWritableSpan(offset, sizeof(long)), value);
@@ -237,6 +260,17 @@ namespace LiteDB
         public static void Write(this BufferSlice buffer, Guid value, int offset)
         {
             buffer.Write(value.ToByteArray(), offset);
+        }
+
+        public static void Write(this BufferSlice buffer, float[] value, int offset)
+        {
+            buffer.Write((ushort)value.Length, offset);
+            offset += 2;
+            foreach (var v in value)
+            {
+                BitConverter.GetBytes(v).CopyTo(buffer.Array, buffer.Offset + offset);
+                offset += 4;
+            }
         }
 
         public static void Write(this BufferSlice buffer, ObjectId value, int offset)
@@ -319,6 +353,7 @@ namespace LiteDB
 
                     case BsonType.Boolean: buffer[offset] = (value.AsBoolean) ? (byte)1 : (byte)0; break;
                     case BsonType.DateTime: buffer.Write(value.AsDateTime, offset); break;
+                    case BsonType.Vector: buffer.Write(value.AsVector, offset); break;
 
                     default: throw new NotImplementedException();
                 }

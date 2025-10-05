@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace LiteDB.Engine
     /// <summary>
     /// Read multiple array segment as a single linear segment - Forward Only
     /// </summary>
-    internal class BufferReader : IDisposable
+    internal partial class BufferReader : IDisposable
     {
         private readonly IEnumerator<BufferSlice> _source;
         private readonly bool _utcDate;
@@ -207,72 +207,7 @@ namespace LiteDB.Engine
         #endregion
 
         #region Read String
-
-        /// <summary>
-        /// Read string with fixed size
-        /// </summary>
-        public string ReadString(int count)
-        {
-            string value;
-
-            // if fits in current segment, use inner array - otherwise copy from multiples segments
-            if (_currentPosition + count <= _current.Count)
-            {
-                value = StringEncoding.UTF8.GetString(_current.Array, _current.Offset + _currentPosition, count);
-
-                this.MoveForward(count);
-            }
-            else
-            {
-                // rent a buffer to be re-usable
-                var buffer = _bufferPool.Rent(count);
-
-                this.Read(buffer, 0, count);
-
-                value = StringEncoding.UTF8.GetString(buffer, 0, count);
-
-                _bufferPool.Return(buffer, true);
-            }
-
-            return value;
-        }
-
-        /// <summary>
-        /// Reading string until find \0 at end
-        /// </summary>
-        public string ReadCString()
-        {
-            // first try read CString in current segment
-            if (this.TryReadCStringCurrentSegment(out var value))
-            {
-                return value;
-            }
-            else
-            {
-                using (var mem = new MemoryStream())
-                {
-                    // copy all first segment 
-                    var initialCount = _current.Count - _currentPosition;
-
-                    mem.Write(_current.Array, _current.Offset + _currentPosition, initialCount);
-
-                    this.MoveForward(initialCount);
-
-                    // and go to next segment
-                    while (_current[_currentPosition] != 0x00 && _isEOF == false)
-                    {
-                        mem.WriteByte(_current[_currentPosition]);
-
-                        this.MoveForward(1);
-                    }
-
-                    this.MoveForward(1); // +1 to '\0'
-
-                    return StringEncoding.UTF8.GetString(mem.ToArray());
-                }
-            }
-        }
-
+        
         /// <summary>	
         /// Try read CString in current segment avoind read byte-to-byte over segments	
         /// </summary>	
@@ -300,7 +235,7 @@ namespace LiteDB.Engine
 
         #endregion
 
-        #region Read Numbers
+                #region Read Numbers
 
         public Int32 ReadInt32()
         {
@@ -342,6 +277,26 @@ namespace LiteDB.Engine
             return BinaryPrimitives.ReadInt64LittleEndian(buffer);
         }
 
+        public UInt16 ReadUInt16()
+        {
+            const int size = 2;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                var value = BinaryPrimitives.ReadUInt16LittleEndian(_current.AsSpan(_currentPosition, size));
+
+                this.MoveForward(size);
+
+                return value;
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            this.ReadTo(buffer);
+
+            return BinaryPrimitives.ReadUInt16LittleEndian(buffer);
+        }
+
         public UInt32 ReadUInt32()
         {
             const int size = 4;
@@ -362,26 +317,54 @@ namespace LiteDB.Engine
             return BinaryPrimitives.ReadUInt32LittleEndian(buffer);
         }
 
-        public Double ReadDouble()
+        public Single ReadSingle()
         {
-            const int size = 8;
+            const int size = 4;
 
             if (_currentPosition + size <= _current.Count)
             {
-                var value = BinaryPrimitives.ReadInt64LittleEndian(_current.AsSpan(_currentPosition, size));
+                var bits = BinaryPrimitives.ReadInt32LittleEndian(_current.AsSpan(_currentPosition, size));
 
                 this.MoveForward(size);
 
-                return BitConverter.Int64BitsToDouble(value);
+                return Int32BitsToSingle(bits);
             }
 
             Span<byte> buffer = stackalloc byte[size];
 
             this.ReadTo(buffer);
 
-            var bits = BinaryPrimitives.ReadInt64LittleEndian(buffer);
+            var value = BinaryPrimitives.ReadInt32LittleEndian(buffer);
 
-            return BitConverter.Int64BitsToDouble(bits);
+            return Int32BitsToSingle(value);
+        }
+
+        public Double ReadDouble()
+        {
+            const int size = 8;
+
+            if (_currentPosition + size <= _current.Count)
+            {
+                var bits = BinaryPrimitives.ReadInt64LittleEndian(_current.AsSpan(_currentPosition, size));
+
+                this.MoveForward(size);
+
+                return BitConverter.Int64BitsToDouble(bits);
+            }
+
+            Span<byte> buffer = stackalloc byte[size];
+
+            this.ReadTo(buffer);
+
+            var value = BinaryPrimitives.ReadInt64LittleEndian(buffer);
+
+            return BitConverter.Int64BitsToDouble(value);
+        }
+
+        private static unsafe float Int32BitsToSingle(int value)
+        {
+            // Unsafe re-interpretation keeps Engine serializer span-based without extra allocations.
+            return *(float*)&value;
         }
 
         public Decimal ReadDecimal()
@@ -466,6 +449,20 @@ namespace LiteDB.Engine
             return value;
         }
 
+        private BsonValue ReadVector()
+        {
+            var length = this.ReadUInt16();
+            var values = new float[length];
+
+            for (var i = 0; i < length; i++)
+            {
+                values[i] = this.ReadSingle();
+            }
+
+            return new BsonVector(values);
+        }
+
+
         /// <summary>
         /// Write single byte
         /// </summary>
@@ -527,9 +524,13 @@ namespace LiteDB.Engine
                 case BsonType.MinValue: return BsonValue.MinValue;
                 case BsonType.MaxValue: return BsonValue.MaxValue;
 
+                case BsonType.Vector: return this.ReadVector();
+
                 default: throw new NotImplementedException();
             }
         }
+
+        
 
         #endregion
 
@@ -706,8 +707,12 @@ namespace LiteDB.Engine
             {
                 return BsonValue.MaxValue;
             }
+            else if (type == 0x64) // Vector
+            {
+                return this.ReadVector();
+            }
 
-            throw new NotSupportedException("BSON type not supported");
+                throw new NotSupportedException("BSON type not supported");
         }
 
         #endregion
@@ -718,3 +723,4 @@ namespace LiteDB.Engine
         }
     }
 }
+

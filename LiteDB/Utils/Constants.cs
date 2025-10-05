@@ -1,4 +1,4 @@
-﻿using LiteDB.Engine;
+using LiteDB.Engine;
 
 using System;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Threading;
 
 [assembly: InternalsVisibleTo("LiteDB.Tests")]
 [assembly: InternalsVisibleTo("LiteDB.Benchmarks")]
-#if DEBUG
+#if DEBUG || TESTING
 [assembly: InternalsVisibleTo("ConsoleApp1")]
 #endif
 
@@ -103,7 +103,7 @@ namespace LiteDB
         /// <summary>
         /// Initial seed for Random
         /// </summary>
-#if DEBUG
+#if DEBUG || TESTING
         public const int RANDOMIZER_SEED = 3131;
 #else
         public const int RANDOMIZER_SEED = 0;
