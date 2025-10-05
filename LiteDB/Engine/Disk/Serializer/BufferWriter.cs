@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Buffers;
 using System.Collections.Generic;
-using System.Text;
 using static LiteDB.Constants;
 
 namespace LiteDB.Engine
@@ -9,7 +8,7 @@ namespace LiteDB.Engine
     /// <summary>
     /// Write data types/BSON data into byte[]. It's forward only and support multi buffer slice as source
     /// </summary>
-    internal class BufferWriter : IDisposable
+    internal partial class BufferWriter : IDisposable
     {
         private readonly IEnumerator<BufferSlice> _source;
 
@@ -20,7 +19,6 @@ namespace LiteDB.Engine
         private bool _isEOF = false;
 
         private static readonly ArrayPool<byte> _bufferPool = ArrayPool<byte>.Shared;
-        private const int StackAllocationThreshold = 256;
 
         /// <summary>
         /// Current global cursor position
@@ -146,217 +144,20 @@ namespace LiteDB.Engine
         }
 
         #endregion
-
+        
         #region String
-
+        
         /// <summary>
         /// Write String with \0 at end
         /// </summary>
-        public void WriteCString(string value)
-        {
-            if (value.IndexOf('\0') > -1) throw LiteException.InvalidNullCharInString();
-
-            var bytesCount = StringEncoding.UTF8.GetByteCount(value);
-#if NET8_0_OR_GREATER
-            if (this.TryWriteInline(value.AsSpan(), bytesCount, 1))
-            {
-                this.Write((byte)0x00);
-                return;
-            }
-
-            if (bytesCount <= StackAllocationThreshold)
-            {
-                Span<byte> stackBuffer = stackalloc byte[StackAllocationThreshold];
-                var buffer = stackBuffer.Slice(0, bytesCount);
-
-                StringEncoding.UTF8.GetBytes(value.AsSpan(), buffer);
-
-                this.WriteSpan(buffer);
-            }
-            else
-            {
-                var rented = _bufferPool.Rent(bytesCount);
-
-                try
-                {
-                    var buffer = rented.AsSpan(0, bytesCount);
-
-                    StringEncoding.UTF8.GetBytes(value.AsSpan(), buffer);
-
-                    this.WriteSpan(buffer);
-                }
-                finally
-                {
-                    _bufferPool.Return(rented, true);
-                }
-            }
-
-            this.Write((byte)0x00);
-#else
-            var available = _current.Count - _currentPosition; // avaiable in current segment
-
-            // can write direct in current segment (use < because need +1 \0)
-            if (bytesCount < available)
-            {
-                StringEncoding.UTF8.GetBytes(value, 0, value.Length, _current.Array, _current.Offset + _currentPosition);
-
-                this.MoveForward(bytesCount);
-
-                this.Write((byte)0x00);
-            }
-            else
-            {
-                var buffer = _bufferPool.Rent(bytesCount);
-
-                try
-                {
-                    StringEncoding.UTF8.GetBytes(value, 0, value.Length, buffer, 0);
-
-                    this.Write(buffer, 0, bytesCount);
-                }
-                finally
-                {
-                    _bufferPool.Return(buffer, true);
-                }
-
-                this.Write((byte)0x00);
-            }
-#endif
-        }
-
+        public partial void WriteCString(string value);
+        
         /// <summary>
         /// Write string into output buffer.
         /// Support direct string (with no length information) or BSON specs: with (legnth + 1) [4 bytes] before and '\0' at end = 5 extra bytes
         /// </summary>
-        public void WriteString(string value, bool specs)
-        {
-            var count = StringEncoding.UTF8.GetByteCount(value);
-
-            if (specs)
-            {
-                this.Write(count + 1); // write Length + 1 (for \0)
-            }
-
-#if NET8_0_OR_GREATER
-            if (this.TryWriteInline(value.AsSpan(), count, specs ? 1 : 0))
-            {
-                if (specs)
-                {
-                    this.Write((byte)0x00);
-                }
-
-                return;
-            }
-
-            if (count <= StackAllocationThreshold)
-            {
-                Span<byte> stackBuffer = stackalloc byte[StackAllocationThreshold];
-                var buffer = stackBuffer.Slice(0, count);
-
-                StringEncoding.UTF8.GetBytes(value.AsSpan(), buffer);
-
-                this.WriteSpan(buffer);
-            }
-            else
-            {
-                var rented = _bufferPool.Rent(count);
-
-                try
-                {
-                    var buffer = rented.AsSpan(0, count);
-
-                    StringEncoding.UTF8.GetBytes(value.AsSpan(), buffer);
-
-                    this.WriteSpan(buffer);
-                }
-                finally
-                {
-                    _bufferPool.Return(rented, true);
-                }
-            }
-
-            if (specs)
-            {
-                this.Write((byte)0x00);
-            }
-#else
-            if (count <= _current.Count - _currentPosition)
-            {
-                StringEncoding.UTF8.GetBytes(value, 0, value.Length, _current.Array, _current.Offset + _currentPosition);
-
-                this.MoveForward(count);
-            }
-            else
-            {
-                // rent a buffer to be re-usable
-                var buffer = _bufferPool.Rent(count);
-
-                try
-                {
-                    StringEncoding.UTF8.GetBytes(value, 0, value.Length, buffer, 0);
-
-                    this.Write(buffer, 0, count);
-                }
-                finally
-                {
-                    _bufferPool.Return(buffer, true);
-                }
-            }
-
-            if (specs)
-            {
-                this.Write((byte)0x00);
-            }
-#endif
-        }
-
-#if NET8_0_OR_GREATER
-        private bool TryWriteInline(ReadOnlySpan<char> chars, int byteCount, int extraBytes)
-        {
-            var required = byteCount + extraBytes;
-
-            if (required > _current.Count - _currentPosition)
-            {
-                return false;
-            }
-
-            if (byteCount > 0)
-            {
-                var destination = new Span<byte>(_current.Array, _current.Offset + _currentPosition, byteCount);
-                var written = StringEncoding.UTF8.GetBytes(chars, destination);
-                ENSURE(written == byteCount, "encoded byte count mismatch");
-
-                this.MoveForward(byteCount);
-            }
-
-            return true;
-        }
-#endif
-
-        private void WriteSpan(ReadOnlySpan<byte> source)
-        {
-            var offset = 0;
-
-            while (offset < source.Length)
-            {
-                if (_currentPosition == _current.Count)
-                {
-                    this.MoveForward(0);
-
-                    ENSURE(_isEOF == false, "current value must fit inside defined buffer");
-                }
-
-                var available = _current.Count - _currentPosition;
-                var toCopy = Math.Min(source.Length - offset, available);
-
-                var target = new Span<byte>(_current.Array, _current.Offset + _currentPosition, toCopy);
-                source.Slice(offset, toCopy).CopyTo(target);
-
-                this.MoveForward(toCopy);
-                offset += toCopy;
-            }
-        }
-
+        public partial void WriteString(string value, bool specs);
+        
         #endregion
 
         #region Numbers
