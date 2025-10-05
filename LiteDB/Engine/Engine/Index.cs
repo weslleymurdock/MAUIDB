@@ -11,7 +11,7 @@ namespace LiteDB.Engine
         /// <summary>
         /// Create a new index (or do nothing if already exists) to a collection/field
         /// </summary>
-        public bool EnsureIndex(string collection, string name, BsonExpression expression, bool unique)
+        public bool EnsureIndex(string collection, string name, BsonExpression expression, bool unique, byte? reservedMetadata = null)
         {
             if (collection.IsNullOrWhiteSpace()) throw new ArgumentNullException(nameof(collection));
             if (name.IsNullOrWhiteSpace()) throw new ArgumentNullException(nameof(name));
@@ -41,6 +41,12 @@ namespace LiteDB.Engine
                     // but if expression are different, throw error
                     if (current.Expression != expression.Source) throw LiteException.IndexAlreadyExist(name);
 
+                    if (reservedMetadata.HasValue && current.Reserved != reservedMetadata.Value)
+                    {
+                        var updated = collectionPage.UpdateCollectionIndex(name);
+                        updated.Reserved = reservedMetadata.Value;
+                    }
+
                     return false;
                 }
 
@@ -48,6 +54,11 @@ namespace LiteDB.Engine
 
                 // create index head
                 var index = indexer.CreateIndex(name, expression.Source, unique);
+
+                if (reservedMetadata.HasValue)
+                {
+                    index.Reserved = reservedMetadata.Value;
+                }
                 var count = 0u;
 
                 // read all objects (read from PK index)
@@ -109,13 +120,13 @@ namespace LiteDB.Engine
                 var snapshot = transaction.CreateSnapshot(LockMode.Write, collection, false);
                 var col = snapshot.CollectionPage;
                 var indexer = new IndexService(snapshot, _header.Pragmas.Collation, _disk.MAX_ITEMS_COUNT);
-            
+
                 // no collection, no index
                 if (col == null) return false;
-            
+
                 // search for index reference
                 var index = col.GetCollectionIndex(name);
-            
+
                 // no index, no drop
                 if (index == null) return false;
 
@@ -124,8 +135,34 @@ namespace LiteDB.Engine
 
                 // remove index entry in collection page
                 snapshot.CollectionPage.DeleteCollectionIndex(name);
-            
+
                 return true;
+            });
+        }
+
+        public byte? GetIndexMetadata(string collection, string name)
+        {
+            if (collection.IsNullOrWhiteSpace()) throw new ArgumentNullException(nameof(collection));
+            if (name.IsNullOrWhiteSpace()) throw new ArgumentNullException(nameof(name));
+
+            return this.AutoTransaction(transaction =>
+            {
+                var snapshot = transaction.CreateSnapshot(LockMode.Read, collection, false);
+                var collectionPage = snapshot.CollectionPage;
+
+                if (collectionPage == null)
+                {
+                    return (byte?)null;
+                }
+
+                var index = collectionPage.GetCollectionIndex(name);
+
+                if (index == null)
+                {
+                    return (byte?)null;
+                }
+
+                return index.Reserved;
             });
         }
     }

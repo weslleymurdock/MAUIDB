@@ -230,9 +230,14 @@ namespace LiteDB
             return QueryDatabase(() => _engine.DropIndex(collection, name));
         }
 
-        public bool EnsureIndex(string collection, string name, BsonExpression expression, bool unique)
+        public bool EnsureIndex(string collection, string name, BsonExpression expression, bool unique, byte? reservedMetadata = null)
         {
-            return QueryDatabase(() => _engine.EnsureIndex(collection, name, expression, unique));
+            return QueryDatabase(() => _engine.EnsureIndex(collection, name, expression, unique, reservedMetadata));
+        }
+
+        public byte? GetIndexMetadata(string collection, string name)
+        {
+            return QueryDatabase(() => _engine.GetIndexMetadata(collection, name));
         }
 
         #endregion

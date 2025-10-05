@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using LiteDB;
+using LiteDB.Engine;
 
 namespace LiteDB.Spatial
 {
@@ -14,7 +15,7 @@ namespace LiteDB.Spatial
 
         public static SpatialOptions Options { get; set; } = new SpatialOptions();
 
-        public static void EnsurePointIndex<T>(ILiteCollection<T> collection, Expression<Func<T, GeoPoint>> selector, int precisionBits = 52)
+        public static void EnsurePointIndex<T>(ILiteCollection<T> collection, Expression<Func<T, GeoPoint>> selector, int? precisionBits = null)
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
             if (selector == null) throw new ArgumentNullException(nameof(selector));
@@ -25,6 +26,8 @@ namespace LiteDB.Spatial
 
             var getter = selector.Compile();
 
+            var precision = precisionBits ?? Options.IndexPrecisionBits;
+
             SpatialMapping.EnsureComputedMember(lite, "_gh", typeof(long), entity =>
             {
                 var point = getter(entity);
@@ -34,12 +37,12 @@ namespace LiteDB.Spatial
                 }
 
                 var normalized = point.Normalize();
-                return SpatialIndexing.ComputeMorton(normalized, precisionBits);
+                return SpatialIndexing.ComputeMorton(normalized, precision);
             });
 
             SpatialMapping.EnsureBoundingBox(lite, entity => getter(entity)?.Normalize());
 
-            lite.EnsureIndex("_gh", BsonExpression.Create("$._gh"));
+            lite.EnsureIndex("_gh", BsonExpression.Create("$._gh"), unique: false, reservedMetadata: (byte)precision);
         }
 
         public static void EnsureShapeIndex<T>(ILiteCollection<T> collection, Expression<Func<T, GeoShape>> selector)
@@ -80,9 +83,15 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
+            var indexPrecision = GetPointIndexPrecision(lite);
+            var boundingBox = GeoMath.BoundingBoxForCircle(center, radiusMeters);
+            var idAccessor = CreateIdAccessor(lite, mapper);
+            var segments = SpatialQueryHelper.CreateSegments(boundingBox, indexPrecision);
+            var toleranceMeters = GeoMath.EarthRadiusMeters * Options.ToleranceDegrees * (Math.PI / 180d);
+
             var candidates = new List<(T item, double distance)>();
 
-            foreach (var item in lite.FindAll())
+            foreach (var item in SpatialQueryHelper.QueryCandidates(lite, segments, idAccessor))
             {
                 var point = selector(item);
                 if (point == null)
@@ -91,7 +100,7 @@ namespace LiteDB.Spatial
                 }
 
                 var distance = GeoMath.DistanceMeters(center, point, Options.Distance);
-                if (distance <= radiusMeters)
+                if (distance <= radiusMeters + toleranceMeters)
                 {
                     candidates.Add((item, distance));
                 }
@@ -102,12 +111,9 @@ namespace LiteDB.Spatial
                 candidates.Sort((x, y) => x.distance.CompareTo(y.distance));
             }
 
-            if (limit.HasValue)
-            {
-                return candidates.Take(limit.Value).Select(x => x.item).ToList();
-            }
+            var result = limit.HasValue ? candidates.Take(limit.Value) : candidates;
 
-            return candidates.Select(x => x.item).ToList();
+            return result.Select(x => x.item).ToList();
         }
 
         public static IEnumerable<T> WithinBoundingBox<T>(ILiteCollection<T> collection, Func<T, GeoPoint> selector, double minLat, double minLon, double maxLat, double maxLon)
@@ -120,20 +126,48 @@ namespace LiteDB.Spatial
             EnsureMapperRegistration(mapper);
 
             var latitudeRange = (min: Math.Min(minLat, maxLat), max: Math.Max(minLat, maxLat));
+            var tolerance = Options.ToleranceDegrees;
+            var expandedLatitudeRange = (min: latitudeRange.min - tolerance, max: latitudeRange.max + tolerance);
             var longitudeRange = new LongitudeRange(minLon, maxLon);
+            var expandedLongitudeRange = new LongitudeRange(minLon - tolerance, maxLon + tolerance);
+            var queryBox = new GeoBoundingBox(latitudeRange.min, minLon, latitudeRange.max, maxLon);
+            var idAccessor = CreateIdAccessor(lite, mapper);
+            var segments = SpatialQueryHelper.CreateSegments(queryBox, null);
 
-            return lite.FindAll()
-                .Where(entity =>
+            var results = new List<T>();
+
+            foreach (var entity in SpatialQueryHelper.QueryCandidates(lite, segments, idAccessor))
+            {
+                var point = selector(entity);
+                if (point == null)
                 {
-                    var point = selector(entity);
-                    if (point == null)
-                    {
-                        return false;
-                    }
+                    continue;
+                }
 
-                    return point.Lat >= latitudeRange.min && point.Lat <= latitudeRange.max && longitudeRange.Contains(point.Lon);
-                })
-                .ToList();
+                if (point.Lat < expandedLatitudeRange.min || point.Lat > expandedLatitudeRange.max)
+                {
+                    continue;
+                }
+
+                if (!expandedLongitudeRange.Contains(point.Lon))
+                {
+                    continue;
+                }
+
+                if (point.Lat < latitudeRange.min || point.Lat > latitudeRange.max)
+                {
+                    continue;
+                }
+
+                if (!longitudeRange.Contains(point.Lon))
+                {
+                    continue;
+                }
+
+                results.Add(entity);
+            }
+
+            return results;
         }
 
         public static IEnumerable<T> Within<T>(ILiteCollection<T> collection, Func<T, GeoShape> selector, GeoPolygon area)
@@ -146,22 +180,35 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            return lite.FindAll().Where(entity =>
+            var boundingBox = area.GetBoundingBox();
+            var idAccessor = CreateIdAccessor(lite, mapper);
+            var segments = SpatialQueryHelper.CreateSegments(boundingBox, null);
+
+            var results = new List<T>();
+
+            foreach (var entity in SpatialQueryHelper.QueryCandidates(lite, segments, idAccessor))
             {
                 var shape = selector(entity);
                 if (shape == null)
                 {
-                    return false;
+                    continue;
                 }
 
-                return shape switch
+                var inside = shape switch
                 {
                     GeoPoint point => Geometry.ContainsPoint(area, point),
                     GeoPolygon polygon => Geometry.Intersects(area, polygon) && polygon.Outer.All(p => Geometry.ContainsPoint(area, p)),
                     GeoLineString line => line.Points.All(p => Geometry.ContainsPoint(area, p)),
                     _ => false
                 };
-            }).ToList();
+
+                if (inside)
+                {
+                    results.Add(entity);
+                }
+            }
+
+            return results;
         }
 
         public static IEnumerable<T> Intersects<T>(ILiteCollection<T> collection, Func<T, GeoShape> selector, GeoShape query)
@@ -174,15 +221,21 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            return lite.FindAll().Where(entity =>
+            var boundingBox = query.GetBoundingBox();
+            var idAccessor = CreateIdAccessor(lite, mapper);
+            var segments = SpatialQueryHelper.CreateSegments(boundingBox, null);
+
+            var results = new List<T>();
+
+            foreach (var entity in SpatialQueryHelper.QueryCandidates(lite, segments, idAccessor))
             {
                 var shape = selector(entity);
                 if (shape == null)
                 {
-                    return false;
+                    continue;
                 }
 
-                return shape switch
+                var intersects = shape switch
                 {
                     GeoPoint point when query is GeoPolygon polygon => Geometry.ContainsPoint(polygon, point),
                     GeoLineString line when query is GeoPolygon polygon => Geometry.Intersects(line, polygon),
@@ -190,7 +243,14 @@ namespace LiteDB.Spatial
                     GeoLineString line when query is GeoLineString other => Geometry.Intersects(line, other),
                     _ => false
                 };
-            }).ToList();
+
+                if (intersects)
+                {
+                    results.Add(entity);
+                }
+            }
+
+            return results;
         }
 
         public static IEnumerable<T> Contains<T>(ILiteCollection<T> collection, Func<T, GeoShape> selector, GeoPoint point)
@@ -203,22 +263,99 @@ namespace LiteDB.Spatial
             var mapper = GetMapper(lite);
             EnsureMapperRegistration(mapper);
 
-            return lite.FindAll().Where(entity =>
+            var boundingBox = point.GetBoundingBox();
+            var idAccessor = CreateIdAccessor(lite, mapper);
+            var segments = SpatialQueryHelper.CreateSegments(boundingBox, null);
+            var tolerance = Options.ToleranceDegrees;
+
+            var results = new List<T>();
+
+            foreach (var entity in SpatialQueryHelper.QueryCandidates(lite, segments, idAccessor))
             {
                 var shape = selector(entity);
                 if (shape == null)
                 {
-                    return false;
+                    continue;
                 }
 
-                return shape switch
+                var contains = shape switch
                 {
                     GeoPolygon polygon => Geometry.ContainsPoint(polygon, point),
                     GeoLineString line => Geometry.LineContainsPoint(line, point),
-                    GeoPoint candidate => Math.Abs(candidate.Lat - point.Lat) < GeoMath.EpsilonDegrees && Math.Abs(candidate.Lon - point.Lon) < GeoMath.EpsilonDegrees,
+                    GeoPoint candidate => Math.Abs(candidate.Lat - point.Lat) <= tolerance && Math.Abs(candidate.Lon - point.Lon) <= tolerance,
                     _ => false
                 };
-            }).ToList();
+
+                if (contains)
+                {
+                    results.Add(entity);
+                }
+            }
+
+            return results;
+        }
+
+        private static Func<T, BsonValue> CreateIdAccessor<T>(LiteCollection<T> collection, BsonMapper mapper)
+        {
+            if (typeof(T) == typeof(BsonDocument))
+            {
+                return entity =>
+                {
+                    var doc = (BsonDocument)(object)entity;
+                    return doc.TryGetValue("_id", out var value) ? value : BsonValue.Null;
+                };
+            }
+
+            var entity = collection.EntityMapper;
+            if (entity?.Id is MemberMapper id && id.Getter != null)
+            {
+                return entityValue =>
+                {
+                    var raw = id.Getter(entityValue);
+                    if (raw == null)
+                    {
+                        return BsonValue.Null;
+                    }
+
+                    if (raw is BsonValue bsonValue)
+                    {
+                        return bsonValue;
+                    }
+
+                    if (id.Serialize != null)
+                    {
+                        return id.Serialize(raw, mapper);
+                    }
+
+                    var type = id.DataType ?? raw.GetType();
+                    return mapper.Serialize(type, raw);
+                };
+            }
+
+            return _ => BsonValue.Null;
+        }
+
+        private static ILiteEngine GetEngine<T>(LiteCollection<T> liteCollection)
+        {
+            var engineField = typeof(LiteCollection<T>).GetField("_engine", BindingFlags.NonPublic | BindingFlags.Instance);
+            return engineField?.GetValue(liteCollection) as ILiteEngine;
+        }
+
+        private static int? GetPointIndexPrecision<T>(LiteCollection<T> liteCollection)
+        {
+            var engine = GetEngine(liteCollection);
+            if (engine == null)
+            {
+                return null;
+            }
+
+            var metadata = engine.GetIndexMetadata(liteCollection.Name, "_gh");
+            if (metadata.HasValue && metadata.Value > 1)
+            {
+                return metadata.Value;
+            }
+
+            return null;
         }
 
         private static LiteCollection<T> GetLiteCollection<T>(ILiteCollection<T> collection)

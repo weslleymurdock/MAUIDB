@@ -48,6 +48,8 @@ New UI to manage and visualize your database:
 
 Visit [the Wiki](https://github.com/mbdavid/LiteDB/wiki) for full documentation. For simplified chinese version, [check here](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn).
 
+- New: [Spatial Queries & Indexing Guide](docs/spatial-getting-started.md) covers the spatial roadmap milestones, the BenchmarkDotNet suite, and the REST sample in `samples/SpatialApi`.
+
 ## LiteDB Community
 
 Help LiteDB grow its user community by answering this [simple survey](https://docs.google.com/forms/d/e/1FAIpQLSc4cNG7wyLKXXcOLIt7Ea4TlXCG6s-51_EfHPu2p5WZ2dIx7A/viewform?usp=sf_link)

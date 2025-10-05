@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using LiteDB;
+using LiteDB.Engine;
 using LiteDB.Spatial;
 using Xunit;
 using SpatialApi = LiteDB.Spatial.Spatial;
@@ -164,6 +166,33 @@ namespace LiteDB.Tests.Spatial
             var hits = SpatialApi.Intersects(roads, r => r.Path, square).ToList();
 
             Assert.NotEmpty(hits);
+        }
+
+        [Fact]
+        public void EnsurePointIndex_Uses_Configured_Precision_Metadata()
+        {
+            using var db = new LiteDatabase(":memory:");
+            var col = db.GetCollection<Place>("p");
+
+            var original = SpatialApi.Options.IndexPrecisionBits;
+
+            try
+            {
+                SpatialApi.Options.IndexPrecisionBits = 40;
+                SpatialApi.EnsurePointIndex(col, x => x.Location);
+
+                var liteCollection = (LiteCollection<Place>)col;
+                var engineField = typeof(LiteCollection<Place>).GetField("_engine", BindingFlags.NonPublic | BindingFlags.Instance);
+                var engine = (ILiteEngine)engineField!.GetValue(liteCollection);
+
+                var metadata = engine.GetIndexMetadata(liteCollection.Name, "_gh");
+
+                Assert.Equal((byte)40, metadata);
+            }
+            finally
+            {
+                SpatialApi.Options.IndexPrecisionBits = original;
+            }
         }
 
         private class Place

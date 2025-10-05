@@ -15,12 +15,13 @@ namespace LiteDB
         /// <param name="name">Index name - unique name for this collection</param>
         /// <param name="expression">Create a custom expression function to be indexed</param>
         /// <param name="unique">If is a unique index</param>
-        public bool EnsureIndex(string name, BsonExpression expression, bool unique = false)
+        /// <param name="reservedMetadata">Optional metadata persisted with the index definition.</param>
+        public bool EnsureIndex(string name, BsonExpression expression, bool unique = false, byte? reservedMetadata = null)
         {
             if (string.IsNullOrEmpty(name)) throw new ArgumentNullException(nameof(name));
             if (expression == null) throw new ArgumentNullException(nameof(expression));
 
-            return _engine.EnsureIndex(_collection, name, expression, unique);
+            return _engine.EnsureIndex(_collection, name, expression, unique, reservedMetadata);
         }
 
         /// <summary>
@@ -28,13 +29,14 @@ namespace LiteDB
         /// </summary>
         /// <param name="expression">Document field/expression</param>
         /// <param name="unique">If is a unique index</param>
-        public bool EnsureIndex(BsonExpression expression, bool unique = false)
+        /// <param name="reservedMetadata">Optional metadata persisted with the index definition.</param>
+        public bool EnsureIndex(BsonExpression expression, bool unique = false, byte? reservedMetadata = null)
         {
             if (expression == null) throw new ArgumentNullException(nameof(expression));
 
             var name = Regex.Replace(expression.Source, @"[^a-z0-9]", "", RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
-            return this.EnsureIndex(name, expression, unique);
+            return this.EnsureIndex(name, expression, unique, reservedMetadata);
         }
 
         /// <summary>
@@ -42,11 +44,12 @@ namespace LiteDB
         /// </summary>
         /// <param name="keySelector">LinqExpression to be converted into BsonExpression to be indexed</param>
         /// <param name="unique">Create a unique keys index?</param>
-        public bool EnsureIndex<K>(Expression<Func<T, K>> keySelector, bool unique = false)
+        /// <param name="reservedMetadata">Optional metadata persisted with the index definition.</param>
+        public bool EnsureIndex<K>(Expression<Func<T, K>> keySelector, bool unique = false, byte? reservedMetadata = null)
         {
             var expression = this.GetIndexExpression(keySelector);
 
-            return this.EnsureIndex(expression, unique);
+            return this.EnsureIndex(expression, unique, reservedMetadata);
         }
 
         /// <summary>
@@ -55,11 +58,12 @@ namespace LiteDB
         /// <param name="name">Index name - unique name for this collection</param>
         /// <param name="keySelector">LinqExpression to be converted into BsonExpression to be indexed</param>
         /// <param name="unique">Create a unique keys index?</param>
-        public bool EnsureIndex<K>(string name, Expression<Func<T, K>> keySelector, bool unique = false)
+        /// <param name="reservedMetadata">Optional metadata persisted with the index definition.</param>
+        public bool EnsureIndex<K>(string name, Expression<Func<T, K>> keySelector, bool unique = false, byte? reservedMetadata = null)
         {
             var expression = this.GetIndexExpression(keySelector);
 
-            return this.EnsureIndex(name, expression, unique);
+            return this.EnsureIndex(name, expression, unique, reservedMetadata);
         }
 
         /// <summary>
