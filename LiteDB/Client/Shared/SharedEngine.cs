@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using LiteDB.Client.Shared;
 using LiteDB.Vector;
 
 namespace LiteDB
@@ -18,7 +19,7 @@ namespace LiteDB
         {
             _settings = settings;
 
-            var name = Path.GetFullPath(settings.Filename).ToLower().Sha1();
+            var name = SharedMutexNameFactory.Create(settings.Filename, settings.SharedMutexNameStrategy);
 
             try
             {
