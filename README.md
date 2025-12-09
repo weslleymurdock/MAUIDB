@@ -1,17 +1,17 @@
-# LiteDB - A .NET NoSQL Document Store in a single data file
+# MAUIDB - A .NET NoSQL Document Store in a single data file
 
-[![NuGet Version](https://img.shields.io/nuget/v/LiteDB)](https://www.nuget.org/packages/LiteDB/)
-[![NuGet Downloads](https://img.shields.io/nuget/dt/LiteDB)](https://www.nuget.org/packages/LiteDB/)
+[![NuGet Version](https://img.shields.io/nuget/v/MAUIDB)](https://www.nuget.org/packages/MAUIDB/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/MAUIDB)](https://www.nuget.org/packages/MAUIDB/)
 [![](https://dcbadge.limes.pink/api/server/u8seFBH9Zu?style=flat-square)](https://discord.gg/u8seFBH9Zu)
 
-[![NuGet Version](https://img.shields.io/nuget/vpre/LiteDB)](https://www.nuget.org/packages/LiteDB/absoluteLatest)
-[![Build status](https://img.shields.io/github/actions/workflow/status/litedb-org/LiteDB/publish-prerelease.yml)](https://github.com/litedb-org/LiteDB/actions/workflows/publish-prerelease.yml)
-<!--[![Build status](https://ci.appveyor.com/api/projects/status/sfe8he0vik18m033?svg=true)](https://ci.appveyor.com/project/mbdavid/litedb) -->
-LiteDB is a small, fast and lightweight .NET NoSQL embedded database. 
+[![NuGet Version](https://img.shields.io/nuget/vpre/MAUIDB)](https://www.nuget.org/packages/MAUIDB/absoluteLatest)
+[![Build status](https://img.shields.io/github/actions/workflow/status/litedb-org/LiteDB/publish-prerelease.yml)](https://github.com/temotecodehub/MAUIDB/actions/workflows/publish-prerelease.yml)
+<!--[![Build status](https://ci.appveyor.com/api/projects/status/sfe8he0vik18m033?svg=true)](https://ci.appveyor.com/project/mbdavid/mauidb) -->
+MAUIDB is a small, fast and lightweight .NET NoSQL embedded database. 
 
 - Serverless NoSQL Document Store
 - Simple API, similar to MongoDB
-- 100% C# code for .NET 4.5 / NETStandard 1.3/2.0 in a single DLL (less than 450kb)
+- 100% C# code for .NET 10.0
 - Thread-safe
 - ACID with full transaction support
 - Data recovery after write failure (WAL log file)
@@ -22,9 +22,9 @@ LiteDB is a small, fast and lightweight .NET NoSQL embedded database.
 - Index document fields for fast search
 - LINQ support for queries
 - SQL-Like commands to access/transform data
-- [LiteDB Studio](https://github.com/mbdavid/LiteDB.Studio) - Nice UI for data access 
+- [MAUIDB Studio](https://github.com/waslleymurdock/MAUIDB.Studio) - Nice UI for data access 
 - Open source and free for everyone - including commercial use
-- Install from NuGet: `Install-Package LiteDB`
+- Install from NuGet: `Install-Package MAUIDB`
 
 
 ## New v5
@@ -38,20 +38,16 @@ LiteDB is a small, fast and lightweight .NET NoSQL embedded database.
 - Partial document load (root level)
 - and much, much more!
 
-## Lite.Studio
+## MauiDB.Studio
 
 New UI to manage and visualize your database:
 
 
-![LiteDB.Studio](https://www.litedb.org/images/banner.gif)
+![MauiDB.Studio](https://www.mauidb.remotecodehub.com/images/banner.gif)
 
 ## Documentation
 
-Visit [the Wiki](https://github.com/mbdavid/LiteDB/wiki) for full documentation. For simplified chinese version, [check here](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn).
-
-## LiteDB Community
-
-Help LiteDB grow its user community by answering this [simple survey](https://docs.google.com/forms/d/e/1FAIpQLSc4cNG7wyLKXXcOLIt7Ea4TlXCG6s-51_EfHPu2p5WZ2dIx7A/viewform?usp=sf_link)
+Visit [the Wiki](https://github.com/weslleymurdock/MAUIDB/wiki) for full documentation. 
 
 ## How to use LiteDB
 
@@ -161,14 +157,12 @@ using(var db = new LiteDatabase("MyOrderDatafile.db"))
 
 ## Changelog
 
-Change details for each release are documented in the [release notes](https://github.com/mbdavid/LiteDB/releases).
+Change details for each release are documented in the [release notes](https://github.com/mbdavid/LiteDB/releases)
 
-## Code Signing
+## License
 
-LiteDB is digitally signed courtesy of [SignPath](https://www.signpath.io)
-
-<a href="https://www.signpath.io">
-    <img src="https://about.signpath.io/assets/signpath-logo.svg" width="150">
+[MIT](http://opensource.org/licenses/MIT)
+bout.signpath.io/assets/signpath-logo.svg" width="150">
 </a>
 
 ## License
